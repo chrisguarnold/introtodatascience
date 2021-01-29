@@ -1,26 +1,62 @@
 {
     "sources": [
         {
-            "URL": "http://yihui.org/knitr/",
             "author": [
                 {
-                    "family": "Xie",
-                    "given": "Yihui"
+                    "family": "Fogarty",
+                    "given": "Brian"
                 }
             ],
-            "edition": "2nd",
-            "id": "xie2015",
+            "id": "Fogarty2019",
             "issued": {
                 "date-parts": [
                     [
-                        2015
+                        2019
                     ]
                 ]
             },
-            "note": "ISBN 978-1498716963",
-            "publisher": "Chapman; Hall/CRC",
-            "publisher-place": "Boca Raton, Florida",
-            "title": "Dynamic documents with R and knitr",
+            "publisher": "Sage",
+            "publisher-place": "London",
+            "title": "Quantitative Social Science Data With R",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Agresti",
+                    "given": "Alan"
+                }
+            ],
+            "edition": "5th",
+            "id": "Agresti2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "Pearson",
+            "title": "Statistical methods for the social sciences",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Imai",
+                    "given": "Kosuke"
+                }
+            ],
+            "id": "Imai2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "Princeton University Press",
+            "title": "Quantitative social science–an introduction",
             "type": "book"
         },
         {
@@ -289,7 +325,7 @@
         }
     ],
     "project_biblios": [
-        "book.bib",
+        "IntroDS.bib",
         "packages.bib"
     ]
 }
