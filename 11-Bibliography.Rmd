@@ -1,5 +1,5 @@
 # (PART\*) Appendix {-}
 
-# Bibliography {-} 
+# Bibliography 
 \ref{@Bibliography}
 

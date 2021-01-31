@@ -1,0 +1,4 @@
+
+# Why Does Hypothesis Testing Work? A Primer on Probability
+
+<!-- ## Reading for This Week -->
