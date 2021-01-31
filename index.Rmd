@@ -14,7 +14,7 @@ description: "This is the website for the Intro to Data Science Class."
 
 
 # Welcome! {-}
-Welcome to this module. In PL9239 you will learn how to make the most of data. How can you handle and analyse data efficiently? How to communicate and visualise results? While everything we do here has of course a wider appeal, we will focus in particular on our area: How can we use data to study politics and international relations?
+Welcome to this module. In PL 9239 you will learn how to make the most of data. How can you handle and analyse data efficiently? How to communicate and visualise results? While everything we do here has of course a wider appeal, we will focus in particular on our area: How can we use data to study politics and international relations?
 
 
 ## Data to Answer Your Questions {-}
@@ -25,16 +25,16 @@ Today, data are everywhere. Data are not only collected for scientific studies. 
 Data on their own can actually be a bit boring. Few people might enjoy to just browse numbers. Everything changes, however, if we can use data to answer a question we are interested in. This is why we we will build the module around three scenarios.
 
 #### Scenario 1: The Data Report {-}
-Whatever you actually want to do with data, the first step is always getting a good oversight over the data itself. You will have to open the data and describe its most characteristic features. Often, you want to communicate these results to other colleagues in a data report. And all of your work with the data is ideally documented in a transparent way so that others--or even your future self--can easily understand what you were doing. This first scenario might be quite typical for your first years at work. 
+Whatever you actually want to do with data, the first step is always getting a good oversight over the data itself. You will have to open the data and describe its most characteristic features. Often, you want to communicate these results to other colleagues in a data report. And all of your work with the data is ideally documented in a transparent way so that others---or even your future self---can easily understand what you were doing. This first scenario might actually be quite typical for your first years at work. 
 
 #### Scenario 2: Knowing It All By Knowing A Few {-}
-For the second scenario, imagine you are working for an NGO that helps implement voting observation missions in fragile democracies. Even though you are partnering up with local civil society organisations, you cannot send election observers too all polling stations. Luckily, this is not strictly necessary: As long as you properly randomise the polling stations you want to observe, you can infer the real, countrywide numbers on the basis of just a few hundred few hundred observations. In this class, we will learn why this is working and how you can do inference yourself. 
+For the second scenario, imagine you are working for an NGO that helps implement voting observation missions in fragile democracies. Even though you are partnering up with local civil society organisations, you cannot send election observers too all polling stations during a mission. Luckily, this is not strictly necessary: As long as you properly randomise the polling stations you want to observe, you can infer the real, countrywide numbers on the basis of just a few hundred few hundred observations. In this class, we will learn why this is working and how you can do inference yourself. 
 
 #### Scenario 3: Did the New Policy Have an Effect? {-}
 Finally, take another example: A new law introduced mandatory environmental protection for farm land. A year later, biologists measure that harmful substances in ground water are down by 20%. Was this the effect of the policy? Or was it maybe just a particularly rainy year that washed all pollutants away? Together we will learn how we can find answers by asking our data the right kind of questions.
 
 
-The module is particularly relevant if you are planning to undertake a dissertation, since it will help you find the right data and how to work with it. Data literacy is not only a really useful skill to have as a [modern citizen](https://datajusticelab.org/), it is also a valuable skill to have on your CV when you are looking for any job.
+The module is particularly relevant if you are planning to undertake a dissertation, since it will help you find the right data and how to work with it. Data literacy is not only a really useful skill to have as a [modern citizen](https://datajusticelab.org/), it is also really valuable when you are looking for a job.
 
 
 
