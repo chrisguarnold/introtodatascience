@@ -17,7 +17,7 @@ We will learn a couple of important things.
 * How to communicate and visualise results.
 * How to manage everything efficiently.
 
-To give you an idea how and why even these basic skills matter in real life, I talked to Dr Sebastian Sternberg. He has a degree in politics and works as a data scientist with KPMG at the moment. In the interview, he was so kind to offer us insighs into how he is working with data and how relevant data reports are in his daily work.
+To give you an idea how and why even these basic skills matter in real life, I talked to Dr Sebastian Sternberg. He has a degree in politics and works as a data scientist with KPMG at the moment. In the interview, he was so kind to offer us insights into how he is working with data and how relevant data reports are in his daily work.
 
 ```{r, eval=knitr::is_html_output(excludes = "epub"), results = 'asis', echo = F}
 cat(
