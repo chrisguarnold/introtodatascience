@@ -1,4 +1,12 @@
 
 # Visualising Data 
 
+
+<!-- Visualising Data	 -->
+<!-- What does visualisation mean?	Plotting  -->
+<!-- Go through all the measures again.	 -->
+
 <!-- ## Reading for This Week -->
+
+<!-- Please read chapter 2 and chapter 3 in [@Fogarty2019]. -->
+

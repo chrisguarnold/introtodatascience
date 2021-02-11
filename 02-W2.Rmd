@@ -567,6 +567,9 @@ sd(spend)
 
 
 
+Please read chapter 7 in [@Fogarty2019]. Chapters 4 and 5 are a good idea, but you do not necessarily have to.
+
+
 
 
 
