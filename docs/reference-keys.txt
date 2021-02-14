@@ -26,6 +26,20 @@ describing-data-using-r
 central-tendencies-1
 spread-1
 visualising-data
+communicating-with-data-effectively
+thinking-about-your-data-visualisation
+visualising-the-data
+nominal-data-1
+ordinal-data-1
+interval-or-continuous-data
+visualising-typical-values-and-spreads
+plotting-data-with-r
+basics-in-plotting
+colours
+visualising-nominal-and-ordinal-data
+visualising-continuous-data
+boxplots
+readings-for-this-week-1
 testing-a-hypothesis
 why-does-hypothesis-testing-work-a-primer-on-probability
 are-different-people-different
@@ -33,4 +47,5 @@ comparing-apples-and-oranges
 the-fundamental-problem-of-causal-inference
 causal-statements-from-observational-data
 multivariate-regression-and-heterogenous-treatment-effects
+useful-internet-resources
 bibliography

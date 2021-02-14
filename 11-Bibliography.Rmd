@@ -1,5 +1,10 @@
 # (PART\*) Appendix {-}
 
+# Useful Internet Resources
+[Quick-R](https://www.statmethods.net/) has been a go-to reference when you look up simple examples for quite some time. It is a really helpful source.
+
+If you want to dig a little deeper on the things we are doing, you can check out this beautiful online book titled [Causal Inference: The Mix Tape](https://mixtape.scunning.com/index.html). Also available as a print version of course...
+
 # Bibliography 
 \ref{@Bibliography}
 
