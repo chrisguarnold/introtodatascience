@@ -239,6 +239,7 @@ axis(1)
 
 
 ```
+
 Lastly, you also offered information about a variable that I think is particularly interesting. How much money do you spend when you go out? Here we can see the information nicely summarised in a box plot. The median person spends `r round(median(spend))` GBP when he or she goes out at night. A quarter of you spent between `r round(quantile(spend, 0.25))` GBP and `r round(median(spend))` GBP. Another 25% spent between `r round(median(spend))` GBP and `r round(quantile(spend, 0.75))` GBP when you go out. The whiskers give an indication of the whole spread of the distribution. There are people who typically spend `r round(min(spend))` GBP when they go out. On the other side of the spectrum somebody seems to have quite deep pockets and is able of spending up to `r round(max(spend))` GBP per night out. 
 
 ```{r echo=FALSE}
@@ -268,12 +269,15 @@ In all we do here, I am showing you some basic options. Look for the name of the
 ### Basics in Plotting
 
 First, let us whip up some data. 
+
 ```{r}
 # This creates a vector with a sequence of integers from -10 to 10 with a distance of 1
 x <- seq(-10,10,1)
 x
 ```
+
 We calculate a second variable.
+
 ```{r}
 a <- 5
 b <- 3
@@ -287,6 +291,7 @@ And then we use the function `plot()` to chart the data.
 ```{r}
 plot(x,y)
 ```
+
 Simple, right? R takes over a number of jobs for you, from selecting the right data range in both axes, to chosing the shape and colour of representations for the data etc.. To give you a first idea, this is what happens when you tweak a number of options. 
 
 ```{r}
@@ -312,6 +317,7 @@ colors()[1:15]
 ```
 
 And you can even define your own colours using the rgb function. Cardiff University's corporate identity colours for example can be generated like so.
+
 ```{r}
 # Predefined Cardiff colours
 # primary
@@ -338,6 +344,7 @@ plot(a, b,
      pch = 15
      )
 ```
+
 The number of data points is larger than the number of colours. R will therefore cycle through the colours.
 
 ### Visualising Nominal and Ordinal Data 
@@ -409,6 +416,7 @@ Finally, let us take a look at boxplots. The default function is called `boxplot
 ```{r}
 boxplot(spend)
 ```
+
 But admittedly it is far from pleasent to look at the figure. Since we want that others pay attention to our message, let us make our visual communication more appealing.
 
 ```{r}

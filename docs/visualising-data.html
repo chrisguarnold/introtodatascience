@@ -294,8 +294,8 @@ The whiskers that you see give an impression of the magnitude of the overall spr
 <p>In this first figure we are plotting the hours that you are actually studying in red and the hours that you think you should be studying in yellow. Let us begin with the median values. The median for the hours actually studied is 12, the median for the hours ideally studied is 21. You also get an impression of the magnitude of the interquartile range: it ranges from 8.75 to 18.5 for the top figure in red. For the lower figure, it begins at 14.75 and goes to a value to 25. Both distributions are a little skewed. On the top, the median is a bit to the left of the box. This means that a quarter of you study between the lower end of the box and the median value so somewhere between 8.75 and 12. The same interquartile range between the lower 25% quantile and the median is much larger for the hours that you think you should ideally be studying. The whiskers offer an impression of the data beyond the interquartile range. The smallest value for the hours that you actually study is 2
 in the top figure. The maximum hours that any of you studies is 20. The whiskers are a little different for the hours that you think you should ideally be studying. On the left, they range from 8 hours and they grow all the way up to 30 hours.</p>
 <p>In the next figure, let us take a look at your age: I plotted your age between 18 and all the way up to 30 years and you can see it is not necessary to cover anymore space. Large parts of you—at least 75%—are either 19 or 20 years. You can also see an outlier for one person who is 25 years old and is outside of the whiskers. He or she can be seen as clearly distinct circle.</p>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-63-1.png" width="672" />
-Lastly, you also offered information about a variable that I think is particularly interesting. How much money do you spend when you go out? Here we can see the information nicely summarised in a box plot. The median person spends 20 GBP when he or she goes out at night. A quarter of you spent between 10 GBP and 20 GBP. Another 25% spent between 20 GBP and 26 GBP when you go out. The whiskers give an indication of the whole spread of the distribution. There are people who typically spend 0 GBP when they go out. On the other side of the spectrum somebody seems to have quite deep pockets and is able of spending up to 50 GBP per night out.</p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
+<p>Lastly, you also offered information about a variable that I think is particularly interesting. How much money do you spend when you go out? Here we can see the information nicely summarised in a box plot. The median person spends 20 GBP when he or she goes out at night. A quarter of you spent between 10 GBP and 20 GBP. Another 25% spent between 20 GBP and 26 GBP when you go out. The whiskers give an indication of the whole spread of the distribution. There are people who typically spend 0 GBP when they go out. On the other side of the spectrum somebody seems to have quite deep pockets and is able of spending up to 50 GBP per night out.</p>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-64-1.png" width="672" /></p>
 </div>
 </div>
@@ -322,8 +322,8 @@ Lastly, you also offered information about a variable that I think is particular
 ## [16] 32.5 41.0 50.5 61.0 72.5 85.0</code></pre>
 <p>And then we use the function <code>plot()</code> to chart the data.</p>
 <div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="visualising-data.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y)</span></code></pre></div>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-67-1.png" width="672" />
-Simple, right? R takes over a number of jobs for you, from selecting the right data range in both axes, to chosing the shape and colour of representations for the data etc.. To give you a first idea, this is what happens when you tweak a number of options.</p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
+<p>Simple, right? R takes over a number of jobs for you, from selecting the right data range in both axes, to chosing the shape and colour of representations for the data etc.. To give you a first idea, this is what happens when you tweak a number of options.</p>
 <div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="visualising-data.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, </span>
 <span id="cb90-2"><a href="visualising-data.html#cb90-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">cex =</span> <span class="dv">3</span>, <span class="co"># size of the data points</span></span>
 <span id="cb90-3"><a href="visualising-data.html#cb90-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">16</span>, <span class="co"># point character</span></span>
@@ -364,8 +364,8 @@ Simple, right? R takes over a number of jobs for you, from selecting the right d
 <span id="cb94-6"><a href="visualising-data.html#cb94-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">las =</span> <span class="dv">1</span>,</span>
 <span id="cb94-7"><a href="visualising-data.html#cb94-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">15</span></span>
 <span id="cb94-8"><a href="visualising-data.html#cb94-8" aria-hidden="true" tabindex="-1"></a>     )</span></code></pre></div>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-71-1.png" width="672" />
-The number of data points is larger than the number of colours. R will therefore cycle through the colours.</p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
+<p>The number of data points is larger than the number of colours. R will therefore cycle through the colours.</p>
 </div>
 <div id="visualising-nominal-and-ordinal-data" class="section level3" number="3.2.3">
 <h3><span class="header-section-number">3.2.3</span> Visualising Nominal and Ordinal Data</h3>
@@ -424,8 +424,8 @@ The number of data points is larger than the number of colours. R will therefore
 <h3><span class="header-section-number">3.2.5</span> Boxplots</h3>
 <p>Finally, let us take a look at boxplots. The default function is called <code>boxplot()</code>. Calling it with a continuous variable such as <code>spend</code> as its argument will already generate a plot that has all the important information.</p>
 <div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="visualising-data.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(spend)</span></code></pre></div>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-77-1.png" width="672" />
-But admittedly it is far from pleasent to look at the figure. Since we want that others pay attention to our message, let us make our visual communication more appealing.</p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
+<p>But admittedly it is far from pleasent to look at the figure. Since we want that others pay attention to our message, let us make our visual communication more appealing.</p>
 <div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="visualising-data.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="co"># here, we create a data object that is a list. Think of it as a super flexible data object.</span></span>
 <span id="cb103-2"><a href="visualising-data.html#cb103-2" aria-hidden="true" tabindex="-1"></a>list.study <span class="ot">&lt;-</span> <span class="fu">list</span>(studyideal, studyperweek)</span>
 <span id="cb103-3"><a href="visualising-data.html#cb103-3" aria-hidden="true" tabindex="-1"></a></span>
