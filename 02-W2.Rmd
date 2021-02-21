@@ -1,7 +1,7 @@
 
 
 # Describing Data 
-
+<!-- For next time: Introduce quantile function. Also min and max -->
 
 ```{r echo=FALSE, include=FALSE}
 # -- housekeeping -------------------------------------------------------------- 
@@ -261,6 +261,7 @@ What is the sum of deviations? Do the maths with a couple of numbers on a piece 
 		\sum(x-\bar{x}) = ?
 	\end{equation*}
 	
+<!-- IN THE FUTURE ADD A SMALL VIDEO FOR THAT HERE -->
 You will find that it is always 0---simply because the values keep cancelling each other out. So what can we do? One solution would be to calculate the Mean Absolute Deviation $\text{MAD}$.
 	\begin{equation*}
 		\text{MAD}=\frac{\sum(|x_i-\bar{x}|)}{n}
@@ -436,6 +437,8 @@ Apparently, you were purchasing less computers during the pandemic year, more sp
 
 ## Data Management with R
 To calculate all above, we first need to take a closer look at some data management this week.
+
+<!-- IN THE FUTURE ADD SELECTION WITH $ FROM DATA FRAMES HERE -->
 
 ### Libraries
 Libraries are functions that do not ship on board your original R programme. Instead, you have to get them from them internet.

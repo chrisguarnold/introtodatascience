@@ -1,3 +1,4 @@
+fig:t1t2e
 tools-for-working-with-data
 what-is-in-a-data-spreadsheet
 key-concepts
@@ -41,6 +42,20 @@ visualising-continuous-data
 boxplots
 readings-for-this-week-1
 testing-a-hypothesis
+generating-good-hypotheses
+studying-our-sample
+investigating-the-hypothesis
+is-what-we-see-just-coincidence
+are-the-two-cohorts-the-same
+how-can-we-tell-the-difference
+hypothesis-testing
+test-test-test
+type-1-and-type-2-errors
+coding
+data-management
+hypothesis-testing-1
+mathcamp-summing-with-sigmas
+reading-for-this-week
 why-does-hypothesis-testing-work-a-primer-on-probability
 are-different-people-different
 comparing-apples-and-oranges

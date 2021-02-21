@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 10 Multivariate Regression and Heterogenous Treatment Effects | PL 9239 Introduction to Data Science for Politics and IR</title>
+  <title>Chapter 5 Coding | PL 9239 Introduction to Data Science for Politics and IR</title>
   <meta name="description" content="This is the website for the Intro to Data Science Class." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 10 Multivariate Regression and Heterogenous Treatment Effects | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta property="og:title" content="Chapter 5 Coding | PL 9239 Introduction to Data Science for Politics and IR" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 10 Multivariate Regression and Heterogenous Treatment Effects | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta name="twitter:title" content="Chapter 5 Coding | PL 9239 Introduction to Data Science for Politics and IR" />
   
   <meta name="twitter:description" content="This is the website for the Intro to Data Science Class." />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2021-02-21" />
+<meta name="date" content="2021-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="causal-statements-from-observational-data.html"/>
-<link rel="next" href="useful-internet-resources.html"/>
+<link rel="prev" href="testing-a-hypothesis.html"/>
+<link rel="next" href="why-does-hypothesis-testing-work-a-primer-on-probability.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -210,37 +210,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="part"><span><b>Scenario II: Knowing It All By Knowing A Few</b></span></li>
 <li class="chapter" data-level="4" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html"><i class="fa fa-check"></i><b>4</b> Testing a Hypothesis</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#generating-good-hypotheses"><i class="fa fa-check"></i><b>4.1</b> Generating Good Hypotheses</a></li>
-<li class="chapter" data-level="4.2" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#studying-our-sample"><i class="fa fa-check"></i><b>4.2</b> Studying Our Sample</a>
+<li class="chapter" data-level="4.1" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#what-is-a-good-hypothesis"><i class="fa fa-check"></i><b>4.1</b> What Is a Good Hypothesis ?</a></li>
+<li class="chapter" data-level="4.2" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#a-good-hypothesis-from-our-data"><i class="fa fa-check"></i><b>4.2</b> A Good Hypothesis from Our Data</a></li>
+<li class="chapter" data-level="4.3" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#testing-the-hypothesis"><i class="fa fa-check"></i><b>4.3</b> Testing the Hypothesis</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="coding.html"><a href="coding.html"><i class="fa fa-check"></i><b>5</b> Coding</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#investigating-the-hypothesis"><i class="fa fa-check"></i><b>4.2.1</b> Investigating the Hypothesis</a></li>
+<li class="chapter" data-level="5.1" data-path="coding.html"><a href="coding.html#data-management"><i class="fa fa-check"></i><b>5.1</b> Data Management</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#is-what-we-see-just-coincidence"><i class="fa fa-check"></i><b>4.3</b> Is What We See Just Coincidence?</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#are-the-two-cohorts-the-same"><i class="fa fa-check"></i><b>4.3.1</b> Are the Two Cohorts the Same?</a></li>
-<li class="chapter" data-level="4.3.2" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#how-can-we-tell-the-difference"><i class="fa fa-check"></i><b>4.3.2</b> How Can We Tell the Difference?</a></li>
-<li class="chapter" data-level="4.3.3" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>4.3.3</b> Hypothesis Testing</a></li>
-<li class="chapter" data-level="4.3.4" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#test-test-test"><i class="fa fa-check"></i><b>4.3.4</b> Test! Test! Test!</a></li>
-<li class="chapter" data-level="4.3.5" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#type-1-and-type-2-errors"><i class="fa fa-check"></i><b>4.3.5</b> Type 1 and Type 2 Errors</a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#coding"><i class="fa fa-check"></i><b>4.4</b> Coding</a>
-<ul>
-<li class="chapter" data-level="4.4.1" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#data-management"><i class="fa fa-check"></i><b>4.4.1</b> Data Management</a></li>
-<li class="chapter" data-level="4.4.2" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#hypothesis-testing-1"><i class="fa fa-check"></i><b>4.4.2</b> Hypothesis Testing</a></li>
-</ul></li>
-<li class="chapter" data-level="4.5" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#mathcamp-summing-with-sigmas"><i class="fa fa-check"></i><b>4.5</b> Mathcamp: Summing With Sigmas</a></li>
-<li class="chapter" data-level="4.6" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#reading-for-this-week"><i class="fa fa-check"></i><b>4.6</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html"><i class="fa fa-check"></i><b>5</b> Why Does Hypothesis Testing Work? A Primer on Probability</a></li>
-<li class="chapter" data-level="6" data-path="are-different-people-different.html"><a href="are-different-people-different.html"><i class="fa fa-check"></i><b>6</b> Are Different People Different?</a></li>
-<li class="chapter" data-level="7" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html"><i class="fa fa-check"></i><b>7</b> Comparing Apples and Oranges</a></li>
+<li class="chapter" data-level="6" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html"><i class="fa fa-check"></i><b>6</b> Why Does Hypothesis Testing Work? A Primer on Probability</a></li>
+<li class="chapter" data-level="7" data-path="are-different-people-different.html"><a href="are-different-people-different.html"><i class="fa fa-check"></i><b>7</b> Are Different People Different?</a></li>
+<li class="chapter" data-level="8" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html"><i class="fa fa-check"></i><b>8</b> Comparing Apples and Oranges</a></li>
 <li class="part"><span><b>Scenario III: Did the New Policy Have an Effect?</b></span></li>
-<li class="chapter" data-level="8" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html"><i class="fa fa-check"></i><b>8</b> The Fundamental Problem of Causal Inference</a></li>
-<li class="chapter" data-level="9" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html"><i class="fa fa-check"></i><b>9</b> Causal Statements from Observational Data</a></li>
-<li class="chapter" data-level="10" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html"><i class="fa fa-check"></i><b>10</b> Multivariate Regression and Heterogenous Treatment Effects</a></li>
+<li class="chapter" data-level="9" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html"><i class="fa fa-check"></i><b>9</b> The Fundamental Problem of Causal Inference</a></li>
+<li class="chapter" data-level="10" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html"><i class="fa fa-check"></i><b>10</b> Causal Statements from Observational Data</a></li>
+<li class="chapter" data-level="11" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html"><i class="fa fa-check"></i><b>11</b> Multivariate Regression and Heterogenous Treatment Effects</a></li>
 <li class="part"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="11" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>11</b> Useful Internet Resources</a></li>
-<li class="chapter" data-level="12" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i><b>12</b> Bibliography</a></li>
+<li class="chapter" data-level="12" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>12</b> Useful Internet Resources</a></li>
+<li class="chapter" data-level="13" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i><b>13</b> Bibliography</a></li>
 </ul>
 
       </nav>
@@ -258,21 +245,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="multivariate-regression-and-heterogenous-treatment-effects" class="section level1" number="10">
-<h1><span class="header-section-number">Chapter 10</span> Multivariate Regression and Heterogenous Treatment Effects</h1>
-<!-- ## Reading for This Week -->
+<div id="coding" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Coding</h1>
+<p>MAKE A VIDEO ON SIGMA ADDITION THAT YOU CAN PULL BACK TO W2 IN THE FUTURE</p>
+<div id="data-management" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Data Management</h2>
+<p>Data management: Recoding, Dummying (chap 6)
+<!-- ## R:  -->
+<!-- Data management: na.rm -->
+<!-- ## Reading for This Week --></p>
 
 </div>
-
-
-
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="causal-statements-from-observational-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="useful-internet-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="testing-a-hypothesis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

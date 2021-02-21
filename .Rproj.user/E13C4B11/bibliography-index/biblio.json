@@ -70,7 +70,7 @@
             "issued": {
                 "date-parts": [
                     [
-                        2019
+                        2020
                     ]
                 ]
             },
@@ -113,11 +113,11 @@
             "issued": {
                 "date-parts": [
                     [
-                        2020
+                        2021
                     ]
                 ]
             },
-            "note": "R package version 1.30",
+            "note": "R package version 1.31",
             "title": "Knitr: A general-purpose package for dynamic report generation in r",
             "title-short": "Knitr",
             "type": "book"
