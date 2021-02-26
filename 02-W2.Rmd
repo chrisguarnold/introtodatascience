@@ -1,7 +1,7 @@
 
 
 # Describing Data 
-<!-- For next time: Introduce quantile function. Also min and max -->
+<!-- For next time: Introduce quantile function. Also min and max. also how to save data as an .xls-->
 
 ```{r echo=FALSE, include=FALSE}
 # -- housekeeping -------------------------------------------------------------- 

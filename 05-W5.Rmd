@@ -1,4 +1,210 @@
 
 # Why Does Hypothesis Testing Work? A Primer on Probability
 
-<!-- ## Reading for This Week -->
+Why do we care so much about inference? We can calculate central tendencies and spreads. Why learn more?
+
+This week we are revisiting the concepts from last week and will take a closer look at them. To goal is that you gain a deeper understanding about what it is that we are actually doing here.
+
+* What does inference mean? 
+* What are those p-values actually? 
+* Why does all this inference actually work? 
+* And why is it so important to properly randomise the samples that we draw? 
+
+
+
+## Distributions
+What are those p-values exactly we heard of last week? To properly understand them, let us begin with distributions and a number of related ideas that will all be useful. 
+
+
+### Probability 
+
+Let us begin with probability and take a look at a definition. We will define probability from a frequentist perspective as follows.
+
+> The probability of an outcome is the frequency of that outcome if the process were repeated a large number of times. 
+
+This says that we can learn the probability of an event by *trying it out* many times---whatever *it* means.
+
+Here are some examples that you know from everyday life.
+
+* Toss a coin: The probability to have 'head' is Pr(head) = 1/2
+* Toss a [dice](https://www.youtube.com/watch?v=4Dryu8gybd0): 
+  * The probability to throw a 1 is Pr(1) = 1/6
+  * The probability to throw everything else than a 1 is Pr(not 1) = 5/6
+
+
+### Distribution 
+The next useful concept is the distribution. You can get to the distribution of an event in a pretty straightforward way. Imagine we were playing [Boule](https://en.wikipedia.org/wiki/Boules) in our local club 'Allez les Bleus'. On our Thursday evening training sessions we are trying to hit a line that is exactly 5m away. As avid data aficionados we are measuring each try. At home you sit down and chart of histogram of all the tries that we have been making and turn it into a histogram.
+
+```{r fig.show="hold", out.width="30%", fig.align="center", fig.cap="A Histogram Becoming a Distribution.", echo=FALSE}
+# This works in the browser but not in the R Markdown Viewer.
+knitr::include_graphics("./figures/w5_distr1.pdf")
+knitr::include_graphics("./figures/w5_distr2.pdf")
+knitr::include_graphics("./figures/w5_distr3.pdf")
+knitr::include_graphics("./figures/w5_distr4.pdf")
+knitr::include_graphics("./figures/w5_distr5.pdf")
+knitr::include_graphics("./figures/w5_distr6.pdf")
+```
+
+
+
+On the horizontal axis you are observing the possible outcomes. In statistical theory, this area is also called the *sampling space*. In the example with the coin, the sampling space $S$ of one fair flip one coin is $S = {H, T}$ where $H = \text{heads}$ and $T = \text{tails}$ are the outcomes. 
+
+On the vertical you are at first simply observing the frequencies. Increasing bins of the histogram leads to increasingly realistic representations of the data. If you narrow the bandwidth of the histogram to be infinitely small, you end up with a continuous representation of the data. Once the data is continuous, we do not speak of frequencies any longer---simply because each point on the x-axis is not infinitely small. We now call the vertical axis density.
+
+Given our definition of probability above, if we were to repeatedly throw the *boule* infinitely many times, this data is the distribution of the probability to actually hit the 5m line. 
+
+There is an important property of distributions: Everything under the curve adds up to 1. This means that probability distributions have a straightforward geometric interpretation: we can simply ask for value ranges that we are interested in and see how often we observe it on the distribution.
+
+<!-- XXX video drawing distributions.  -->
+<!-- - explain the idea -->
+<!-- - half of the line -->
+<!-- - but if we want to know more, we have to introduce a more rigorous concept. -->
+
+
+### The Normal Distribution 
+But if we want to know more, we have to introduce a more rigorous concept of what a probability distribution actually is. Let us get to know the Normal Distribution, a very special probability distribution. This is how it looks like.
+
+
+```{r fig.show="hold", out.width="30%", fig.align="center", fig.cap="A Histogram Becoming a Distribution.", echo=FALSE}
+# This works in the browser but not in the R Markdown Viewer.
+knitr::include_graphics("./figures/w5_stnorm.pdf")
+```
+
+
+
+The Normal Distribution has a number of important properties. 
+
+* It is always a bell-shaped curve.
+* It is always symmetrical.
+* The mean = median = mode.
+* The tails are asymptotic, which means the values get closer to the x-axis the further you go into infinity, but never intercept it.
+* Two parameters drive the distribution: The mean $\mu$ and the standard deviation $\sigma$.
+
+
+The Normal Distribution has a proper formula that allows us to calculate the density. Remember, the mean $\mu$ and the standard deviation $\sigma$ determine how the function looks like. Then, given any value $x$ we can calculate the resulting density. The formula for the probability density function was discovered by [Carl Friedrich Gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss).
+
+\[f(x; \mu,\sigma^{2})=\frac{1}{\sqrt{2\pi\sigma^{2}}}
+			exp \left[ - \frac{(x-\mu)^{2}}{2\sigma^{2}} \right] \]
+
+The parameter $\pi$ is the [famous mathematical constant](https://en.wikipedia.org/wiki/Pi). The expression $exp(\cdot)$ is short for $e^{(\cdot)}$, where $e$ is yet another important mathematical constant, the [Euler number](https://en.wikipedia.org/wiki/E_(mathematical_constant)). You do not have to understand all details here, the main point is that you can see how $\mu$ and $\sigma$ drive how the whole thing works. 
+
+The resulting shape of the function has yet another couple of great characteristics. The area covered within the bounds of the standard deviation always remains the same:
+
+*  The area ± 1 SD from the mean always covers 68.3%
+*  The area ± 2 SD from the mean always covers 95.4%
+*  The area ± 3 SD from the mean always covers 99.7% etc.
+
+Take a look at the figure below. We have two different Normal distributions. On the left, $\mu$ = 5 and $\sigma$ = 1 and on the right $\mu$ = 5 and $\sigma$ = 2. In both cases, the area that covers one standard deviation to the left and to the right of the mean covers 68.3%. This means that if we have a process that we can describe with this function, then we know that there is a probability of 68.3% that we end up with a value between 4 and 6 on the left figure. Likewise, with the same probability of 68.3% we will end up between 3 and 7 on the right figure. The same holds for all other values of the standard deviation (2 SD, 3 SD, ...) [Fascinating!](https://www.youtube.com/watch?v=cFods1KSWsQ).
+
+
+```{r fig.show="hold", fig.align="center", fig.cap="Two Different Normal Distributions and The Probability Mass Covered By Their Standard Deviations.", echo=FALSE}
+# This works in the browser but not in the R Markdown Viewer.
+knitr::include_graphics("./figures/w5_nd2.pdf")
+```
+
+
+This is really useful, because *independent of the exact shape of the Normal Distribution*---that is *indenendent of the values of $\mu$ and $\sigma$*---we can now draw all kinds of probabilities using simple geometry. 
+
+```{r fig.show="hold", out.width="100%", fig.align="center", fig.cap="A Histogram Becoming a Distribution.", echo=FALSE}
+# This works in the browser but not in the R Markdown Viewer.
+knitr::include_graphics("./figures/w5_norm1.pdf")
+```
+
+Remember what we know: one standard deviation to both sides covers 68.3%, two standard deviations to both sides covers 95.4%.
+
+* The probability to observe a value between 0 and 1: 34.15%. We know that 1 standard deviation to the left *and* right adds to 68.3%, so 68.3%/2 = 34.15%.
+* The probability to observe a value > 1: 15.85%. Simply take the left 50% and also add the one standard deviation to the right of the mean 68.3%/2 = 34.15%. So 50% + 34.15% = 84.15%. Now given that all under the curve adds up to 100% we simply subtract the 84.15%---and get 15.85%.
+
+
+
+
+### z-scores
+What are z-scores and why do we need them? We can use them if we want to make comparisons across samples. For example, we might want to compare the effort from two students Alexandra and Bastian who are in different cohorts. *In comparison to their peers*, is Alexandra more diligent than Peter?
+
+* Alexandra studies 40h per week, Bastian 42h. So *prima facie*, Bastian is working more. But: Is he working more than Alexandra *in the light of the different study regimes of their cohorts?*
+* To determine who studies harder we can standardize the effort of each of the students: How different are Alexandra and Bastian from the typical student in their class?
+
+
+The idea is straightforward: We calculate the difference of each student from the average per spread of their respective cohorts. To compare variables from different distributions, we can standardize them by building so called ‘z-scores’ 
+ \[ z_{i} = \frac{x_{i}-\bar x}{\sigma} \]
+
+A so standardized variable will have mean zero and a standard deviation of one. Let us do the math.
+
+* We learn that Alexandra’s class has a mean of 30h with a standard deviation of 5. 
+* Bastian’s class has mean of 40h with standard deviation 6.
+* We begin with the z-score from Alexandra. It is $z_A =(40−30)/5=2$ 
+* Bastian's z-score is $z_B =(42−40)/6=0.33$
+
+What do we conclude? Well, Alexandra is on average much more 'off' in comparison to her peers than Bastian. She is much more of an outlier and he actually is much more of an average guy when it comes to studying.
+
+[One more thing.](https://www.youtube.com/watch?v=sdqMvEZTxlI) The z-scores have a link to the Normal distribution. We can actually use them to calculate the probability of an event. 
+
+The only thing you have to do is convert your data into z-score. And then you can look up its probability in the probability tables of a normal distribution. 
+
+
+```{r fig.show="hold", out.width="50%", fig.align="center", fig.cap="A Histogram Becoming a Distribution.", echo=FALSE}
+# This works in the browser but not in the R Markdown Viewer.
+knitr::include_graphics("./figures/w5_norm2.pdf")
+knitr::include_graphics("./figures/w5_zscores.pdf")
+```
+
+Here is a quick video where I show you how to use the table.
+
+
+
+## Inference 
+Let us continue with a proper look at inference. We will revisit some topics we talked about last week.
+
+### Population and Samples 
+### Standard Error 
+### Confidence Intervals
+### p-values
+
+
+### The Central Limit Theorem
+
+<!-- The Normal Distribution is actually even more amazing. The whole world would probably not really work if it did not exist. The reason is: all statistical processes boil down to being normal eventually---as proven by the mathematician [Pierre-Simon Laplace](https://en.wikipedia.org/wiki/Pierre-Simon_Laplace). -->
+
+
+<!-- Informally, this is what the Central Limit Theorem is saying. -->
+<!-- * We have a population distribution with mean $\mu$ and variance $\sigma^2$ and we are interested in its mean. -->
+<!-- * Repeatedly taking samples from that distribution, yields the sampling distribution of the mean which approaches a normal distribution with mean $\mu$ and variance $\sigma^2/n$ as n increases. -->
+<!-- * This holds regardless of the shape of the original distribution. -->
+<!-- * The Central Limit Theorem is the basis for application of statistics to many *natural* phenomena (which are the sum of many unobserved random events). -->
+<!-- * How? Take a sample, calculate its mean. Do the same thing again and again. The distribution of sample means will be normal. -->
+
+
+
+<!-- Take a look at the famous Galton Board. Balls are entered at the top and have to take a series of left-right decisions. The result of it in the end is the normal distribution.  -->
+
+
+<!-- ```{r, eval=knitr::is_html_output(excludes = "epub"), results = 'asis', echo = F} -->
+<!-- cat( -->
+<!-- '<iframe width="560" height="315" src="https://www.youtube.com/embed/3m4bxse2JEQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' -->
+<!-- ) -->
+<!-- ``` -->
+
+
+<!-- In the video, this works well for the large and the medium balls. But it does not really work for the small ones. Why not? David Bulger offers a great intuition in the comments: -->
+
+<!-- > Watching the small balls fall, you can see that they tend to gather momentum and run in diagonal paths to the left or right—that is, they don't change direction much. This illustrates the importance of the independence assumption in the central limit theorem: if the individual random variables are not independent, then their sum may not tend to a normal distribution. -->
+
+
+## Being 95% certain in 5 steps
+
+<!-- 5 Videos -->
+
+
+
+## Revisiting the Original Questions
+
+
+<!-- * What does inference mean?  -->
+<!-- * What are those p-values actually?  -->
+<!-- * Why does all this inference actually work?  -->
+<!-- * And why is it so important to properly randomise the samples that we draw?  -->
+
+## Reading for This Week
+For this week, please read chapter 4 in @Agresti2018.
+
+
