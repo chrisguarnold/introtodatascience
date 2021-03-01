@@ -78,6 +78,7 @@ summing-up-what-is-inference
 confidence-intervals-being-95-certain
 revisiting-t-tests
 revisiting-the-original-questions
+a-simple-figure-with-two-variables
 reading-for-this-week-1
 are-different-people-different
 comparing-apples-and-oranges

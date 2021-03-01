@@ -32,6 +32,8 @@ cardiffpurple2 <- rgb(60,44,89, maxColorValue = 255)
 
 # Why Does Hypothesis Testing Work? A Primer on Probability
 
+
+
 Why do we care so much about inference? We can calculate central tendencies and spreads. Why learn more?
 
 This week we are revisiting the concepts from last week and will take a closer look at them. To goal is that you gain a deeper understanding about what it is that we are actually doing here.
@@ -67,14 +69,16 @@ While you cannot observe these probabilities from one throw alone, try it out a 
 ### Distribution 
 The next useful concept is the distribution. You can get to the distribution of an event in a pretty straightforward way. Imagine we were playing [Boule](https://en.wikipedia.org/wiki/Boules) in our local club 'Allez les Bleus'. On our Thursday evening training sessions we are trying to hit a line that is exactly 5m away. As avid data aficionados we are measuring each try and record the data in a spread sheet. At home you sit down and chart of histogram of all the tries that we have been throwing.
 
+HAUI
+
 ```{r fig.show="hold", out.width="30%", fig.align="center", fig.cap="A Histogram Becoming a Distribution.", echo=FALSE}
 # This works in the browser but not in the R Markdown Viewer.
-knitr::include_graphics("./figures/w5_distr1.pdf")
-knitr::include_graphics("./figures/w5_distr2.pdf")
-knitr::include_graphics("./figures/w5_distr3.pdf")
-knitr::include_graphics("./figures/w5_distr4.pdf")
-knitr::include_graphics("./figures/w5_distr5.pdf")
-knitr::include_graphics("./figures/w5_distr6.pdf")
+knitr::include_graphics("./figures/w5_distr1.png")
+knitr::include_graphics("./figures/w5_distr2.png")
+knitr::include_graphics("./figures/w5_distr3.png")
+knitr::include_graphics("./figures/w5_distr4.png")
+knitr::include_graphics("./figures/w5_distr5.png")
+knitr::include_graphics("./figures/w5_distr6.png")
 ```
 
 
@@ -101,7 +105,7 @@ But if we want to know more, we have to introduce a more rigorous concept of wha
 
 ```{r fig.show="hold", out.width="30%", fig.align="center", fig.cap="A Histogram Becoming a Distribution.", echo=FALSE}
 # This works in the browser but not in the R Markdown Viewer.
-knitr::include_graphics("./figures/w5_stnorm.pdf")
+knitr::include_graphics("./figures/w5_stnorm.png")
 ```
 
 
@@ -133,7 +137,7 @@ Take a look at the figure below. We have two different Normal distributions. On 
 
 ```{r fig.show="hold", fig.align="center", fig.cap="Two Different Normal Distributions and The Probability Mass Covered By Their Standard Deviations.", echo=FALSE}
 # This works in the browser but not in the R Markdown Viewer.
-knitr::include_graphics("./figures/w5_nd2.pdf")
+knitr::include_graphics("./figures/w5_nd2.png")
 ```
 
 
@@ -141,7 +145,7 @@ This is really useful, because *independent of the exact shape of the Normal Dis
 
 ```{r fig.show="hold", out.width="100%", fig.align="center", fig.cap="A Histogram Becoming a Distribution.", echo=FALSE}
 # This works in the browser but not in the R Markdown Viewer.
-knitr::include_graphics("./figures/w5_norm1.pdf")
+knitr::include_graphics("./figures/w5_norm1.png")
 ```
 
 Remember what we know: one standard deviation to both sides covers 68.3%, two standard deviations to both sides covers 95.4%.
@@ -179,8 +183,8 @@ The only thing you have to do is convert your data into z-score. And then you ca
 
 ```{r fig.show="hold", out.width="50%", fig.align="center", fig.cap="A Histogram Becoming a Distribution.", echo=FALSE}
 # This works in the browser but not in the R Markdown Viewer.
-knitr::include_graphics("./figures/w5_norm2.pdf")
-knitr::include_graphics("./figures/w5_zscores.pdf")
+knitr::include_graphics(normalizePath("./figures/w5_norm2.png"))
+knitr::include_graphics(normalizePath("./figures/w5_zscores.png"))
 ```
 
 Here is a quick video where I show you how to use the table.
@@ -260,7 +264,7 @@ Luckily, when we generate the sample with our computer, we can simulate a truly 
 
 ```{r fig.show="hold", out.width="50%", fig.align="center", fig.cap="Drawing Many Samples from the Population.", echo=FALSE}
 # This works in the browser but not in the R Markdown Viewer.
-knitr::include_graphics("./figures/w5_pop3.pdf")
+knitr::include_graphics("./figures/w5_pop3.png")
 ```
 
 
@@ -275,7 +279,7 @@ Let us take a look at a *real* example in Figure \@ref(fig:distribution-sampling
 
 ```{r distribution-sampling, fig.show="hold", out.width="100%", fig.align="center", fig.cap="Drawing Many Samples from the Population.", echo=FALSE}
 # This works in the browser but not in the R Markdown Viewer.
-knitr::include_graphics("./figures/w5_norm3c.pdf")
+knitr::include_graphics("./figures/w5_norm3c.png")
 ```
 
 If we were able to repeat the sampling a great number of times, there actually *is* a way in which we can really measure the unkown population parameter $\mu$, the average of the *population*.
@@ -377,7 +381,7 @@ Let us assume we want to catch the population mean with our sample in 95 out of 
 
 ```{r fig.show="hold", fig.align="center", fig.cap="Two Different Normal Distributions and The Probability Mass Covered By Their Standard Deviations.", echo=FALSE}
 # This works in the browser but not in the R Markdown Viewer.
-knitr::include_graphics("./figures/w5_nd2.pdf")
+knitr::include_graphics("./figures/w5_nd2.png")
 ```
 
 
@@ -432,6 +436,39 @@ Let us revisit the original questions we initially set out above.
 * How can we be 95% confident about the test of a hypothesis?
 
 If you worked through this class properly and also did the readings, you should be able to answer the questions. If not, let's be in touch in the weekly workshop on Tuesdays.
+
+## A Simple Figure With Two Variables
+This week was quite heavy on concepts, hence let us be really quick on the coding. Just a simply plot of two variables. In all we are doing, I am introducing some functions for randomly sampling in different ways.
+Let us first do a random draw from a normal distribution. We then calculate a second variable from it, adding a bit of normally distributed noise on top. Then we plot it using colour.
+
+```{r}
+# Select var1 randomly from a normal distribution
+var1 <- rnorm(n = 100, mean = 5, sd = 3)
+# Select some noise again randomly from a normal distribution
+var2.noise <- rnorm(n=100, mean = 0, sd = 0.5)
+# create second variable
+var2 <- var1 + var2.noise
+
+# Here I sample two colours randomly 
+allcolours <- colours()
+two.colours <- sample(allcolours, 2)
+
+# Plot two variables
+plot(var1, var2, 
+     pch = 21, # Setting Point Characters, here filled circles
+     col = two.colours[1], # using the first colour for the frame
+     bg = two.colours[2], # using the second colour for the background
+     las = 1, #rotates numbers on the left
+     xlab = 'Label on the x-Axis')
+
+# abline is very useful for plotting all sorts of lines
+# a: intercept, b: slope
+abline(a= 0, b = 1, col = cardiffred) 
+# horizontal line at 0, lwd: line width
+abline(h = 0, col = cardiffblue, lwd = 3)
+# vertical line at 0, lty: line type
+abline(v = 0, lty = 3)
+```
 
 ## Reading for This Week
 For this week, please read chapter 4 in @Agresti2018.

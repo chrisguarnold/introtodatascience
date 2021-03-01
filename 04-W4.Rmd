@@ -236,7 +236,7 @@ We could observe two samples that seem to be different even though in reality th
 
 ```{r t1t2e, out.width=300, fig.align="center", fig.cap="Type 1 and Type 2 Errors", echo=FALSE}
 # This works in the browser but not in the R Markdown Viewer.
-knitr::include_graphics("./figures/t1t2e.pdf")
+knitr::include_graphics("./figures/t1t2e.png")
 ```
 
 
