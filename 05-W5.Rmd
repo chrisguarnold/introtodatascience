@@ -410,7 +410,7 @@ ttest.perweek.21.18 <- t.test(dat18$studyperweek, studyperweek)
 ttest.perweek.21.18
 ```
 
-R returns us the confidence interval: Here, it is anywhere between `r round(ttest.perweek.21.18$conf.int, 2)[1] ` and `r `round(ttest.perweek.21.18$conf.int, 2)[2]`. This means that your confidence interval covers the 0---with a probability of 95% you could not tell whether the true difference in the means is lower 0, equal 0 or higher than 0. Hence, you cannot refute the original hypothesis that the means are the same. Therefore, you have to conclude that the means are probably the same.
+R returns us the confidence interval: Here, it is anywhere between `r round(ttest.perweek.21.18$conf.int, 2)[1] ` and `r round(ttest.perweek.21.18$conf.int, 2)[2]`. This means that your confidence interval covers the 0---with a probability of 95% you could not tell whether the true difference in the means is lower 0, equal 0 or higher than 0. Hence, you cannot refute the original hypothesis that the means are the same. Therefore, you have to conclude that the means are probably the same.
 
 
 
@@ -421,7 +421,7 @@ ttest.perweek.21.19 <- t.test(dat19$studyperweek, studyperweek)
 ttest.perweek.21.19
 ```
 
-Now, the confidence interval it is anywhere between `r round(ttest.perweek.21.19$conf.int, 2)[1] ` and `r `round(ttest.perweek.21.19$conf.int, 2)[2]`. The confidence interval *does not* cover the 0. You can conclude that with a probability of 95% the difference between the cohort *is* larger than 0. Now, you can refute the original hypothesis that the means are the same---at least with a 95% confidence in the results. 
+Now, the confidence interval it is anywhere between `r round(ttest.perweek.21.19$conf.int, 2)[1] ` and `r round(ttest.perweek.21.19$conf.int, 2)[2]`. The confidence interval *does not* cover the 0. You can conclude that with a probability of 95% the difference between the cohort *is* larger than 0. Now, you can refute the original hypothesis that the means are the same---at least with a 95% confidence in the results. 
 
 
 
