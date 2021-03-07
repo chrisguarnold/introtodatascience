@@ -24,7 +24,7 @@
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2021-03-01" />
+<meta name="date" content="2021-03-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -253,7 +253,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.4" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#a-simple-figure-with-two-variables"><i class="fa fa-check"></i><b>5.4</b> A Simple Figure With Two Variables</a></li>
 <li class="chapter" data-level="5.5" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#reading-for-this-week-1"><i class="fa fa-check"></i><b>5.5</b> Reading for This Week</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="are-different-people-different.html"><a href="are-different-people-different.html"><i class="fa fa-check"></i><b>6</b> Are Different People Different?</a></li>
+<li class="chapter" data-level="6" data-path="are-different-people-different.html"><a href="are-different-people-different.html"><i class="fa fa-check"></i><b>6</b> Are Different People Different?</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#a-recap-from-last-week"><i class="fa fa-check"></i><b>6.1</b> A Recap from Last Week</a></li>
+<li class="chapter" data-level="6.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#what-are-bivariate-relationships"><i class="fa fa-check"></i><b>6.2</b> What Are Bivariate Relationships?</a></li>
+<li class="chapter" data-level="6.3" data-path="are-different-people-different.html"><a href="are-different-people-different.html#categorical-data"><i class="fa fa-check"></i><b>6.3</b> Categorical Data</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#describing-the-sample"><i class="fa fa-check"></i><b>6.3.1</b> Describing the Sample</a></li>
+<li class="chapter" data-level="6.3.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#estimating-the-parameters-in-the-population"><i class="fa fa-check"></i><b>6.3.2</b> Estimating the Parameters in the Population</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="are-different-people-different.html"><a href="are-different-people-different.html#continuous-data"><i class="fa fa-check"></i><b>6.4</b> Continuous Data</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#describe"><i class="fa fa-check"></i><b>6.4.1</b> Describe</a></li>
+<li class="chapter" data-level="6.4.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#measures-about-the-population"><i class="fa fa-check"></i><b>6.4.2</b> Measures About the Population</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="are-different-people-different.html"><a href="are-different-people-different.html#code"><i class="fa fa-check"></i><b>6.5</b> Code</a></li>
+<li class="chapter" data-level="6.6" data-path="are-different-people-different.html"><a href="are-different-people-different.html#reading-for-this-week-2"><i class="fa fa-check"></i><b>6.6</b> Reading for This Week</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html"><i class="fa fa-check"></i><b>7</b> Comparing Apples and Oranges</a></li>
 <li class="part"><span><b>Scenario III: Did the New Policy Have an Effect?</b></span></li>
 <li class="chapter" data-level="8" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html"><i class="fa fa-check"></i><b>8</b> The Fundamental Problem of Causal Inference</a></li>
@@ -408,15 +424,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4>Objects</h4>
 <p>R can keep several objects in memory at the same time. To distinguish them, object have names. Objects are assigned with an arrow like this: <code>&lt;-</code></p>
 <p>Let us assign some values to objects.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="tools-for-working-with-data.html#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb3-2"><a href="tools-for-working-with-data.html#cb3-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">6</span></span>
-<span id="cb3-3"><a href="tools-for-working-with-data.html#cb3-3" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> a <span class="sc">*</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="tools-for-working-with-data.html#cb4-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb4-2"><a href="tools-for-working-with-data.html#cb4-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">6</span></span>
+<span id="cb4-3"><a href="tools-for-working-with-data.html#cb4-3" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> a <span class="sc">*</span> b</span></code></pre></div>
 <p>Objects can be called using their name. Here on this homepage, you will see a second grey block that will give you the output. If you type all up in R Studio, you will find all R related output in the console.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="tools-for-working-with-data.html#cb4-1" aria-hidden="true" tabindex="-1"></a>a</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="tools-for-working-with-data.html#cb5-1" aria-hidden="true" tabindex="-1"></a>a</span></code></pre></div>
 <pre><code>## [1] 5</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="tools-for-working-with-data.html#cb6-1" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="tools-for-working-with-data.html#cb7-1" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
 <pre><code>## [1] 6</code></pre>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="tools-for-working-with-data.html#cb8-1" aria-hidden="true" tabindex="-1"></a>c</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="tools-for-working-with-data.html#cb9-1" aria-hidden="true" tabindex="-1"></a>c</span></code></pre></div>
 <pre><code>## [1] 30</code></pre>
 <p>We can combine several values with the function <code>c()</code>. Functions are really useful. There are basically three elements to a function.
 * First of call, they have a name—here in this case it is the letter <code>c</code> which stands for <em>concatenate</em>.
@@ -426,16 +442,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 a</code></pre>
 <p>The object <code>a</code> is not a scalar any more. It is now a vector that has three elements to it, the numbers 1, 2 and 3.</p>
 <p>You can of course also assign more than just numbers. We can assign strings—here a couple of three digit country codes.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="tools-for-working-with-data.html#cb11-1" aria-hidden="true" tabindex="-1"></a>cntry <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;BRA&quot;</span>, <span class="st">&quot;GER&quot;</span>, <span class="st">&quot;FRA&quot;</span>, <span class="st">&quot;NLD&quot;</span>)</span>
-<span id="cb11-2"><a href="tools-for-working-with-data.html#cb11-2" aria-hidden="true" tabindex="-1"></a>cntry</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="tools-for-working-with-data.html#cb12-1" aria-hidden="true" tabindex="-1"></a>cntry <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;BRA&quot;</span>, <span class="st">&quot;GER&quot;</span>, <span class="st">&quot;FRA&quot;</span>, <span class="st">&quot;NLD&quot;</span>)</span>
+<span id="cb12-2"><a href="tools-for-working-with-data.html#cb12-2" aria-hidden="true" tabindex="-1"></a>cntry</span></code></pre></div>
 <pre><code>## [1] &quot;BRA&quot; &quot;GER&quot; &quot;FRA&quot; &quot;NLD&quot;</code></pre>
 <p>If you want to see all the objects that we have in the workspace so far, try the function <code>ls()</code>.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="tools-for-working-with-data.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="tools-for-working-with-data.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;a&quot;     &quot;b&quot;     &quot;c&quot;     &quot;cntry&quot;</code></pre>
 <p>You want to remove an object? Then use the function <code>rm()</code> like so.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="tools-for-working-with-data.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(cntry)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="tools-for-working-with-data.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(cntry)</span></code></pre></div>
 <p>See, the object <code>cntry</code> is not in the workspace any more.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="tools-for-working-with-data.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="tools-for-working-with-data.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;</code></pre>
 </div>
 <div id="r-data-types" class="section level4 unnumbered">
@@ -448,42 +464,42 @@ a</code></pre>
 <li>Data frame: Collections of vectors of (possibly) different types but with same length</li>
 </ul>
 <p>Let us begin from scratch with am empty workspace. To delete everything, we will nest two of the functions above.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="tools-for-working-with-data.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="tools-for-working-with-data.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span></code></pre></div>
 <p>First we assign some scalars.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="tools-for-working-with-data.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># scalar</span></span>
-<span id="cb19-2"><a href="tools-for-working-with-data.html#cb19-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">43</span></span>
-<span id="cb19-3"><a href="tools-for-working-with-data.html#cb19-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> a <span class="sc">+</span> <span class="dv">7</span></span>
-<span id="cb19-4"><a href="tools-for-working-with-data.html#cb19-4" aria-hidden="true" tabindex="-1"></a>a</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="tools-for-working-with-data.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># scalar</span></span>
+<span id="cb20-2"><a href="tools-for-working-with-data.html#cb20-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">43</span></span>
+<span id="cb20-3"><a href="tools-for-working-with-data.html#cb20-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> a <span class="sc">+</span> <span class="dv">7</span></span>
+<span id="cb20-4"><a href="tools-for-working-with-data.html#cb20-4" aria-hidden="true" tabindex="-1"></a>a</span></code></pre></div>
 <pre><code>## [1] 43</code></pre>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="tools-for-working-with-data.html#cb21-1" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="tools-for-working-with-data.html#cb22-1" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
 <pre><code>## [1] 50</code></pre>
 <p>And here we go with some vectors.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="tools-for-working-with-data.html#cb23-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(a,b,a,b)</span>
-<span id="cb23-2"><a href="tools-for-working-with-data.html#cb23-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> x <span class="sc">+</span> <span class="dv">10</span></span>
-<span id="cb23-3"><a href="tools-for-working-with-data.html#cb23-3" aria-hidden="true" tabindex="-1"></a>cntry <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;Brasil&#39;</span>, <span class="st">&#39;Canada&#39;</span>, <span class="st">&#39;China&#39;</span>, <span class="st">&#39;Singapore&#39;</span>)</span>
-<span id="cb23-4"><a href="tools-for-working-with-data.html#cb23-4" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="tools-for-working-with-data.html#cb24-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(a,b,a,b)</span>
+<span id="cb24-2"><a href="tools-for-working-with-data.html#cb24-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> x <span class="sc">+</span> <span class="dv">10</span></span>
+<span id="cb24-3"><a href="tools-for-working-with-data.html#cb24-3" aria-hidden="true" tabindex="-1"></a>cntry <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;Brasil&#39;</span>, <span class="st">&#39;Canada&#39;</span>, <span class="st">&#39;China&#39;</span>, <span class="st">&#39;Singapore&#39;</span>)</span>
+<span id="cb24-4"><a href="tools-for-working-with-data.html#cb24-4" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>## [1] 43 50 43 50</code></pre>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="tools-for-working-with-data.html#cb25-1" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="tools-for-working-with-data.html#cb26-1" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
 <pre><code>## [1] 53 60 53 60</code></pre>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="tools-for-working-with-data.html#cb27-1" aria-hidden="true" tabindex="-1"></a>cntry</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="tools-for-working-with-data.html#cb28-1" aria-hidden="true" tabindex="-1"></a>cntry</span></code></pre></div>
 <pre><code>## [1] &quot;Brasil&quot;    &quot;Canada&quot;    &quot;China&quot;     &quot;Singapore&quot;</code></pre>
 <p>Something interesting just happened here: You see the object <code>x</code> which is a vector? R added <code>10</code> to each of the scalars in <code>x</code> when calculating <code>y</code>. In programming you call this <em>broadcasting</em>. Pretty nifty!</p>
 <p>Next, we build a matrix, for example by binding two columns with the function <code>cbind()</code> or two rows with the function <code>rbind()</code>.</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="tools-for-working-with-data.html#cb29-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span><span class="fu">cbind</span>(x,y)</span>
-<span id="cb29-2"><a href="tools-for-working-with-data.html#cb29-2" aria-hidden="true" tabindex="-1"></a>z2 <span class="ot">&lt;-</span><span class="fu">rbind</span>(x,y)</span>
-<span id="cb29-3"><a href="tools-for-working-with-data.html#cb29-3" aria-hidden="true" tabindex="-1"></a>z</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="tools-for-working-with-data.html#cb30-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span><span class="fu">cbind</span>(x,y)</span>
+<span id="cb30-2"><a href="tools-for-working-with-data.html#cb30-2" aria-hidden="true" tabindex="-1"></a>z2 <span class="ot">&lt;-</span><span class="fu">rbind</span>(x,y)</span>
+<span id="cb30-3"><a href="tools-for-working-with-data.html#cb30-3" aria-hidden="true" tabindex="-1"></a>z</span></code></pre></div>
 <pre><code>##       x  y
 ## [1,] 43 53
 ## [2,] 50 60
 ## [3,] 43 53
 ## [4,] 50 60</code></pre>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="tools-for-working-with-data.html#cb31-1" aria-hidden="true" tabindex="-1"></a>z2</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="tools-for-working-with-data.html#cb32-1" aria-hidden="true" tabindex="-1"></a>z2</span></code></pre></div>
 <pre><code>##   [,1] [,2] [,3] [,4]
 ## x   43   50   43   50
 ## y   53   60   53   60</code></pre>
 <p>This is how a data frame looks like. It accepts vectors with any value. Data frames are quite similar to spreadsheets, for example in Excel or LibreOffice.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="tools-for-working-with-data.html#cb33-1" aria-hidden="true" tabindex="-1"></a>dat1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(cntry, z)</span>
-<span id="cb33-2"><a href="tools-for-working-with-data.html#cb33-2" aria-hidden="true" tabindex="-1"></a>dat1</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="tools-for-working-with-data.html#cb34-1" aria-hidden="true" tabindex="-1"></a>dat1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(cntry, z)</span>
+<span id="cb34-2"><a href="tools-for-working-with-data.html#cb34-2" aria-hidden="true" tabindex="-1"></a>dat1</span></code></pre></div>
 <pre><code>##       cntry  x  y
 ## 1    Brasil 43 53
 ## 2    Canada 50 60
@@ -493,38 +509,38 @@ a</code></pre>
 <div id="selecting-elements" class="section level4" number="1.3.4.1">
 <h4><span class="header-section-number">1.3.4.1</span> Selecting Elements</h4>
 <p>Finally, we will learn how to select elements from objects. We will begin with vectors.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="tools-for-working-with-data.html#cb35-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
-<span id="cb35-2"><a href="tools-for-working-with-data.html#cb35-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> a <span class="sc">+</span> <span class="dv">10</span></span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="tools-for-working-with-data.html#cb36-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb36-2"><a href="tools-for-working-with-data.html#cb36-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> a <span class="sc">+</span> <span class="dv">10</span></span></code></pre></div>
 <p>We can select elements in R with <code>[ ]</code>.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="tools-for-working-with-data.html#cb36-1" aria-hidden="true" tabindex="-1"></a>a</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="tools-for-working-with-data.html#cb37-1" aria-hidden="true" tabindex="-1"></a>a</span></code></pre></div>
 <pre><code>## [1] 1 2 3 4 5</code></pre>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="tools-for-working-with-data.html#cb38-1" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="tools-for-working-with-data.html#cb39-1" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## [1] 2</code></pre>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="tools-for-working-with-data.html#cb40-1" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="tools-for-working-with-data.html#cb41-1" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]</span></code></pre></div>
 <pre><code>## [1] 2 3 4</code></pre>
 <p>Like in many other programming languages, the colon <code>:</code> expresses a range. Here we select all values in the range from the second to the fourth entry.</p>
 <p>We can also select elements from a matrix. The <code>,</code> helps to distinguish between the two dimensions. The selection <code>m[1,1]</code> will return the first element of the first column. In a similar vein, the selection <code>m[3,2]</code> will return the third element of the second column.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="tools-for-working-with-data.html#cb42-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">cbind</span>(a,b)</span>
-<span id="cb42-2"><a href="tools-for-working-with-data.html#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-3"><a href="tools-for-working-with-data.html#cb42-3" aria-hidden="true" tabindex="-1"></a>m[<span class="dv">1</span>,<span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="tools-for-working-with-data.html#cb43-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">cbind</span>(a,b)</span>
+<span id="cb43-2"><a href="tools-for-working-with-data.html#cb43-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-3"><a href="tools-for-working-with-data.html#cb43-3" aria-hidden="true" tabindex="-1"></a>m[<span class="dv">1</span>,<span class="dv">1</span>]</span></code></pre></div>
 <pre><code>## a 
 ## 1</code></pre>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="tools-for-working-with-data.html#cb44-1" aria-hidden="true" tabindex="-1"></a>m[<span class="dv">3</span>,<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="tools-for-working-with-data.html#cb45-1" aria-hidden="true" tabindex="-1"></a>m[<span class="dv">3</span>,<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>##  b 
 ## 13</code></pre>
 <p>Finally, we select elements from a data frame. We create a variable ‘name’ with the names of Mark, Luise and Peter. The variable ‘bike’ contains their bikes: Mountainbike, Single Speed and Racing Bike. We capture the hours per week they ride on it: 4, 7, 8 and finally we bring all variables together in a common data frame <code>dat2</code>.</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="tools-for-working-with-data.html#cb46-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;Mark&#39;</span>, <span class="st">&#39;Luise&#39;</span>, <span class="st">&#39;Peter&#39;</span>)</span>
-<span id="cb46-2"><a href="tools-for-working-with-data.html#cb46-2" aria-hidden="true" tabindex="-1"></a>bike <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;Mountainbike&#39;</span>, <span class="st">&#39;Single_Speed&#39;</span>, <span class="st">&#39;Racing_Bike&#39;</span>)</span>
-<span id="cb46-3"><a href="tools-for-working-with-data.html#cb46-3" aria-hidden="true" tabindex="-1"></a>hours <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">7</span>,<span class="dv">8</span>)</span>
-<span id="cb46-4"><a href="tools-for-working-with-data.html#cb46-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-5"><a href="tools-for-working-with-data.html#cb46-5" aria-hidden="true" tabindex="-1"></a>dat2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(name, bike, hours)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="tools-for-working-with-data.html#cb47-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;Mark&#39;</span>, <span class="st">&#39;Luise&#39;</span>, <span class="st">&#39;Peter&#39;</span>)</span>
+<span id="cb47-2"><a href="tools-for-working-with-data.html#cb47-2" aria-hidden="true" tabindex="-1"></a>bike <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;Mountainbike&#39;</span>, <span class="st">&#39;Single_Speed&#39;</span>, <span class="st">&#39;Racing_Bike&#39;</span>)</span>
+<span id="cb47-3"><a href="tools-for-working-with-data.html#cb47-3" aria-hidden="true" tabindex="-1"></a>hours <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">7</span>,<span class="dv">8</span>)</span>
+<span id="cb47-4"><a href="tools-for-working-with-data.html#cb47-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-5"><a href="tools-for-working-with-data.html#cb47-5" aria-hidden="true" tabindex="-1"></a>dat2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(name, bike, hours)</span></code></pre></div>
 <p>In data frames, you can select elements with the operator <code>$</code> and the name of the variable</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="tools-for-working-with-data.html#cb47-1" aria-hidden="true" tabindex="-1"></a>dat2<span class="sc">$</span>bike</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="tools-for-working-with-data.html#cb48-1" aria-hidden="true" tabindex="-1"></a>dat2<span class="sc">$</span>bike</span></code></pre></div>
 <pre><code>## [1] &quot;Mountainbike&quot; &quot;Single_Speed&quot; &quot;Racing_Bike&quot;</code></pre>
 <p>You can of course still use the positions, too!</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="tools-for-working-with-data.html#cb49-1" aria-hidden="true" tabindex="-1"></a>dat2[,<span class="dv">2</span>] <span class="co"># gives you all entries for the second column</span></span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="tools-for-working-with-data.html#cb50-1" aria-hidden="true" tabindex="-1"></a>dat2[,<span class="dv">2</span>] <span class="co"># gives you all entries for the second column</span></span></code></pre></div>
 <pre><code>## [1] &quot;Mountainbike&quot; &quot;Single_Speed&quot; &quot;Racing_Bike&quot;</code></pre>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="tools-for-working-with-data.html#cb51-1" aria-hidden="true" tabindex="-1"></a>dat2[<span class="dv">1</span>,<span class="dv">2</span>] <span class="co"># gives you the first entry for the second column</span></span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="tools-for-working-with-data.html#cb52-1" aria-hidden="true" tabindex="-1"></a>dat2[<span class="dv">1</span>,<span class="dv">2</span>] <span class="co"># gives you the first entry for the second column</span></span></code></pre></div>
 <pre><code>## [1] &quot;Mountainbike&quot;</code></pre>
 <p>Since <em>just</em> selecting might not always be enough, R allows us to select elements based on conditions.</p>
 <p>R comes with everything formal logic requires.</p>
@@ -542,16 +558,16 @@ a</code></pre>
 <li>OR <code>|</code></li>
 </ul>
 <p>Let’s go:</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="tools-for-working-with-data.html#cb53-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">56</span>,<span class="dv">23</span>,<span class="dv">89</span>,<span class="sc">-</span><span class="dv">3</span>,<span class="dv">5</span>)</span>
-<span id="cb53-2"><a href="tools-for-working-with-data.html#cb53-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">24</span>,<span class="dv">78</span>,<span class="dv">32</span>,<span class="dv">27</span>,<span class="dv">8</span>,<span class="dv">1</span>)     </span>
-<span id="cb53-3"><a href="tools-for-working-with-data.html#cb53-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-4"><a href="tools-for-working-with-data.html#cb53-4" aria-hidden="true" tabindex="-1"></a>x[x <span class="sc">&gt;</span><span class="dv">20</span>]    <span class="co"># greater as 20</span></span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="tools-for-working-with-data.html#cb54-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">56</span>,<span class="dv">23</span>,<span class="dv">89</span>,<span class="sc">-</span><span class="dv">3</span>,<span class="dv">5</span>)</span>
+<span id="cb54-2"><a href="tools-for-working-with-data.html#cb54-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">24</span>,<span class="dv">78</span>,<span class="dv">32</span>,<span class="dv">27</span>,<span class="dv">8</span>,<span class="dv">1</span>)     </span>
+<span id="cb54-3"><a href="tools-for-working-with-data.html#cb54-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-4"><a href="tools-for-working-with-data.html#cb54-4" aria-hidden="true" tabindex="-1"></a>x[x <span class="sc">&gt;</span><span class="dv">20</span>]    <span class="co"># greater as 20</span></span></code></pre></div>
 <pre><code>## [1] 56 23 89</code></pre>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="tools-for-working-with-data.html#cb55-1" aria-hidden="true" tabindex="-1"></a>x[x <span class="sc">&gt;</span><span class="dv">20</span> <span class="sc">&amp;</span> x <span class="sc">!=</span><span class="dv">89</span>] <span class="co"># greater as 20 and unequal 89</span></span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="tools-for-working-with-data.html#cb56-1" aria-hidden="true" tabindex="-1"></a>x[x <span class="sc">&gt;</span><span class="dv">20</span> <span class="sc">&amp;</span> x <span class="sc">!=</span><span class="dv">89</span>] <span class="co"># greater as 20 and unequal 89</span></span></code></pre></div>
 <pre><code>## [1] 56 23</code></pre>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="tools-for-working-with-data.html#cb57-1" aria-hidden="true" tabindex="-1"></a>x[x<span class="sc">&gt;</span><span class="dv">0</span> <span class="sc">|</span> x<span class="sc">==-</span><span class="dv">3</span>] <span class="co"># x where x greater 0 oder x=-3</span></span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="tools-for-working-with-data.html#cb58-1" aria-hidden="true" tabindex="-1"></a>x[x<span class="sc">&gt;</span><span class="dv">0</span> <span class="sc">|</span> x<span class="sc">==-</span><span class="dv">3</span>] <span class="co"># x where x greater 0 oder x=-3</span></span></code></pre></div>
 <pre><code>## [1]  1 56 23 89 -3  5</code></pre>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="tools-for-working-with-data.html#cb59-1" aria-hidden="true" tabindex="-1"></a>y[x<span class="sc">==</span><span class="dv">1</span>] <span class="co"># y where x=1</span></span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="tools-for-working-with-data.html#cb60-1" aria-hidden="true" tabindex="-1"></a>y[x<span class="sc">==</span><span class="dv">1</span>] <span class="co"># y where x=1</span></span></code></pre></div>
 <pre><code>## [1] 24</code></pre>
 </div>
 </div>

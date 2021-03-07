@@ -24,7 +24,7 @@
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2021-03-01" />
+<meta name="date" content="2021-03-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -253,7 +253,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.4" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#a-simple-figure-with-two-variables"><i class="fa fa-check"></i><b>5.4</b> A Simple Figure With Two Variables</a></li>
 <li class="chapter" data-level="5.5" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#reading-for-this-week-1"><i class="fa fa-check"></i><b>5.5</b> Reading for This Week</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="are-different-people-different.html"><a href="are-different-people-different.html"><i class="fa fa-check"></i><b>6</b> Are Different People Different?</a></li>
+<li class="chapter" data-level="6" data-path="are-different-people-different.html"><a href="are-different-people-different.html"><i class="fa fa-check"></i><b>6</b> Are Different People Different?</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#a-recap-from-last-week"><i class="fa fa-check"></i><b>6.1</b> A Recap from Last Week</a></li>
+<li class="chapter" data-level="6.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#what-are-bivariate-relationships"><i class="fa fa-check"></i><b>6.2</b> What Are Bivariate Relationships?</a></li>
+<li class="chapter" data-level="6.3" data-path="are-different-people-different.html"><a href="are-different-people-different.html#categorical-data"><i class="fa fa-check"></i><b>6.3</b> Categorical Data</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#describing-the-sample"><i class="fa fa-check"></i><b>6.3.1</b> Describing the Sample</a></li>
+<li class="chapter" data-level="6.3.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#estimating-the-parameters-in-the-population"><i class="fa fa-check"></i><b>6.3.2</b> Estimating the Parameters in the Population</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="are-different-people-different.html"><a href="are-different-people-different.html#continuous-data"><i class="fa fa-check"></i><b>6.4</b> Continuous Data</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#describe"><i class="fa fa-check"></i><b>6.4.1</b> Describe</a></li>
+<li class="chapter" data-level="6.4.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#measures-about-the-population"><i class="fa fa-check"></i><b>6.4.2</b> Measures About the Population</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="are-different-people-different.html"><a href="are-different-people-different.html#code"><i class="fa fa-check"></i><b>6.5</b> Code</a></li>
+<li class="chapter" data-level="6.6" data-path="are-different-people-different.html"><a href="are-different-people-different.html#reading-for-this-week-2"><i class="fa fa-check"></i><b>6.6</b> Reading for This Week</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html"><i class="fa fa-check"></i><b>7</b> Comparing Apples and Oranges</a></li>
 <li class="part"><span><b>Scenario III: Did the New Policy Have an Effect?</b></span></li>
 <li class="chapter" data-level="8" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html"><i class="fa fa-check"></i><b>8</b> The Fundamental Problem of Causal Inference</a></li>
@@ -597,44 +613,44 @@ I am including again the interquartile range in red (which goes from where to wh
 <h3><span class="header-section-number">2.2.1</span> Libraries</h3>
 <p>Libraries are functions that do not ship on board your original R programme. Instead, you have to get them from them internet.</p>
 <p>Think of it like wanting to read a book. You first have to get it from a shop and bring it home, where you will add it to your book shelf. In R, you can use the command <code>install.packages()</code> to download a package to your computer. If you execute the command, R might prompt you for a location—simply pick one that is close to you. Obviously, <code>"name_of_library"</code> is a placeholder here, so <a href="https://open.spotify.com/album/2DHFJRBMsly28nJ8HrfdIJ?si=YUjhdyskRnuC6Y1QR22q_w">don’t try this at home</a> with that particular code snippet and replace it with the package you actually need.</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="describing-data.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;name_of_library&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="describing-data.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;name_of_library&quot;</span>)</span></code></pre></div>
 <p>Now you have downloaded the programme to your computer. Or, in other words, you have added the book into your bookshelf. However, you are not sitting in your lounge chair with the book in your hand, yet. For that, you would still have to go to the library in your house and get the book. This is exactly what we will be doing now with the R package. We will collect the package from our library and load it into the active workingspace.</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="describing-data.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;name_of_library&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="describing-data.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;name_of_library&quot;</span>)</span></code></pre></div>
 </div>
 <div id="setting-the-working-directory" class="section level3" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Setting the Working Directory</h3>
 <p>R is quite stupid. It does not know where to look for files—be they R code or any other data—unless you really tell it where to look for a file.</p>
 <p>Typically, we will instruct R to make its home in the exact place where you save your main R script with a function called <code>setwd()</code>. As its argument, you
 provide the path you are working in. For me on my office machine, this is how it looks like.</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="describing-data.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&#39;/Users/foo/PL9239 Intro_data_science/intro_data_science_homepage&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="describing-data.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&#39;/Users/foo/PL9239 Intro_data_science/intro_data_science_homepage&#39;</span>)</span></code></pre></div>
 <p>Now, R will start looking for everything starting in that particular working directory. To see which working directory you are in, you can type</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="describing-data.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="describing-data.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
 </div>
 <div id="reading-data" class="section level3" number="2.2.3">
 <h3><span class="header-section-number">2.2.3</span> Reading Data</h3>
 <p>Working directories are particularly relevant if you want to read in data sets. Data mostly comes in two formats: comma separated values, or short .csv, and as a Microsoft Excel spreadsheet .xls. Most open data formats can be read in with a function that begins with <code>read.foo</code>. Of course, <em>just</em> reading it is not enough—you have to assign it to an object if you want to work with it.</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="describing-data.html#cb65-1" aria-hidden="true" tabindex="-1"></a>csvdata <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;dataset1.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="describing-data.html#cb66-1" aria-hidden="true" tabindex="-1"></a>csvdata <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;dataset1.csv&quot;</span>)</span></code></pre></div>
 <p>If we want to read in .xls data, we have to load a library that can help us with that. We will go with the <code>readxl</code> package. Again, we are assigning the data to an object so that we can call it later.</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="describing-data.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb66-2"><a href="describing-data.html#cb66-2" aria-hidden="true" tabindex="-1"></a>xlsdata <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;dataset1.xls&quot;</span>, <span class="at">sheet=</span><span class="st">&#39;sheet_foo&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="describing-data.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb67-2"><a href="describing-data.html#cb67-2" aria-hidden="true" tabindex="-1"></a>xlsdata <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;dataset1.xls&quot;</span>, <span class="at">sheet=</span><span class="st">&#39;sheet_foo&#39;</span>)</span></code></pre></div>
 </div>
 <div id="saving-data" class="section level3" number="2.2.4">
 <h3><span class="header-section-number">2.2.4</span> Saving Data</h3>
 <p>You can also save data. Let us create a toy data set again.</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="describing-data.html#cb67-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;Mark&#39;</span>, <span class="st">&#39;Luise&#39;</span>, <span class="st">&#39;Peter&#39;</span>)</span>
-<span id="cb67-2"><a href="describing-data.html#cb67-2" aria-hidden="true" tabindex="-1"></a>bike <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;Mountainbike&#39;</span>, <span class="st">&#39;Single_Speed&#39;</span>, <span class="st">&#39;Racing_Bike&#39;</span>)</span>
-<span id="cb67-3"><a href="describing-data.html#cb67-3" aria-hidden="true" tabindex="-1"></a>hours <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">7</span>,<span class="dv">8</span>)</span>
-<span id="cb67-4"><a href="describing-data.html#cb67-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-5"><a href="describing-data.html#cb67-5" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(name, bike, hours)</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="describing-data.html#cb68-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;Mark&#39;</span>, <span class="st">&#39;Luise&#39;</span>, <span class="st">&#39;Peter&#39;</span>)</span>
+<span id="cb68-2"><a href="describing-data.html#cb68-2" aria-hidden="true" tabindex="-1"></a>bike <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;Mountainbike&#39;</span>, <span class="st">&#39;Single_Speed&#39;</span>, <span class="st">&#39;Racing_Bike&#39;</span>)</span>
+<span id="cb68-3"><a href="describing-data.html#cb68-3" aria-hidden="true" tabindex="-1"></a>hours <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">7</span>,<span class="dv">8</span>)</span>
+<span id="cb68-4"><a href="describing-data.html#cb68-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-5"><a href="describing-data.html#cb68-5" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(name, bike, hours)</span></code></pre></div>
 <p>Now save it.</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="describing-data.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(dat, <span class="at">file =</span> <span class="st">&quot;toydata.RData&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="describing-data.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(dat, <span class="at">file =</span> <span class="st">&quot;toydata.RData&quot;</span>)</span></code></pre></div>
 <p>To check the magic of this we remove the data set and then try to call the object.</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="describing-data.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(dat)</span>
-<span id="cb69-2"><a href="describing-data.html#cb69-2" aria-hidden="true" tabindex="-1"></a>dat</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="describing-data.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(dat)</span>
+<span id="cb70-2"><a href="describing-data.html#cb70-2" aria-hidden="true" tabindex="-1"></a>dat</span></code></pre></div>
 <pre><code>## Error in eval(expr, envir, enclos): object &#39;dat&#39; not found</code></pre>
 <p>Nothing there.</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="describing-data.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;toydata.RData&quot;</span>)</span>
-<span id="cb71-2"><a href="describing-data.html#cb71-2" aria-hidden="true" tabindex="-1"></a>dat</span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="describing-data.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;toydata.RData&quot;</span>)</span>
+<span id="cb72-2"><a href="describing-data.html#cb72-2" aria-hidden="true" tabindex="-1"></a>dat</span></code></pre></div>
 <pre><code>##    name         bike hours
 ## 1  Mark Mountainbike     4
 ## 2 Luise Single_Speed     7
@@ -648,21 +664,21 @@ provide the path you are working in. For me on my office machine, this is how it
 <div id="central-tendencies-1" class="section level3" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> Central Tendencies</h3>
 <p>You can take a look at the frequency of categorical data with the function <code>table()</code>. This is your data on how many data you are partying per week—of course, out of pandemic times…</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="describing-data.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(partydays)</span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="describing-data.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(partydays)</span></code></pre></div>
 <pre><code>## partydays
 ## 1 2 3 4 5 6 
 ## 2 2 5 2 3 2</code></pre>
 <p>Quite a number of party animals here. Now, what is the mode? We have to call a package for that function.</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="describing-data.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DescTools)</span>
-<span id="cb75-2"><a href="describing-data.html#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Mode</span>(partydays)</span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="describing-data.html#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DescTools)</span>
+<span id="cb76-2"><a href="describing-data.html#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Mode</span>(partydays)</span></code></pre></div>
 <pre><code>## [1] 3
 ## attr(,&quot;freq&quot;)
 ## [1] 5</code></pre>
 <p>The output is a bit cryptic at first, but it tells us that the value <span class="math inline">\(3\)</span> is the most frequent one and that <span class="math inline">\(5\)</span> individuals chose it.</p>
 <p>For the median and the mean, let us take a look at a continuous variable. For example, how much money you spend when you go out. You call the median with <code>median()</code> and the mean with <code>mean()</code>.</p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="describing-data.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(spend)</span></code></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="describing-data.html#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(spend)</span></code></pre></div>
 <pre><code>## [1] 20</code></pre>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="describing-data.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(spend)</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="describing-data.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(spend)</span></code></pre></div>
 <pre><code>## [1] 20.78125</code></pre>
 <p>Stop for a second and think about the results:
 * What does the relationship between the median and the mean tell us here?
@@ -672,9 +688,9 @@ provide the path you are working in. For me on my office machine, this is how it
 <div id="spread-1" class="section level3" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> Spread</h3>
 <p>The rest is a piece of cake just the like. You can calculate the variance using <code>var()</code> and the standard deviation with <code>sd()</code>.</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="describing-data.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(spend)</span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="describing-data.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(spend)</span></code></pre></div>
 <pre><code>## [1] 154.7656</code></pre>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="describing-data.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(spend)</span></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="describing-data.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(spend)</span></code></pre></div>
 <pre><code>## [1] 12.44048</code></pre>
 <p>Please read chapter 7 in <span class="citation">(<a href="bibliography.html#ref-Fogarty2019" role="doc-biblioref">Fogarty 2019</a>)</span>. Chapters 4 and 5 are a good idea, but you do not necessarily have to.</p>
 

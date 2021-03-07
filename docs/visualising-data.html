@@ -24,7 +24,7 @@
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2021-03-01" />
+<meta name="date" content="2021-03-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -253,7 +253,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.4" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#a-simple-figure-with-two-variables"><i class="fa fa-check"></i><b>5.4</b> A Simple Figure With Two Variables</a></li>
 <li class="chapter" data-level="5.5" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#reading-for-this-week-1"><i class="fa fa-check"></i><b>5.5</b> Reading for This Week</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="are-different-people-different.html"><a href="are-different-people-different.html"><i class="fa fa-check"></i><b>6</b> Are Different People Different?</a></li>
+<li class="chapter" data-level="6" data-path="are-different-people-different.html"><a href="are-different-people-different.html"><i class="fa fa-check"></i><b>6</b> Are Different People Different?</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#a-recap-from-last-week"><i class="fa fa-check"></i><b>6.1</b> A Recap from Last Week</a></li>
+<li class="chapter" data-level="6.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#what-are-bivariate-relationships"><i class="fa fa-check"></i><b>6.2</b> What Are Bivariate Relationships?</a></li>
+<li class="chapter" data-level="6.3" data-path="are-different-people-different.html"><a href="are-different-people-different.html#categorical-data"><i class="fa fa-check"></i><b>6.3</b> Categorical Data</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#describing-the-sample"><i class="fa fa-check"></i><b>6.3.1</b> Describing the Sample</a></li>
+<li class="chapter" data-level="6.3.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#estimating-the-parameters-in-the-population"><i class="fa fa-check"></i><b>6.3.2</b> Estimating the Parameters in the Population</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="are-different-people-different.html"><a href="are-different-people-different.html#continuous-data"><i class="fa fa-check"></i><b>6.4</b> Continuous Data</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#describe"><i class="fa fa-check"></i><b>6.4.1</b> Describe</a></li>
+<li class="chapter" data-level="6.4.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#measures-about-the-population"><i class="fa fa-check"></i><b>6.4.2</b> Measures About the Population</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="are-different-people-different.html"><a href="are-different-people-different.html#code"><i class="fa fa-check"></i><b>6.5</b> Code</a></li>
+<li class="chapter" data-level="6.6" data-path="are-different-people-different.html"><a href="are-different-people-different.html#reading-for-this-week-2"><i class="fa fa-check"></i><b>6.6</b> Reading for This Week</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html"><i class="fa fa-check"></i><b>7</b> Comparing Apples and Oranges</a></li>
 <li class="part"><span><b>Scenario III: Did the New Policy Have an Effect?</b></span></li>
 <li class="chapter" data-level="8" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html"><i class="fa fa-check"></i><b>8</b> The Fundamental Problem of Causal Inference</a></li>
@@ -350,31 +366,31 @@ in the top figure. The maximum hours that any of you studies is 20. The whiskers
 <div id="basics-in-plotting" class="section level3" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Basics in Plotting</h3>
 <p>First, let us whip up some data.</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="visualising-data.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This creates a vector with a sequence of integers from -10 to 10 with a distance of 1</span></span>
-<span id="cb85-2"><a href="visualising-data.html#cb85-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">10</span>,<span class="dv">10</span>,<span class="dv">1</span>)</span>
-<span id="cb85-3"><a href="visualising-data.html#cb85-3" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="visualising-data.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This creates a vector with a sequence of integers from -10 to 10 with a distance of 1</span></span>
+<span id="cb86-2"><a href="visualising-data.html#cb86-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">10</span>,<span class="dv">10</span>,<span class="dv">1</span>)</span>
+<span id="cb86-3"><a href="visualising-data.html#cb86-3" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>##  [1] -10  -9  -8  -7  -6  -5  -4  -3  -2  -1   0   1   2   3   4   5   6   7   8
 ## [20]   9  10</code></pre>
 <p>We calculate a second variable.</p>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="visualising-data.html#cb87-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb87-2"><a href="visualising-data.html#cb87-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb87-3"><a href="visualising-data.html#cb87-3" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> .<span class="dv">5</span></span>
-<span id="cb87-4"><a href="visualising-data.html#cb87-4" aria-hidden="true" tabindex="-1"></a>y  <span class="ot">&lt;-</span> a <span class="sc">+</span> b<span class="sc">*</span>x <span class="sc">+</span> c<span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb87-5"><a href="visualising-data.html#cb87-5" aria-hidden="true" tabindex="-1"></a>y </span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="visualising-data.html#cb88-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb88-2"><a href="visualising-data.html#cb88-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb88-3"><a href="visualising-data.html#cb88-3" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> .<span class="dv">5</span></span>
+<span id="cb88-4"><a href="visualising-data.html#cb88-4" aria-hidden="true" tabindex="-1"></a>y  <span class="ot">&lt;-</span> a <span class="sc">+</span> b<span class="sc">*</span>x <span class="sc">+</span> c<span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb88-5"><a href="visualising-data.html#cb88-5" aria-hidden="true" tabindex="-1"></a>y </span></code></pre></div>
 <pre><code>##  [1] 25.0 18.5 13.0  8.5  5.0  2.5  1.0  0.5  1.0  2.5  5.0  8.5 13.0 18.5 25.0
 ## [16] 32.5 41.0 50.5 61.0 72.5 85.0</code></pre>
 <p>And then we use the function <code>plot()</code> to chart the data.</p>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="visualising-data.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y)</span></code></pre></div>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="visualising-data.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y)</span></code></pre></div>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
 <p>Simple, right? R takes over a number of jobs for you, from selecting the right data range in both axes, to chosing the shape and colour of representations for the data etc.. To give you a first idea, this is what happens when you tweak a number of options.</p>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="visualising-data.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, </span>
-<span id="cb90-2"><a href="visualising-data.html#cb90-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">cex =</span> <span class="dv">3</span>, <span class="co"># size of the data points</span></span>
-<span id="cb90-3"><a href="visualising-data.html#cb90-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">16</span>, <span class="co"># point character</span></span>
-<span id="cb90-4"><a href="visualising-data.html#cb90-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">&#39;aquamarine3&#39;</span>, <span class="co"># chose the colour. R defaults with inverted commas.</span></span>
-<span id="cb90-5"><a href="visualising-data.html#cb90-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">las =</span> <span class="dv">1</span>, <span class="co"># rotates labels in y axis by 90 degrees,</span></span>
-<span id="cb90-6"><a href="visualising-data.html#cb90-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">15</span>, <span class="dv">15</span>), <span class="co"># This defines the limit of the x-axis you want to plot in</span></span>
-<span id="cb90-7"><a href="visualising-data.html#cb90-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">&#39;My First Figure&#39;</span> <span class="co"># Title </span></span>
-<span id="cb90-8"><a href="visualising-data.html#cb90-8" aria-hidden="true" tabindex="-1"></a>     )</span></code></pre></div>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="visualising-data.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, </span>
+<span id="cb91-2"><a href="visualising-data.html#cb91-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">cex =</span> <span class="dv">3</span>, <span class="co"># size of the data points</span></span>
+<span id="cb91-3"><a href="visualising-data.html#cb91-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">16</span>, <span class="co"># point character</span></span>
+<span id="cb91-4"><a href="visualising-data.html#cb91-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">&#39;aquamarine3&#39;</span>, <span class="co"># chose the colour. R defaults with inverted commas.</span></span>
+<span id="cb91-5"><a href="visualising-data.html#cb91-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">las =</span> <span class="dv">1</span>, <span class="co"># rotates labels in y axis by 90 degrees,</span></span>
+<span id="cb91-6"><a href="visualising-data.html#cb91-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">15</span>, <span class="dv">15</span>), <span class="co"># This defines the limit of the x-axis you want to plot in</span></span>
+<span id="cb91-7"><a href="visualising-data.html#cb91-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">&#39;My First Figure&#39;</span> <span class="co"># Title </span></span>
+<span id="cb91-8"><a href="visualising-data.html#cb91-8" aria-hidden="true" tabindex="-1"></a>     )</span></code></pre></div>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
 <p>You select the options by adding them with a comma. Check the help file in R-Studio for what is available. We will have a proper session on plotting bivariate data in a couple of weeks for all this, so do not worry about the details at this stage.</p>
 <p>The important message that needs to come across is that R will handle a lot for you—but the possibilities to adapt everything that you were seeing are literally endless.</p>
@@ -382,114 +398,114 @@ in the top figure. The maximum hours that any of you studies is 20. The whiskers
 <div id="colours" class="section level3" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> Colours</h3>
 <p>R is great for using all different kinds of colours. You can check the already pre-defined colours by calling the function <code>colors()</code>. Here, let us call the first 15 ones.</p>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="visualising-data.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colors</span>()[<span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="visualising-data.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colors</span>()[<span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>]</span></code></pre></div>
 <pre><code>##  [1] &quot;white&quot;         &quot;aliceblue&quot;     &quot;antiquewhite&quot;  &quot;antiquewhite1&quot;
 ##  [5] &quot;antiquewhite2&quot; &quot;antiquewhite3&quot; &quot;antiquewhite4&quot; &quot;aquamarine&quot;   
 ##  [9] &quot;aquamarine1&quot;   &quot;aquamarine2&quot;   &quot;aquamarine3&quot;   &quot;aquamarine4&quot;  
 ## [13] &quot;azure&quot;         &quot;azure1&quot;        &quot;azure2&quot;</code></pre>
 <p>And you can even define your own colours using the rgb function. Cardiff University’s corporate identity colours for example can be generated like so.</p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="visualising-data.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Predefined Cardiff colours</span></span>
-<span id="cb93-2"><a href="visualising-data.html#cb93-2" aria-hidden="true" tabindex="-1"></a><span class="co"># primary</span></span>
-<span id="cb93-3"><a href="visualising-data.html#cb93-3" aria-hidden="true" tabindex="-1"></a>cardiffred <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">211</span>,<span class="dv">55</span>,<span class="dv">74</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span>
-<span id="cb93-4"><a href="visualising-data.html#cb93-4" aria-hidden="true" tabindex="-1"></a>cardiffblack <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">35</span>,<span class="dv">31</span>,<span class="dv">32</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span>
-<span id="cb93-5"><a href="visualising-data.html#cb93-5" aria-hidden="true" tabindex="-1"></a>cardiffgrey <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">47</span>,<span class="dv">68</span>,<span class="dv">78</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span>
-<span id="cb93-6"><a href="visualising-data.html#cb93-6" aria-hidden="true" tabindex="-1"></a>cardiffgold <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">189</span>,<span class="dv">158</span>,<span class="dv">94</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span>
-<span id="cb93-7"><a href="visualising-data.html#cb93-7" aria-hidden="true" tabindex="-1"></a><span class="co"># secondary </span></span>
-<span id="cb93-8"><a href="visualising-data.html#cb93-8" aria-hidden="true" tabindex="-1"></a>cardiffblue <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">21</span>,<span class="dv">44</span>,<span class="dv">81</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span>
-<span id="cb93-9"><a href="visualising-data.html#cb93-9" aria-hidden="true" tabindex="-1"></a>cardiffpurple1 <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">29</span>,<span class="dv">15</span>,<span class="dv">51</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span>
-<span id="cb93-10"><a href="visualising-data.html#cb93-10" aria-hidden="true" tabindex="-1"></a>cardiffpurple2 <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">60</span>,<span class="dv">44</span>,<span class="dv">89</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="visualising-data.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Predefined Cardiff colours</span></span>
+<span id="cb94-2"><a href="visualising-data.html#cb94-2" aria-hidden="true" tabindex="-1"></a><span class="co"># primary</span></span>
+<span id="cb94-3"><a href="visualising-data.html#cb94-3" aria-hidden="true" tabindex="-1"></a>cardiffred <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">211</span>,<span class="dv">55</span>,<span class="dv">74</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span>
+<span id="cb94-4"><a href="visualising-data.html#cb94-4" aria-hidden="true" tabindex="-1"></a>cardiffblack <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">35</span>,<span class="dv">31</span>,<span class="dv">32</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span>
+<span id="cb94-5"><a href="visualising-data.html#cb94-5" aria-hidden="true" tabindex="-1"></a>cardiffgrey <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">47</span>,<span class="dv">68</span>,<span class="dv">78</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span>
+<span id="cb94-6"><a href="visualising-data.html#cb94-6" aria-hidden="true" tabindex="-1"></a>cardiffgold <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">189</span>,<span class="dv">158</span>,<span class="dv">94</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span>
+<span id="cb94-7"><a href="visualising-data.html#cb94-7" aria-hidden="true" tabindex="-1"></a><span class="co"># secondary </span></span>
+<span id="cb94-8"><a href="visualising-data.html#cb94-8" aria-hidden="true" tabindex="-1"></a>cardiffblue <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">21</span>,<span class="dv">44</span>,<span class="dv">81</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span>
+<span id="cb94-9"><a href="visualising-data.html#cb94-9" aria-hidden="true" tabindex="-1"></a>cardiffpurple1 <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">29</span>,<span class="dv">15</span>,<span class="dv">51</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span>
+<span id="cb94-10"><a href="visualising-data.html#cb94-10" aria-hidden="true" tabindex="-1"></a>cardiffpurple2 <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">60</span>,<span class="dv">44</span>,<span class="dv">89</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span></code></pre></div>
 <p>And then you can use them for plotting.</p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="visualising-data.html#cb94-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">1</span>)</span>
-<span id="cb94-2"><a href="visualising-data.html#cb94-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span>,<span class="dv">10</span>) <span class="co"># repeats the value &#39;1&#39; 10 times</span></span>
-<span id="cb94-3"><a href="visualising-data.html#cb94-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(a, b,</span>
-<span id="cb94-4"><a href="visualising-data.html#cb94-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="fu">c</span>(cardiffred, cardiffgrey, cardiffgold),</span>
-<span id="cb94-5"><a href="visualising-data.html#cb94-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">cex =</span> <span class="dv">2</span>,</span>
-<span id="cb94-6"><a href="visualising-data.html#cb94-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">las =</span> <span class="dv">1</span>,</span>
-<span id="cb94-7"><a href="visualising-data.html#cb94-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">15</span></span>
-<span id="cb94-8"><a href="visualising-data.html#cb94-8" aria-hidden="true" tabindex="-1"></a>     )</span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="visualising-data.html#cb95-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">1</span>)</span>
+<span id="cb95-2"><a href="visualising-data.html#cb95-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span>,<span class="dv">10</span>) <span class="co"># repeats the value &#39;1&#39; 10 times</span></span>
+<span id="cb95-3"><a href="visualising-data.html#cb95-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(a, b,</span>
+<span id="cb95-4"><a href="visualising-data.html#cb95-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="fu">c</span>(cardiffred, cardiffgrey, cardiffgold),</span>
+<span id="cb95-5"><a href="visualising-data.html#cb95-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">cex =</span> <span class="dv">2</span>,</span>
+<span id="cb95-6"><a href="visualising-data.html#cb95-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">las =</span> <span class="dv">1</span>,</span>
+<span id="cb95-7"><a href="visualising-data.html#cb95-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">15</span></span>
+<span id="cb95-8"><a href="visualising-data.html#cb95-8" aria-hidden="true" tabindex="-1"></a>     )</span></code></pre></div>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
 <p>The number of data points is larger than the number of colours. R will therefore cycle through the colours.</p>
 </div>
 <div id="visualising-nominal-and-ordinal-data" class="section level3" number="3.2.3">
 <h3><span class="header-section-number">3.2.3</span> Visualising Nominal and Ordinal Data</h3>
 <p>To visualise data in a way that we can chart them as a barplot, we first have to count them. How often do we observe each value? There is a really useful function for that in R, it is called <code>table()</code>. Just calling it without plotting is quite revealing.</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="visualising-data.html#cb95-1" aria-hidden="true" tabindex="-1"></a>table.breakfast <span class="ot">&lt;-</span> <span class="fu">table</span>(breakfast)</span>
-<span id="cb95-2"><a href="visualising-data.html#cb95-2" aria-hidden="true" tabindex="-1"></a>table.breakfast</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="visualising-data.html#cb96-1" aria-hidden="true" tabindex="-1"></a>table.breakfast <span class="ot">&lt;-</span> <span class="fu">table</span>(breakfast)</span>
+<span id="cb96-2"><a href="visualising-data.html#cb96-2" aria-hidden="true" tabindex="-1"></a>table.breakfast</span></code></pre></div>
 <pre><code>## breakfast
 ## Coffee    Other     Tea 
 ##       7       4       5</code></pre>
 <p>Just a quick fyi: You can use the function <code>prop.table()</code> to get percentages. Then <code>round()</code> will round the resulting values.</p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="visualising-data.html#cb97-1" aria-hidden="true" tabindex="-1"></a>prop.table.breakfast <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(table.breakfast)</span>
-<span id="cb97-2"><a href="visualising-data.html#cb97-2" aria-hidden="true" tabindex="-1"></a>prop.table.breakfast.rounded <span class="ot">&lt;-</span> <span class="fu">round</span>(prop.table.breakfast, <span class="at">digits =</span> <span class="dv">2</span>)</span>
-<span id="cb97-3"><a href="visualising-data.html#cb97-3" aria-hidden="true" tabindex="-1"></a>prop.table.breakfast.rounded</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="visualising-data.html#cb98-1" aria-hidden="true" tabindex="-1"></a>prop.table.breakfast <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(table.breakfast)</span>
+<span id="cb98-2"><a href="visualising-data.html#cb98-2" aria-hidden="true" tabindex="-1"></a>prop.table.breakfast.rounded <span class="ot">&lt;-</span> <span class="fu">round</span>(prop.table.breakfast, <span class="at">digits =</span> <span class="dv">2</span>)</span>
+<span id="cb98-3"><a href="visualising-data.html#cb98-3" aria-hidden="true" tabindex="-1"></a>prop.table.breakfast.rounded</span></code></pre></div>
 <pre><code>## breakfast
 ## Coffee    Other     Tea 
 ##    0.44    0.25    0.31</code></pre>
 <p>But we are here for visualising data. We need the object <code>table.breakfast</code> for our barplot.</p>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="visualising-data.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table.breakfast)</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="visualising-data.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table.breakfast)</span></code></pre></div>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
 <p>Let us make this a bit more pretty.</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="visualising-data.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table.breakfast,</span>
-<span id="cb100-2"><a href="visualising-data.html#cb100-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">&quot;Frequency&quot;</span>, <span class="co"># Adds label to the y-axis</span></span>
-<span id="cb100-3"><a href="visualising-data.html#cb100-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> cardiffred, <span class="co"># You know this already</span></span>
-<span id="cb100-4"><a href="visualising-data.html#cb100-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">las =</span> <span class="dv">1</span>, <span class="co"># and this</span></span>
-<span id="cb100-5"><a href="visualising-data.html#cb100-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">border =</span> <span class="cn">NA</span> <span class="co"># Removes the small black border around the bars</span></span>
-<span id="cb100-6"><a href="visualising-data.html#cb100-6" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb100-7"><a href="visualising-data.html#cb100-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb100-8"><a href="visualising-data.html#cb100-8" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table.breakfast,</span>
-<span id="cb100-9"><a href="visualising-data.html#cb100-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">xlab =</span> <span class="st">&quot;Frequency&quot;</span>,</span>
-<span id="cb100-10"><a href="visualising-data.html#cb100-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">las =</span> <span class="dv">1</span>,</span>
-<span id="cb100-11"><a href="visualising-data.html#cb100-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">col =</span> cardiffgold,</span>
-<span id="cb100-12"><a href="visualising-data.html#cb100-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">horiz =</span> <span class="cn">TRUE</span> <span class="co"># plots bars horizontally instead of vertically</span></span>
-<span id="cb100-13"><a href="visualising-data.html#cb100-13" aria-hidden="true" tabindex="-1"></a>            )</span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="visualising-data.html#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table.breakfast,</span>
+<span id="cb101-2"><a href="visualising-data.html#cb101-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">&quot;Frequency&quot;</span>, <span class="co"># Adds label to the y-axis</span></span>
+<span id="cb101-3"><a href="visualising-data.html#cb101-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> cardiffred, <span class="co"># You know this already</span></span>
+<span id="cb101-4"><a href="visualising-data.html#cb101-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">las =</span> <span class="dv">1</span>, <span class="co"># and this</span></span>
+<span id="cb101-5"><a href="visualising-data.html#cb101-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">border =</span> <span class="cn">NA</span> <span class="co"># Removes the small black border around the bars</span></span>
+<span id="cb101-6"><a href="visualising-data.html#cb101-6" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb101-7"><a href="visualising-data.html#cb101-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb101-8"><a href="visualising-data.html#cb101-8" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table.breakfast,</span>
+<span id="cb101-9"><a href="visualising-data.html#cb101-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">xlab =</span> <span class="st">&quot;Frequency&quot;</span>,</span>
+<span id="cb101-10"><a href="visualising-data.html#cb101-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">las =</span> <span class="dv">1</span>,</span>
+<span id="cb101-11"><a href="visualising-data.html#cb101-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">col =</span> cardiffgold,</span>
+<span id="cb101-12"><a href="visualising-data.html#cb101-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">horiz =</span> <span class="cn">TRUE</span> <span class="co"># plots bars horizontally instead of vertically</span></span>
+<span id="cb101-13"><a href="visualising-data.html#cb101-13" aria-hidden="true" tabindex="-1"></a>            )</span></code></pre></div>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-75-1.png" width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-75-2.png" width="50%" /></p>
 </div>
 <div id="visualising-continuous-data" class="section level3" number="3.2.4">
 <h3><span class="header-section-number">3.2.4</span> Visualising Continuous Data</h3>
 <p>We also wanted to take a look at continuous data. Let us see how far you are living from the university for that matter.</p>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="visualising-data.html#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R uses an algorithm to determine the number of bins</span></span>
-<span id="cb101-2"><a href="visualising-data.html#cb101-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(commute,</span>
-<span id="cb101-3"><a href="visualising-data.html#cb101-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> cardiffgold,</span>
-<span id="cb101-4"><a href="visualising-data.html#cb101-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">&quot;Minutes&quot;</span>,</span>
-<span id="cb101-5"><a href="visualising-data.html#cb101-5" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb101-6"><a href="visualising-data.html#cb101-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb101-7"><a href="visualising-data.html#cb101-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Here we control a bit more by ourselves</span></span>
-<span id="cb101-8"><a href="visualising-data.html#cb101-8" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(commute,</span>
-<span id="cb101-9"><a href="visualising-data.html#cb101-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">breaks =</span> <span class="dv">3</span>, <span class="co"># This is a very rough break into three bins</span></span>
-<span id="cb101-10"><a href="visualising-data.html#cb101-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> cardiffpurple1,</span>
-<span id="cb101-11"><a href="visualising-data.html#cb101-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">&quot;Minutes&quot;</span>,</span>
-<span id="cb101-12"><a href="visualising-data.html#cb101-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span><span class="st">&#39;&#39;</span>, <span class="co"># suppress the default main title</span></span>
-<span id="cb101-13"><a href="visualising-data.html#cb101-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">border =</span> <span class="st">&quot;white&quot;</span> <span class="co"># border around the histograms--here set to white</span></span>
-<span id="cb101-14"><a href="visualising-data.html#cb101-14" aria-hidden="true" tabindex="-1"></a>        )</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="visualising-data.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R uses an algorithm to determine the number of bins</span></span>
+<span id="cb102-2"><a href="visualising-data.html#cb102-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(commute,</span>
+<span id="cb102-3"><a href="visualising-data.html#cb102-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> cardiffgold,</span>
+<span id="cb102-4"><a href="visualising-data.html#cb102-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">&quot;Minutes&quot;</span>,</span>
+<span id="cb102-5"><a href="visualising-data.html#cb102-5" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb102-6"><a href="visualising-data.html#cb102-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-7"><a href="visualising-data.html#cb102-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Here we control a bit more by ourselves</span></span>
+<span id="cb102-8"><a href="visualising-data.html#cb102-8" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(commute,</span>
+<span id="cb102-9"><a href="visualising-data.html#cb102-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">breaks =</span> <span class="dv">3</span>, <span class="co"># This is a very rough break into three bins</span></span>
+<span id="cb102-10"><a href="visualising-data.html#cb102-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> cardiffpurple1,</span>
+<span id="cb102-11"><a href="visualising-data.html#cb102-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">&quot;Minutes&quot;</span>,</span>
+<span id="cb102-12"><a href="visualising-data.html#cb102-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span><span class="st">&#39;&#39;</span>, <span class="co"># suppress the default main title</span></span>
+<span id="cb102-13"><a href="visualising-data.html#cb102-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">border =</span> <span class="st">&quot;white&quot;</span> <span class="co"># border around the histograms--here set to white</span></span>
+<span id="cb102-14"><a href="visualising-data.html#cb102-14" aria-hidden="true" tabindex="-1"></a>        )</span></code></pre></div>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-76-1.png" width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-76-2.png" width="50%" /></p>
 </div>
 <div id="boxplots" class="section level3" number="3.2.5">
 <h3><span class="header-section-number">3.2.5</span> Boxplots</h3>
 <p>Finally, let us take a look at boxplots. The default function is called <code>boxplot()</code>. Calling it with a continuous variable such as <code>spend</code> as its argument will already generate a plot that has all the important information.</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="visualising-data.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(spend)</span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="visualising-data.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(spend)</span></code></pre></div>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
 <p>But admittedly it is far from pleasent to look at the figure. Since we want that others pay attention to our message, let us make our visual communication more appealing.</p>
-<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="visualising-data.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="co"># here, we create a data object that is a list. Think of it as a super flexible data object.</span></span>
-<span id="cb103-2"><a href="visualising-data.html#cb103-2" aria-hidden="true" tabindex="-1"></a>list.study <span class="ot">&lt;-</span> <span class="fu">list</span>(studyideal, studyperweek)</span>
-<span id="cb103-3"><a href="visualising-data.html#cb103-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb103-4"><a href="visualising-data.html#cb103-4" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(list.study,</span>
-<span id="cb103-5"><a href="visualising-data.html#cb103-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">horizontal =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb103-6"><a href="visualising-data.html#cb103-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(cardiffred, cardiffpurple1), <span class="co"># different colours for the plots</span></span>
-<span id="cb103-7"><a href="visualising-data.html#cb103-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">axes =</span> <span class="cn">FALSE</span>, <span class="co"># we are suppressing all axes</span></span>
-<span id="cb103-8"><a href="visualising-data.html#cb103-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">boxwex =</span> .<span class="dv">6</span>, <span class="co"># this is about the width of the interquartile range box</span></span>
-<span id="cb103-9"><a href="visualising-data.html#cb103-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>), <span class="co"># defines the limit of the x-axis (!). </span></span>
-<span id="cb103-10"><a href="visualising-data.html#cb103-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># It would have been the y-axis, but we rotated the figure. </span></span>
-<span id="cb103-11"><a href="visualising-data.html#cb103-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># This is a superconfusing command of the boxplot function </span></span>
-<span id="cb103-12"><a href="visualising-data.html#cb103-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># We just have to live with it... </span></span>
-<span id="cb103-13"><a href="visualising-data.html#cb103-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">&#39;Hours&#39;</span> <span class="co"># Label for the x-axis</span></span>
-<span id="cb103-14"><a href="visualising-data.html#cb103-14" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb103-15"><a href="visualising-data.html#cb103-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Here, we are adding axes manually to have more control over them.</span></span>
-<span id="cb103-16"><a href="visualising-data.html#cb103-16" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">2</span>, <span class="at">col =</span> <span class="st">&quot;white&quot;</span>, </span>
-<span id="cb103-17"><a href="visualising-data.html#cb103-17" aria-hidden="true" tabindex="-1"></a>     <span class="at">las =</span> <span class="dv">1</span>, </span>
-<span id="cb103-18"><a href="visualising-data.html#cb103-18" aria-hidden="true" tabindex="-1"></a>     <span class="at">at =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="co"># where to put the tickmarks</span></span>
-<span id="cb103-19"><a href="visualising-data.html#cb103-19" aria-hidden="true" tabindex="-1"></a>     <span class="at">lab =</span><span class="fu">c</span>(<span class="st">&quot;Ideally </span><span class="sc">\n</span><span class="st"> Studied&quot;</span>, <span class="st">&quot;Ideally </span><span class="sc">\n</span><span class="st"> Studied&quot;</span>) <span class="co"># Labels. &#39;\n&#39; is a new line</span></span>
-<span id="cb103-20"><a href="visualising-data.html#cb103-20" aria-hidden="true" tabindex="-1"></a>     )</span>
-<span id="cb103-21"><a href="visualising-data.html#cb103-21" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="visualising-data.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="co"># here, we create a data object that is a list. Think of it as a super flexible data object.</span></span>
+<span id="cb104-2"><a href="visualising-data.html#cb104-2" aria-hidden="true" tabindex="-1"></a>list.study <span class="ot">&lt;-</span> <span class="fu">list</span>(studyideal, studyperweek)</span>
+<span id="cb104-3"><a href="visualising-data.html#cb104-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb104-4"><a href="visualising-data.html#cb104-4" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(list.study,</span>
+<span id="cb104-5"><a href="visualising-data.html#cb104-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">horizontal =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb104-6"><a href="visualising-data.html#cb104-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(cardiffred, cardiffpurple1), <span class="co"># different colours for the plots</span></span>
+<span id="cb104-7"><a href="visualising-data.html#cb104-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">axes =</span> <span class="cn">FALSE</span>, <span class="co"># we are suppressing all axes</span></span>
+<span id="cb104-8"><a href="visualising-data.html#cb104-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">boxwex =</span> .<span class="dv">6</span>, <span class="co"># this is about the width of the interquartile range box</span></span>
+<span id="cb104-9"><a href="visualising-data.html#cb104-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>), <span class="co"># defines the limit of the x-axis (!). </span></span>
+<span id="cb104-10"><a href="visualising-data.html#cb104-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># It would have been the y-axis, but we rotated the figure. </span></span>
+<span id="cb104-11"><a href="visualising-data.html#cb104-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># This is a superconfusing command of the boxplot function </span></span>
+<span id="cb104-12"><a href="visualising-data.html#cb104-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># We just have to live with it... </span></span>
+<span id="cb104-13"><a href="visualising-data.html#cb104-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">&#39;Hours&#39;</span> <span class="co"># Label for the x-axis</span></span>
+<span id="cb104-14"><a href="visualising-data.html#cb104-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb104-15"><a href="visualising-data.html#cb104-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Here, we are adding axes manually to have more control over them.</span></span>
+<span id="cb104-16"><a href="visualising-data.html#cb104-16" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">2</span>, <span class="at">col =</span> <span class="st">&quot;white&quot;</span>, </span>
+<span id="cb104-17"><a href="visualising-data.html#cb104-17" aria-hidden="true" tabindex="-1"></a>     <span class="at">las =</span> <span class="dv">1</span>, </span>
+<span id="cb104-18"><a href="visualising-data.html#cb104-18" aria-hidden="true" tabindex="-1"></a>     <span class="at">at =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="co"># where to put the tickmarks</span></span>
+<span id="cb104-19"><a href="visualising-data.html#cb104-19" aria-hidden="true" tabindex="-1"></a>     <span class="at">lab =</span><span class="fu">c</span>(<span class="st">&quot;Ideally </span><span class="sc">\n</span><span class="st"> Studied&quot;</span>, <span class="st">&quot;Ideally </span><span class="sc">\n</span><span class="st"> Studied&quot;</span>) <span class="co"># Labels. &#39;\n&#39; is a new line</span></span>
+<span id="cb104-20"><a href="visualising-data.html#cb104-20" aria-hidden="true" tabindex="-1"></a>     )</span>
+<span id="cb104-21"><a href="visualising-data.html#cb104-21" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">1</span>)</span></code></pre></div>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
 <p>This is it for this week.</p>
 </div>

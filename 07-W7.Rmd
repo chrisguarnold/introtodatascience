@@ -1,4 +1,17 @@
 
 # Comparing Apples and Oranges
 
+<!-- Why are we doing all this? In the end, reach statistical control. We want to be able to make a statement about the effect of A controling for B, C, D. Example -->
+
+<!-- ## Regression  -->
+
+<!-- ### How Does It Work? -->
+<!-- ### How Do We Interpret Results? -->
+
+<!-- ## Multivariate Regression -->
+<!-- ### How Does It Work? -->
+<!-- ### How Do We Interpret Results? -->
+
+
+<!-- ## The Relevance of Statistical Control -->
 <!-- ## Reading for This Week -->

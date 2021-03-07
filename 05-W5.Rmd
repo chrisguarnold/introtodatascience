@@ -69,7 +69,6 @@ While you cannot observe these probabilities from one throw alone, try it out a 
 ### Distribution 
 The next useful concept is the distribution. You can get to the distribution of an event in a pretty straightforward way. Imagine we were playing [Boule](https://en.wikipedia.org/wiki/Boules) in our local club 'Allez les Bleus'. On our Thursday evening training sessions we are trying to hit a line that is exactly 5m away. As avid data aficionados we are measuring each try and record the data in a spread sheet. At home you sit down and chart of histogram of all the tries that we have been throwing.
 
-HAUI
 
 ```{r fig.show="hold", out.width="30%", fig.align="center", fig.cap="A Histogram Becoming a Distribution.", echo=FALSE}
 # This works in the browser but not in the R Markdown Viewer.

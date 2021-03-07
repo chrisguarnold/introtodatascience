@@ -342,7 +342,7 @@ R is made for statistical analysis. No surprise that doing a t-test is really ea
 ```{r}
 
 ttest.perweek.21.19 <- t.test(dat19$studyperweek, studyperweek)
-
+ttest.perweek.21.19
 
 ```
 
