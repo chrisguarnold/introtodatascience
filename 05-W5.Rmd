@@ -102,7 +102,7 @@ cat(
 But if we want to know more, we have to introduce a more rigorous concept of what a probability distribution actually is. Let us get to know the Normal Distribution, a very special probability distribution. This is how it looks like.
 
 
-```{r fig.show="hold", out.width="30%", fig.align="center", fig.cap="A Histogram Becoming a Distribution.", echo=FALSE}
+```{r fig.show="hold", out.width="30%", fig.align="center", fig.cap="The Normal Distribution.", echo=FALSE}
 # This works in the browser but not in the R Markdown Viewer.
 knitr::include_graphics("./figures/w5_stnorm.png")
 ```
