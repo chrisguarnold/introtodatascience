@@ -142,7 +142,7 @@ knitr::include_graphics("./figures/w5_nd2.png")
 
 This is really useful, because *independent of the exact shape of the Normal Distribution*---that is *indenendent of the values of $\mu$ and $\sigma$*---we can now draw all kinds of probabilities using simple geometry. 
 
-```{r fig.show="hold", out.width="100%", fig.align="center", fig.cap="A Histogram Becoming a Distribution.", echo=FALSE}
+```{r fig.show="hold", out.width="100%", fig.align="center", fig.cap="Probabilities are Just Shapes Under the Distribution Function.", echo=FALSE}
 # This works in the browser but not in the R Markdown Viewer.
 knitr::include_graphics("./figures/w5_norm1.png")
 ```
@@ -180,7 +180,7 @@ What do we conclude? Well, Alexandra is on average much more 'off' in comparison
 The only thing you have to do is convert your data into z-score. And then you can look up its probability in the probability tables of a normal distribution. 
 
 
-```{r fig.show="hold", out.width="50%", fig.align="center", fig.cap="A Histogram Becoming a Distribution.", echo=FALSE}
+```{r fig.show="hold", out.width="50%", fig.align="center", fig.cap="Reading z-Scores.", echo=FALSE}
 # This works in the browser but not in the R Markdown Viewer.
 knitr::include_graphics(normalizePath("./figures/w5_norm2.png"))
 knitr::include_graphics(normalizePath("./figures/w5_zscores.png"))
@@ -342,10 +342,10 @@ Of course we do not know the true population parameter. So what do we do? We aga
 Let us take a look at an example to make this more easy to understand. We assume your sample is a random sample from your cohort. How many hours does your cohort sleep per night? And what is our uncertainty around that?
 
 ```{r echo=FALSE}
-m_i <- round(mean(dat$How.many.hours.do.you.usually.sleep.per.night.), 2)
-s_i <- round(sd(dat$How.many.hours.do.you.usually.sleep.per.night.), 2)
+m_i <- round(mean(dat$sleep), 2)
+s_i <- round(sd(dat$sleep), 2)
 
-n <- length(dat$How.many.hours.do.you.usually.sleep.per.night.)
+n <- length(dat$sleep)
 
 
 

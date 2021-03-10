@@ -24,7 +24,7 @@
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2021-03-07" />
+<meta name="date" content="2021-03-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -378,9 +378,9 @@ Figure 5.3: Two Different Normal Distributions and The Probability Mass Covered 
 </div>
 <p>This is really useful, because <em>independent of the exact shape of the Normal Distribution</em>—that is <em>indenendent of the values of <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span></em>—we can now draw all kinds of probabilities using simple geometry.</p>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-103"></span>
-<img src="figures/w5_norm1.png" alt="A Histogram Becoming a Distribution." width="100%" />
+<img src="figures/w5_norm1.png" alt="Probabilities are Just Shapes Under the Distribution Function." width="100%" />
 <p class="caption">
-Figure 5.4: A Histogram Becoming a Distribution.
+Figure 5.4: Probabilities are Just Shapes Under the Distribution Function.
 </p>
 </div>
 <p>Remember what we know: one standard deviation to both sides covers 68.3%, two standard deviations to both sides covers 95.4%.</p>
@@ -409,9 +409,9 @@ Figure 5.4: A Histogram Becoming a Distribution.
 <p><a href="https://www.youtube.com/watch?v=sdqMvEZTxlI">One more thing.</a> The z-scores have a link to the Normal distribution. We can actually use them to calculate the probability of an event.</p>
 <p>The only thing you have to do is convert your data into z-score. And then you can look up its probability in the probability tables of a normal distribution.</p>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-104"></span>
-<img src="figures/w5_norm2.png" alt="A Histogram Becoming a Distribution." width="50%" /><img src="figures/w5_zscores.png" alt="A Histogram Becoming a Distribution." width="50%" />
+<img src="figures/w5_norm2.png" alt="Reading z-Scores." width="50%" /><img src="figures/w5_zscores.png" alt="Reading z-Scores." width="50%" />
 <p class="caption">
-Figure 5.5: A Histogram Becoming a Distribution.
+Figure 5.5: Reading z-Scores.
 </p>
 </div>
 <p>Here is a quick video where I show you how to use the table.</p>
@@ -532,10 +532,8 @@ the sample we draw is normally distributed. We can therefore calculate an estima
 <p>Of course we do not know the true population parameter. So what do we do? We again use the value from the sample and assume that we have the right value. The estimate for the standard error then is as follows.</p>
 <p><span class="math display">\[  \hat{s}_n = \frac{s_i}{\sqrt{n}} \]</span></p>
 <p>Let us take a look at an example to make this more easy to understand. We assume your sample is a random sample from your cohort. How many hours does your cohort sleep per night? And what is our uncertainty around that?</p>
-<pre><code>## Warning in mean.default(dat$How.many.hours.do.you.usually.sleep.per.night.):
-## argument is not numeric or logical: returning NA</code></pre>
-<p><span class="math display">\[\hat \mu = \bar m_i = NA \]</span></p>
-<p><span class="math display">\[ \hat \sigma_i = \frac{\hat \sigma}{\sqrt{n}} = \frac{NA}{\sqrt{0}} = NA  \]</span></p>
+<p><span class="math display">\[\hat \mu = \bar m_i = 7.69 \]</span></p>
+<p><span class="math display">\[ \hat \sigma_i = \frac{\hat \sigma}{\sqrt{n}} = \frac{1.08}{\sqrt{16}} = 0.27  \]</span></p>
 </div>
 <div id="summing-up-what-is-inference" class="section level3" number="5.2.4">
 <h3><span class="header-section-number">5.2.4</span> Summing Up: What is Inference?</h3>
@@ -563,8 +561,8 @@ Figure 5.8: Two Different Normal Distributions and The Probability Mass Covered 
 <p>Knowing that we can assume that the sampling distribution is normally distributed (hat tip CLT), we can calculate the probability that we cover the range of values where we will capture the real mean in 95 out of 100 times. It is the range given by</p>
 <p><span class="math display">\[  \hat\mu ± 1.96 \hat \sigma \]</span></p>
 <p>Or in our example <em>How many hours do you sleep at night?</em></p>
-<p><span class="math display">\[  NA ± 1.96 NA = [NA, NA] \]</span></p>
-<p>This means that if we drew 100 samples, the true population mean of your overall cohort would be in the interval [NA, NA] in 95 out of 100 times.</p>
+<p><span class="math display">\[  7.69 ± 1.96 1.08 = [5.5732, 9.8068] \]</span></p>
+<p>This means that if we drew 100 samples, the true population mean of your overall cohort would be in the interval [5.5732, 9.8068] in 95 out of 100 times.</p>
 <!-- Insert a video here on the calculations by hand? -->
 </div>
 <div id="revisiting-t-tests" class="section level3" number="5.2.6">
@@ -613,32 +611,32 @@ Figure 5.8: Two Different Normal Distributions and The Probability Mass Covered 
 <h2><span class="header-section-number">5.4</span> A Simple Figure With Two Variables</h2>
 <p>This week was quite heavy on concepts, hence let us be really quick on the coding. Just a simply plot of two variables. In all we are doing, I am introducing some functions for randomly sampling in different ways.
 Let us first do a random draw from a normal distribution. We then calculate a second variable from it, adding a bit of normally distributed noise on top. Then we plot it using colour.</p>
-<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select var1 randomly from a normal distribution</span></span>
-<span id="cb132-2"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-2" aria-hidden="true" tabindex="-1"></a>var1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">3</span>)</span>
-<span id="cb132-3"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Select some noise again randomly from a normal distribution</span></span>
-<span id="cb132-4"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-4" aria-hidden="true" tabindex="-1"></a>var2.noise <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n=</span><span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="fl">0.5</span>)</span>
-<span id="cb132-5"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-5" aria-hidden="true" tabindex="-1"></a><span class="co"># create second variable</span></span>
-<span id="cb132-6"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-6" aria-hidden="true" tabindex="-1"></a>var2 <span class="ot">&lt;-</span> var1 <span class="sc">+</span> var2.noise</span>
-<span id="cb132-7"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb132-8"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Here I sample two colours randomly </span></span>
-<span id="cb132-9"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-9" aria-hidden="true" tabindex="-1"></a>allcolours <span class="ot">&lt;-</span> <span class="fu">colours</span>()</span>
-<span id="cb132-10"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-10" aria-hidden="true" tabindex="-1"></a>two.colours <span class="ot">&lt;-</span> <span class="fu">sample</span>(allcolours, <span class="dv">2</span>)</span>
-<span id="cb132-11"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb132-12"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot two variables</span></span>
-<span id="cb132-13"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-13" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(var1, var2, </span>
-<span id="cb132-14"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-14" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">21</span>, <span class="co"># Setting Point Characters, here filled circles</span></span>
-<span id="cb132-15"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-15" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> two.colours[<span class="dv">1</span>], <span class="co"># using the first colour for the frame</span></span>
-<span id="cb132-16"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-16" aria-hidden="true" tabindex="-1"></a>     <span class="at">bg =</span> two.colours[<span class="dv">2</span>], <span class="co"># using the second colour for the background</span></span>
-<span id="cb132-17"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-17" aria-hidden="true" tabindex="-1"></a>     <span class="at">las =</span> <span class="dv">1</span>, <span class="co">#rotates numbers on the left</span></span>
-<span id="cb132-18"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-18" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&#39;Label on the x-Axis&#39;</span>)</span>
-<span id="cb132-19"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb132-20"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-20" aria-hidden="true" tabindex="-1"></a><span class="co"># abline is very useful for plotting all sorts of lines</span></span>
-<span id="cb132-21"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-21" aria-hidden="true" tabindex="-1"></a><span class="co"># a: intercept, b: slope</span></span>
-<span id="cb132-22"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-22" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">a=</span> <span class="dv">0</span>, <span class="at">b =</span> <span class="dv">1</span>, <span class="at">col =</span> cardiffred) </span>
-<span id="cb132-23"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-23" aria-hidden="true" tabindex="-1"></a><span class="co"># horizontal line at 0, lwd: line width</span></span>
-<span id="cb132-24"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-24" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> cardiffblue, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
-<span id="cb132-25"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-25" aria-hidden="true" tabindex="-1"></a><span class="co"># vertical line at 0, lty: line type</span></span>
-<span id="cb132-26"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb132-26" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="dv">0</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select var1 randomly from a normal distribution</span></span>
+<span id="cb131-2"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-2" aria-hidden="true" tabindex="-1"></a>var1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">3</span>)</span>
+<span id="cb131-3"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Select some noise again randomly from a normal distribution</span></span>
+<span id="cb131-4"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-4" aria-hidden="true" tabindex="-1"></a>var2.noise <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n=</span><span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="fl">0.5</span>)</span>
+<span id="cb131-5"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-5" aria-hidden="true" tabindex="-1"></a><span class="co"># create second variable</span></span>
+<span id="cb131-6"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-6" aria-hidden="true" tabindex="-1"></a>var2 <span class="ot">&lt;-</span> var1 <span class="sc">+</span> var2.noise</span>
+<span id="cb131-7"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-8"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Here I sample two colours randomly </span></span>
+<span id="cb131-9"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-9" aria-hidden="true" tabindex="-1"></a>allcolours <span class="ot">&lt;-</span> <span class="fu">colours</span>()</span>
+<span id="cb131-10"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-10" aria-hidden="true" tabindex="-1"></a>two.colours <span class="ot">&lt;-</span> <span class="fu">sample</span>(allcolours, <span class="dv">2</span>)</span>
+<span id="cb131-11"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-12"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot two variables</span></span>
+<span id="cb131-13"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-13" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(var1, var2, </span>
+<span id="cb131-14"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-14" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">21</span>, <span class="co"># Setting Point Characters, here filled circles</span></span>
+<span id="cb131-15"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-15" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> two.colours[<span class="dv">1</span>], <span class="co"># using the first colour for the frame</span></span>
+<span id="cb131-16"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-16" aria-hidden="true" tabindex="-1"></a>     <span class="at">bg =</span> two.colours[<span class="dv">2</span>], <span class="co"># using the second colour for the background</span></span>
+<span id="cb131-17"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-17" aria-hidden="true" tabindex="-1"></a>     <span class="at">las =</span> <span class="dv">1</span>, <span class="co">#rotates numbers on the left</span></span>
+<span id="cb131-18"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-18" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&#39;Label on the x-Axis&#39;</span>)</span>
+<span id="cb131-19"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-20"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-20" aria-hidden="true" tabindex="-1"></a><span class="co"># abline is very useful for plotting all sorts of lines</span></span>
+<span id="cb131-21"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-21" aria-hidden="true" tabindex="-1"></a><span class="co"># a: intercept, b: slope</span></span>
+<span id="cb131-22"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-22" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">a=</span> <span class="dv">0</span>, <span class="at">b =</span> <span class="dv">1</span>, <span class="at">col =</span> cardiffred) </span>
+<span id="cb131-23"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-23" aria-hidden="true" tabindex="-1"></a><span class="co"># horizontal line at 0, lwd: line width</span></span>
+<span id="cb131-24"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-24" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> cardiffblue, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
+<span id="cb131-25"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-25" aria-hidden="true" tabindex="-1"></a><span class="co"># vertical line at 0, lty: line type</span></span>
+<span id="cb131-26"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb131-26" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="dv">0</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span></code></pre></div>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-112-1.png" width="672" /></p>
 </div>
 <div id="reading-for-this-week-1" class="section level2" number="5.5">
