@@ -1,7 +1,7 @@
 % Encoding: UTF-8
 
 @Book{Fogarty2019,
-  title     = {Quantitative Social Science Data With R},
+  title     = {{Quantitative Social Science Data With R}},
   publisher = {Sage},
   year      = {2019},
   author    = {Fogarty, Brian},

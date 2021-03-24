@@ -2,4 +2,131 @@
 
 # The Fundamental Problem of Causal Inference
 
-<!-- ## Reading for This Week -->
+## Studying Causal Effects
+
+
+In the last section of this module, we will take a closer look at policy evaluations. We want to see whether a policy actually did have any effect. Was it what policy makers intended? Or was the outcome different? These questions will concern any society, since studying the effect of policies is the foundation for any good governance. Policy makers are able to learn from the impact of their policies---and a political debate can begin about how to adapt policies where necessary.
+
+But evaluating policies comes with an important challenge. It is only possible to observe the world in two stages. Either the policy was enacted and we now see how the world developed with it. Or the policy was not enacted and we observe the world without it. What was the impact of the policy? The answer is the difference between these two worlds---the world with and the world without the policy.
+
+For example, imagine a policy introduced mandatory environmental protection for farm land. A year later, biologists measure that harmful substances in ground water are down by 20%. Was this the effect of the policy? Or was it maybe just a particularly rainy year that washed all pollutants away? We could only tell if we observed the world in both stages: farming with the new environmental protection and farming without it.
+
+In this last section we will learn how to think systematically about this problem. We will also take a look at some easy solutions to this problem.
+
+To further introduce this new section, I was fortunate to interview Claire Rowlands. She is the Strategy and Policy Director for the COVID Vaccination Programme in the Welsh Government. Of course, policy evaluation played a crucial role in fighting the pandemic: new measures were taken almost every second week and had to be adjusted regarding their impact. A rigorous and analytical evaluation of these policies and their impact is therefore key.
+
+
+```{r, eval=knitr::is_html_output(excludes = "epub"), results = 'asis', echo = F}
+cat(
+'<iframe width="560" height="315" src="https://www.youtube.com/embed/tFpMqrBbI_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+)
+```
+
+
+## Key Concepts
+
+
+
+We have already seen that there are a couple of new concepts that we should define. Let us introduce some terms.
+
+**Treatment** is the actual intervention. The causal inference framework has its roots in experimentation and in particular the life sciences, which is why we speak of the treatment here. 
+
+**The Counterfactual** We can observe the world as it is. We can only hypothesise about a different *counterfactual* world where a key condition is different. 
+
+**Potential Outcomes** is the outcome of the world in the presence or the absence of a treatment.
+
+
+**Causal Effect** In this framework, we care for causality from a particular view. The causal effect is the difference between the two potential outcomes of the world. 
+
+
+## The Fundamental Problem of Causal Inference
+
+Let us think a bit more rigorously about the potential outcomes framework. We first need a treatment $T$. In the light of the treatment there are two possible outcomes for our dependent variable $Y$. In theory, we would love to observe both of them: the outcome under the treatment $Y(1)$ and also the outcome of the same unit we are studying without the treatment $Y(0)$. We will often collect data about more than one observation, so we index everything with $i$ resulting in the treatment $T_i$ and the two potential outcomes will be $Y_i(1)$ and $Y_i(0)$. 
+
+
+To calculate the causal effect of the treatment $T_i$, we subtract the two potential outcomes from one another: $Y_i(1) - Y_i(0)$. Done. 
+
+The problem is, we can never observe the same unit $i$ in both conditions. As illustrated in the small table, we can only observe a unit either under the treatment condition $T_i=1$ or the control condition $T_i=0$, but never under both at the same time.
+
+
+| ID  | Outcome with Treatment | Outcome without Treatment | Treatment Variable |
+|-----|:----------------------:|:-------------------------:|:------------------:|
+|  1  |          Y(1)          |             ?             |          T=1         |
+|  2  |          Y(1)          |             ?             |          T=1         |
+|  3  |            ?           |            Y(0)           |          T=0         |
+| ... |           ...          |            ...            |         ...        |
+|  n  |            ?           |            Y(0)           |          T=0         |
+
+This framework tells us already a lot about the potential research that we can implement with it: it is necessary to be able to manipulate the treatment variable $T$. Think back at the data we collected about you. From the point of this framework, could we study the causal effect of gender on for example much you spend on average when you go out? 
+
+
+<!-- TODO: plot with expenditure by week men vs. women -->
+
+No we could not because it is impossible to change *gender* in an experimental setting. Does that mean that this framework is unable to study *any* gender related questions? No that is not the case: we need to think carefully about what it is that we are actually interested in---and then manipulate this condition. For example, if we are studying how the *perception* of gender might affect certain outcomes, we would could use a clever research design that helps manipulate this gender perception. 
+
+
+## Randomized Control Trials
+
+So what is our way out? How *can* we estimate causal effects?
+
+A very straightforward way to calculate the average treatment effect in a sample is to randomise the treatment. These randomised experiments are called *Randomised Control Trials* (RCT) and they are the working horse in the Life Sciences and Psychology. They have recently also found increasing attention in those disciplines who study societies at large like Economics, Sociology or Political Science. 
+
+RCTs are often considered as the gold standard, because they have a lot of internal validity: If randomization is done correctly, they reliably produce an average treatment effect. The big question is whether this validity within the study can be extrapolated to the society at large. For that, researchers need to show that a study also has external validity: the sample that is being studied actually needs to represent the population at large. 
+
+
+When you randomize a treatment in your sample, you can calculate the Sample Average Treatment Effect (SATE) as follows.
+
+\[
+\text{SATE} = \frac{1}{n} \sum_{i=1}^{n} \left(Y_i(1)-Y_i(0)\right)
+\]
+
+Let me walk you through the annotation again in a small video.
+
+TBD
+<!-- TODO small video with annotation here. -->
+
+Note: We are observing the Sample *Average* Treatment Effect. Does that mean that the treatment will have the same effect for all individuals? No, it will not. Using randomised control trials in this way we can only estimate the average effect across all participants in a study. 
+
+
+## Estimating a First Causal Effect
+
+TBD
+
+
+## R Code
+There is nothing really new this week, so let us refine your plotting skills. Today we will take a start at plotting maps.
+
+<!-- XXX TODO Maps -->
+
+
+
+
+
+
+## Reading for This Week
+This week, we will get to know a new book. Please read p.32–53 in @Imai2018.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

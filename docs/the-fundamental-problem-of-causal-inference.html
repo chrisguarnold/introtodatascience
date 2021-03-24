@@ -24,7 +24,7 @@
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2021-03-14" />
+<meta name="date" content="2021-03-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -287,7 +287,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#reading-for-this-week-3"><i class="fa fa-check"></i><b>7.5</b> Reading for This Week</a></li>
 </ul></li>
 <li class="part"><span><b>Scenario III: Did the New Policy Have an Effect?</b></span></li>
-<li class="chapter" data-level="8" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html"><i class="fa fa-check"></i><b>8</b> The Fundamental Problem of Causal Inference</a></li>
+<li class="chapter" data-level="8" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html"><i class="fa fa-check"></i><b>8</b> The Fundamental Problem of Causal Inference</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#studying-causal-effects"><i class="fa fa-check"></i><b>8.1</b> Studying Causal Effects</a></li>
+<li class="chapter" data-level="8.2" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#key-concepts-1"><i class="fa fa-check"></i><b>8.2</b> Key Concepts</a></li>
+<li class="chapter" data-level="8.3" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#the-fundamental-problem-of-causal-inference-1"><i class="fa fa-check"></i><b>8.3</b> The Fundamental Problem of Causal Inference</a></li>
+<li class="chapter" data-level="8.4" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#randomized-control-trials"><i class="fa fa-check"></i><b>8.4</b> Randomized Control Trials</a></li>
+<li class="chapter" data-level="8.5" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#estimating-a-first-causal-effect"><i class="fa fa-check"></i><b>8.5</b> Estimating a First Causal Effect</a></li>
+<li class="chapter" data-level="8.6" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#r-code-1"><i class="fa fa-check"></i><b>8.6</b> R Code</a></li>
+<li class="chapter" data-level="8.7" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#reading-for-this-week-4"><i class="fa fa-check"></i><b>8.7</b> Reading for This Week</a></li>
+</ul></li>
 <li class="chapter" data-level="9" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html"><i class="fa fa-check"></i><b>9</b> Causal Statements from Observational Data</a></li>
 <li class="chapter" data-level="10" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html"><i class="fa fa-check"></i><b>10</b> Multivariate Regression and Heterogenous Treatment Effects</a></li>
 <li class="part"><span><b>Appendix</b></span></li>
@@ -312,8 +321,103 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="the-fundamental-problem-of-causal-inference" class="section level1" number="8">
 <h1><span class="header-section-number">Chapter 8</span> The Fundamental Problem of Causal Inference</h1>
-<!-- ## Reading for This Week -->
+<div id="studying-causal-effects" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Studying Causal Effects</h2>
+<p>In the last section of this module, we will take a closer look at policy evaluations. We want to see whether a policy actually did have any effect. Was it what policy makers intended? Or was the outcome different? These questions will concern any society, since studying the effect of policies is the foundation for any good governance. Policy makers are able to learn from the impact of their policies—and a political debate can begin about how to adapt policies where necessary.</p>
+<p>But evaluating policies comes with an important challenge. It is only possible to observe the world in two stages. Either the policy was enacted and we now see how the world developed with it. Or the policy was not enacted and we observe the world without it. What was the impact of the policy? The answer is the difference between these two worlds—the world with and the world without the policy.</p>
+<p>For example, imagine a policy introduced mandatory environmental protection for farm land. A year later, biologists measure that harmful substances in ground water are down by 20%. Was this the effect of the policy? Or was it maybe just a particularly rainy year that washed all pollutants away? We could only tell if we observed the world in both stages: farming with the new environmental protection and farming without it.</p>
+<p>In this last section we will learn how to think systematically about this problem. We will also take a look at some easy solutions to this problem.</p>
+<p>To further introduce this new section, I was fortunate to interview Claire Rowlands. She is the Strategy and Policy Director for the COVID Vaccination Programme in the Welsh Government. Of course, policy evaluation played a crucial role in fighting the pandemic: new measures were taken almost every second week and had to be adjusted regarding their impact. A rigorous and analytical evaluation of these policies and their impact is therefore key.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tFpMqrBbI_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<div id="key-concepts-1" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Key Concepts</h2>
+<p>We have already seen that there are a couple of new concepts that we should define. Let us introduce some terms.</p>
+<p><strong>Treatment</strong> is the actual intervention. The causal inference framework has its roots in experimentation and in particular the life sciences, which is why we speak of the treatment here.</p>
+<p><strong>The Counterfactual</strong> We can observe the world as it is. We can only hypothesise about a different <em>counterfactual</em> world where a key condition is different.</p>
+<p><strong>Potential Outcomes</strong> is the outcome of the world in the presence or the absence of a treatment.</p>
+<p><strong>Causal Effect</strong> In this framework, we care for causality from a particular view. The causal effect is the difference between the two potential outcomes of the world.</p>
+</div>
+<div id="the-fundamental-problem-of-causal-inference-1" class="section level2" number="8.3">
+<h2><span class="header-section-number">8.3</span> The Fundamental Problem of Causal Inference</h2>
+<p>Let us think a bit more rigorously about the potential outcomes framework. We first need a treatment <span class="math inline">\(T\)</span>. In the light of the treatment there are two possible outcomes for our dependent variable <span class="math inline">\(Y\)</span>. In theory, we would love to observe both of them: the outcome under the treatment <span class="math inline">\(Y(1)\)</span> and also the outcome of the same unit we are studying without the treatment <span class="math inline">\(Y(0)\)</span>. We will often collect data about more than one observation, so we index everything with <span class="math inline">\(i\)</span> resulting in the treatment <span class="math inline">\(T_i\)</span> and the two potential outcomes will be <span class="math inline">\(Y_i(1)\)</span> and <span class="math inline">\(Y_i(0)\)</span>.</p>
+<p>To calculate the causal effect of the treatment <span class="math inline">\(T_i\)</span>, we subtract the two potential outcomes from one another: <span class="math inline">\(Y_i(1) - Y_i(0)\)</span>. Done.</p>
+<p>The problem is, we can never observe the same unit <span class="math inline">\(i\)</span> in both conditions. As illustrated in the small table, we can only observe a unit either under the treatment condition <span class="math inline">\(T_i=1\)</span> or the control condition <span class="math inline">\(T_i=0\)</span>, but never under both at the same time.</p>
+<table>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th align="center">Outcome with Treatment</th>
+<th align="center">Outcome without Treatment</th>
+<th align="center">Treatment Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td align="center">Y(1)</td>
+<td align="center">?</td>
+<td align="center">T=1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td align="center">Y(1)</td>
+<td align="center">?</td>
+<td align="center">T=1</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td align="center">?</td>
+<td align="center">Y(0)</td>
+<td align="center">T=0</td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+<tr class="odd">
+<td>n</td>
+<td align="center">?</td>
+<td align="center">Y(0)</td>
+<td align="center">T=0</td>
+</tr>
+</tbody>
+</table>
+<p>This framework tells us already a lot about the potential research that we can implement with it: it is necessary to be able to manipulate the treatment variable <span class="math inline">\(T\)</span>. Think back at the data we collected about you. From the point of this framework, could we study the causal effect of gender on for example much you spend on average when you go out?</p>
+<!-- TODO: plot with expenditure by week men vs. women -->
+<p>No we could not because it is impossible to change <em>gender</em> in an experimental setting. Does that mean that this framework is unable to study <em>any</em> gender related questions? No that is not the case: we need to think carefully about what it is that we are actually interested in—and then manipulate this condition. For example, if we are studying how the <em>perception</em> of gender might affect certain outcomes, we would could use a clever research design that helps manipulate this gender perception.</p>
+</div>
+<div id="randomized-control-trials" class="section level2" number="8.4">
+<h2><span class="header-section-number">8.4</span> Randomized Control Trials</h2>
+<p>So what is our way out? How <em>can</em> we estimate causal effects?</p>
+<p>A very straightforward way to calculate the average treatment effect in a sample is to randomise the treatment. These randomised experiments are called <em>Randomised Control Trials</em> (RCT) and they are the working horse in the Life Sciences and Psychology. They have recently also found increasing attention in those disciplines who study societies at large like Economics, Sociology or Political Science.</p>
+<p>RCTs are often considered as the gold standard, because they have a lot of internal validity: If randomization is done correctly, they reliably produce an average treatment effect. The big question is whether this validity within the study can be extrapolated to the society at large. For that, researchers need to show that a study also has external validity: the sample that is being studied actually needs to represent the population at large.</p>
+<p>When you randomize a treatment in your sample, you can calculate the Sample Average Treatment Effect (SATE) as follows.</p>
+<p><span class="math display">\[
+\text{SATE} = \frac{1}{n} \sum_{i=1}^{n} \left(Y_i(1)-Y_i(0)\right)
+\]</span></p>
+<p>Let me walk you through the annotation again in a small video.</p>
+<p>TBD
+<!-- TODO small video with annotation here. --></p>
+<p>Note: We are observing the Sample <em>Average</em> Treatment Effect. Does that mean that the treatment will have the same effect for all individuals? No, it will not. Using randomised control trials in this way we can only estimate the average effect across all participants in a study.</p>
+</div>
+<div id="estimating-a-first-causal-effect" class="section level2" number="8.5">
+<h2><span class="header-section-number">8.5</span> Estimating a First Causal Effect</h2>
+<p>TBD</p>
+</div>
+<div id="r-code-1" class="section level2" number="8.6">
+<h2><span class="header-section-number">8.6</span> R Code</h2>
+<p>There is nothing really new this week, so let us refine your plotting skills. Today we will take a start at plotting maps.</p>
+<!-- XXX TODO Maps -->
+</div>
+<div id="reading-for-this-week-4" class="section level2" number="8.7">
+<h2><span class="header-section-number">8.7</span> Reading for This Week</h2>
+<p>This week, we will get to know a new book. Please read p.32–53 in <span class="citation"><a href="bibliography.html#ref-Imai2018" role="doc-biblioref">Imai</a> (<a href="bibliography.html#ref-Imai2018" role="doc-biblioref">2018</a>)</span>.</p>
 
+</div>
 </div>
             </section>
 

@@ -147,7 +147,7 @@ table.breakfast.summer.18 <- table(dat18$breakfast, dat18$summer)
 
 
 kable(list(table.breakfast.summer.18, table.breakfast.summer.19, table.breakfast.summer.21),
-      caption = "Cross Tabulating the What You Drink in the Morning and How Much You Like Summer for the Cohort in 2018, 2019 and 2021 (from Left to Right).",
+      caption = "Cross Tabulating the variables 'What You Drink in the Morning' and 'How Much You Like Summer' for the Cohort in 2018, 2019 and 2021 (from Left to Right).",
       booktabs = TRUE,
       valign ='t') 
 

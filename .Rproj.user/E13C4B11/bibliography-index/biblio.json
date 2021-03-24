@@ -60,6 +60,41 @@
             "type": "book"
         },
         {
+            "author": [
+                {
+                    "family": "Müller",
+                    "given": "Stefan"
+                }
+            ],
+            "container-title": "Journal of Politics",
+            "id": "MuellerForthcoming",
+            "issued": {
+                "date-parts": []
+            },
+            "title": "The temporal focus of campaign communication",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Edelstein",
+                    "given": "David M."
+                }
+            ],
+            "id": "Edelstein2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "publisher": "Cornell University Press",
+            "title": "Over the horizon: Time, uncertainty, and the rise of great powers",
+            "title-short": "Over the horizon",
+            "type": "book"
+        },
+        {
             "URL": "https://www.R-project.org/",
             "author": [
                 {
