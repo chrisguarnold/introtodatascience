@@ -24,7 +24,7 @@
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2021-03-24" />
+<meta name="date" content="2021-03-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -323,11 +323,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 8</span> The Fundamental Problem of Causal Inference</h1>
 <div id="studying-causal-effects" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> Studying Causal Effects</h2>
-<p>In the last section of this module, we will take a closer look at policy evaluations. We want to see whether a policy actually did have any effect. Was it what policy makers intended? Or was the outcome different? These questions will concern any society, since studying the effect of policies is the foundation for any good governance. Policy makers are able to learn from the impact of their policies—and a political debate can begin about how to adapt policies where necessary.</p>
+<p>In the last section of this module, we will take a closer look at policy evaluations. We want to see whether a policy actually did have any effect. Was the outcome what policy makers intended? Or was it different? These questions will concern any society, since studying the effect of policies is the foundation for any good governance.</p>
 <p>But evaluating policies comes with an important challenge. It is only possible to observe the world in two stages. Either the policy was enacted and we now see how the world developed with it. Or the policy was not enacted and we observe the world without it. What was the impact of the policy? The answer is the difference between these two worlds—the world with and the world without the policy.</p>
 <p>For example, imagine a policy introduced mandatory environmental protection for farm land. A year later, biologists measure that harmful substances in ground water are down by 20%. Was this the effect of the policy? Or was it maybe just a particularly rainy year that washed all pollutants away? We could only tell if we observed the world in both stages: farming with the new environmental protection and farming without it.</p>
 <p>In this last section we will learn how to think systematically about this problem. We will also take a look at some easy solutions to this problem.</p>
-<p>To further introduce this new section, I was fortunate to interview Claire Rowlands. She is the Strategy and Policy Director for the COVID Vaccination Programme in the Welsh Government. Of course, policy evaluation played a crucial role in fighting the pandemic: new measures were taken almost every second week and had to be adjusted regarding their impact. A rigorous and analytical evaluation of these policies and their impact is therefore key.</p>
+<p>To further introduce this new section, I was fortunate to interview Claire Rowlands. She is the Strategy and Policy Director for the COVID Vaccination Programme in the Welsh Government. Of course, policy evaluation plays a crucial role in fighting the pandemic: measures are updated regularly and have to be adjusted regarding their impact. A rigorous and analytical evaluation of these policies and their impact is therefore key.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tFpMqrBbI_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </div>
@@ -388,30 +388,113 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 <p>This framework tells us already a lot about the potential research that we can implement with it: it is necessary to be able to manipulate the treatment variable <span class="math inline">\(T\)</span>. Think back at the data we collected about you. From the point of this framework, could we study the causal effect of gender on for example much you spend on average when you go out?</p>
 <!-- TODO: plot with expenditure by week men vs. women -->
-<p>No we could not because it is impossible to change <em>gender</em> in an experimental setting. Does that mean that this framework is unable to study <em>any</em> gender related questions? No that is not the case: we need to think carefully about what it is that we are actually interested in—and then manipulate this condition. For example, if we are studying how the <em>perception</em> of gender might affect certain outcomes, we would could use a clever research design that helps manipulate this gender perception.</p>
+<p>No, we could not because it is impossible to change <em>gender</em> in an experimental setting. Does that mean that this framework is unable to study <em>any</em> gender related questions? This is not the case: we need to think carefully about what it is that we are actually interested in—and then manipulate this condition. For example, if we are studying how the <em>perception</em> of gender might affect certain outcomes, we could use a clever research design that helps manipulate this gender perception.</p>
 </div>
 <div id="randomized-control-trials" class="section level2" number="8.4">
 <h2><span class="header-section-number">8.4</span> Randomized Control Trials</h2>
 <p>So what is our way out? How <em>can</em> we estimate causal effects?</p>
 <p>A very straightforward way to calculate the average treatment effect in a sample is to randomise the treatment. These randomised experiments are called <em>Randomised Control Trials</em> (RCT) and they are the working horse in the Life Sciences and Psychology. They have recently also found increasing attention in those disciplines who study societies at large like Economics, Sociology or Political Science.</p>
 <p>RCTs are often considered as the gold standard, because they have a lot of internal validity: If randomization is done correctly, they reliably produce an average treatment effect. The big question is whether this validity within the study can be extrapolated to the society at large. For that, researchers need to show that a study also has external validity: the sample that is being studied actually needs to represent the population at large.</p>
-<p>When you randomize a treatment in your sample, you can calculate the Sample Average Treatment Effect (SATE) as follows.</p>
+<p>Ideally, we want to calculate the Sample Average Treatment Effect (SATE) as follows.</p>
 <p><span class="math display">\[
 \text{SATE} = \frac{1}{n} \sum_{i=1}^{n} \left(Y_i(1)-Y_i(0)\right)
 \]</span></p>
-<p>Let me walk you through the annotation again in a small video.</p>
-<p>TBD
-<!-- TODO small video with annotation here. --></p>
-<p>Note: We are observing the Sample <em>Average</em> Treatment Effect. Does that mean that the treatment will have the same effect for all individuals? No, it will not. Using randomised control trials in this way we can only estimate the average effect across all participants in a study.</p>
+<!-- Let me walk you through the annotation again in a small video. -->
+<!-- TBD -->
+<!-- TODO small video with annotation here. -->
+<p>However, as mentioned before, we cannot observe the individuals <span class="math inline">\(i\)</span> under both conditions. But what we can do in an RCT is to randomise our treatment across individuals. To do so, we chose those who receive the treatment and those who are in the control group by coincidence. If this condition is satisfied, we can actually expect that the inviduals in both groups are comparable <em>on average</em>. Randomisation makes sure that participants in the treatment group and the control group share <em>on average</em> the same traits. In short, if we randomise the treatment, we can compare the results of both groups with one another. The causal effect from the treatment then simply boils down to the <em>difference in means</em>. We also alredy know from previous weeks how to do inference and express our uncertainty for estimates by simplyt using t-tests.</p>
+<p>One final note here. We are observing the <em>average</em> treatment effect. Does that mean that the treatment will have the same effect for all individuals? No, it will not. Using randomised control trials in this way we can only estimate the <em>average</em> effect across all participants in a study.</p>
 </div>
 <div id="estimating-a-first-causal-effect" class="section level2" number="8.5">
 <h2><span class="header-section-number">8.5</span> Estimating a First Causal Effect</h2>
-<p>TBD</p>
+<p>I sent out an email in Week 8 asking you for more data on the effort you are putting into this module and the effort you think you should be investing into the module. In these emails, I hid a quick experiment: I wanted to investigate whether priming you for how difficult this class is makes any difference regarding the effort you are reporting or the effort you think you should be investing.</p>
+<p>This was the email to the control group:</p>
+<blockquote>
+<p>Hi everybody,
+To fine tune the material for PL 9239, I would like to collect some more data on your study effort.
+Could you please fill out the two short questions at the following link until tomorrow Thursday night?
+Thanks a lot!
+Best,
+Christian</p>
+</blockquote>
+<p>And here is the email to the treatment group with the extra prompt in bold so that you can easily see it here.</p>
+<blockquote>
+<p>Hi everybody,
+To fine tune the material for PL 9239, I would like to collect some more data on your study effort.
+<strong>I am aware that the module does indeed require quite a bit of work to keep up with the comprehensive material.</strong>
+Could you please fill out the two short questions at the following link until tomorrow Thursday night?
+Thanks a lot!
+Best,
+Christian</p>
+</blockquote>
+<p>Let us go and analyse whether this prompt actually made any difference. Note that I excluded one outlier in the control group who is putting in 50h per week and thinks that s/he should be spending 56h. (Whoever it is, feel free to get in touch if this is PL9239 causing all the work! I would love to know more.)</p>
+<p>To analyse the data, let us first plot the data. On the left, you can see the effort that you are actually putting into your studies in both groups. In the middle, you can see what you think that you should be studying. On the right we are plotting the difference between what you think that you should be studying and what you are actually studying.</p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-147-1.png" width="33%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-147-2.png" width="33%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-147-3.png" width="33%" /></p>
+<p>The differences are quite striking in our little experiment! Let us begin with the actual hours that you are studying. The treatment group studies on average 1.67h more. For the number of hours that you think you should be studying, the difference is also positive: Those in the treatment group think they should study on average 2.67h more. Finally, we can also calculate the difference between the hours that you think you should be studying and the actual hours that you are studying. Think of it as an expression about how ‘bad’ your conscious is. Do we find an effect here, too? We do. The difference between the treatment group and the control group is 1h—telling you that the module requires a lot of work indeed causes you a bad consciousness.</p>
+<p>Now, what about statistical significance? Could we trust that we would find this in the larger population if we ran the experiment there? All t-test report a unanimous result: the result is not statistically significant. The reason is quite simple: your sample is way to small. Ideally we have at least 100 participants in the controlgroup and another 100 in the treatment group to get nice and small 95% confidence intervals.</p>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  dat.control$studyperweek and dat.treatment$studyperweek
+## t = -0.42273, df = 4.1011, p-value = 0.6937
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -12.507561   9.174228
+## sample estimates:
+## mean of x mean of y 
+##  13.33333  15.00000</code></pre>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  dat.control$studyideal and dat.treatment$studyideal
+## t = -0.44582, df = 5.2124, p-value = 0.6736
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -17.85591  12.52257
+## sample estimates:
+## mean of x mean of y 
+##  22.83333  25.50000</code></pre>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  dat.control$studydifference and dat.treatment$studydifference
+## t = -0.33457, df = 7.5413, p-value = 0.7471
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -7.966007  5.966007
+## sample estimates:
+## mean of x mean of y 
+##       9.5      10.5</code></pre>
 </div>
 <div id="r-code-1" class="section level2" number="8.6">
 <h2><span class="header-section-number">8.6</span> R Code</h2>
-<p>There is nothing really new this week, so let us refine your plotting skills. Today we will take a start at plotting maps.</p>
-<!-- XXX TODO Maps -->
+<p>There is nothing really new this week regarding code, so let us refine your plotting skills. Today we will take a start at plotting maps. I used the stop and search data that is published <a href="https://data.police.uk/data/">online</a> by the police. For our intro, I am using the data from December 2018 before the pandemic which you can download <a href="https://github.com/chrisguarnold/introtodatascience">here</a>. <!-- TODO refine link --></p>
+<p>The basic idea is pretty simple: We have to load a map of Wales from a package. Then we can plot our stop and search incidents on that map using the longitude and latitude data.</p>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="the-fundamental-problem-of-causal-inference.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stop and Search Data </span></span>
+<span id="cb148-2"><a href="the-fundamental-problem-of-causal-inference.html#cb148-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;stop_and_search_18_12.RData&quot;</span>)</span>
+<span id="cb148-3"><a href="the-fundamental-problem-of-causal-inference.html#cb148-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb148-4"><a href="the-fundamental-problem-of-causal-inference.html#cb148-4" aria-hidden="true" tabindex="-1"></a><span class="co"># First, we want to have a map</span></span>
+<span id="cb148-5"><a href="the-fundamental-problem-of-causal-inference.html#cb148-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rworldmap)</span>
+<span id="cb148-6"><a href="the-fundamental-problem-of-causal-inference.html#cb148-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rworldxtra)</span>
+<span id="cb148-7"><a href="the-fundamental-problem-of-causal-inference.html#cb148-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb148-8"><a href="the-fundamental-problem-of-causal-inference.html#cb148-8" aria-hidden="true" tabindex="-1"></a><span class="co"># we don&#39;t want to take a look at the whole world - </span></span>
+<span id="cb148-9"><a href="the-fundamental-problem-of-causal-inference.html#cb148-9" aria-hidden="true" tabindex="-1"></a><span class="co"># just the bits on the map that have our data points</span></span>
+<span id="cb148-10"><a href="the-fundamental-problem-of-causal-inference.html#cb148-10" aria-hidden="true" tabindex="-1"></a><span class="co"># so we take the min and max</span></span>
+<span id="cb148-11"><a href="the-fundamental-problem-of-causal-inference.html#cb148-11" aria-hidden="true" tabindex="-1"></a>min.long <span class="ot">&lt;-</span> <span class="fu">min</span>(dat.sas<span class="sc">$</span>Longitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb148-12"><a href="the-fundamental-problem-of-causal-inference.html#cb148-12" aria-hidden="true" tabindex="-1"></a>max.long <span class="ot">&lt;-</span> <span class="fu">max</span>(dat.sas<span class="sc">$</span>Longitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb148-13"><a href="the-fundamental-problem-of-causal-inference.html#cb148-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb148-14"><a href="the-fundamental-problem-of-causal-inference.html#cb148-14" aria-hidden="true" tabindex="-1"></a>min.lat <span class="ot">&lt;-</span> <span class="fu">min</span>(dat.sas<span class="sc">$</span>Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb148-15"><a href="the-fundamental-problem-of-causal-inference.html#cb148-15" aria-hidden="true" tabindex="-1"></a>max.lat <span class="ot">&lt;-</span> <span class="fu">max</span>(dat.sas<span class="sc">$</span>Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb148-16"><a href="the-fundamental-problem-of-causal-inference.html#cb148-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb148-17"><a href="the-fundamental-problem-of-causal-inference.html#cb148-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Get a map</span></span>
+<span id="cb148-18"><a href="the-fundamental-problem-of-causal-inference.html#cb148-18" aria-hidden="true" tabindex="-1"></a>newmap <span class="ot">&lt;-</span> <span class="fu">getMap</span>(<span class="at">resolution =</span> <span class="st">&quot;high&quot;</span>)</span>
+<span id="cb148-19"><a href="the-fundamental-problem-of-causal-inference.html#cb148-19" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(newmap, <span class="at">xlim =</span> <span class="fu">c</span>(min.long, max.long),</span>
+<span id="cb148-20"><a href="the-fundamental-problem-of-causal-inference.html#cb148-20" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span> <span class="fu">c</span>(min.lat, max.lat))</span>
+<span id="cb148-21"><a href="the-fundamental-problem-of-causal-inference.html#cb148-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb148-22"><a href="the-fundamental-problem-of-causal-inference.html#cb148-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the incidents</span></span>
+<span id="cb148-23"><a href="the-fundamental-problem-of-causal-inference.html#cb148-23" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(dat.sas<span class="sc">$</span>Longitude, dat.sas<span class="sc">$</span>Latitude, <span class="at">col =</span> cardiffred)</span></code></pre></div>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-149-1.png" width="672" /></p>
+<p>This is it—as simple as that. Go wild and explore the data that is available on the police’s website!</p>
 </div>
 <div id="reading-for-this-week-4" class="section level2" number="8.7">
 <h2><span class="header-section-number">8.7</span> Reading for This Week</h2>
