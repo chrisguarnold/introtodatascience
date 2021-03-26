@@ -294,7 +294,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#the-fundamental-problem-of-causal-inference-1"><i class="fa fa-check"></i><b>8.3</b> The Fundamental Problem of Causal Inference</a></li>
 <li class="chapter" data-level="8.4" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#randomized-control-trials"><i class="fa fa-check"></i><b>8.4</b> Randomized Control Trials</a></li>
 <li class="chapter" data-level="8.5" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#estimating-a-first-causal-effect"><i class="fa fa-check"></i><b>8.5</b> Estimating a First Causal Effect</a></li>
-<li class="chapter" data-level="8.6" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#r-code-1"><i class="fa fa-check"></i><b>8.6</b> R Code</a></li>
+<li class="chapter" data-level="8.6" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#plotting-data-on-maps"><i class="fa fa-check"></i><b>8.6</b> Plotting Data on Maps</a></li>
 <li class="chapter" data-level="8.7" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#reading-for-this-week-4"><i class="fa fa-check"></i><b>8.7</b> Reading for This Week</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html"><i class="fa fa-check"></i><b>9</b> Causal Statements from Observational Data</a></li>
@@ -466,9 +466,9 @@ Christian</p>
 ## mean of x mean of y 
 ##       9.5      10.5</code></pre>
 </div>
-<div id="r-code-1" class="section level2" number="8.6">
-<h2><span class="header-section-number">8.6</span> R Code</h2>
-<p>There is nothing really new this week regarding code, so let us refine your plotting skills. Today we will take a start at plotting maps. I used the stop and search data that is published <a href="https://data.police.uk/data/">online</a> by the police. For our intro, I am using the data from December 2018 before the pandemic which you can download <a href="https://github.com/chrisguarnold/introtodatascience">here</a>. <!-- TODO refine link --></p>
+<div id="plotting-data-on-maps" class="section level2" number="8.6">
+<h2><span class="header-section-number">8.6</span> Plotting Data on Maps</h2>
+<p>There is nothing really new this week regarding code, so let us refine your plotting skills. Today we will take a start at plotting maps. I used the stop and search data that is published <a href="https://data.police.uk/data/">online</a> by the police. For this introduction, I am using the data from December 2018 before the pandemic which you can download <a href="https://github.com/chrisguarnold/introtodatascience/blob/master/stop_and_search_18_12.RData">here</a> if you want to play around with it yourself.</p>
 <p>The basic idea is pretty simple: We have to load a map of Wales from a package. Then we can plot our stop and search incidents on that map using the longitude and latitude data.</p>
 <div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="the-fundamental-problem-of-causal-inference.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stop and Search Data </span></span>
 <span id="cb148-2"><a href="the-fundamental-problem-of-causal-inference.html#cb148-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;stop_and_search_18_12.RData&quot;</span>)</span>

@@ -194,7 +194,7 @@ t.test(dat.control$studydifference, dat.treatment$studydifference)
 
 
 ## Plotting Data on Maps
-There is nothing really new this week regarding code, so let us refine your plotting skills. Today we will take a start at plotting maps. I used the stop and search data that is published [online](https://data.police.uk/data/) by the police. For this introduction, I am using the data from December 2018 before the pandemic which you can download [here](https://github.com/chrisguarnold/introtodatascience).  <!-- TODO refine link -->
+There is nothing really new this week regarding code, so let us refine your plotting skills. Today we will take a start at plotting maps. I used the stop and search data that is published [online](https://data.police.uk/data/) by the police. For this introduction, I am using the data from December 2018 before the pandemic which you can download [here](https://github.com/chrisguarnold/introtodatascience/blob/master/stop_and_search_18_12.RData) if you want to play around with it yourself.  
 
 The basic idea is pretty simple: We have to load a map of Wales from a package. Then we can plot our stop and search incidents on that map using the longitude and latitude data.
 

@@ -127,7 +127,7 @@ key-concepts-1
 the-fundamental-problem-of-causal-inference-1
 randomized-control-trials
 estimating-a-first-causal-effect
-r-code-1
+plotting-data-on-maps
 reading-for-this-week-4
 causal-statements-from-observational-data
 multivariate-regression-and-heterogenous-treatment-effects
