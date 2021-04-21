@@ -1,5 +1,276 @@
 
+```{r echo=FALSE, include=FALSE}
+# -- housekeeping -------------------------------------------------------------- 
+rm(list=ls())
+# Libraries
+library(foreign)
+library(xtable)
+
+
+
+
+
+
+# data: Class surveys
+# cov.dat <- read.csv("preparing_data/data/confirmed_hosp_cases_england_wales.csv")
+cov.dat <- read.csv("preparing_data/data/mv_beds_england_wales.csv")
+
+# Predefined Cardiff colours
+# primary
+cardiffred <- rgb(211,55,74, maxColorValue = 255)
+cardiffblack <- rgb(35,31,32, maxColorValue = 255)
+cardiffgrey <- rgb(47,68,78, maxColorValue = 255)
+cardiffgold <- rgb(189,158,94, maxColorValue = 255)
+# secondary 
+cardiffblue <- rgb(21,44,81, maxColorValue = 255)
+cardiffpurple1 <- rgb(29,15,51, maxColorValue = 255)
+cardiffpurple2 <- rgb(60,44,89, maxColorValue = 255)
+
+
+cov.dat$date <- as.Date(cov.dat$date, format = "%d/%m/%Y")
+
+pop.wales <- 3136000
+pop.england <- 55980000
+
+cov.dat$england.p.pop <- cov.dat$england/pop.england *1000000 
+cov.dat$wales.p.pop <- cov.dat$wales/pop.wales *1000000 
+
+wales.pre.treatment.dat <- subset(cov.dat, 
+  (as.Date('2020-10-19') < cov.dat$date) & (cov.dat$date < as.Date('2020-10-27'))) 
+
+wales.post.treatment.dat <- subset(cov.dat, 
+  (as.Date('2020-11-16') < cov.dat$date) & (cov.dat$date < as.Date('2020-11-24'))) 
+
+england.pre.treatment.dat <- subset(cov.dat, 
+  (as.Date('2020-10-29') < cov.dat$date) & (cov.dat$date < as.Date('2020-11-06'))) 
+
+england.post.treatment.dat <- subset(cov.dat, 
+  (as.Date('2020-12-03') < cov.dat$date) & (cov.dat$date < as.Date('2020-12-10'))) 
+
+```
+
+
+
+
 # Causal Statements from Observational Data
 
+Last week, we were taking a look at randomised control trials. While they are of course great in generating internal validity, they are not always easy to implement and we may need alternatives for practical reasons. Let me help frame this week's discussion in this video. 
 
-<!-- ## Reading for This Week -->
+
+```{r, eval=knitr::is_html_output(excludes = "epub"), results = 'asis', echo = F}
+cat(
+'<iframe width="560" height="315" src="https://www.youtube.com/embed/kzv3FXv14pU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+)
+```
+
+
+
+## This Week's Data: The Effect of the Welsh Circuit Break
+
+Let me introduce the data that we will be using for this week. I downloaded data on manual ventilation beds due to COVID-19 in autumn 2020. The data from Wales is publicly available [here](https://gov.wales/nhs-activity-and-capacity-during-coronavirus-covid-19-pandemic-7-january-2021-html) and the data for England can be downloaded [here](https://www.england.nhs.uk/statistics/statistical-work-areas/hospital-activity/monthly-hospital-activity/mar-data/). I then used the overall population of Wales and England to calculate how many MV beds are being used per 1,000,000 inhabitants. The Figure is plotting the resulting daily time-series from September 1st 2020 until the end of 2020. 
+
+
+
+
+```{r echo=FALSE}
+
+
+plot(cov.dat$date, cov.dat$wales.p.pop, 
+     ylim = c(0, 60), xlim = as.Date(c('2020-09-01', '2021-01-01')),type = 'l',
+     col = cardiffred, lwd = 2, las = 1, bty = 'n',
+     xlab = 'Date', ylab = 'MV Beds / Population (1 Mio)')
+lines(cov.dat$date, cov.dat$england.p.pop, col = cardiffblue, lwd = 2)
+
+abline(v=as.Date('2020-10-23'), lwd = 2, lty = 3, col = cardiffred)
+text(as.Date('2020-10-23'), 40, labels = 'Wales Circuit Break', pos = 2, 
+     col = cardiffred)
+
+abline(v=as.Date('2020-11-20'), lwd = 1, lty = 3, col = cardiffred)
+text(as.Date('2020-11-20'), 40, labels = '+ 4 Weeks', pos = 4, 
+     col = cardiffred)
+
+abline(v=as.Date('2020-11-05'), lwd = 2, lty = 3, col = cardiffblue)
+text(as.Date('2020-11-05'), 50, labels = 'Lockdown in England', pos = 2, 
+     col = cardiffblue)
+
+abline(v=as.Date('2020-12-03'), lwd = 1, lty = 3, col = cardiffblue)
+text(as.Date('2020-12-03'), 50, labels = '+ 4 Weeks', pos = 4, 
+     col = cardiffblue)
+
+
+```
+
+
+
+What you can see is that the numbers were increasing from September onwards. In October, the Welsh government announced the Circuit Break that would start on October 23rd and everybody had to stay at home. The way Corona works, it is reasonable to assume a four weeks lag before the policy is actually becoming effective. Apparently, between being infected and being able to transmit the virus further on, there is normally a one to two weeks lag. And then you can add another two weeks until the critical patients become so severely ill that the patient would have to use an MV bed. So the date that we should pay attention to when we want to understand whether the policy has become effective is around November the 20th.  England introduced a stay home order as well, but this only came effective on November the 5th, so almost two weeks after. It is reasonable to assume that this policy will take effect only in the first week of December. 
+
+We will use this example to study the causal effect of the Welsh circuit break. How did the policy affect the pandemic situation measured by the use of envy beds per 1,000,000 population?
+
+
+Remember that our goal is to calculate the treatment effect from a policy. What difference does the policy make? The definition of the causal effect means that we are interested in the difference between the world as it is with the new policy and the world without that policy. Obviously, both states cannot be observed at the same time. 
+
+
+
+## Compare Treated from One Group to the Non-Treated of Another Group
+
+One solution to this problem would be to compare units that have been treated to units that have not been treated. In a policy context, we could for example compare the country where a policy is enacted with another country that does not have this policy. 
+
+What would that mean for the Welsh circuit breaker? We could compare the policy outcome in Wales to what is going on in England. The calculation is actually pretty straightforward: we take the seven day average of Wales during the week of November 20th (`r round(mean(wales.post.treatment.dat$wales.p.pop), 2)`) and compare it to the same time in England (`r round(mean(wales.post.treatment.dat$england.p.pop), 2)`). The difference between the two would be our estimate for the causal effect: `r round(mean(wales.post.treatment.dat$wales.p.pop) - mean(wales.post.treatment.dat$england.p.pop), 2)` MV beds per 1 Million inhabitants.
+ 
+
+All this rests on a fairly strong assumption: we are actually comparing Wales to England. Now, is that a fair comparison to make? You might rightfully say that this might not be a good idea, simply because Wales and England are different on very many levels. 
+
+From a more systematic point of view, we might fall prey to an important bias that can influence your results: the confounding bias. Confounding bias happens when a pretreatment variable is related to the treatment and the outcome at the same time. In our case, this could be for example the quality of the NHS. A better performing Welsh NHS would inform Welsh politicians in a better way and therefore affects the likelyhood that a new policy is enacted. At the same time, a better NHS of course can care for its patients in better way, which is why it is also likely to affect the outcome. There are ways to control for this influence and we will take a closer look at them next week. But for now suffice it to say that it is not a good idea to "just" compare two different countries, one with the treatment and one without. 
+
+
+
+
+
+## Compare the Treated Before and After their Treatment
+
+
+So comparing different countries does not make a lot of sense. But what about comparing a unit with a treatment to its state just before the treatment? Or, in the context of our policy evaluation, why not comparing the country with a policy enacted with the same country, but before the policy actually came into force? 
+
+
+Indeed, comparing the same units before and after policy intervention will make sure that the units are the same. But, are they *really* the same? Note that meanwhile some time has gone past. This means that a lot of things apart from our new policy might have changed and the environment for the policy might be a different one.
+
+Let us take a look at the Welsh MV beds again, in particular around the 20th of November at the finely dotted line. Compare the figures to what happened on October 23rd when the Wales circuit break actually came into force. During these two points in time, the number of empty beds actually was rising and did not remain flat or was even going down. This is simply due to the fact that the whole environment in Wales changed and the Corona situation was completely different then. 
+
+To estimate the causal effect in this way, we would take the seven day average of Wales during the week of November 20th (`r round(mean(wales.post.treatment.dat$wales.p.pop), 2)`) and compare it to the week of October the 23rd for example (`r round(mean(wales.pre.treatment.dat$wales.p.pop), 2)`). The difference now would be `r round(mean(wales.post.treatment.dat$wales.p.pop) - mean(wales.pre.treatment.dat$wales.p.pop), 2)` MV beds per 1 Million inhabitants. Any intuition with the numbers would tell us that this cannot be correct.
+ 
+
+
+
+
+```{r echo=FALSE}
+
+
+plot(cov.dat$date, cov.dat$wales.p.pop, 
+     ylim = c(0, 60), xlim = as.Date(c('2020-09-01', '2021-01-01')),type = 'l',
+     col = cardiffred, lwd = 2, las = 1, bty = 'n',
+     xlab = 'Date', ylab = 'MV Beds / Population (1 Mio)')
+
+
+abline(v=as.Date('2020-10-23'), lwd = 2, lty = 3, col = cardiffred)
+text(as.Date('2020-10-23'), 40, labels = 'Wales Circuit Break', pos = 2, 
+     col = cardiffred)
+
+abline(v=as.Date('2020-11-20'), lwd = 1, lty = 3, col = cardiffred)
+text(as.Date('2020-11-20'), 40, labels = '+ 4 Weeks', pos = 4, 
+     col = cardiffred)
+
+```
+
+What happens is that we are again observing a confounding factor that biases the estimation of the causal effect. This time it is a time-varying confounder. 
+
+In short, we need something that can clearly combine the best of both worlds: making sure that we neither bias our results due to pre-treatment counfounders nor time varying confounders. 
+
+
+
+
+
+
+
+## Best of Both Worlds: The Difference-in-Difference Estimator
+Can you have it both ways? Indeed, you can. The estimator that will solve a lot of our problems is called the difference-in-difference estimator. What it does is it calculates the difference between the treated group before and after the treatment and subtracts from it the difference in the control group before and after the treatment. 
+ 
+ 
+This is the formula for the difference-in-difference estimator. You can use it to calculate the sample average treatment effect for the treated (SATT).
+
+\[ \text{DiD estimate} = \left(\overline{Y}_{\text{treated}}^{\text{after}} -\overline{Y}_{\text{treated}}^{\text{before}} \right) -  \left(\overline{Y}_{\text{control}}^{\text{after}} -\overline{Y}_{\text{control}}^{\text{before}} \right)\]
+
+Here is a quick video where I explained the core intuition and show how to calculate everything on the basis of the figure below. 
+
+
+```{r, eval=knitr::is_html_output(excludes = "epub"), results = 'asis', echo = F}
+cat(
+'<iframe width="560" height="315" src="https://www.youtube.com/embed/vKRiarWq-64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+)
+```
+
+
+How do we get around the two assumptions? As explained in the video:
+
+
+* We account for the time varying confounders by comparing the *difference* between two times two points in time. 
+* We account for confounding pretreatment variables by comparing the difference between *two times two points in time*. 
+
+
+Remember that we buy this leverage by making a third assumption: the outcome variables are following a parallel trend without the treatment. How can you check this assumption? Simply look at the data. 
+
+
+```{r echo=FALSE}
+
+plot(cov.dat$date, cov.dat$wales.p.pop, 
+     ylim = c(0, 30), xlim = as.Date(c('2020-10-01', '2020-12-01')),type = 'l',
+     col = cardiffred, lwd = 2, las = 1, bty = 'n', xaxt = 'n',
+     xlab = 'Date', ylab = 'MV Beds / Population (1 Mio)')
+lines(cov.dat$date, cov.dat$england.p.pop, col = cardiffblue, lwd = 2)
+
+axis(1, at = c(18535, 18558, 18586), labels = c('Oct. 1st', 'Oct. 23rd', 'Nov 20th'))
+# axis(1)
+abline(v=as.Date('2020-10-23'), lwd = 2, lty = 3, col = cardiffred)
+text(as.Date('2020-10-23'), 2, labels = 'Wales Circuit Break', pos = 2, 
+     col = cardiffred)
+
+abline(v=as.Date('2020-11-20'), lwd = 1, lty = 3, col = cardiffred)
+text(as.Date('2020-11-20'), 2, labels = '+ 4 Weeks', pos = 4, 
+     col = cardiffred)
+
+
+points(as.Date('2020-10-23'), mean(wales.pre.treatment.dat$wales.p.pop), 
+       pch = 3, col = cardiffred, cex = 3)
+text(as.Date('2020-10-24'), mean(wales.pre.treatment.dat$wales.p.pop)-2, 
+     label = 'Wales Before \n Treatment', pos = 4, cex = .8, col = cardiffred)
+
+
+points(as.Date('2020-10-23'), mean(wales.pre.treatment.dat$england.p.pop),
+       pch = 4, col = cardiffblue, cex = 3)
+text(as.Date('2020-10-23'), mean(wales.pre.treatment.dat$england.p.pop)+3, 
+     label = 'England Before \n Treatment', pos = 2, cex = .8, col = cardiffblue)
+
+
+points(as.Date('2020-11-20'), mean(wales.post.treatment.dat$wales.p.pop),
+       pch = 3, col = cardiffred, cex = 3)
+text(as.Date('2020-11-21'), mean(wales.post.treatment.dat$wales.p.pop)-4, 
+     label = 'Wales After \n Treatment', pos = 4, cex = .8, col = cardiffred)
+
+
+points(as.Date('2020-11-20'), mean(wales.post.treatment.dat$england.p.pop),
+       pch = 4, col = cardiffblue, cex = 3)
+text(as.Date('2020-11-19'), mean(wales.post.treatment.dat$england.p.pop)+3, 
+     label = 'England After \n Treatment', pos = 2, cex = .8, col = cardiffblue)
+
+       
+# (mean(wales.post.treatment.dat$wales.p.pop) - mean(wales.pre.treatment.dat$wales.p.pop)) 
+       
+```
+
+Given what we see in our figures, this assumption is met fairly well. Even better: for the MV beds in our sample it is not only a similar trend---which means that both lines should have the same slope---both curves actually overlap pretty much. This parallel trend assumption is therefore really well fulfilled for our example. 
+
+
+```{r include = FALSE }
+wales.before <- round(mean(wales.pre.treatment.dat$wales.p.pop), 2)
+wales.after <- round(mean(wales.post.treatment.dat$wales.p.pop), 2)
+
+england.before <- round(mean(wales.pre.treatment.dat$england.p.pop), 2)
+england.after <- round(mean(wales.post.treatment.dat$england.p.pop), 2)
+
+delta.wales <- wales.after - wales.before 
+delta.england <- england.after - england.before 
+
+satt <- delta.wales - delta.england
+```
+
+Let us calculate the SATT. We take the seven day average of Wales during the week of November 20th (`r wales.after`) and subtract the seven day average of Wales during the Week of October 23rd (`r wales.before`), which gives us a difference of `r delta.wales`.
+
+Then we do the same for our control group England. We calculate the seven day average of England during the week of November 20th (`r england.after`) and subtract the seven day average of England during the Week of October 23rd (`r england.before`), resulting in a difference of `r delta.england`.
+
+Last step: To calculate the sample average treatment effect of the treated (SATT), we subtract the two differences from one another once more `r delta.wales` - `r delta.england` = `r satt` MV beds per 1 Million inhabitants. 
+
+Note that this result is remarkably close with our very first result when we simply compared Wales to England. Why is this the case? It is, because Wales and England not only share the same trend before the treatment, but their values are actually really close to one another.
+
+
+## Reading for This Week
+To learn more about all this and going through everything with yet another great example, please read p.54–63 in @Imai2018.
+
