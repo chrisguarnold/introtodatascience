@@ -24,7 +24,7 @@
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2021-04-21" />
+<meta name="date" content="2021-04-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -300,12 +300,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html"><i class="fa fa-check"></i><b>9</b> Causal Statements from Observational Data</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#this-weeks-data-the-effect-of-the-welsh-circuit-break"><i class="fa fa-check"></i><b>9.1</b> This Week’s Data: The Effect of the Welsh Circuit Break</a></li>
-<li class="chapter" data-level="9.2" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-treated-from-one-group-to-the-non-treated-of-another-group"><i class="fa fa-check"></i><b>9.2</b> Compare Treated from One Group to the Non Treated of Another Group</a></li>
+<li class="chapter" data-level="9.2" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-treated-from-one-group-to-the-non-treated-of-another-group"><i class="fa fa-check"></i><b>9.2</b> Compare Treated from One Group to the Non-Treated of Another Group</a></li>
 <li class="chapter" data-level="9.3" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-the-treated-before-and-after-their-treatment"><i class="fa fa-check"></i><b>9.3</b> Compare the Treated Before and After their Treatment</a></li>
-<li class="chapter" data-level="9.4" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#best-of-both-worlds-difference-in-difference"><i class="fa fa-check"></i><b>9.4</b> Best of both worlds: Difference-in-Difference</a></li>
+<li class="chapter" data-level="9.4" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#best-of-both-worlds-the-difference-in-difference-estimator"><i class="fa fa-check"></i><b>9.4</b> Best of Both Worlds: The Difference-in-Difference Estimator</a></li>
 <li class="chapter" data-level="9.5" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#reading-for-this-week-5"><i class="fa fa-check"></i><b>9.5</b> Reading for This Week</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html"><i class="fa fa-check"></i><b>10</b> Multivariate Regression and Heterogenous Treatment Effects</a></li>
+<li class="chapter" data-level="10" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html"><i class="fa fa-check"></i><b>10</b> Multivariate Regression and Heterogenous Treatment Effects</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#analysing-experimental-data-revisited"><i class="fa fa-check"></i><b>10.1</b> Analysing Experimental Data Revisited</a></li>
+<li class="chapter" data-level="10.2" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#controling-for-confounders"><i class="fa fa-check"></i><b>10.2</b> Controling for Confounders</a></li>
+<li class="chapter" data-level="10.3" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#treatment-heterogeneity"><i class="fa fa-check"></i><b>10.3</b> Treatment Heterogeneity</a></li>
+<li class="chapter" data-level="10.4" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#outro"><i class="fa fa-check"></i><b>10.4</b> Outro</a></li>
+<li class="chapter" data-level="10.5" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#reading-for-this-week-6"><i class="fa fa-check"></i><b>10.5</b> Reading for This Week</a></li>
+</ul></li>
 <li class="part"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="11" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>11</b> Useful Internet Resources</a></li>
 <li class="chapter" data-level="12" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i><b>12</b> Bibliography</a></li>
@@ -340,7 +347,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Remember that our goal is to calculate the treatment effect from a policy. What difference does the policy make? The definition of the causal effect means that we are interested in the difference between the world as it is with the new policy and the world without that policy. Obviously, both states cannot be observed at the same time.</p>
 </div>
 <div id="compare-treated-from-one-group-to-the-non-treated-of-another-group" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> Compare Treated from One Group to the Non Treated of Another Group</h2>
+<h2><span class="header-section-number">9.2</span> Compare Treated from One Group to the Non-Treated of Another Group</h2>
 <p>One solution to this problem would be to compare units that have been treated to units that have not been treated. In a policy context, we could for example compare the country where a policy is enacted with another country that does not have this policy.</p>
 <p>What would that mean for the Welsh circuit breaker? We could compare the policy outcome in Wales to what is going on in England. The calculation is actually pretty straightforward: we take the seven day average of Wales during the week of November 20th (17.36) and compare it to the same time in England (22.35). The difference between the two would be our estimate for the causal effect: -4.99 MV beds per 1 Million inhabitants.</p>
 <p>All this rests on a fairly strong assumption: we are actually comparing Wales to England. Now, is that a fair comparison to make? You might rightfully say that this might not be a good idea, simply because Wales and England are different on very many levels.</p>
@@ -356,8 +363,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>What happens is that we are again observing a confounding factor that biases the estimation of the causal effect. This time it is a time-varying confounder.</p>
 <p>In short, we need something that can clearly combine the best of both worlds: making sure that we neither bias our results due to pre-treatment counfounders nor time varying confounders.</p>
 </div>
-<div id="best-of-both-worlds-difference-in-difference" class="section level2" number="9.4">
-<h2><span class="header-section-number">9.4</span> Best of both worlds: Difference-in-Difference</h2>
+<div id="best-of-both-worlds-the-difference-in-difference-estimator" class="section level2" number="9.4">
+<h2><span class="header-section-number">9.4</span> Best of Both Worlds: The Difference-in-Difference Estimator</h2>
 <p>Can you have it both ways? Indeed, you can. The estimator that will solve a lot of our problems is called the difference-in-difference estimator. What it does is it calculates the difference between the treated group before and after the treatment and subtracts from it the difference in the control group before and after the treatment.</p>
 <p>This is the formula for the difference-in-difference estimator. You can use it to calculate the sample average treatment effect for the treated (SATT).</p>
 <p><span class="math display">\[ \text{DiD estimate} = \left(\overline{Y}_{\text{treated}}^{\text{after}} -\overline{Y}_{\text{treated}}^{\text{before}} \right) -  \left(\overline{Y}_{\text{control}}^{\text{after}} -\overline{Y}_{\text{control}}^{\text{before}} \right)\]</span></p>
