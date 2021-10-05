@@ -1,17 +1,17 @@
 # (PART\*) Appendix {-}
 
-# Useful Internet Resources
-[Quick-R](https://www.statmethods.net/) has been a go-to reference when you look up simple examples for quite some time. It is a really helpful source.
+<!-- # Useful Internet Resources -->
+<!-- [Quick-R](https://www.statmethods.net/) has been a go-to reference when you look up simple examples for quite some time. It is a really helpful source. -->
 
-If you want to dig a little deeper on the things we are doing, you can check out this beautiful online book titled [Causal Inference: The Mix Tape](https://mixtape.scunning.com/index.html). Also available as a print version of course...
+<!-- If you want to dig a little deeper on the things we are doing, you can check out this beautiful online book titled [Causal Inference: The Mix Tape](https://mixtape.scunning.com/index.html). Also available as a print version of course... -->
 
-The project [Seeing Theory](https://seeing-theory.brown.edu/index.html) is a visually really beautiful and interactive take on what we are doing in this class. Note: The authors are undergrads from Brown University.
+<!-- The project [Seeing Theory](https://seeing-theory.brown.edu/index.html) is a visually really beautiful and interactive take on what we are doing in this class. Note: The authors are undergrads from Brown University. -->
 
-Interested in Data Visualization? [This](http://cup.columbia.edu/book/better-data-visualizations/9780231193115) is a really great book on the topic from Jonathan Schwabish.
+<!-- Interested in Data Visualization? [This](http://cup.columbia.edu/book/better-data-visualizations/9780231193115) is a really great book on the topic from Jonathan Schwabish. -->
 
-If you are interested in critically reflecting on what you are doing when you are analysing data, go and read [Critical Thinking](https://uk.sagepub.com/en-gb/eur/critical-thinking/book248140) from Tom Chatfield. He also has a [great video](https://www.youtube.com/watch?v=SY-CMrGp9Xs) where he explains the core ideas.
+<!-- If you are interested in critically reflecting on what you are doing when you are analysing data, go and read [Critical Thinking](https://uk.sagepub.com/en-gb/eur/critical-thinking/book248140) from Tom Chatfield. He also has a [great video](https://www.youtube.com/watch?v=SY-CMrGp9Xs) where he explains the core ideas. -->
 
 
-# Bibliography 
-\ref{@Bibliography}
+<!-- # Bibliography  -->
+<!-- \ref{@Bibliography} -->
 
