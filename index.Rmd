@@ -78,7 +78,7 @@ To guide you through all the hoops, I will also stay in touch with you with am e
 
 
 ## The Module Webpage {-}
-<!-- <!-- What is this page for? --> 
+<!-- What is this page for? --> 
 Let us take a closer look at how this website is working. This space is going to be the main learning tool for this term's *Introduction to Data Science for Politics and IR*.
 
 Obviously, I will guide you through the material on this web-page via text. Think of it as a replacement for the lecture slides that you might find in other contexts: A place to find the core concepts and central ideas of this class.
