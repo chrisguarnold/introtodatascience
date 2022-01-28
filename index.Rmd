@@ -69,7 +69,7 @@ Without participating in these workshops, the assignments will be really challen
 
 
 
-### 3 Bring Your Questions to the Module Cafés {-}
+### 3 Bring Your Questions to the Seminars {-}
 
 We will have bi-weekly module cafes where you can discuss any additional questions that you might have. In addition, these module cafes will also serve to answer any question regarding the assignments.
 
@@ -132,7 +132,7 @@ If you have questions or need any kind of help, feel free to get in touch.
 <!-- ``` -->
 
 
-```{r echo=FALSE}
+```{r echo=FALSE, warning=FALSE, message=FALSE}
 
 # -- housekeeping for the rest of the class ------------------------------------ 
 
@@ -142,11 +142,13 @@ library(xtable)
 
 
 # data: Class surveys 
-# dat18 <- read.csv("preparing_data/data/class_survey/lecture_survey_18.csv") 
-# dat19 <- read.csv("preparing_data/data/class_survey/lecture_survey_19.csv") 
-# dat21 <- read.csv("preparing_data/data/class_survey/lecture_survey_21.csv") 
-# names(dat) 
-# attach(dat) 
+dat18 <- read.csv("preparing_data/data/class_survey/lecture_survey_18.csv")
+dat19 <- read.csv("preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("preparing_data/data/class_survey/lecture_survey_21.csv")
+dat <- read.csv("preparing_data/data/class_survey/lecture_survey_22.csv")
+# TODO add the new data.
+# names(dat)
+attach(dat)
 # Predefined Cardiff colours 
 # primary 
 cardiffred <- rgb(211,55,74, maxColorValue = 255) 

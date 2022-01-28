@@ -1,0 +1,17 @@
+tools-for-working-with-data
+what-is-in-a-data-spreadsheet
+key-concepts
+what-is-a-statistic
+some-more-definitions
+types-of-data
+data-in-action
+meet-r
+install-r
+install-r-studio
+how-to-work-with-r
+first-steps-in-r
+selecting-elements
+readings-for-this-week
+useful-internet-resources
+homepages
+online-books
