@@ -131,7 +131,7 @@ stripchart(na.omit(studyperweek)
 			, col = cardiffgrey
 			, cex = 2.5
 			, ylim = c(.9, 1.5)
-			, xlim = c(0,20)
+			, xlim = c(0,max(na.omit(studyperweek)))
 			, frame.plot = FALSE)
 
 ```
