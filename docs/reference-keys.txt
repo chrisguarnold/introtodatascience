@@ -27,6 +27,7 @@ describing-data-using-r
 working-with-data-frames
 central-tendencies-1
 spread-1
+readings-for-this-week-1
 useful-internet-resources
 homepages
 online-books
