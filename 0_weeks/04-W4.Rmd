@@ -349,16 +349,6 @@
 
 
 
-<!-- ## Mathcamp: Summing With Sigmas -->
-
-<!-- You were asking for a refresher on how to read the symbol $\sum$, so I put together a small video. -->
-
-
-<!-- ```{r, eval=knitr::is_html_output(excludes = "epub"), results = 'asis', echo = F} -->
-<!-- cat( -->
-<!-- '<iframe width="560" height="315" src="https://www.youtube.com/embed/YKu77QytJOE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' -->
-<!-- ) -->
-<!-- ``` -->
 
 <!-- ## Reading for This Week -->
 <!-- The readings for this week are chapter 6 in @Fogarty2019 which tells you all about generating hypotheses. Chapter 9 is all about how to test them. -->

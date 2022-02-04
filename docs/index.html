@@ -24,7 +24,7 @@
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2022-01-28" />
+<meta name="date" content="2022-02-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -193,11 +193,34 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="tools-for-working-with-data.html"><a href="tools-for-working-with-data.html#readings-for-this-week"><i class="fa fa-check"></i><b>1.4</b> Readings for This Week</a></li>
 </ul></li>
-<li class="part"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>2</b> Useful Internet Resources</a>
+<li class="chapter" data-level="2" data-path="describing-data.html"><a href="describing-data.html"><i class="fa fa-check"></i><b>2</b> Describing Data</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>2.1</b> Homepages</a></li>
-<li class="chapter" data-level="2.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>2.2</b> Online Books</a></li>
+<li class="chapter" data-level="2.1" data-path="describing-data.html"><a href="describing-data.html#statistics-to-summarise-data"><i class="fa fa-check"></i><b>2.1</b> Statistics to Summarise Data</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="describing-data.html"><a href="describing-data.html#tables"><i class="fa fa-check"></i><b>2.1.1</b> Tables</a></li>
+<li class="chapter" data-level="2.1.2" data-path="describing-data.html"><a href="describing-data.html#central-tendencies"><i class="fa fa-check"></i><b>2.1.2</b> Central Tendencies</a></li>
+<li class="chapter" data-level="2.1.3" data-path="describing-data.html"><a href="describing-data.html#spread"><i class="fa fa-check"></i><b>2.1.3</b> Spread</a></li>
+<li class="chapter" data-level="2.1.4" data-path="describing-data.html"><a href="describing-data.html#ratios-and-rates"><i class="fa fa-check"></i><b>2.1.4</b> Ratios and Rates</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="describing-data.html"><a href="describing-data.html#data-management-with-r"><i class="fa fa-check"></i><b>2.2</b> Data Management with R</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="describing-data.html"><a href="describing-data.html#libraries"><i class="fa fa-check"></i><b>2.2.1</b> Libraries</a></li>
+<li class="chapter" data-level="2.2.2" data-path="describing-data.html"><a href="describing-data.html#setting-the-working-directory"><i class="fa fa-check"></i><b>2.2.2</b> Setting the Working Directory</a></li>
+<li class="chapter" data-level="2.2.3" data-path="describing-data.html"><a href="describing-data.html#reading-data"><i class="fa fa-check"></i><b>2.2.3</b> Reading Data</a></li>
+<li class="chapter" data-level="2.2.4" data-path="describing-data.html"><a href="describing-data.html#saving-data"><i class="fa fa-check"></i><b>2.2.4</b> Saving Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="describing-data.html"><a href="describing-data.html#describing-data-using-r"><i class="fa fa-check"></i><b>2.3</b> Describing Data Using R</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="describing-data.html"><a href="describing-data.html#working-with-data-frames"><i class="fa fa-check"></i><b>2.3.1</b> Working with Data Frames</a></li>
+<li class="chapter" data-level="2.3.2" data-path="describing-data.html"><a href="describing-data.html#central-tendencies-1"><i class="fa fa-check"></i><b>2.3.2</b> Central Tendencies</a></li>
+<li class="chapter" data-level="2.3.3" data-path="describing-data.html"><a href="describing-data.html#spread-1"><i class="fa fa-check"></i><b>2.3.3</b> Spread</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="3" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>3</b> Useful Internet Resources</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>3.1</b> Homepages</a></li>
+<li class="chapter" data-level="3.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>3.2</b> Online Books</a></li>
 </ul></li>
 </ul>
 
@@ -219,7 +242,7 @@ div.csl-indent {
 <div id="header">
 <h1 class="title">PL 9239 Introduction to Data Science for Politics and IR</h1>
 <p class="author"><em>Christian Arnold, Cardiff University</em></p>
-<p class="date"><em>2022-01-28</em></p>
+<p class="date"><em>2022-02-04</em></p>
 </div>
 <div id="welcome" class="section level1 unnumbered">
 <h1>Welcome!</h1>
@@ -374,6 +397,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
