@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Testing a Hypothesis | PL 9239 Introduction to Data Science for Politics and IR</title>
+  <meta name="description" content="This is the website for the Intro to Data Science Class." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Testing a Hypothesis | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the website for the Intro to Data Science Class." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Testing a Hypothesis | PL 9239 Introduction to Data Science for Politics and IR" />
+  
+  <meta name="twitter:description" content="This is the website for the Intro to Data Science Class." />
+  
+
+<meta name="author" content="Christian Arnold, Cardiff University" />
+
+
+<meta name="date" content="2022-02-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="visualising-data.html"/>
+<link rel="next" href="useful-internet-resources.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<p class="verticalhorizontal" style="text-align:center;">
+<img src="logo.jpg" height="80">
+</p>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome!</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#data-to-answer-your-questions"><i class="fa fa-check"></i>Data to Answer Your Questions</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#your-weekly-data-workout"><i class="fa fa-check"></i>Your Weekly Data Workout</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#work-through-this-homepage"><i class="fa fa-check"></i>1 Work Through This Homepage</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#apply-your-knowledge-in-our-workshops"><i class="fa fa-check"></i>2 Apply Your Knowledge in Our Workshops</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#bring-your-questions-to-the-seminars"><i class="fa fa-check"></i>3 Bring Your Questions to the Seminars</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#read-guideance-on-planning-and-structuring"><i class="fa fa-check"></i>4 Read Guideance on Planning and Structuring</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-module-webpage"><i class="fa fa-check"></i>The Module Webpage</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#getting-in-touch"><i class="fa fa-check"></i>Getting in Touch</a></li>
+</ul></li>
+<li class="part"><span><b>Scenario I: The Data Report</b></span></li>
+<li class="chapter" data-level="1" data-path="tools-for-working-with-data.html"><a href="tools-for-working-with-data.html"><i class="fa fa-check"></i><b>1</b> Tools for Working with Data</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="tools-for-working-with-data.html"><a href="tools-for-working-with-data.html#what-is-in-a-data-spreadsheet"><i class="fa fa-check"></i><b>1.1</b> What Is In a Data Spreadsheet?</a></li>
+<li class="chapter" data-level="1.2" data-path="tools-for-working-with-data.html"><a href="tools-for-working-with-data.html#key-concepts"><i class="fa fa-check"></i><b>1.2</b> Key Concepts</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="tools-for-working-with-data.html"><a href="tools-for-working-with-data.html#what-is-a-statistic"><i class="fa fa-check"></i><b>1.2.1</b> What is a Statistic?</a></li>
+<li class="chapter" data-level="1.2.2" data-path="tools-for-working-with-data.html"><a href="tools-for-working-with-data.html#some-more-definitions"><i class="fa fa-check"></i><b>1.2.2</b> Some More Definitions</a></li>
+<li class="chapter" data-level="1.2.3" data-path="tools-for-working-with-data.html"><a href="tools-for-working-with-data.html#types-of-data"><i class="fa fa-check"></i><b>1.2.3</b> Types of Data</a></li>
+<li class="chapter" data-level="1.2.4" data-path="tools-for-working-with-data.html"><a href="tools-for-working-with-data.html#data-in-action"><i class="fa fa-check"></i><b>1.2.4</b> Data in Action</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="tools-for-working-with-data.html"><a href="tools-for-working-with-data.html#meet-r"><i class="fa fa-check"></i><b>1.3</b> Meet: R</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="tools-for-working-with-data.html"><a href="tools-for-working-with-data.html#install-r"><i class="fa fa-check"></i><b>1.3.1</b> Install R</a></li>
+<li class="chapter" data-level="1.3.2" data-path="tools-for-working-with-data.html"><a href="tools-for-working-with-data.html#install-r-studio"><i class="fa fa-check"></i><b>1.3.2</b> Install R Studio</a></li>
+<li class="chapter" data-level="1.3.3" data-path="tools-for-working-with-data.html"><a href="tools-for-working-with-data.html#how-to-work-with-r"><i class="fa fa-check"></i><b>1.3.3</b> How to Work with R</a></li>
+<li class="chapter" data-level="1.3.4" data-path="tools-for-working-with-data.html"><a href="tools-for-working-with-data.html#first-steps-in-r"><i class="fa fa-check"></i><b>1.3.4</b> First Steps in R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="tools-for-working-with-data.html"><a href="tools-for-working-with-data.html#readings-for-this-week"><i class="fa fa-check"></i><b>1.4</b> Readings for This Week</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="describing-data.html"><a href="describing-data.html"><i class="fa fa-check"></i><b>2</b> Describing Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="describing-data.html"><a href="describing-data.html#statistics-to-summarise-data"><i class="fa fa-check"></i><b>2.1</b> Statistics to Summarise Data</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="describing-data.html"><a href="describing-data.html#tables"><i class="fa fa-check"></i><b>2.1.1</b> Tables</a></li>
+<li class="chapter" data-level="2.1.2" data-path="describing-data.html"><a href="describing-data.html#central-tendencies"><i class="fa fa-check"></i><b>2.1.2</b> Central Tendencies</a></li>
+<li class="chapter" data-level="2.1.3" data-path="describing-data.html"><a href="describing-data.html#spread"><i class="fa fa-check"></i><b>2.1.3</b> Spread</a></li>
+<li class="chapter" data-level="2.1.4" data-path="describing-data.html"><a href="describing-data.html#ratios-and-rates"><i class="fa fa-check"></i><b>2.1.4</b> Ratios and Rates</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="describing-data.html"><a href="describing-data.html#data-management-with-r"><i class="fa fa-check"></i><b>2.2</b> Data Management with R</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="describing-data.html"><a href="describing-data.html#libraries"><i class="fa fa-check"></i><b>2.2.1</b> Libraries</a></li>
+<li class="chapter" data-level="2.2.2" data-path="describing-data.html"><a href="describing-data.html#setting-the-working-directory"><i class="fa fa-check"></i><b>2.2.2</b> Setting the Working Directory</a></li>
+<li class="chapter" data-level="2.2.3" data-path="describing-data.html"><a href="describing-data.html#reading-data"><i class="fa fa-check"></i><b>2.2.3</b> Reading Data</a></li>
+<li class="chapter" data-level="2.2.4" data-path="describing-data.html"><a href="describing-data.html#saving-data"><i class="fa fa-check"></i><b>2.2.4</b> Saving Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="describing-data.html"><a href="describing-data.html#describing-data-using-r"><i class="fa fa-check"></i><b>2.3</b> Describing Data Using R</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="describing-data.html"><a href="describing-data.html#working-with-data-frames"><i class="fa fa-check"></i><b>2.3.1</b> Working with Data Frames</a></li>
+<li class="chapter" data-level="2.3.2" data-path="describing-data.html"><a href="describing-data.html#central-tendencies-1"><i class="fa fa-check"></i><b>2.3.2</b> Central Tendencies</a></li>
+<li class="chapter" data-level="2.3.3" data-path="describing-data.html"><a href="describing-data.html#spread-1"><i class="fa fa-check"></i><b>2.3.3</b> Spread</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="describing-data.html"><a href="describing-data.html#readings-for-this-week-1"><i class="fa fa-check"></i><b>2.4</b> Readings for This Week</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="visualising-data.html"><a href="visualising-data.html"><i class="fa fa-check"></i><b>3</b> Visualising Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="visualising-data.html"><a href="visualising-data.html#communicating-with-data-effectively"><i class="fa fa-check"></i><b>3.1</b> Communicating with Data Effectively</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="visualising-data.html"><a href="visualising-data.html#thinking-about-your-data-visualisation"><i class="fa fa-check"></i><b>3.1.1</b> Thinking About your Data Visualisation</a></li>
+<li class="chapter" data-level="3.1.2" data-path="visualising-data.html"><a href="visualising-data.html#visualising-the-data"><i class="fa fa-check"></i><b>3.1.2</b> Visualising ‘The Data’</a></li>
+<li class="chapter" data-level="3.1.3" data-path="visualising-data.html"><a href="visualising-data.html#visualising-typical-values-and-spreads"><i class="fa fa-check"></i><b>3.1.3</b> Visualising Typical Values and Spreads</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="visualising-data.html"><a href="visualising-data.html#plotting-data-with-r"><i class="fa fa-check"></i><b>3.2</b> Plotting Data with R</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="visualising-data.html"><a href="visualising-data.html#basics-in-plotting"><i class="fa fa-check"></i><b>3.2.1</b> Basics in Plotting</a></li>
+<li class="chapter" data-level="3.2.2" data-path="visualising-data.html"><a href="visualising-data.html#colours"><i class="fa fa-check"></i><b>3.2.2</b> Colours</a></li>
+<li class="chapter" data-level="3.2.3" data-path="visualising-data.html"><a href="visualising-data.html#visualising-nominal-and-ordinal-data"><i class="fa fa-check"></i><b>3.2.3</b> Visualising Nominal and Ordinal Data</a></li>
+<li class="chapter" data-level="3.2.4" data-path="visualising-data.html"><a href="visualising-data.html#visualising-continuous-data"><i class="fa fa-check"></i><b>3.2.4</b> Visualising Continuous Data</a></li>
+<li class="chapter" data-level="3.2.5" data-path="visualising-data.html"><a href="visualising-data.html#boxplots"><i class="fa fa-check"></i><b>3.2.5</b> Boxplots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="visualising-data.html"><a href="visualising-data.html#readings-for-this-week-2"><i class="fa fa-check"></i><b>3.3</b> Readings for This Week</a></li>
+</ul></li>
+<li class="part"><span><b>Scenario II: Knowing It All By Knowing A Few</b></span></li>
+<li class="chapter" data-level="4" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html"><i class="fa fa-check"></i><b>4</b> Testing a Hypothesis</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#generating-good-hypotheses"><i class="fa fa-check"></i><b>4.1</b> Generating Good Hypotheses</a></li>
+<li class="chapter" data-level="4.2" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#studying-our-sample"><i class="fa fa-check"></i><b>4.2</b> Studying Our Sample</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#investigating-the-hypothesis"><i class="fa fa-check"></i><b>4.2.1</b> Investigating the Hypothesis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#is-what-we-see-just-coincidence"><i class="fa fa-check"></i><b>4.3</b> Is What We See Just Coincidence?</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#are-two-cohorts-the-same"><i class="fa fa-check"></i><b>4.3.1</b> Are Two Cohorts the Same?</a></li>
+<li class="chapter" data-level="4.3.2" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#how-can-we-tell-the-difference"><i class="fa fa-check"></i><b>4.3.2</b> How Can We Tell the Difference?</a></li>
+<li class="chapter" data-level="4.3.3" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>4.3.3</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="4.3.4" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#test-test-test"><i class="fa fa-check"></i><b>4.3.4</b> Test! Test! Test!</a></li>
+<li class="chapter" data-level="4.3.5" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#type-1-and-type-2-errors"><i class="fa fa-check"></i><b>4.3.5</b> Type 1 and Type 2 Errors</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#coding"><i class="fa fa-check"></i><b>4.4</b> Coding</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#data-management"><i class="fa fa-check"></i><b>4.4.1</b> Data Management</a></li>
+<li class="chapter" data-level="4.4.2" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#hypothesis-testing-1"><i class="fa fa-check"></i><b>4.4.2</b> Hypothesis Testing</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#reading-for-this-week"><i class="fa fa-check"></i><b>4.5</b> Reading for This Week</a></li>
+</ul></li>
+<li class="part"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="5" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>5</b> Useful Internet Resources</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>5.1</b> Homepages</a></li>
+<li class="chapter" data-level="5.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>5.2</b> Online Books</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PL 9239 Introduction to Data Science for Politics and IR</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="testing-a-hypothesis" class="section level1" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Testing a Hypothesis</h1>
+<p>Welcome to the second part of the module PL9239. In our second scenario we turn to one of the core tasks of any data analysis: inference. The basic idea is that you want to be able to make a statement—e.g. calculate a statistic—about the world out there. But since the world out there is so large it is impossible to collect data about everything, we will have to chose a different approach. Instead, we are going to learn how to collect data about a sample and then say something with a little uncertainty about the world at large.</p>
+<p>To show you how useful all this actually is, I interviewed Michelle Brown who is working as a Senior Advisor on Elections for the <a href="https://www.ndi.org/">National Democratic Institute</a>. This NGO cooperates with local civil society actors in fragile democracies and trains them to do voting observation missions. These election observers tabulate the ballots in parallel to the official representatives and can thus get an idea about the amount of voting fraud that might be occurring.</p>
+<p>Obviously, it is prohibitive to observe every single polling station. In some countries there might be tens of thousands of polling stations and an NGO never has the resources to cover all that. Instead, the NDI relies on sampling. Election observers only monitor randomly selected polling stations, and the NDI then uses statistics to infer what is really going on.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y5W0Xj6bQh0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<p>Together with colleagues, we are doing research with the National Democratic Institute that helps them improve their technology stack even further. In case you are interested, feel free to take a look at a <a href="https://youtu.be/3vpP8MA5Ocg?t=1005">presentation</a> I gave at the 2020 CogX—it might give you a good overview about what we are doing. Of course, feel free to reach out in case you want to know more.</p>
+<div id="generating-good-hypotheses" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Generating Good Hypotheses</h2>
+<p>All research requires hypotheses. What is a good hypothesis? Good Hypotheses have a number of characteristics.</p>
+<ul>
+<li>A hypothesis is falsifiable.</li>
+<li>A hypothesis relates two observations.</li>
+<li>A hypothesis qualifies this relation, i.e. makes a statement whether the relation is the same, larger or smaller.</li>
+</ul>
+<p>Let me walk you through good hypothesis in a short video using our data as an example.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nPuJ1lzk0Bk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<div id="studying-our-sample" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Studying Our Sample</h2>
+<div id="investigating-the-hypothesis" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Investigating the Hypothesis</h3>
+<p>We investigate our data and take a look at what the data is telling us. First we compare the hours that you are studying with the hours that you think you should be studying. Given that we assume that you have a bit of a bad conscious regarding your efforts, there should be a clear difference.</p>
+<blockquote>
+<p><strong>Hypothesis 1</strong>: On average, you think that you should be studying more than you actually are.</p>
+</blockquote>
+<p>Let us investigate the question. We begin with Hypothesis 1.</p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
+<p>It seems, there is a lot to our hypothesis. Given the two distributions, there seems to be a clear difference.</p>
+<p>Next we will compare you to the past cohort here in Cardiff for which I have data. Actually, I asked them the same questions that I asked you. Would we expect any difference between you and the previous cohorts? There is no real reason to believe that the cohorts are different, so:</p>
+<blockquote>
+<p><strong>Hypothesis 2a</strong>: On average, all three cohorts are putting in the same effort.</p>
+</blockquote>
+<blockquote>
+<p><strong>Hypothesis 2b</strong>: On average, you and your previous cohorts have the same expectations regarding the efforts that you think you should be making for your university degree.</p>
+</blockquote>
+<p>Let us take a look at what the data is telling us.</p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-78-1.png" width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-78-2.png" width="50%" /></p>
+<p>It seems as if you are investing a little less than the students in 2019 and 2018, but more than the lockdown students from 2021. Now when you compare you to the previous years with regards to how much you think you should be studying, your ideal number of hours is not so different and you seem to be a bit more in line with the other students.</p>
+</div>
+</div>
+<div id="is-what-we-see-just-coincidence" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Is What We See Just Coincidence?</h2>
+<p>We have seen that indeed there are slight differences between your module and the students in the module before you. Now, can we say something about your cohort—all Politics and IR students in your year—more in general? It could be, for example, that out of pure coincidence you are a particularly efficient crowd of students who do not need as much time to study as the cohorts before you. So given the differences in the observations from your class and the classes in previous years, can we say something about whether we would expect differences in your cohorts in general?</p>
+<div id="are-two-cohorts-the-same" class="section level3" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Are Two Cohorts the Same?</h3>
+<p>To be able to answer this question, we first need to understand the idea of sampling. Sampling means to draw a number of observations randomly from a larger population. Intuitively, our sample should be able to provide us with a good account of what is going on in the population. Of course, with bad luck we can always be wrong and sample a result that is quite unusual given what is going on in the population.</p>
+<p>It is also intuitive that larger samples should be less prone to coincidences. If we only ask a few number of individuals, there is fair likelihood that these few people do not represent the overall population well. However, if we ask a larger amount of people, we could be fairly certain that this sample gives us a good insight about the overall population.</p>
+<!-- Let us do an easy sampling exercise with Lego bricks:  -->
+<p><!-- VIDEO WITH SAMPLING. FIRST ROUND SAMPLE 2 BLOCKS. SECOND ROUND SAMPLE 10 BLOCKS. --></p>
+<p>How does it help us understand whether your cohort is different from the cohort before you? Let us assume that on average the effort that you put into your studies is the same, for you and for the cohorts before you. How likely is it that we would observe the data I collected on you assuming that the cohorts invest on average the same amount of time? What are the odds to observe these differences? We have a clear expectation. If the average amount of hours in our data sample is largely different, then this is already a good indication that it should be quite unlikely to observe so different samples given that they all come from the same population.</p>
+<p>If it is unlikely that we observe such a group of students on the basis of pure coincidence, we should maybe revisit our initial assumption. Maybe, it was wrong to assume that you and the other cohorts all share the same efficiency in studying. We would then have to refute this initial assumption and rather conclude that, well maybe your group indeed puts in a different effort into your studies.</p>
+</div>
+<div id="how-can-we-tell-the-difference" class="section level3" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> How Can We Tell the Difference?</h3>
+<p>In the light of the two samples that we observe, we want to be able to determine how likely it is that they are from the same population? So we need a measure. It is called the p-value and in our example it will be able to tell us how likely is it to observe the means of two samples given that we assume they come from the same population.</p>
+<p>This is a very useful measure, because now we can say something about the likelihood that these samples really are from cohorts with the same amount of effort in both groups. If the samples look quite similar, then we can be certain that they are from same population. However, if they are really distinct, the probability that the cohorts have similar efforts is quite small. So what should we conclude? We might want to reconsider our initial assumption: Maybe the two cohorts are not one large population. Instead, maybe the two cohorts are different after all.</p>
+</div>
+<div id="hypothesis-testing" class="section level3" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Hypothesis Testing</h3>
+<p>What we are doing here is called hypothesis testing. More formally, we distinguish between two hypothesis. The first one is called the <em>null-hypothesis</em> and it assumes that there is no difference between the two groups. We can specify it explicitly as follows.</p>
+<blockquote>
+<p>Null hypothesis (<span class="math inline">\(H_0\)</span>): The samples come from populations with the same mean.</p>
+</blockquote>
+<p>As a default, we will always at first believe in the fact that there is no difference between the cohorts. We change our minds only if we see that it is quite unlikely that we would observe our two samples. In that case we will then rather prefer a different hypothesis, the <em>alternative hypothesis</em>.</p>
+<blockquote>
+<p>Alternative hypothesis (<span class="math inline">\(H_A\)</span>): The samples come from populations with different means.</p>
+</blockquote>
+<p>If we believe in the alternative hypothesis, then we say that the two populations are different.</p>
+<p>How unlikely is ‘unlikely enough’ to change our minds? By convention, in the social sciences we define a threshold of 5% for that: We will believe in the null-hypothesis until the two samples are so different that we think it would be less than 5% probable to observe two samples that are so different by chance. More formally, the threshold <span class="math inline">\(\alpha\)</span> for the acceptable p-value is set to <span class="math inline">\(p \leq 0.05\)</span>.</p>
+</div>
+<div id="test-test-test" class="section level3" number="4.3.4">
+<h3><span class="header-section-number">4.3.4</span> Test! Test! Test!</h3>
+<p>Now, let us go and test the hypotheses in our data.</p>
+<p>Regarding the actual effort you put into studying, is your cohort different from previous cohorts? With R, we can do a so called t-test. We will cover it more formally next week, so do not worry at this stage how it really works. What matters for now is that it will return us the p-value we are interested in: the probability that the mean in the cohorts is the same given the two samples we observe. We first compare your cohort to the cohort in 2018.</p>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  dat18$studyperweek and studyperweek
+## t = 0.31733, df = 36.126, p-value = 0.7528
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -5.693601  7.806133
+## sample estimates:
+## mean of x mean of y 
+##  16.88235  15.82609</code></pre>
+<p>R reports a number of statistics and for now we only care about some. First, for the mean of both of the samples at the very bottom of the table with 15.83 for your cohort and 16.88 for the cohort back in 2018. The important bit for us is the p-value. Here it is reported as 0.75.</p>
+<p>How do we interpret this result? Well it tells us that assuming that both of the samples come from the same population, there is a 75.28% probability that we observe the result if both are from populations with the same mean. In the light of this evidence, we stick with the null hypothesis and believe that apparently the amount of average effort is the same in your cohorts and in the cohort in 2018.</p>
+<p>Let us now compare your cohort to the one in 2019. Here are the results from the t-test.</p>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  dat19$studyperweek and studyperweek
+## t = 1.2732, df = 37.816, p-value = 0.2107
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -3.130627 13.739323
+## sample estimates:
+## mean of x mean of y 
+##  21.13043  15.82609</code></pre>
+<p>The means are even further apart. The cohort in 2019 was putting in on average 21.13 hours, while you on average study 15.83 hours. Can we still assume that the mean in both cohorts is the same in the light of the data we collected from the students in the two methods classes?</p>
+<p>The p-value is reported as 0.21. If both of the samples were drawn from cohorts with the same mean, we would have a 21.07% probability that we observe the data in our two samples. This is still quite unlikely and below the general accepted the threshold of <span class="math inline">\(\alpha\)</span> = 0.05. So what do we do now? Well, we refute the null hypothesis <span class="math inline">\(H_0\)</span>. Instead, we will trust in the alternative hypothesis <span class="math inline">\(H_A\)</span>. Your cohort is on average studying less than the cohort in 2019.</p>
+<p>And lastly, let us compare you to the cohort before you that was completely in lockdown in their second year.</p>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  dat21$studyperweek and studyperweek
+## t = -1.065, df = 35.291, p-value = 0.2941
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -8.392950  2.615776
+## sample estimates:
+## mean of x mean of y 
+##  12.93750  15.82609</code></pre>
+<p>They were studying on average 12.94 hours. In comparison to your 15.83 hours, do both larger cohorts study the same?</p>
+<p>The t-test yields a p-value of 0.29. If both of the samples were drawn from cohorts with the same mean, we would have a 29.41% probability that we observe the data in our two samples. Again. We refute the 0-hypothesis.</p>
+<!-- We can do the same exercise for the hours that you think you should be studying ideally. Let me show you how this works in a quick video.  -->
+<!-- XXXTODO redo this here. -->
+<!-- ```{r, eval=knitr::is_html_output(excludes = "epub"), results = 'asis', echo = F} -->
+<!-- cat( -->
+<!-- '<iframe width="560" height="315" src="https://www.youtube.com/embed/-CS29tNb9hM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' -->
+<!-- ) -->
+<!-- ``` -->
+<p>You got the hang of it by now, don’t you?</p>
+</div>
+<div id="type-1-and-type-2-errors" class="section level3" number="4.3.5">
+<h3><span class="header-section-number">4.3.5</span> Type 1 and Type 2 Errors</h3>
+<p>When we test a hypothesis based on samples, we can of course be wrong. Remember that everything do involves probabilistic statements. An <span class="math inline">\(\alpha\)</span> level of 0.05 means that in 19 out of 20 cases we should be correct. However, in one out of 20 cases we might wrongly refute a hypothesis.</p>
+<p>We could observe two samples that seem to be different even though in reality the null hypothesis is actually true. This kind of error is called a type-1 error or also a false positive. Then again, the two samples may come from populations with distinct means. But out of bad luck we get samples that actually look quite similar. In that case, we speak of a false negative, or a type-2 error. Figure <a href="testing-a-hypothesis.html#fig:t1t2e">4.1</a> offers you a nice summary.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:t1t2e"></span>
+<img src="figures/t1t2e.png" alt="Type 1 and Type 2 Errors" width="300" />
+<p class="caption">
+Figure 4.1: Type 1 and Type 2 Errors
+</p>
+</div>
+<p>A good way of remembering this difference is with the help of the following story that you certainly know from your childhood.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-DRS8DR0Rck" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<p>The first time the young shepherd is calling for help, the farmers believe that the wolf is there even though in reality it is not—clearly a type 1 error or a false positive. In the second instance, the farmers think there is no wolf, even though in reality there is actually one. We speak of a false negative, or a type 2 error.</p>
+</div>
+</div>
+<div id="coding" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Coding</h2>
+<p>This week was quite heavy on conceptual things, so we will be much lighter with the code.</p>
+<div id="data-management" class="section level3" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Data Management</h3>
+<p>We learned that we can select from objects using their position and these brackets <code>[ ]</code>. Just to stress this again: since data frames are R’s spreadsheets, you can select from them also by the name of their column.</p>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="testing-a-hypothesis.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data</span></span>
+<span id="cb112-2"><a href="testing-a-hypothesis.html#cb112-2" aria-hidden="true" tabindex="-1"></a>people.living.in.household <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">5</span>)</span>
+<span id="cb112-3"><a href="testing-a-hypothesis.html#cb112-3" aria-hidden="true" tabindex="-1"></a>education.in.years <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">13</span>, <span class="dv">15</span>)</span>
+<span id="cb112-4"><a href="testing-a-hypothesis.html#cb112-4" aria-hidden="true" tabindex="-1"></a>favourite.colour <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;forestgreen&#39;</span>, <span class="st">&#39;darkred&#39;</span>, <span class="st">&#39;lemongreen&#39;</span>)</span>
+<span id="cb112-5"><a href="testing-a-hypothesis.html#cb112-5" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(people.living.in.household, education.in.years, favourite.colour)</span></code></pre></div>
+<p>Let us select the first column.</p>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="testing-a-hypothesis.html#cb113-1" aria-hidden="true" tabindex="-1"></a>dat[,<span class="dv">1</span>]</span></code></pre></div>
+<pre><code>## [1] 3 2 5</code></pre>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="testing-a-hypothesis.html#cb115-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>people.living.in.household</span></code></pre></div>
+<pre><code>## [1] 3 2 5</code></pre>
+<p>Or what about the third element of second column?</p>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="testing-a-hypothesis.html#cb117-1" aria-hidden="true" tabindex="-1"></a>dat[<span class="dv">3</span>,<span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="testing-a-hypothesis.html#cb119-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>education.in.years[<span class="dv">3</span>]</span></code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<p>Sometimes you want to recode a variable. The oldschool way using the <code>car</code> package goes as follows.</p>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="testing-a-hypothesis.html#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb121-2"><a href="testing-a-hypothesis.html#cb121-2" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>favourite.colour <span class="ot">&lt;-</span> <span class="fu">recode</span>(dat<span class="sc">$</span>favourite.colour, <span class="st">&quot;</span></span>
+<span id="cb121-3"><a href="testing-a-hypothesis.html#cb121-3" aria-hidden="true" tabindex="-1"></a><span class="st">       c(&#39;forestgreen&#39;, &#39;lemongreen&#39;) = &#39;green&#39;;</span></span>
+<span id="cb121-4"><a href="testing-a-hypothesis.html#cb121-4" aria-hidden="true" tabindex="-1"></a><span class="st">       &#39;darkred&#39; = &#39;red&#39;&quot;</span>)</span>
+<span id="cb121-5"><a href="testing-a-hypothesis.html#cb121-5" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>favourite.colour</span></code></pre></div>
+<pre><code>## [1] &quot;green&quot; &quot;red&quot;   &quot;green&quot;</code></pre>
+<p>Finally let us meet a problem that will keep haunting you until the end of your professional life: missing data. Sometimes, data has empty entries. By convention R uses <code>NA</code> for it. Please not that even if it looks like a string variable, it actually is not treated as such by R.</p>
+<pre><code>## [1] 5e+04 1e+05    NA</code></pre>
+<p>Things begin to be complicated as soon as you want to do calculations with the variable. The reason is that R protects you from making stupid mistakes.</p>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="testing-a-hypothesis.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dat<span class="sc">$</span>income)</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<p>I know this is a pain at the moment, but believe me, once you write more complex programmes for analysing data, it will become really useful. You can set options in the functions to override the default behaviour.</p>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="testing-a-hypothesis.html#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dat<span class="sc">$</span>income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 75000</code></pre>
+<p>Another more general way of handling the issue is to filter your data set for missing values with <code>na.omit()</code>.</p>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="testing-a-hypothesis.html#cb128-1" aria-hidden="true" tabindex="-1"></a>dat.no.na <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(dat)</span>
+<span id="cb128-2"><a href="testing-a-hypothesis.html#cb128-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(dat)</span></code></pre></div>
+<pre><code>## [1] 3 4</code></pre>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="testing-a-hypothesis.html#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(dat.no.na)</span></code></pre></div>
+<pre><code>## [1] 2 4</code></pre>
+<p>As you can see, R kicked out a whole row from our observations. This certainly means that quite a bit of information just go lost here. Deleting missing data is a quick and convenient fix, but it comes at a high price.</p>
+<p>There is a whole subfield that is concerned with <a href="https://en.wikipedia.org/wiki/Imputation_(statistics)">imputing values</a> that are reasonable for the missing observation. The intuition is that you would use information from the fully observed variables to get a good guess for the observation that is missing. For example, in our case the years in education might give us a good proxy for the income that someone receives and we can get a good estimate for it. If we then want to analyse the relationship between—say—preferred colours and income we would then have a better data basis for that.</p>
+</div>
+<div id="hypothesis-testing-1" class="section level3" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> Hypothesis Testing</h3>
+<p>R is made for statistical analysis. No surprise that doing a t-test is really easy: With the function <code>t.test()</code>.</p>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="testing-a-hypothesis.html#cb132-1" aria-hidden="true" tabindex="-1"></a>ttest.perweek.now<span class="fl">.19</span> <span class="ot">&lt;-</span> <span class="fu">t.test</span>(dat19<span class="sc">$</span>studyperweek, studyperweek)</span>
+<span id="cb132-2"><a href="testing-a-hypothesis.html#cb132-2" aria-hidden="true" tabindex="-1"></a>ttest.perweek.now<span class="fl">.19</span></span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  dat19$studyperweek and studyperweek
+## t = 1.2732, df = 37.816, p-value = 0.2107
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -3.130627 13.739323
+## sample estimates:
+## mean of x mean of y 
+##  21.13043  15.82609</code></pre>
+</div>
+</div>
+<div id="reading-for-this-week" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Reading for This Week</h2>
+<p>The readings for this week are chapter 6 in <span class="citation"><a href="#ref-Fogarty2019" role="doc-biblioref">Fogarty</a> (<a href="#ref-Fogarty2019" role="doc-biblioref">2019</a>)</span> which tells you all about generating hypotheses. Chapter 9 is all about how to test them.</p>
+
+</div>
+</div>
+
+
+
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Fogarty2019" class="csl-entry">
+Fogarty, Brian. 2019. <em><span>Quantitative Social Science Data With R</span></em>. London: Sage.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="visualising-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="useful-internet-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["intro_data_science_homepage.pdf", "intro_data_science_homepage.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

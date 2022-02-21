@@ -1,5 +1,7 @@
 # Describing Data
 
+<!-- Next time, add video intro to setting the working directory here for windows and unix. Students struggle... -->
+
 
 ```{r housekeepingw2, echo=FALSE, include=FALSE}
 # -- housekeeping --------------------------------------------------------------

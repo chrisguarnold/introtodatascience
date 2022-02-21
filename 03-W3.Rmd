@@ -1,5 +1,6 @@
 # Visualising Data
 <!-- Next time: add pdf() -->
+
 ```{r echo=FALSE, include=FALSE}
 # -- housekeeping --------------------------------------------------------------
 rm(list=ls())
