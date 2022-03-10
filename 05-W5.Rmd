@@ -352,6 +352,7 @@ n <- length(dat$sleep)
 ### Summing Up: What is Inference?
 
 Let us take stock and understand the core idea of inference.
+
 * We can never know the true population mean $\mu$.
 * We will take the next best guesses: Measures on the basis of our
 sample.

@@ -24,7 +24,7 @@
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2022-03-04" />
+<meta name="date" content="2022-03-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -297,11 +297,27 @@ div.csl-indent {
 <li class="chapter" data-level="6.5" data-path="are-different-people-different.html"><a href="are-different-people-different.html#code"><i class="fa fa-check"></i><b>6.5</b> Code</a></li>
 <li class="chapter" data-level="6.6" data-path="are-different-people-different.html"><a href="are-different-people-different.html#reading-for-this-week-2"><i class="fa fa-check"></i><b>6.6</b> Reading for This Week</a></li>
 </ul></li>
-<li class="part"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="7" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>7</b> Useful Internet Resources</a>
+<li class="chapter" data-level="7" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html"><i class="fa fa-check"></i><b>7</b> Comparing Apples and Oranges</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>7.1</b> Homepages</a></li>
-<li class="chapter" data-level="7.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>7.2</b> Online Books</a></li>
+<li class="chapter" data-level="7.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#bivariate-regression"><i class="fa fa-check"></i><b>7.1</b> Bivariate Regression</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#how-does-it-work"><i class="fa fa-check"></i><b>7.1.1</b> How Does It Work?</a></li>
+<li class="chapter" data-level="7.1.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#how-do-we-interpret-results"><i class="fa fa-check"></i><b>7.1.2</b> How Do We Interpret Results?</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#beyond-bivariate-regression"><i class="fa fa-check"></i><b>7.2</b> Beyond Bivariate Regression</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#bivariate-regression-plus-a-dummy"><i class="fa fa-check"></i><b>7.2.1</b> Bivariate Regression Plus a Dummy</a></li>
+<li class="chapter" data-level="7.2.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#multivariate-regression"><i class="fa fa-check"></i><b>7.2.2</b> Multivariate Regression</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#the-relevance-of-statistical-control"><i class="fa fa-check"></i><b>7.3</b> The Relevance of Statistical Control</a></li>
+<li class="chapter" data-level="7.4" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#r-code"><i class="fa fa-check"></i><b>7.4</b> R Code</a></li>
+<li class="chapter" data-level="7.5" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#reading-for-this-week-3"><i class="fa fa-check"></i><b>7.5</b> Reading for This Week</a></li>
+</ul></li>
+<li class="part"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="8" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>8</b> Useful Internet Resources</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>8.1</b> Homepages</a></li>
+<li class="chapter" data-level="8.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>8.2</b> Online Books</a></li>
 </ul></li>
 </ul>
 
@@ -563,14 +579,16 @@ Figure 5.7: Drawing Many Samples from the Population.
 </div>
 <div id="summing-up-what-is-inference" class="section level3" number="5.2.4">
 <h3><span class="header-section-number">5.2.4</span> Summing Up: What is Inference?</h3>
-<p>Let us take stock and understand the core idea of inference.
-* We can never know the true population mean <span class="math inline">\(\mu\)</span>.
-* We will take the next best guesses: Measures on the basis of our
-sample.
-* We will make use of the mean, the standard deviation and the size of the sample.
-* We rely on the fact that random samples would typically give us a good idea about the population (Central Limit Theorem).
-* And then we assume that the sample mean is the population mean.
-* We then use the standard deviation from our sample to estimate the standard error of the sampling distribution.</p>
+<p>Let us take stock and understand the core idea of inference.</p>
+<ul>
+<li>We can never know the true population mean <span class="math inline">\(\mu\)</span>.</li>
+<li>We will take the next best guesses: Measures on the basis of our
+sample.</li>
+<li>We will make use of the mean, the standard deviation and the size of the sample.</li>
+<li>We rely on the fact that random samples would typically give us a good idea about the population (Central Limit Theorem).</li>
+<li>And then we assume that the sample mean is the population mean.</li>
+<li>We then use the standard deviation from our sample to estimate the standard error of the sampling distribution.</li>
+</ul>
 </div>
 <div id="confidence-intervals-being-95-certain" class="section level3" number="5.2.5">
 <h3><span class="header-section-number">5.2.5</span> Confidence Intervals: Being 95% Certain</h3>
