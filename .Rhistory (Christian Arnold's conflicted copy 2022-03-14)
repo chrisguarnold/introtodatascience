@@ -1,0 +1,512 @@
+, xlim = c(0,40)
+, frame.plot = FALSE)
+par(mar = c(4,1,1,1))
+stripchart(na.omit(studyperweek)
+, method = "stack"
+, pch = 16
+, xlab = "Hours Per Week"
+, col = cardiffpurple2
+, cex = 3
+, ylim = c(.95, 1.4)
+, xlim = c(0,40)
+, frame.plot = FALSE)
+par(mar = c(4,4,1,1))
+hist(studyperweek
+, breaks = 8
+, col = cardiffgrey
+, main = ""
+, xlab = "Hours Per Week"
+, border = "white")
+par(mar = c(4,4,1,1))
+hist(studyperweek
+, breaks = 3
+, col = cardiffgold
+, main = ""
+, xlab = "Hours Per Week"
+, border = "white")
+par(mar = c(4,5,1,1))
+boxplot(list(studyideal, studyperweek), horizontal = TRUE
+, col = c(cardiffgold, cardiffred)
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,40)
+, xlab = 'Hours'
+)
+axis(2, col = "white", las = 1, at = c(1,2),lab =c("Ideally \n Studied", "Really \n Studied"))
+axis(1)
+par(mar = c(4,5,1,1))
+boxplot(age, horizontal = TRUE
+, col = cardiffgold
+, axes = FALSE
+, boxwex = .6
+, ylim = c(18,45)
+, xlab = "Years"
+)
+axis(2, col = "white", las = 1, at = 1,lab ="Age")
+axis(1)
+par(mar = c(4,5,1,1))
+boxplot(spend, horizontal = TRUE
+, col = cardiffpurple2
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,80)
+, xlab = "GBP/Night Out"
+)
+axis(2, col = "white", las = 1, at = 1,lab ="Party \n Money")
+axis(1)
+# This creates a vector with a sequence of integers from -10 to 10 with a distance of 1
+x <- seq(-10,10,1)
+x
+a <- 5
+b <- 3
+c <- .5
+y  <- a + b*x + c*x^2
+y
+plot(x,y)
+plot(x,y,
+cex = 3, # size of the data points
+pch = 16, # point character
+col = 'aquamarine3', # chose the colour. R defaults with inverted commas.
+las = 1, # rotates labels in y axis by 90 degrees,
+xlim = c(-15, 15), # This defines the limit of the x-axis you want to plot in
+main = 'My First Figure' # Title
+)
+colors()[1:15]
+# Predefined Cardiff colours
+# primary
+cardiffred <- rgb(211,55,74, maxColorValue = 255)
+cardiffblack <- rgb(35,31,32, maxColorValue = 255)
+cardiffgrey <- rgb(47,68,78, maxColorValue = 255)
+cardiffgold <- rgb(189,158,94, maxColorValue = 255)
+# secondary
+cardiffblue <- rgb(21,44,81, maxColorValue = 255)
+cardiffpurple1 <- rgb(29,15,51, maxColorValue = 255)
+cardiffpurple2 <- rgb(60,44,89, maxColorValue = 255)
+a <- seq(1,10,1)
+b <- rep(1,10) # repeats the value '1' 10 times
+plot(a, b,
+col = c(cardiffred, cardiffgrey, cardiffgold),
+cex = 2,
+las = 1,
+pch = 15
+)
+table.breakfast <- table(breakfast)
+table.breakfast
+prop.table.breakfast <- prop.table(table.breakfast)
+prop.table.breakfast.rounded <- round(prop.table.breakfast, digits = 2)
+prop.table.breakfast.rounded
+barplot(table.breakfast)
+barplot(table.breakfast,
+ylab = "Frequency", # Adds label to the y-axis
+col = cardiffred, # You know this already
+las = 1, # and this
+border = NA # Removes the small black border around the bars
+)
+barplot(table.breakfast,
+xlab = "Frequency",
+las = 1,
+col = cardiffgold,
+horiz = TRUE # plots bars horizontally instead of vertically
+)
+# R uses an algorithm to determine the number of bins
+hist(commute,
+col = cardiffgold,
+xlab = "Minutes",
+)
+# Here we control a bit more by ourselves
+hist(commute,
+breaks = 3, # This is a very rough break into three bins
+col = cardiffpurple1,
+xlab = "Minutes",
+main ='', # suppress the default main title
+border = "white" # border around the histograms--here set to white
+)
+boxplot(spend)
+# here, we create a data object that is a list. Think of it as a super flexible data object.
+list.study <- list(studyideal, studyperweek)
+boxplot(list.study,
+horizontal = TRUE,
+col = c(cardiffred, cardiffpurple1), # different colours for the plots
+axes = FALSE, # we are suppressing all axes
+boxwex = .6, # this is about the width of the interquartile range box
+ylim = c(0,40), # defines the limit of the x-axis (!).
+# It would have been the y-axis, but we rotated the figure.
+# This is a superconfusing command of the boxplot function
+# We just have to live with it...
+xlab = 'Hours' # Label for the x-axis
+)
+# Here, we are adding axes manually to have more control over them.
+axis(2, col = "white",
+las = 1,
+at = c(1,2), # where to put the tickmarks
+lab =c("Ideally \n Studied", "Really \n Studied") # Labels. '\n' is a new line
+)
+axis(1)
+ttest.perweek.22.18 <- t.test(dat18$studyperweek, studyperweek)
+ttest.perweek.22.18
+ttest.perweek.21.19 <- t.test(dat19$studyperweek, dat21$studyperweek)
+ttest.perweek.21.19
+# This is my directory, yours looks quite differently.
+setwd("/Users/haui/Dropbox/Academia/Teaching/2021_22/PL9239 Intro_data_science/labsheets")
+# -- Load Data -----------------------------------------------------------------
+dat <- read.csv(file='w3_data.csv', header = TRUE)
+dat <- read.csv(file='w3_data_test.csv', header = TRUE)
+dat <- read.csv(file='w3_data_test.csv', header = TRUE)
+dat
+head(dat)
+head(dat)
+dim(dat)
+dat <- read.csv(file='w3_data_test.csv', header = TRUE, sep = ';')
+dim(dat)
+dat
+cardiffred <- rgb(211,55,74, maxColorValue = 255)
+cardiffblack <- rgb(35,21,32, maxColorValue = 255)
+cardiffgrey <- rgb(47,68,78, maxColorValue = 255)
+cardiffgold <- rgb(189,158,94, maxColorValue = 255)
+# secondary
+cardiffblue <- rgb(21,44,81, maxColorValue = 255)
+cardiffpurple1 <- rgb(29,15,51, maxColorValue = 255)
+cardiffpurple2 <- rgb(60,44,89, maxColorValue = 255)
+# define oxford colors
+oxblue                         <- rgb(0,33,71,maxColorValue = 255)
+oxlightblue         <- rgb(161,196,208,maxColorValue = 255)
+oxorange                 <- rgb(207,122,48,maxColorValue = 255)
+oxyellow                 <- rgb(245,207,71,maxColorValue = 255)
+oxdarkgreen         <- rgb(105,145,59,maxColorValue = 255)
+oxlightgreen         <- rgb(170, 179,0,maxColorValue = 255)
+oxred                         <- rgb(135,36,52,maxColorValue = 255)
+oxgrey                         <- "grey65"
+plot(x, y, col = c(cardiffred, cardiffgrey, cardiffgold) )
+plot(x, y, col = c(cardiffred, cardiffgrey, cardiffgold), pch = 16)
+# Libraries
+library(foreign)
+# Libraries
+library(foreign)
+library(xtable)
+library(knitr)
+library(DescTools)
+library(DescTools)
+# data: Class surveys
+dat18 <- read.csv("preparing_data/data/class_survey/lecture_survey_18.csv")
+dat19 <- read.csv("preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("preparing_data/data/class_survey/lecture_survey_21.csv")
+dat <- read.csv("preparing_data/data/class_survey/lecture_survey_22.csv")
+# names(dat)
+attach(dat)
+# Predefined Cardiff colours
+# primary
+cardiffred <- rgb(211,55,74, maxColorValue = 255)
+cardiffblack <- rgb(35,31,32, maxColorValue = 255)
+cardiffgrey <- rgb(47,68,78, maxColorValue = 255)
+cardiffgold <- rgb(189,158,94, maxColorValue = 255)
+# secondary
+cardiffblue <- rgb(21,44,81, maxColorValue = 255)
+cardiffpurple1 <- rgb(29,15,51, maxColorValue = 255)
+cardiffpurple2 <- rgb(60,44,89, maxColorValue = 255)
+## A Recap from Last Week
+# table(dat$partydays, dat$sleep)
+table.siblings.sleep <- table(dat$siblings, dat$sleep)
+table.siblings.sleep.prop <- round(prop.table(table(dat$siblings, dat$sleep), 2), 2)
+kable(list(table.siblings.sleep, table.siblings.sleep.prop),
+caption = "Cross Tabulating the Number of Siblings with the Hours You Sleep at Night.",
+booktabs = TRUE,
+valign ='t')
+# -- housekeeping --------------------------------------------------------------
+rm(list=ls())
+# Libraries
+library(foreign)
+library(xtable)
+library(knitr)
+library(DescTools)
+# data: Class surveys
+dat18 <- read.csv("preparing_data/data/class_survey/lecture_survey_18.csv")
+dat19 <- read.csv("preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("preparing_data/data/class_survey/lecture_survey_21.csv")
+dat <- read.csv("preparing_data/data/class_survey/lecture_survey_22.csv")
+# names(dat)
+attach(dat)
+# Predefined Cardiff colours
+# primary
+cardiffred <- rgb(211,55,74, maxColorValue = 255)
+cardiffblack <- rgb(35,31,32, maxColorValue = 255)
+cardiffgrey <- rgb(47,68,78, maxColorValue = 255)
+cardiffgold <- rgb(189,158,94, maxColorValue = 255)
+# secondary
+cardiffblue <- rgb(21,44,81, maxColorValue = 255)
+cardiffpurple1 <- rgb(29,15,51, maxColorValue = 255)
+cardiffpurple2 <- rgb(60,44,89, maxColorValue = 255)
+# table(dat$partydays, dat$sleep)
+table.siblings.sleep <- table(dat$siblings, dat$sleep)
+table.siblings.sleep.prop <- round(prop.table(table(dat$siblings, dat$sleep), 2), 2)
+kable(list(table.siblings.sleep, table.siblings.sleep.prop),
+caption = "Cross Tabulating the Number of Siblings with the Hours You Sleep at Night.",
+booktabs = TRUE,
+valign ='t')
+# table(dat$partydays, dat$sleep)
+table.breakfast.summer.21 <- table(dat$breakfast, dat$summer)
+table.breakfast.summer.19 <- table(dat19$breakfast, dat19$summer)
+table.breakfast.summer.18 <- table(dat18$breakfast, dat18$summer)
+kable(list(table.breakfast.summer.18, table.breakfast.summer.19, table.breakfast.summer.21),
+caption = "Cross Tabulating the variables 'What You Drink in the Morning' and 'How Much You Like Summer' for the Cohort in 2018, 2019 and 2021 (from Left to Right).",
+booktabs = TRUE,
+valign ='t')
+table.siblings.sleep.18 <- table(dat18$siblings, dat18$sleep)
+# A little recoding for the 2019 data
+dat19$siblings <- car::recode(dat19$siblings, "'5 or more'=5")
+dat19$sleep <- car::recode(dat19$sleep,
+"'5 and less'=5")
+table.siblings.sleep.19 <- table(dat19$siblings, dat19$sleep)
+kable(list(table.siblings.sleep.18, table.siblings.sleep.19, table.siblings.sleep),
+caption = "Tabulating the Number of Siblings with the Hours You Sleep at Night for the Cohort in 2018, 2019 and 2021 (from Left to Right).",
+booktabs = TRUE,
+valign ='t')
+chisq.test(dat18$siblings, dat18$sleep)
+chisq.test(dat19$siblings, dat19$sleep)
+chisq.test(dat$siblings, dat$sleep)
+commute.men <- mean(dat$commute[dat$gender=='Male'])
+commute.women <- mean(dat$commute[dat$gender=='Female'])
+par(mar = c(2,2,1,1))
+a <- runif(50, 0,30)
+b <- 2 + a
+plot(a, b
+, xlim = c(0, 40), ylim = c(0, 40)
+, xlab = "", ylab = ""
+, pch = 16, cex = 2, las = 1
+, col = cardiffblue,
+main = paste0('r = ', round(cor(a, b), 2))
+)
+abline(2, 1, col =  cardiffred, lwd = 1.5)
+par(mar = c(2,2,1,1))
+a <- runif(40, 0,40)
+b <- runif(40, 0,40)
+c <- rep(10, 40)
+plot(a, c,
+xlim = c(0, 40), ylim = c(0, 40),
+xlab = "", ylab = "", las = 1,
+pch = 16, cex = 2,
+col = cardiffblue,
+main = 'r = 0')
+abline(h=10, col =  cardiffred, lwd = 1.5)
+par(mar = c(2,2,1,1))
+a <- runif(50, 0,30)
+b <- 45 - a
+plot(a, b
+, xlim = c(0, 40), ylim = c(0, 40)
+, xlab = "", ylab = "", las = 1
+, pch = 16, cex = 2
+, col = cardiffblue,
+main = paste0('r = ', round(cor(a, b), 2))
+)
+abline(45, -1, col =  cardiffred, lwd = 1.5)
+par(mar = c(5,5,1,1))
+plot(dat$studyideal, dat$studyperweek,  las = 1,
+ylab = "Studying Per Week \n Real Effort (in h)", xlab = "Studying Per Week \n Ideal Effort (in h)",
+pch = 16, cex = 2,
+col = cardiffblue)
+text(10, 19, lab = paste0('r = ',
+round(cor(dat$studyideal, dat$studyperweek), 2)), cex = 2)
+plot(dat$studyideal, dat$commute, las = 1,
+xlab = "Studying Per Week \n Ideal Effort (in h)", ylab = "Commute (in min)",
+pch = 16, cex = 2,
+col = cardiffblue)
+text(10, 47, lab = paste0('r = ',
+round(cor(dat$studyideal, dat$commute), 2)), cex = 2)
+dat$studyideal
+dat$commute
+par(mar = c(5,5,1,1))
+plot(dat$studyideal, dat$studyperweek,  las = 1,
+ylab = "Studying Per Week \n Real Effort (in h)", xlab = "Studying Per Week \n Ideal Effort (in h)",
+pch = 16, cex = 2,
+col = cardiffblue)
+text(10, 19, lab = paste0('r = ',
+round(cor(dat$studyideal, dat$studyperweek), 2)), cex = 2)
+plot(dat$studyideal, dat$commute, las = 1,
+xlab = "Studying Per Week \n Ideal Effort (in h)", ylab = "Commute (in min)",
+pch = 16, cex = 2,
+col = cardiffblue)
+text(10, 47, lab = paste0('r = ',
+round(cor(dat$studyideal, dat$commute, na.rm=TRUE), 2)), cex = 2)
+dat <- na.omit(read.csv("preparing_data/data/class_survey/lecture_survey_22.csv"))
+dim(dat)
+dat <- read.csv("preparing_data/data/class_survey/lecture_survey_22.csv")
+dim(dat)
+par(mar = c(5,5,1,1))
+plot(dat$studyideal, dat$studyperweek,  las = 1,
+ylab = "Studying Per Week \n Real Effort (in h)", xlab = "Studying Per Week \n Ideal Effort (in h)",
+pch = 16, cex = 2,
+col = cardiffblue)
+text(10, 19, lab = paste0('r = ',
+round(cor(dat$studyideal, dat$studyperweek), 2)), cex = 2)
+plot(dat$studyideal, dat$commute, las = 1,
+xlab = "Studying Per Week \n Ideal Effort (in h)", ylab = "Commute (in min)",
+pch = 16, cex = 2,
+col = cardiffblue)
+text(10, 47, lab = paste0('r = ',
+round(cor(dat$studyideal, dat$commute), 2)), cex = 2)
+cor(dat$studyideal, dat$commute), 2)
+cor(dat$studyideal, dat$commute)
+dat$studyideal
+dat$commute
+class(dat$commute)
+class(dat$studyideal)
+cor(dat$studyideal, as.integer(dat$commute))
+dat <- na.omit(read.csv("preparing_data/data/class_survey/lecture_survey_22.csv"))
+dat
+dat
+dat$commute
+# -- housekeeping --------------------------------------------------------------
+rm(list=ls())
+# Libraries
+library(foreign)
+library(xtable)
+library(knitr)
+library(DescTools)
+# data: Class surveys
+dat18 <- read.csv("preparing_data/data/class_survey/lecture_survey_18.csv")
+dat19 <- read.csv("preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("preparing_data/data/class_survey/lecture_survey_21.csv")
+dat <- na.omit(read.csv("preparing_data/data/class_survey/lecture_survey_22.csv"))
+# names(dat)
+attach(dat)
+# Predefined Cardiff colours
+# primary
+cardiffred <- rgb(211,55,74, maxColorValue = 255)
+cardiffblack <- rgb(35,31,32, maxColorValue = 255)
+cardiffgrey <- rgb(47,68,78, maxColorValue = 255)
+cardiffgold <- rgb(189,158,94, maxColorValue = 255)
+# secondary
+cardiffblue <- rgb(21,44,81, maxColorValue = 255)
+cardiffpurple1 <- rgb(29,15,51, maxColorValue = 255)
+cardiffpurple2 <- rgb(60,44,89, maxColorValue = 255)
+# table(dat$partydays, dat$sleep)
+table.siblings.sleep <- table(dat$siblings, dat$sleep)
+table.siblings.sleep.prop <- round(prop.table(table(dat$siblings, dat$sleep), 2), 2)
+kable(list(table.siblings.sleep, table.siblings.sleep.prop),
+caption = "Cross Tabulating the Number of Siblings with the Hours You Sleep at Night.",
+booktabs = TRUE,
+valign ='t')
+# table(dat$partydays, dat$sleep)
+table.breakfast.summer.21 <- table(dat$breakfast, dat$summer)
+table.breakfast.summer.19 <- table(dat19$breakfast, dat19$summer)
+table.breakfast.summer.18 <- table(dat18$breakfast, dat18$summer)
+kable(list(table.breakfast.summer.18, table.breakfast.summer.19, table.breakfast.summer.21),
+caption = "Cross Tabulating the variables 'What You Drink in the Morning' and 'How Much You Like Summer' for the Cohort in 2018, 2019 and 2021 (from Left to Right).",
+booktabs = TRUE,
+valign ='t')
+table.siblings.sleep.18 <- table(dat18$siblings, dat18$sleep)
+# A little recoding for the 2019 data
+dat19$siblings <- car::recode(dat19$siblings, "'5 or more'=5")
+dat19$sleep <- car::recode(dat19$sleep,
+"'5 and less'=5")
+table.siblings.sleep.19 <- table(dat19$siblings, dat19$sleep)
+kable(list(table.siblings.sleep.18, table.siblings.sleep.19, table.siblings.sleep),
+caption = "Tabulating the Number of Siblings with the Hours You Sleep at Night for the Cohort in 2018, 2019 and 2021 (from Left to Right).",
+booktabs = TRUE,
+valign ='t')
+chisq.test(dat18$siblings, dat18$sleep)
+chisq.test(dat19$siblings, dat19$sleep)
+chisq.test(dat$siblings, dat$sleep)
+commute.men <- mean(dat$commute[dat$gender=='Male'])
+commute.women <- mean(dat$commute[dat$gender=='Female'])
+par(mar = c(2,2,1,1))
+a <- runif(50, 0,30)
+b <- 2 + a
+plot(a, b
+, xlim = c(0, 40), ylim = c(0, 40)
+, xlab = "", ylab = ""
+, pch = 16, cex = 2, las = 1
+, col = cardiffblue,
+main = paste0('r = ', round(cor(a, b), 2))
+)
+abline(2, 1, col =  cardiffred, lwd = 1.5)
+par(mar = c(2,2,1,1))
+a <- runif(40, 0,40)
+b <- runif(40, 0,40)
+c <- rep(10, 40)
+plot(a, c,
+xlim = c(0, 40), ylim = c(0, 40),
+xlab = "", ylab = "", las = 1,
+pch = 16, cex = 2,
+col = cardiffblue,
+main = 'r = 0')
+abline(h=10, col =  cardiffred, lwd = 1.5)
+par(mar = c(2,2,1,1))
+a <- runif(50, 0,30)
+b <- 45 - a
+plot(a, b
+, xlim = c(0, 40), ylim = c(0, 40)
+, xlab = "", ylab = "", las = 1
+, pch = 16, cex = 2
+, col = cardiffblue,
+main = paste0('r = ', round(cor(a, b), 2))
+)
+abline(45, -1, col =  cardiffred, lwd = 1.5)
+par(mar = c(5,5,1,1))
+plot(dat$studyideal, dat$studyperweek,  las = 1,
+ylab = "Studying Per Week \n Real Effort (in h)", xlab = "Studying Per Week \n Ideal Effort (in h)",
+pch = 16, cex = 2,
+col = cardiffblue)
+text(10, 19, lab = paste0('r = ',
+round(cor(dat$studyideal, dat$studyperweek), 2)), cex = 2)
+plot(dat$studyideal, dat$commute, las = 1,
+xlab = "Studying Per Week \n Ideal Effort (in h)", ylab = "Commute (in min)",
+pch = 16, cex = 2,
+col = cardiffblue)
+text(10, 47, lab = paste0('r = ',
+round(cor(dat$studyideal, as.integer(dat$commute)), 2)), cex = 2)
+class(dat$studyideal)
+par(mar = c(5,5,1,1))
+plot(dat$studyideal, dat$studyperweek,  las = 1,
+ylab = "Studying Per Week \n Real Effort (in h)", xlab = "Studying Per Week \n Ideal Effort (in h)",
+pch = 16, cex = 2,
+col = cardiffblue)
+text(10, 19, lab = paste0('r = ',
+round(cor(dat$studyideal, dat$studyperweek), 2)), cex = 2)
+plot(dat$studyideal, dat$commute, las = 1,
+xlab = "Studying Per Week \n Ideal Effort (in h)", ylab = "Commute (in min)",
+pch = 16, cex = 2,
+col = cardiffblue)
+text(10, 47, lab = paste0('r = ',
+round(cor(dat$studyideal, as.integer(dat$commute)), 2)), cex = 2)
+CramerV(dat18$breakfast, dat18$summer)
+chisq.test(dat$siblings, dat$sleep)
+chisq.test(dat$siblings, dat$sleep)
+t.test(dat$commute ~ dat$gender)
+dat$gender
+t.test(dat$commute[dat$gender != 'Prefer not to say'] ~ dat$gender[dat$gender != 'Prefer not to say'])
+t.test(dat$commute[dat$gender != 'Prefer not to say'] ~ dat$gender[dat$gender != 'Prefer not to say'])
+t.test(dat21$commute ~ dat21$gender)
+rnorm(10, 50, 10)
+sample.10 <- rnorm(10, 50, 10)
+sample.50 <- rnorm(50, 50, 10)
+sample.100 <- rnorm(100, 50, 10)
+sample.500 <- rnorm(500, 50, 10)
+sample.1000 <- rnorm(1000, 50, 10)
+sd(sample.10)
+sd(sample.50)
+sd(sample.100)
+sd(sample.500)
+sd(sample.1000)
+sample.10
+mean(sample.10)
+mean(sample.50)
+mean(sample.100)
+mean(sample.500)
+mean(sample.1000)
+plot(density(sample.10))
+plot(density(sample.10))
+plot(density(sample.50))
+plot(density(sample.100))
+plot(density(sample.500))
+plot(density(sample.1000))
+plot(density(rnorm(100000, 50, 10)))
+plot(density(rnorm(10000000, 50, 10)))
+# Assignment 1 test
+dat <- read.csv(file='../assessment/assignment_1_lego_data.csv')
+z <- data.frame(dat$price)
+z <- dat$price
+z<0.5
+data.frame(z<0.5)
+dat <- read.csv(file='../assessment/assignment_1_lego_data')
+temp <- subset(dat, theme == 'Marvel')
+temp
