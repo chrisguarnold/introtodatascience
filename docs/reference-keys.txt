@@ -137,6 +137,12 @@ compare-treated-from-one-group-to-the-non-treated-of-another-group
 compare-the-treated-before-and-after-their-treatment
 best-of-both-worlds-the-difference-in-difference-estimator
 reading-for-this-week-5
+multivariate-regression-and-heterogenous-treatment-effects
+analysing-experimental-data-revisited
+controling-for-confounders
+treatment-heterogeneity
+outro
+reading-for-this-week-6
 useful-internet-resources
 homepages
 online-books

@@ -1,0 +1,166 @@
+
+# Multivariate Regression and Heterogenous Treatment Effects
+
+
+
+
+```{r, eval=knitr::is_html_output(excludes = "epub"), results = 'asis', echo = F}
+cat(
+'<iframe width="560" height="315" src="https://www.youtube.com/embed/gAolTBQbSco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+)
+```
+
+
+
+## Analysing Experimental Data Revisited
+
+To analyse experimental data, we so far did an easy calculation. We subtracted the average of the control group from the average of the treatment group. It turns out, that you can analyse experimental data with the regression framework from our second section in this class, too.
+
+Let us take a look at this comparison with an example. We want to understand the causal effect of unemployment training. For this purpose, I generated some artificial data for illustration---so no real life data today. In our scenario, people have been unemployed for three months. After three months, we randomly assign a treatment. Half of the unemployed will get a four weeks class that improve on their IT skills. The other half continue in the unemployment programme as is. The outcome we are interested in is the monthly income six months into the new job. This is the result from the (hypothetical) experiment.
+
+
+```{r echo=FALSE}
+set.seed(1701)
+# Assemble new data set
+education <- sample(seq(9, 20), 1000, replace = TRUE)
+treat <- c(rep(1, 500), rep(0, 500))
+age.50plus <- sample(c(0, 1), replace = TRUE, 1000)
+wage <- education * 160 + treat * 400 + age.50plus*treat*250 + rnorm(1000, 0, 400)
+# no influence
+female <- sample(c(0,1), 1000, replace  = TRUE)
+reg.dat <- data.frame(wage, treat, female, education, age.50plus)
+par(mar = c(4,6,1,1))
+boxplot(reg.dat$wage ~ reg.dat$treat, horizontal = TRUE
+        , col = c(cardiffgold, cardiffred)
+        , axes = FALSE
+        , boxwex = .6
+        , xlab = 'Salary per Month in New Job (in GBP)', ylab = ''
+)
+axis(2, col = "white", las = 1, at = c(1,2),lab =c("No Training", "Training"))
+axis(1)
+```
+
+As you can see, there is indeed evidence that the training did have an effect. How again did we get to the effect that is caused by the training for the unemployed? We simply calculated the mean of both groups and subtracted them from one another. So we take the average monthly income after 6 months in the new job of those who participated in the training `r round(mean(reg.dat$wage[reg.dat$treat == 1]), 2)` GBP and subtract from it the average monthly income after 6 months in the new job of those who did not participate in the programme `r round(mean(reg.dat$wage[reg.dat$treat == 0]), 2)` GBP. The difference between the two is our causal effect of the programme:
+```{r}
+mean(reg.dat$wage[reg.dat$treat == 1]) - mean(reg.dat$wage[reg.dat$treat == 0])
+```
+
+
+But we can get to this result also with a regression analysis:
+
+```{r}
+regression.result <- lm(reg.dat$wage ~ reg.dat$treat)
+summary(regression.result)
+```
+
+
+Why do we get to the same results with both ways of calculating it? Remember that for the regression we are calculating the following regression model
+
+\[
+Y(X) = \alpha + \beta X + \epsilon.
+\]
+We interpreted the estimate of the parameter $\hat\beta$ as follows. It is the change of the result in $Y$ if we change the value of $X$ by one unit. In our context this means the change from the control to the treatment group. Let us consider the effects for the two groups, the estimated outcomes in the treatment group $\widehat{Y(X=1)}$ and the estimated outcomes in the control group $\widehat{Y(X=0)}$:
+
+\[
+\widehat{Y(X = 1)} - \widehat{Y(X=0)} = (\hat\alpha - \hat\beta) - \hat\alpha = \hat\beta.
+\]
+
+So, indeed, the estimated difference between the two outcomes boils down to the estimated parameter $\hat\beta$.
+
+
+
+## Controling for Confounders
+
+
+OK, so the difference between the control group and the treatment group can also be calculated with a regression. Fancy enough. But why going through all this trouble if we can simply subtract the means of two groups? Isn't that much more easy?
+
+Knowing how to calculate causal effects with the regression framework can be useful in different ways. Let us begin with the problem of confounders. Remember that for our estimator to work, we had to make an important assumption: the treatment assignment really has to be random in both groups. If the assignment is not fully random and the outcome depends on another variable, then we run into problems.
+
+In the context of our running example, we might have collected information on other variables. For example, we recorded participants' gender and also the number of years they spent in education, which in effect measures how long they spent in school or university.
+
+```{r}
+summary(lm(reg.dat$wage ~ reg.dat$treat + reg.dat$female))
+summary(lm(reg.dat$wage ~ reg.dat$treat + reg.dat$female + reg.dat$education))
+```
+
+
+We observe the effects from this omission in the two regressions that we can run. First, we are only adding the variable for gender. The variable is not significant, so there is no evidence that we have a systematic effect. The randomization of the treatment worked well.
+
+Things are different when we also add the variable on education. Indeed, the level of education does have an effect on the outcome. For some reason, when designing the experiment there was a mistake in the randomisation of our treatment and in result we do have a bias. If we only use the difference in means estimator, we would have missed this bias. Now that we include education in our regression analysis, we can control for it. In result, the effect from our treatment diminishes is quite strongly.
+
+
+## Treatment Heterogeneity
+
+
+
+The other area where the regression framework is really useful is in the context of treatment heterogeneity. Treatment heterogeneity describes the situation where the treatment you are assigning might have different effects on different groups.
+
+For example, in our experiment we could believe that retraining has different effects on different age cohorts. For anybody below 50, IT skills are quite normal and employers would expect that they can all handle a computer well. But what about those who did not grow up with a computer and are 50 years or older? For them, IT skills are much more rare and having this extra training under the belt might give you a real advantage.
+
+How can we express such a relationship with a regression equation? We not only include the terms for the treatment and also the age, but we also multiply the two variables and a parameter we estimate along. For our example, the regression equation would look like the following.
+
+\[
+\text{Income} = \beta_0 + \beta_1 \text{Training} + \beta_2 \text{Over 50}
++ \beta_3 \text{Training * Over 50} + \beta_4 \text{Female} + \beta_5 \text{Education}
+\]
+
+
+How do we interpret this result for the resulting regression equation? The coefficient $\beta_3$ is activated if both of the data equal $1$. So only if we observe somebody over $50$ who receives the treatment will we actually notice the impact of the estimated parameter $\beta_3$ on our outcome. If either of the two variables is $0$, there will be no effect from $\beta_3$ on the income.
+
+* If the age is below $50$ and this variable equals $0$, the whole product term equals 0.
+* Likewise, if there is no treatment, the whole product term is $0$ as well.
+
+Overall, we will be able to make the following statement. In addition to the normal treatment effect that we already observe from $\beta_2$, is there also an additional difference in the treatment for those who are older than 50 years?
+
+```{r}
+# 3 Treatment Heterogeneity
+regression.interaction.result <- lm(reg.dat$wage ~ reg.dat$treat*reg.dat$age.50plus + reg.dat$female + reg.dat$education)
+summary(regression.interaction.result)
+```
+
+
+Taking a look at the regression results, what can we learn? First of all, we see that apparently controlling for this interaction term was really necessary and brought our overall treatment effect baseline treatment effect highly up. It is at `r round(regression.interaction.result$coefficients[2],0)` GBP and we are quite certain that it is not just random coincidence. Next, just the age does not make any big difference on the income in our example. Neither does actually the difference between men and women. However, education matters---for every extra year that you spent in education you will earn `r round(regression.interaction.result$coefficients[5],0)` GBP per month more.
+
+Finally, let us also take a look at the interaction turn. We learned that for everyone who is over 50, going through the training gives them an additional advantage of `r round(regression.interaction.result$coefficients[6],0)` per month. This effect is significant as well, so that we can be quite certain that in the larger population there is an effect that is different from zero.
+
+In sum, those who are below $50$ and go through the IT training can expect an income increase of `r round(regression.interaction.result$coefficients[2],0)` GBP per month. In addition, those who are older than $50$ can add an extra `r round(regression.interaction.result$coefficients[6],0)` GBP to this baseline treatment effect summing to overall `r round(regression.interaction.result$coefficients[2] + regression.interaction.result$coefficients[6],0)`.
+
+
+Let me explain you this interaction effect in a quick video again.
+
+
+```{r, eval=knitr::is_html_output(excludes = "epub"), results = 'asis', echo = F}
+cat(
+'<iframe width="560" height="315" src="https://www.youtube.com/embed/qKW9LxE-sP0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+)
+```
+
+
+By the way, here is the 'real' data generating process that I defined to get to our data. You can clearly see that all our estimates of the treatment effect are off if the model is not appropriate---be it with a simple calculation of the difference in means or 'wrongly' specified regression models. We only get regression results close to the 'real' coefficients in the data generating process if we correctly specify the regression equation.
+
+
+```{r}
+# Explanatory Variables
+education <- sample(seq(9, 20), 1000, replace = TRUE)
+treat <- c(rep(1, 500), rep(0, 500))
+age.50plus <- sample(c(0, 1), replace = TRUE, 1000)
+female <- sample(c(0,1), 1000, replace  = TRUE)
+# Outcome
+wage <- education * 160 + treat * 400 + age.50plus*treat*250 + rnorm(1000, 0, 400)
+```
+
+## Outro
+
+This Is It! What an amazing journey we had! Please allow me a couple of final words.
+
+
+```{r, eval=knitr::is_html_output(excludes = "epub"), results = 'asis', echo = F}
+cat(
+'<iframe width="560" height="315" src="https://www.youtube.com/embed/eO3S2ikqaMA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+```
+
+
+
+## Reading for This Week
+For this last week, please read p.161–181 in @Imai2018.
+
