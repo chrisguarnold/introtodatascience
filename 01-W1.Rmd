@@ -102,7 +102,7 @@ How much do you like summer? You were given a scale that ranged from 1 to 5. The
 ```{r echo = FALSE}
 ordtable <- cbind(table(summer), prop.table(table(summer)))
 tsummer <- rbind(ordtable)
-rownames(tsummer) <- c(3,4,"Highest")
+rownames(tsummer) <- c(2,3,4,"Highest")
 
 par(mar = c(4,4,1,1))
 barplot(tsummer[,1]
@@ -119,9 +119,9 @@ Finally, let us consider some interval data. How many hours do you study per wee
 
 
 ```{r echo = FALSE}
-ordtable <- cbind(table(summer), prop.table(table(summer)))
-tsummer <- rbind(ordtable)
-rownames(tsummer) <- c(3,4,"Highest")
+# ordtable <- cbind(table(summer), prop.table(table(summer)))
+# tsummer <- rbind(ordtable)
+# rownames(tsummer) <- c(2,3,4,"Highest")
 
 par(mar = c(4,1,1,1))
 stripchart(na.omit(studyperweek)
@@ -131,7 +131,7 @@ stripchart(na.omit(studyperweek)
 			, col = cardiffgrey
 			, cex = 2.5
 			, ylim = c(.9, 1.5)
-			, xlim = c(0,max(na.omit(studyperweek)))
+			, xlim = c(0,max(na.omit(studyperweek))+5)
 			, frame.plot = FALSE)
 
 ```
@@ -376,5 +376,5 @@ y[x==1] # y where x=1
 
 Please read chapter 2 and chapter 3 in [@Fogarty2019].
 
-This is where we end for this week. I am looking forward to meeting you in the workshops on Tuesday 1pm--1.45pm in Law 2.27 and Friday online on [Zoom](https://cardiff.zoom.us/j/5516861898?pwd=ZGx5MjNJbjRnTFZqOFpoWXQ1VkZTZz09)!
+This is where we end for this week. I am looking forward to meeting you in the workshops on Tuesday 3.10pm-5pm in Tower/0.03!
 
