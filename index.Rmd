@@ -1,5 +1,5 @@
 ---
-title: "PL 9248 Introduction to Data Science for Politics and IR"
+title: "PL 9248 Data Science for Politics and IR"
 author: "Christian Arnold, Cardiff University"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -136,11 +136,11 @@ library(xtable)
 
 
 # data: Class surveys 
-dat18 <- read.csv("preparing_data/data/class_survey/lecture_survey_18.csv")
-dat19 <- read.csv("preparing_data/data/class_survey/lecture_survey_19.csv")
-dat21 <- read.csv("preparing_data/data/class_survey/lecture_survey_21.csv")
-dat22 <- read.csv("preparing_data/data/class_survey/lecture_survey_22.csv")
-dat <- read.csv("preparing_data/data/class_survey/lecture_survey_23.csv")
+dat18 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_18.csv")
+dat19 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_21.csv")
+dat22 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_22.csv")
+dat <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_23.csv")
 # names(dat)
 attach(dat)
 # Predefined Cardiff colours 

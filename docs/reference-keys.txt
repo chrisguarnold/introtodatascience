@@ -12,3 +12,6 @@ how-to-work-with-r
 first-steps-in-r
 selecting-elements
 readings-for-this-week
+useful-internet-resources
+homepages
+online-books
