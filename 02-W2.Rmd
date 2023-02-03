@@ -1,6 +1,5 @@
 # Describing Data
 
-<!-- Next time, add video intro to setting the working directory here for windows and unix. Students struggle... -->
 
 
 ```{r housekeepingw2, echo=FALSE, include=FALSE}
@@ -12,10 +11,11 @@ library(xtable)
 
 
 # data: Class surveys
-dat18 <- read.csv("preparing_data/data/class_survey/lecture_survey_18.csv")
-dat19 <- read.csv("preparing_data/data/class_survey/lecture_survey_19.csv")
-dat21 <- read.csv("preparing_data/data/class_survey/lecture_survey_21.csv")
-dat <- read.csv("preparing_data/data/class_survey/lecture_survey_22.csv")
+dat18 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_18.csv")
+dat19 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_21.csv")
+dat22 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_22.csv")
+dat <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_23.csv")
 
 # names(dat)
 attach(dat)
@@ -104,7 +104,7 @@ The median is the value that falls in the middle of an ordered sample. Obviously
 By definition, the median is resistant to outliers: Irrespective of how small the smallest value or how large the largest one, the one value that splits the sample in half will remain always the same. 
 
 
-```{r echo=FALSE}
+```{r studyideal, echo=FALSE}
 par(mar = c(4,1,1,1))
 stripchart(na.omit(studyideal)
 			, method = "stack"
@@ -113,7 +113,7 @@ stripchart(na.omit(studyideal)
 			, col = cardiffred
 			, cex = 3
 			, ylim = c(.6, 2)
-			, xlim = c(0,40)
+			, xlim = c(0,50)
 			, frame.plot = FALSE)
 abline(v=median(studyideal, na.rm = TRUE), col = cardiffblue, lwd = 3)
 text(y = 1.5, x=median(studyideal, na.rm = TRUE), pos = 4, col = cardiffblue,
@@ -147,7 +147,7 @@ The mean has a couple of interesting characteristics. It is only applicable to i
 
 
 
-```{r studyideal, echo=FALSE}
+```{r studypweek, echo=FALSE}
 par(mar = c(4,1,1,1))
 stripchart(na.omit(studyperweek)
 			, method = "stack"
@@ -166,9 +166,9 @@ text(y = 1.5, x=median(studyperweek, na.rm = TRUE), pos = 2, col = cardiffblue,
      labels = paste("median =", median(studyperweek, na.rm = TRUE)), cex = 1.5)
 ```
 
-Take a look at your data. Your mean is slightly higher than your median. Why is that so? Basically, those who study more than 30h per week have a considerable influence on the mean and push the mean to the right of the median.
+Take a look at your data for how many hours you *actually* study per week. Your mean is slightly higher than your median. Why is that so? Basically, those who study more than 20h per week have a considerable influence on the mean and push the mean to the right of the median.
 
-Compare your data with the data from the previous cohort: Here the median and the mean are closer together. Why is this so?
+Compare your data with the data from the cohort in 2021: Here the median and the mean are closer together. Why is this so?
 
 ```{r studyideal21, echo=FALSE}
 par(mar = c(4,1,1,1))
@@ -283,6 +283,10 @@ cat(
 ```
 
 
+
+
+
+
 Apparently, the deviations always sum up to 0. The values keep canceling each other out. So what can we do? One solution would be to calculate the Mean Absolute Deviation $\text{MAD}$.
 	\begin{equation*}
 		\text{MAD}=\frac{\sum(|x_i-\bar{x}|)}{n}
@@ -300,7 +304,7 @@ stripchart(list(studyideal, studyperweek)
            , col = cardiffgrey
            , cex = 3
            , ylim = c(.6, 3)
-           , xlim = c(0,40)
+           , xlim = c(0,50)
            , frame.plot = FALSE
            , axes = FALSE
            , jitter = 0
@@ -310,7 +314,7 @@ points(quantile(studyideal, c(.25, .75), na.rm=TRUE), c(1,1), col = cardiffred, 
 axis(2, col = "white", las = 1, at = c(1,2),lab =c("h Ideally", "h Studied"))
 lines(quantile(studyperweek, c(.25, .75), na.rm=TRUE), c(2,2), col = cardiffred, lwd = 2)
 lines(quantile(studyideal, c(.25, .75), na.rm=TRUE), c(1,1), col = cardiffred, lwd = 2)
-points(c(mean(studyideal, na.rm = TRUE),mean(studyperweek)), c(1,2), col = cardiffgold, pch = 16, cex = 3)
+points(c(mean(studyideal, na.rm = TRUE),mean(studyperweek, na.rm = TRUE)), c(1,2), col = cardiffgold, pch = 16, cex = 3)
 axis(1)
 # Some calculations for calling later
 MAD_actual <- sum(abs(studyperweek - mean(studyperweek, na.rm = TRUE)), na.rm = TRUE)/length(studyperweek)
@@ -399,16 +403,16 @@ with
 
 Let us advance step by step and wrap our head around this with the help of an example. We want to understand how many of you actually bought a computer during 2020. This simplifies our formula a bit.
 ```{r computer, echo=FALSE}
-f <- table(computer20)[2]
+f <- table(computer21)[2]
 t <- 1
-N <- length(computer20)
+N <- length(computer21)
 u <- 1
 ```
 \begin{equation*}
 	r = \frac{\frac{f}{t}}{\frac{N}{u}} = \frac{\frac{\text{computer purchases}}{\text{one year}}}{\text{all students}} = \frac{\frac{`r f`}{`r t`}}{\frac{`r N`}{`r u`}} = `r round((f/t)/(N/u), 2)`
 \end{equation*}
 
-We can take this a little further and ask *How many computers did 10 student buy in 2020?*. To answer this question, we simply adapt the number of people in the unit and set $u=10$.
+We can take this a little further and ask *How many computers did 10 student buy in 2021?*. To answer this question, we simply adapt the number of people in the unit and set $u=10$.
 ```{r echo=FALSE}
 u <- 10
 ```
@@ -416,7 +420,7 @@ u <- 10
 	r = \frac{\frac{f}{t}}{\frac{N}{u}} = \frac{\frac{\text{computer purchases}}{\text{one year}}}{\frac{\text{all students}}{\text{unit of 10 students}}} = \frac{\frac{`r f`}{`r t`}}{\frac{`r N`}{`r u`}} = `r round((f/t)/(N/u),2)`
 \end{equation*}
 
-So 10 students bought `r round((f/t)/(N/u),2)` computers in 2020.
+So 10 students bought `r round((f/t)/(N/u),2)` computers in 2021.
 
 #### Growth {-}
 The last thing we want to look at is growth. In particular in economics, growth has a really prominent role, and a lot of theory is built around all kinds of growth related to different cash flow: GDP, GDP per capita, return on investments to just name a few. But of course, growth can also happen in other areas like literacy rates in low-income countries, unemployment or votes. Growth can be expressed as a percentage change.
@@ -434,16 +438,16 @@ with
 Again, let us take a look at our own data to understand what is going on here.
 
 ```{r echo=FALSE}
-f_1 <- table(computer20)[2]
-f_2 <- table(computer21)[2]
+f_1 <- table(computer21)[2]
+f_2 <- table(computer22)[2]
 ```
 \begin{align*}
 	G &= \left(\frac{f_2 - f_1}{f_1}\right) 100 \\
-	 &= \left(\frac{\text{Purchases in 2021} - \text{Purchases in 2020}}{\text{Purchases in 2020}}\right) 100 \\
+	 &= \left(\frac{\text{Purchases in 2022} - \text{Purchases in 2021}}{\text{Purchases in 2021}}\right) 100 \\
 	 &= \left(\frac{`r f_2 - f_1`}{`r f_1`}\right) 100 = `r round(100*(f_2 - f_1)/f_1, 2)`\%
 \end{align*}
 
-Apparently, you were purchasing less computers during 2021, more specifically, the sales had a negative growth of $G = `r round(100*(f_2 - f_1)/f_1, 2)`\%$. It could be that a number of you bought a new computer when you started your university career back in 2020.
+Apparently, you were purchasing less computers during 2022, more specifically, the sales had a negative growth of $G = `r round(100*(f_2 - f_1)/f_1, 2)`\%$. It could be that a number of you bought a new computer when you started your university career back in 2021.
 
 
 
@@ -473,6 +477,8 @@ library("name_of_library")
 
 ### Setting the Working Directory
 
+
+
 R is quite stupid. It does not know where to look for files---be they R code or any other data---unless you really tell it where to look for a file.
 
 Typically, we will instruct R to make its home in the exact place where you save your main R script with a function called `setwd()`. As its argument, you provide the path you are working in. For me on my office machine, this is how it looks like.
@@ -487,6 +493,15 @@ getwd()
 ```
 
 This step might seem a bit minor and technical, but it is the nr.1 rookie mistake to forget setting your working directory properly.
+
+In case the idea of folders, files and working directories are still a bit confusing, here goes another video.
+
+```{r video_wd, eval=knitr::is_html_output(excludes = "epub"), results = 'asis', echo = F}
+cat(
+'<iframe width="560" height="315" src="https://www.youtube.com/embed/T0tIcL7RO5I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+)
+```
+
 
 ### Reading Data
 
@@ -529,7 +544,7 @@ Nothing there.
 load("toydata.RData")
 dat
 ```
-[Tada!](https://media.giphy.com/media/3o7TKQdzIQNAGPr9WU/giphy.gif) Worth noting at this stage, that when you use the native R way of saving data, R saves your actual object, here the object `dat`.
+[Tada!](https://media.giphy.com/media/JqDeI2yjpSRgdh35oe/giphy.gif) Worth noting at this stage, that when you use the native R way of saving data, R saves your actual object, here the object `dat`.
 
 
 You can of course also save data as an Excel spreadsheet.
@@ -547,13 +562,13 @@ write_xlsx(dat, "toydata.xlsx")
 
 ## Describing Data Using R
 
-Now, with a bit more of a background, we can calculate all of this week's statistics. In R, this is *really* straightforward. 
+Now, with a bit more of a background, we can calculate all of this week's statistics. In R, this is *really* straightforward. I am showing you how I did that using your data. Of course, you cannot run the script yourselves, since I will not share the data. 
 
 ### Working with Data Frames
 
-First, we load the data. Then we check which type it is: Apparently a data frame.
+First, I load the data. Then I check which type it is: Apparently a data frame.
 ```{r}
-dat <- read.csv("preparing_data/data/class_survey/lecture_survey_22.csv")
+dat <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_23.csv")
 class(dat)
 ```
 
