@@ -8,10 +8,12 @@ rm(list=ls())
 library(foreign)
 library(xtable)
 # data: Class surveys
-dat18 <- read.csv("preparing_data/data/class_survey/lecture_survey_18.csv")
-dat19 <- read.csv("preparing_data/data/class_survey/lecture_survey_19.csv")
-dat21 <- read.csv("preparing_data/data/class_survey/lecture_survey_21.csv")
-dat <- read.csv("preparing_data/data/class_survey/lecture_survey_22.csv")
+dat18 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_18.csv")
+dat19 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_21.csv")
+dat22 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_22.csv")
+dat <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_23.csv")
+
 # names(dat)
 attach(dat)
 # Predefined Cardiff colours
@@ -95,7 +97,7 @@ Ordinal data are nominal data that can be put into a logic order. Of course you 
 ```{r echo=FALSE, fig.show="hold", out.width="33%"}
 ordtable <- cbind(table(summer), prop.table(table(summer)))
 tsummer <- rbind(ordtable)
-rownames(tsummer) <- c(3,4,"Highest")
+rownames(tsummer) <- c(2,3,4,"Highest")
 par(mar = c(4,4,1,1))
 barplot(tsummer[,1]
 			, col = cardiffgrey
@@ -113,13 +115,14 @@ barplot(tsummer
 			, ylim = c(0,.4)
 			, width = .35
 			, las = 1
-			, col = c(cardiffgrey, cardiffred, cardiffgold)
+			, col = c(cardiffpurple1, cardiffgrey, cardiffred, cardiffgold)
 			, horiz = TRUE
 			, border = NA
 			, axes = TRUE)
-text(14, .24, col ="white", labels = "Highest", cex = 2)
-text(5, .24, col ="white", labels = "4", cex = 2)
+text(12, .24, col ="white", labels = "Highest", cex = 2)
+text(4.5, .24, col ="white", labels = "4", cex = 2)
 text(1.5, .24, col ="white", labels = "3", cex = 2)
+text(.5, .24, col ="white", labels = "2", cex = 2)
 ```
 
 
@@ -199,10 +202,10 @@ axis(2, col = "white", las = 1, at = c(1,2),lab =c("Ideally \n Studied", "Really
 axis(1)
 ```
 
-In this first figure we are plotting the hours that you are actually studying in red and the hours that you think you should be studying in yellow. Let us begin with the median values. The median for the hours actually studied is `r median(studyperweek)`, the median for the hours ideally studied is `r median(studyideal)`. You also get an impression of the magnitude of the interquartile range: it ranges from `r quantile(studyperweek, 0.25)` to `r quantile(studyperweek, 0.75)` for the top figure in red. For the lower figure, it begins at `r quantile(studyideal, 0.25)` and goes to a value to `r quantile(studyideal, 0.75)`. Both distributions are a little skewed. On the top, the median is a bit to the left of the box. This means that a quarter of you study between the lower end of the box and the median value so somewhere between `r quantile(studyperweek, 0.25)` and `r quantile(studyperweek, 0.5)`. The same interquartile range between the lower 25% quantile and the median is much larger for the hours that you think you should ideally be studying. The whiskers offer an impression of the data beyond the interquartile range. The smallest value for the hours that you actually study is `r min(studyperweek)` in the top figure. The maximum hours that any of you studies is `r max(studyperweek)`. The whiskers are a little different for the hours that you think you should ideally be studying. On the left, they range from `r min(studyideal)` hours and they grow all the way up to `r max(studyideal)` hours.
+In this first figure we are plotting the hours that you are actually studying in red and the hours that you think you should be studying in yellow. Let us begin with the median values. The median for the hours actually studied is `r median(na.omit(studyperweek))`, the median for the hours ideally studied is `r median(na.omit(studyideal))`. You also get an impression of the magnitude of the interquartile range: it ranges from `r quantile(na.omit(studyperweek), 0.25)` to `r quantile(na.omit(studyperweek), 0.75)` for the top figure in red. For the lower figure, it begins at `r quantile(na.omit(studyideal), 0.25)` and goes to a value to `r quantile(na.omit(studyideal), 0.75)`. Both distributions are a little skewed. On the top, the median is a bit to the right of the box. This means that a quarter of you study between the lower end of the box and the median value so somewhere between `r quantile(na.omit(studyperweek), 0.25)` and `r quantile(na.omit(studyperweek), 0.5)`. The same interquartile range between the lower 25% quantile and the median is much smaller for the hours that you think you should ideally be studying. The whiskers offer an impression of the data beyond the interquartile range. The smallest value for the hours that you actually study is `r min(na.omit(studyperweek))` in the top figure. The maximum hours that any of you studies is `r max(na.omit(studyperweek))`. The whiskers are a little different for the hours that you think you should ideally be studying. On the left, they range from `r min(na.omit(studyideal))` hours and they grow all the way up to `r max(na.omit(studyideal))` hours.
 
 
-In the next figure, let us take a look at your age: I plotted your age between 18 and all the way up to 50 years and you can see it is not necessary to cover anymore space. Large parts of you---at least 75%---are either 19, 20 or 21 years. You can also see an outlier for one person who is 25 years old and another one with the age 43, both outside of the whiskers. They can be seen as clearly distinct circle.
+In the next figure, let us take a look at your reported age: I plotted your age between 18 and all the way up to 30 years and you can see it is not necessary to cover anymore space. Large parts of you---at least 75%---are either 19, 20 or 21 years. You can also see an outlier for one person who is a bit older, clearly visible outside of the whiskers. They can be seen as a clearly distinct circle.
 
 ```{r echo=FALSE}
 par(mar = c(4,5,1,1))
@@ -210,14 +213,14 @@ boxplot(age, horizontal = TRUE
         , col = cardiffgold
         , axes = FALSE
         , boxwex = .6
-        , ylim = c(18,45)
+        , ylim = c(18,30)
         , xlab = "Years"
 )
 axis(2, col = "white", las = 1, at = 1,lab ="Age")
 axis(1)
 ```
 
-Lastly, you also offered information about a variable that I think is particularly interesting. How much money do you spend when you go out? Here we can see the information nicely summarised in a box plot. The median person spends `r round(median(spend))` GBP when he or she goes out at night. A quarter of you spent between `r round(quantile(spend, 0.25))` GBP and `r round(median(spend))` GBP. Another 25% spent between `r round(median(spend))` GBP and `r round(quantile(spend, 0.75))` GBP when you go out. The whiskers give an indication of the whole spread of the distribution. There are people who typically spend `r round(min(spend))` GBP when they go out. On the other side of the spectrum somebody seems to have quite deep pockets and is able of spending up to `r round(max(spend))` GBP per night out.
+Lastly, you also offered information about a variable that I think is particularly interesting. How much money do you spend when you go out? Here we can see the information nicely summarised in a box plot. The median person spends `r round(median(spend))` GBP when they go out at night. A quarter of you spend between `r round(quantile(spend, 0.25))` GBP and `r round(median(spend))` GBP. Another 25% spend between `r round(median(spend))` GBP and `r round(quantile(spend, 0.75))` GBP when you go out. The whiskers give an indication of the whole spread of the distribution. There are people who typically spend `r round(min(spend))` GBP when they go out. On the other side of the spectrum somebody seems to have quite deep pockets and is able of spending up to `r round(max(spend))` GBP per night out.
 
 ```{r echo=FALSE}
 par(mar = c(4,5,1,1))
@@ -225,7 +228,7 @@ boxplot(spend, horizontal = TRUE
         , col = cardiffpurple2
         , axes = FALSE
         , boxwex = .6
-        , ylim = c(0,80)
+        , ylim = c(0,60)
         , xlab = "GBP/Night Out"
 )
 axis(2, col = "white", las = 1, at = 1,lab ="Party \n Money")

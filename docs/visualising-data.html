@@ -4,27 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Visualising Data | PL 9239 Introduction to Data Science for Politics and IR</title>
-  <meta name="description" content="This is the website for the Intro to Data Science Class." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <title>Chapter 3 Visualising Data | PL 9248 Data Science for Politics and IR</title>
+  <meta name="description" content="This is the website for the Data Science Class." />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Visualising Data | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta property="og:title" content="Chapter 3 Visualising Data | PL 9248 Data Science for Politics and IR" />
   <meta property="og:type" content="book" />
   
-  
-  <meta property="og:description" content="This is the website for the Intro to Data Science Class." />
+  <meta property="og:description" content="This is the website for the Data Science Class." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Visualising Data | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta name="twitter:title" content="Chapter 3 Visualising Data | PL 9248 Data Science for Politics and IR" />
   
-  <meta name="twitter:description" content="This is the website for the Intro to Data Science Class." />
+  <meta name="twitter:description" content="This is the website for the Data Science Class." />
   
 
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2022-04-22" />
+<meta name="date" content="2023-02-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +31,7 @@
   
   
 <link rel="prev" href="describing-data.html"/>
-<link rel="next" href="testing-a-hypothesis.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<link rel="next" href="useful-internet-resources.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,14 +49,16 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -235,116 +235,11 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="visualising-data.html"><a href="visualising-data.html#readings-for-this-week-2"><i class="fa fa-check"></i><b>3.3</b> Readings for This Week</a></li>
 </ul></li>
-<li class="part"><span><b>Scenario II: Knowing It All By Knowing A Few</b></span></li>
-<li class="chapter" data-level="4" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html"><i class="fa fa-check"></i><b>4</b> Testing a Hypothesis</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#generating-good-hypotheses"><i class="fa fa-check"></i><b>4.1</b> Generating Good Hypotheses</a></li>
-<li class="chapter" data-level="4.2" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#studying-our-sample"><i class="fa fa-check"></i><b>4.2</b> Studying Our Sample</a>
-<ul>
-<li class="chapter" data-level="4.2.1" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#investigating-the-hypothesis"><i class="fa fa-check"></i><b>4.2.1</b> Investigating the Hypothesis</a></li>
-</ul></li>
-<li class="chapter" data-level="4.3" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#is-what-we-see-just-coincidence"><i class="fa fa-check"></i><b>4.3</b> Is What We See Just Coincidence?</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#are-two-cohorts-the-same"><i class="fa fa-check"></i><b>4.3.1</b> Are Two Cohorts the Same?</a></li>
-<li class="chapter" data-level="4.3.2" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#how-can-we-tell-the-difference"><i class="fa fa-check"></i><b>4.3.2</b> How Can We Tell the Difference?</a></li>
-<li class="chapter" data-level="4.3.3" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>4.3.3</b> Hypothesis Testing</a></li>
-<li class="chapter" data-level="4.3.4" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#test-test-test"><i class="fa fa-check"></i><b>4.3.4</b> Test! Test! Test!</a></li>
-<li class="chapter" data-level="4.3.5" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#type-1-and-type-2-errors"><i class="fa fa-check"></i><b>4.3.5</b> Type 1 and Type 2 Errors</a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#coding"><i class="fa fa-check"></i><b>4.4</b> Coding</a>
-<ul>
-<li class="chapter" data-level="4.4.1" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#data-management"><i class="fa fa-check"></i><b>4.4.1</b> Data Management</a></li>
-<li class="chapter" data-level="4.4.2" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#hypothesis-testing-1"><i class="fa fa-check"></i><b>4.4.2</b> Hypothesis Testing</a></li>
-</ul></li>
-<li class="chapter" data-level="4.5" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#reading-for-this-week"><i class="fa fa-check"></i><b>4.5</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html"><i class="fa fa-check"></i><b>5</b> Why Does Hypothesis Testing Work? A Primer on Probability</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#distributions"><i class="fa fa-check"></i><b>5.1</b> Distributions</a>
-<ul>
-<li class="chapter" data-level="5.1.1" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#probability"><i class="fa fa-check"></i><b>5.1.1</b> Probability</a></li>
-<li class="chapter" data-level="5.1.2" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#distribution"><i class="fa fa-check"></i><b>5.1.2</b> Distribution</a></li>
-<li class="chapter" data-level="5.1.3" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#the-normal-distribution"><i class="fa fa-check"></i><b>5.1.3</b> The Normal Distribution</a></li>
-<li class="chapter" data-level="5.1.4" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#your-standard-measure-z-scores"><i class="fa fa-check"></i><b>5.1.4</b> Your Standard Measure z-scores</a></li>
-</ul></li>
-<li class="chapter" data-level="5.2" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#inference"><i class="fa fa-check"></i><b>5.2</b> Inference</a>
-<ul>
-<li class="chapter" data-level="5.2.1" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#some-key-concepts"><i class="fa fa-check"></i><b>5.2.1</b> Some Key Concepts</a></li>
-<li class="chapter" data-level="5.2.2" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#population-and-samples"><i class="fa fa-check"></i><b>5.2.2</b> Population and Samples</a></li>
-<li class="chapter" data-level="5.2.3" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#the-central-limit-theorem"><i class="fa fa-check"></i><b>5.2.3</b> The Central Limit Theorem</a></li>
-<li class="chapter" data-level="5.2.4" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#summing-up-what-is-inference"><i class="fa fa-check"></i><b>5.2.4</b> Summing Up: What is Inference?</a></li>
-<li class="chapter" data-level="5.2.5" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#confidence-intervals-being-95-certain"><i class="fa fa-check"></i><b>5.2.5</b> Confidence Intervals: Being 95% Certain</a></li>
-<li class="chapter" data-level="5.2.6" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#revisiting-t-tests"><i class="fa fa-check"></i><b>5.2.6</b> Revisiting t-tests</a></li>
-</ul></li>
-<li class="chapter" data-level="5.3" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#revisiting-the-original-questions"><i class="fa fa-check"></i><b>5.3</b> Revisiting the Original Questions</a></li>
-<li class="chapter" data-level="5.4" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#r-a-simple-figure-with-two-variables"><i class="fa fa-check"></i><b>5.4</b> R: A Simple Figure With Two Variables</a></li>
-<li class="chapter" data-level="5.5" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#reading-for-this-week-1"><i class="fa fa-check"></i><b>5.5</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="are-different-people-different.html"><a href="are-different-people-different.html"><i class="fa fa-check"></i><b>6</b> Are Different People Different?</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#a-recap-from-last-week"><i class="fa fa-check"></i><b>6.1</b> A Recap from Last Week</a></li>
-<li class="chapter" data-level="6.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#what-are-bivariate-relationships"><i class="fa fa-check"></i><b>6.2</b> What Are Bivariate Relationships?</a></li>
-<li class="chapter" data-level="6.3" data-path="are-different-people-different.html"><a href="are-different-people-different.html#categorical-data"><i class="fa fa-check"></i><b>6.3</b> Categorical Data</a>
-<ul>
-<li class="chapter" data-level="6.3.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#describing-the-sample"><i class="fa fa-check"></i><b>6.3.1</b> Describing the Sample</a></li>
-<li class="chapter" data-level="6.3.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#estimating-the-parameters-in-the-population"><i class="fa fa-check"></i><b>6.3.2</b> Estimating the Parameters in the Population</a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="are-different-people-different.html"><a href="are-different-people-different.html#continuous-data"><i class="fa fa-check"></i><b>6.4</b> Continuous Data</a>
-<ul>
-<li class="chapter" data-level="6.4.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#describe"><i class="fa fa-check"></i><b>6.4.1</b> Describe</a></li>
-<li class="chapter" data-level="6.4.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#measures-about-the-population"><i class="fa fa-check"></i><b>6.4.2</b> Measures About the Population</a></li>
-</ul></li>
-<li class="chapter" data-level="6.5" data-path="are-different-people-different.html"><a href="are-different-people-different.html#code"><i class="fa fa-check"></i><b>6.5</b> Code</a></li>
-<li class="chapter" data-level="6.6" data-path="are-different-people-different.html"><a href="are-different-people-different.html#reading-for-this-week-2"><i class="fa fa-check"></i><b>6.6</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html"><i class="fa fa-check"></i><b>7</b> Comparing Apples and Oranges</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#bivariate-regression"><i class="fa fa-check"></i><b>7.1</b> Bivariate Regression</a>
-<ul>
-<li class="chapter" data-level="7.1.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#how-does-it-work"><i class="fa fa-check"></i><b>7.1.1</b> How Does It Work?</a></li>
-<li class="chapter" data-level="7.1.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#how-do-we-interpret-results"><i class="fa fa-check"></i><b>7.1.2</b> How Do We Interpret Results?</a></li>
-</ul></li>
-<li class="chapter" data-level="7.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#beyond-bivariate-regression"><i class="fa fa-check"></i><b>7.2</b> Beyond Bivariate Regression</a>
-<ul>
-<li class="chapter" data-level="7.2.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#bivariate-regression-plus-a-dummy"><i class="fa fa-check"></i><b>7.2.1</b> Bivariate Regression Plus a Dummy</a></li>
-<li class="chapter" data-level="7.2.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#multivariate-regression"><i class="fa fa-check"></i><b>7.2.2</b> Multivariate Regression</a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#the-relevance-of-statistical-control"><i class="fa fa-check"></i><b>7.3</b> The Relevance of Statistical Control</a></li>
-<li class="chapter" data-level="7.4" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#r-code"><i class="fa fa-check"></i><b>7.4</b> R Code</a></li>
-<li class="chapter" data-level="7.5" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#reading-for-this-week-3"><i class="fa fa-check"></i><b>7.5</b> Reading for This Week</a></li>
-</ul></li>
-<li class="part"><span><b>Scenario III: Did the New Policy Have an Effect?</b></span></li>
-<li class="chapter" data-level="8" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html"><i class="fa fa-check"></i><b>8</b> The Fundamental Problem of Causal Inference</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#studying-causal-effects"><i class="fa fa-check"></i><b>8.1</b> Studying Causal Effects</a></li>
-<li class="chapter" data-level="8.2" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#key-concepts-1"><i class="fa fa-check"></i><b>8.2</b> Key Concepts</a></li>
-<li class="chapter" data-level="8.3" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#the-fundamental-problem-of-causal-inference-1"><i class="fa fa-check"></i><b>8.3</b> The Fundamental Problem of Causal Inference</a></li>
-<li class="chapter" data-level="8.4" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#randomized-control-trials"><i class="fa fa-check"></i><b>8.4</b> Randomized Control Trials</a></li>
-<li class="chapter" data-level="8.5" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#estimating-a-first-causal-effect"><i class="fa fa-check"></i><b>8.5</b> Estimating a First Causal Effect</a></li>
-<li class="chapter" data-level="8.6" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#plotting-data-on-maps"><i class="fa fa-check"></i><b>8.6</b> Plotting Data on Maps</a></li>
-<li class="chapter" data-level="8.7" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#reading-for-this-week-4"><i class="fa fa-check"></i><b>8.7</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html"><i class="fa fa-check"></i><b>9</b> Causal Statements from Observational Data</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#this-weeks-data-the-effect-of-the-welsh-circuit-break"><i class="fa fa-check"></i><b>9.1</b> This Week’s Data: The Effect of the Welsh Circuit Break</a></li>
-<li class="chapter" data-level="9.2" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-treated-from-one-group-to-the-non-treated-of-another-group"><i class="fa fa-check"></i><b>9.2</b> Compare Treated from One Group to the Non-Treated of Another Group</a></li>
-<li class="chapter" data-level="9.3" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-the-treated-before-and-after-their-treatment"><i class="fa fa-check"></i><b>9.3</b> Compare the Treated Before and After their Treatment</a></li>
-<li class="chapter" data-level="9.4" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#best-of-both-worlds-the-difference-in-difference-estimator"><i class="fa fa-check"></i><b>9.4</b> Best of Both Worlds: The Difference-in-Difference Estimator</a></li>
-<li class="chapter" data-level="9.5" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#reading-for-this-week-5"><i class="fa fa-check"></i><b>9.5</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html"><i class="fa fa-check"></i><b>10</b> Multivariate Regression and Heterogenous Treatment Effects</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#analysing-experimental-data-revisited"><i class="fa fa-check"></i><b>10.1</b> Analysing Experimental Data Revisited</a></li>
-<li class="chapter" data-level="10.2" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#controling-for-confounders"><i class="fa fa-check"></i><b>10.2</b> Controling for Confounders</a></li>
-<li class="chapter" data-level="10.3" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#treatment-heterogeneity"><i class="fa fa-check"></i><b>10.3</b> Treatment Heterogeneity</a></li>
-<li class="chapter" data-level="10.4" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#outro"><i class="fa fa-check"></i><b>10.4</b> Outro</a></li>
-<li class="chapter" data-level="10.5" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#reading-for-this-week-6"><i class="fa fa-check"></i><b>10.5</b> Reading for This Week</a></li>
-</ul></li>
 <li class="part"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="11" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>11</b> Useful Internet Resources</a>
+<li class="chapter" data-level="4" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>4</b> Useful Internet Resources</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>11.1</b> Homepages</a></li>
-<li class="chapter" data-level="11.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>11.2</b> Online Books</a></li>
+<li class="chapter" data-level="4.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>4.1</b> Homepages</a></li>
+<li class="chapter" data-level="4.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>4.2</b> Online Books</a></li>
 </ul></li>
 </ul>
 
@@ -355,7 +250,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PL 9239 Introduction to Data Science for Politics and IR</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PL 9248 Data Science for Politics and IR</a>
           </h1>
         </div>
 
@@ -363,52 +258,52 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="visualising-data" class="section level1" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Visualising Data</h1>
+<div id="visualising-data" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Visualising Data<a href="visualising-data.html#visualising-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <!-- Next time: add pdf() -->
-<div id="communicating-with-data-effectively" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Communicating with Data Effectively</h2>
+<div id="communicating-with-data-effectively" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Communicating with Data Effectively<a href="visualising-data.html#communicating-with-data-effectively" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <!-- Visualising Data    -->
 <!-- What does visualisation mean?  Plotting  -->
 <!-- Go through all the measures again.  -->
 <p>Good data visualisations tell stories that do not need much explanation. Those who view the data can understand what insights you want to communicate from the data without necessarily using a lot of text (like this one) as their explanation.</p>
 <p>Viewing data visualisations is a lot of fun and a seemingly effortless way to explore and process the information in the data. The Internet is full with great examples at different levels of complexity. It is easy to get lost, take a look for example <a href="https://informationisbeautiful.net/">here</a>, <a href="http://techslides.com/over-1000-d3-js-examples-and-demos">here</a> or <a href="https://getdolphins.com/blog/interactive-data-visualizations-new-york-times/">here</a>. I am sure you can find many more interesting examples on the web.</p>
 <p>From a creator point of view, they allow to communicate a lot of information in a direct way. But it goes without saying that a well done data visualisation requires a bit of thinking.</p>
-<div id="thinking-about-your-data-visualisation" class="section level3" number="3.1.1">
-<h3><span class="header-section-number">3.1.1</span> Thinking About your Data Visualisation</h3>
+<div id="thinking-about-your-data-visualisation" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Thinking About your Data Visualisation<a href="visualising-data.html#thinking-about-your-data-visualisation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>At its core, data visualisation is actually pretty simple. How can we possibly visualise the data in a way that it a) communicates the key information in our data well while b) transporting it so that it is easy to understand for the viewer?</p>
 <p>Whenever you want to visualise data you should probably first sit down and think about what it is that you want to tell the end user of your visualisation? What is your key message? The visualisation ideally expresses more content with less ink. Or in more mathy terms:</p>
 <p><span class="math display">\[\begin{equation}
- \text{maximize} \left( \frac{\text{content}}{\text{ink}} \right)
+\text{maximize} \left( \frac{\text{content}}{\text{ink}} \right)
 \end{equation}\]</span></p>
 <p>This optimization problem comes with an important sub-constraint: The skill level of your potential audience. It will greatly determine the level of complexity that you can pitch. Who is your audience? Are they a lay audience without a lot of statistical training? So they would probably require a visualisation that allows for a more intuitive understanding. If the audience is more technically versed, your approach to data visualisation can be more sophisticated.</p>
 <p>Let us talk about colour. Think about the medium on which you want to use your figure. Is it made for publication in any printed format such as a report or a book? If so, be aware that not everybody is printing in colour, but usually in black and white. This means that you have to consider closely how light or how dark your colours are. For example, it might not be a good idea to use green and blue at the same time, simply because they are likely to have similar shadings. A colour that is too light might not be seen well on a white paper when printed. Of course, you are much more free in the choice of your colours when you your figures are for display on screens—like this homepage.</p>
 <p>Also think about the colourblind. Can they view your figures, too? Be careful when you use the spectrum from red to green.</p>
 <p>Ultimately, the choice of colours is a matter of preference and expression. If you feel arty, go wild! At the same time, picking the <em>right</em> colours is also a deep and awesome rabbit whole. Check <a href="https://youtu.be/xAoljeRJ3lU">this talk</a> by the guys who invented the recent <em>viridis</em> colourscheme in case you want to get a taste.</p>
 </div>
-<div id="visualising-the-data" class="section level3" number="3.1.2">
-<h3><span class="header-section-number">3.1.2</span> Visualising ‘The Data’</h3>
+<div id="visualising-the-data" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Visualising ‘The Data’<a href="visualising-data.html#visualising-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When we are visualising data, we probably want to get an overview over it ourselves, so the first move is to take a look at ‘the data’ itself. How does it look like? How is it distributed? We learned that we have different data types, i.e. nominal, ordinal, interval and continuous data.</p>
-<div id="nominal-data-1" class="section level4" number="3.1.2.1">
-<h4><span class="header-section-number">3.1.2.1</span> Nominal Data</h4>
+<div id="nominal-data-1" class="section level4 hasAnchor" number="3.1.2.1">
+<h4><span class="header-section-number">3.1.2.1</span> Nominal Data<a href="visualising-data.html#nominal-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The best way to visualise nominal data is the bar chart. It gives you a nice and succinct overview over the data without distorting your perception. You can plot data vertically as we have done here in blue or you can plot them horizontally—here in red. Be aware of using of not using pie charts. While they are indeed quite popular, they are wrongly so. It seems that Microsoft made us believe that this is a good way to represent data when they introduced visualisations in Excel. You can plot them with R, but it will remind you that there is <a href="https://agris.fao.org/agris-search/search.do?recordID=US201300423252">research</a> showing that it distorts your perception of the data. You will systematically overestimate the relevance of small proportions of the data and think that these proportions are much larger than they really are.</p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-52-1.png" width="33%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-52-2.png" width="33%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-52-3.png" width="33%" /></p>
+</div>
+<div id="ordinal-data-1" class="section level4 hasAnchor" number="3.1.2.2">
+<h4><span class="header-section-number">3.1.2.2</span> Ordinal Data<a href="visualising-data.html#ordinal-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Ordinal data are nominal data that can be put into a logic order. Of course you can again use the barcharts like before. But you can also make use of the fact that now you actually have ranked data. Why not plotting them as a stacked barchart?</p>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-53-1.png" width="33%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-53-2.png" width="33%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-53-3.png" width="33%" /></p>
 </div>
-<div id="ordinal-data-1" class="section level4" number="3.1.2.2">
-<h4><span class="header-section-number">3.1.2.2</span> Ordinal Data</h4>
-<p>Ordinal data are nominal data that can be put into a logic order. Of course you can again use the barcharts like before. But you can also make use of the fact that now you actually have ranked data. Why not plotting them as a stacked barchart?</p>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-54-1.png" width="33%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-54-2.png" width="33%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-54-3.png" width="33%" /></p>
-</div>
-<div id="interval-or-continuous-data" class="section level4" number="3.1.2.3">
-<h4><span class="header-section-number">3.1.2.3</span> Interval or Continuous Data</h4>
+<div id="interval-or-continuous-data" class="section level4 hasAnchor" number="3.1.2.3">
+<h4><span class="header-section-number">3.1.2.3</span> Interval or Continuous Data<a href="visualising-data.html#interval-or-continuous-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Interval data converges to continuous data in the extreme, so let us treat them at the same time here. The left figure charts data simply on the basis of their value in red. We run into a pretty straight forward problem: We cannot see how often we are actually seeing each observation. The solution is to stack values in case they occur more often, like in the purple figure to the right. Here we have a really nice overview of how often we observe each case.</p>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-55-1.png" width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-55-2.png" width="50%" /></p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-54-1.png" width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-54-2.png" width="50%" /></p>
 <p>Plotting each individual data point is realistic for our case where we have just a few observations. However, this can become way too complex to process in case you have a larger number of values. In these circumstances you can visualise the distribution of the data with bins in which you collect your data. On the left in the blue histogram you can see how our data would look like if we split it up into eight groups—it results in a really nice pattern! On the right you can see how the data looks like if we just used four bins for it.</p>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-56-1.png" width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-56-2.png" width="50%" /></p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-55-1.png" width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-55-2.png" width="50%" /></p>
 </div>
 </div>
-<div id="visualising-typical-values-and-spreads" class="section level3" number="3.1.3">
-<h3><span class="header-section-number">3.1.3</span> Visualising Typical Values and Spreads</h3>
+<div id="visualising-typical-values-and-spreads" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Visualising Typical Values and Spreads<a href="visualising-data.html#visualising-typical-values-and-spreads" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now that we have a first overview over how the data usually looks like, we want to become a bit more systematic in our approach to getting to know the data. Remember that we talked about typical values and spread when we wanted to describe data? This is what we want to visualise now. When you have interval or continuous data, there are a number of typical questions that you might want to know from the data.</p>
 <ul>
 <li>What is a typical value for the data?</li>
@@ -418,21 +313,21 @@ div.csl-indent {
 <p>There is one visualisation that summarised this all: boxplots. They easily maximise the content-per-ink criterion. We can identify a number of things from this plot. The median of the distribution is a vertical bar and somewhere in the the colourful box in the middle. This box itself also expresses information: it covers the interquartile range, so the central 50% of the distribution are within the range of this box. If the distribution is symmetric, you can see that the median is in the centre of this box. In case the distribution is skewed, the median will push to one side or the other.
 The whiskers that you see give an impression of the magnitude of the overall spread of the data. Typically they are 1.5 times the interquartile range starting from the box. Data that goes beyond this range will be plotted with a circle.</p>
 <p>Let us take a look at how useful this really is in practice.</p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
+<p>In this first figure we are plotting the hours that you are actually studying in red and the hours that you think you should be studying in yellow. Let us begin with the median values. The median for the hours actually studied is 12, the median for the hours ideally studied is 15. You also get an impression of the magnitude of the interquartile range: it ranges from 9 to 15 for the top figure in red. For the lower figure, it begins at 12 and goes to a value to 20. Both distributions are a little skewed. On the top, the median is a bit to the right of the box. This means that a quarter of you study between the lower end of the box and the median value so somewhere between 9 and 12. The same interquartile range between the lower 25% quantile and the median is much smaller for the hours that you think you should ideally be studying. The whiskers offer an impression of the data beyond the interquartile range. The smallest value for the hours that you actually study is 5 in the top figure. The maximum hours that any of you studies is 37. The whiskers are a little different for the hours that you think you should ideally be studying. On the left, they range from 9 hours and they grow all the way up to 42 hours.</p>
+<p>In the next figure, let us take a look at your reported age: I plotted your age between 18 and all the way up to 30 years and you can see it is not necessary to cover anymore space. Large parts of you—at least 75%—are either 19, 20 or 21 years. You can also see an outlier for one person who is a bit older, clearly visible outside of the whiskers. They can be seen as a clearly distinct circle.</p>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
-<p>In this first figure we are plotting the hours that you are actually studying in red and the hours that you think you should be studying in yellow. Let us begin with the median values. The median for the hours actually studied is 14, the median for the hours ideally studied is 20. You also get an impression of the magnitude of the interquartile range: it ranges from 5.5 to 22.5 for the top figure in red. For the lower figure, it begins at 9 and goes to a value to 32.5. Both distributions are a little skewed. On the top, the median is a bit to the left of the box. This means that a quarter of you study between the lower end of the box and the median value so somewhere between 5.5 and 14. The same interquartile range between the lower 25% quantile and the median is much larger for the hours that you think you should ideally be studying. The whiskers offer an impression of the data beyond the interquartile range. The smallest value for the hours that you actually study is 3 in the top figure. The maximum hours that any of you studies is 36. The whiskers are a little different for the hours that you think you should ideally be studying. On the left, they range from 4 hours and they grow all the way up to 40 hours.</p>
-<p>In the next figure, let us take a look at your age: I plotted your age between 18 and all the way up to 50 years and you can see it is not necessary to cover anymore space. Large parts of you—at least 75%—are either 19, 20 or 21 years. You can also see an outlier for one person who is 25 years old and another one with the age 43, both outside of the whiskers. They can be seen as clearly distinct circle.</p>
+<p>Lastly, you also offered information about a variable that I think is particularly interesting. How much money do you spend when you go out? Here we can see the information nicely summarised in a box plot. The median person spends 20 GBP when they go out at night. A quarter of you spend between 15 GBP and 20 GBP. Another 25% spend between 20 GBP and 30 GBP when you go out. The whiskers give an indication of the whole spread of the distribution. There are people who typically spend 8 GBP when they go out. On the other side of the spectrum somebody seems to have quite deep pockets and is able of spending up to 50 GBP per night out.</p>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-58-1.png" width="672" /></p>
-<p>Lastly, you also offered information about a variable that I think is particularly interesting. How much money do you spend when you go out? Here we can see the information nicely summarised in a box plot. The median person spends 30 GBP when he or she goes out at night. A quarter of you spent between 22 GBP and 30 GBP. Another 25% spent between 30 GBP and 45 GBP when you go out. The whiskers give an indication of the whole spread of the distribution. There are people who typically spend 0 GBP when they go out. On the other side of the spectrum somebody seems to have quite deep pockets and is able of spending up to 75 GBP per night out.</p>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
 </div>
 </div>
-<div id="plotting-data-with-r" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Plotting Data with R</h2>
+<div id="plotting-data-with-r" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Plotting Data with R<a href="visualising-data.html#plotting-data-with-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now it is your turn.</p>
-<p>When it comes to plotting, there is a package that has been put out a couple of years ago which is called <code>ggplot2</code>. On the web, you can find a lot of R visualisations that make use of it. For this class, however, we will stick to the basics—simply because I think it is good to first learn how to really control R from scratch. You can then always switch to higher level printing packages such as <code>ggplot</code>. Think of it as learning how to drive: In this module we will shift gears manually and you will find that switching to a car with automatic gears will not be any problem later. If you want to know more about <code>ggplot2</code>, this week’s reading of Chapter 8 in <span class="citation"><a href="#ref-Fogarty2019" role="doc-biblioref">Fogarty</a> (<a href="#ref-Fogarty2019" role="doc-biblioref">2019</a>)</span> is your friend.</p>
+<p>When it comes to plotting, there is a package that has been put out a couple of years ago which is called <code>ggplot2</code>. On the web, you can find a lot of R visualisations that make use of it. For this class, however, we will stick to the basics—simply because I think it is good to first learn how to really control R from scratch. You can then always switch to higher level printing packages such as <code>ggplot</code>. Think of it as learning how to drive: In this module we will shift gears manually and you will find that switching to a car with automatic gears will not be any problem later. If you want to know more about <code>ggplot2</code>, this week’s reading of Chapter 8 in <span class="citation">Fogarty (<a href="#ref-Fogarty2019" role="doc-biblioref">2019</a>)</span> is your friend.</p>
 <p>In all we do here, I am showing you some basic options. Look for the name of the function in the <em>help</em> tab to find out more details about the functions.</p>
-<div id="basics-in-plotting" class="section level3" number="3.2.1">
-<h3><span class="header-section-number">3.2.1</span> Basics in Plotting</h3>
+<div id="basics-in-plotting" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Basics in Plotting<a href="visualising-data.html#basics-in-plotting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>First, let us whip up some data.</p>
 <div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="visualising-data.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This creates a vector with a sequence of integers from -10 to 10 with a distance of 1</span></span>
 <span id="cb90-2"><a href="visualising-data.html#cb90-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">10</span>,<span class="dv">10</span>,<span class="dv">1</span>)</span>
@@ -449,7 +344,7 @@ The whiskers that you see give an impression of the magnitude of the overall spr
 ## [16] 32.5 41.0 50.5 61.0 72.5 85.0</code></pre>
 <p>And then we use the function <code>plot()</code> to chart the data.</p>
 <div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="visualising-data.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y)</span></code></pre></div>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
 <p>Simple, right? R takes over a number of jobs for you, from selecting the right data range in both axes, to chosing the shape and colour of representations for the data etc.. To give you a first idea, this is what happens when you tweak a number of options.</p>
 <div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="visualising-data.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y,</span>
 <span id="cb95-2"><a href="visualising-data.html#cb95-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">cex =</span> <span class="dv">3</span>, <span class="co"># size of the data points</span></span>
@@ -459,12 +354,12 @@ The whiskers that you see give an impression of the magnitude of the overall spr
 <span id="cb95-6"><a href="visualising-data.html#cb95-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">15</span>, <span class="dv">15</span>), <span class="co"># This defines the limit of the x-axis you want to plot in</span></span>
 <span id="cb95-7"><a href="visualising-data.html#cb95-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">&#39;My First Figure&#39;</span> <span class="co"># Title</span></span>
 <span id="cb95-8"><a href="visualising-data.html#cb95-8" aria-hidden="true" tabindex="-1"></a>     )</span></code></pre></div>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
 <p>You select the options by adding them with a comma. Check the help file in R-Studio for what is available. We will have a proper session on plotting bivariate data in a couple of weeks for all this, so do not worry about the details at this stage.</p>
 <p>The important message that needs to come across is that R will handle a lot for you—but the possibilities to adapt everything that you were seeing are literally endless.</p>
 </div>
-<div id="colours" class="section level3" number="3.2.2">
-<h3><span class="header-section-number">3.2.2</span> Colours</h3>
+<div id="colours" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Colours<a href="visualising-data.html#colours" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>R is great for using all different kinds of colours. You can check the already pre-defined colours by calling the function <code>colors()</code>. Here, let us call the first 15 ones.</p>
 <div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="visualising-data.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colors</span>()[<span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>]</span></code></pre></div>
 <pre><code>##  [1] &quot;white&quot;         &quot;aliceblue&quot;     &quot;antiquewhite&quot;  &quot;antiquewhite1&quot;
@@ -491,27 +386,27 @@ The whiskers that you see give an impression of the magnitude of the overall spr
 <span id="cb99-6"><a href="visualising-data.html#cb99-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">las =</span> <span class="dv">1</span>,</span>
 <span id="cb99-7"><a href="visualising-data.html#cb99-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">15</span></span>
 <span id="cb99-8"><a href="visualising-data.html#cb99-8" aria-hidden="true" tabindex="-1"></a>     )</span></code></pre></div>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-65-1.png" width="672" /></p>
 <p>The number of data points is larger than the number of colours. R will therefore cycle through the colours.</p>
 </div>
-<div id="visualising-nominal-and-ordinal-data" class="section level3" number="3.2.3">
-<h3><span class="header-section-number">3.2.3</span> Visualising Nominal and Ordinal Data</h3>
+<div id="visualising-nominal-and-ordinal-data" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Visualising Nominal and Ordinal Data<a href="visualising-data.html#visualising-nominal-and-ordinal-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To visualise data in a way that we can chart them as a barplot, we first have to count them. How often do we observe each value? There is a really useful function for that in R, it is called <code>table()</code>. Just calling it without plotting is quite revealing.</p>
 <div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="visualising-data.html#cb100-1" aria-hidden="true" tabindex="-1"></a>table.breakfast <span class="ot">&lt;-</span> <span class="fu">table</span>(breakfast)</span>
 <span id="cb100-2"><a href="visualising-data.html#cb100-2" aria-hidden="true" tabindex="-1"></a>table.breakfast</span></code></pre></div>
 <pre><code>## breakfast
 ## Coffee    Other     Tea 
-##      10       4       9</code></pre>
+##      10       2       5</code></pre>
 <p>Just a quick fyi: You can use the function <code>prop.table()</code> to get percentages. Then <code>round()</code> will round the resulting values.</p>
 <div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="visualising-data.html#cb102-1" aria-hidden="true" tabindex="-1"></a>prop.table.breakfast <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(table.breakfast)</span>
 <span id="cb102-2"><a href="visualising-data.html#cb102-2" aria-hidden="true" tabindex="-1"></a>prop.table.breakfast.rounded <span class="ot">&lt;-</span> <span class="fu">round</span>(prop.table.breakfast, <span class="at">digits =</span> <span class="dv">2</span>)</span>
 <span id="cb102-3"><a href="visualising-data.html#cb102-3" aria-hidden="true" tabindex="-1"></a>prop.table.breakfast.rounded</span></code></pre></div>
 <pre><code>## breakfast
 ## Coffee    Other     Tea 
-##    0.43    0.17    0.39</code></pre>
+##    0.59    0.12    0.29</code></pre>
 <p>But we are here for visualising data. We need the object <code>table.breakfast</code> for our barplot.</p>
 <div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="visualising-data.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table.breakfast)</span></code></pre></div>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-69-1.png" width="672" /></p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
 <p>Let us make this a bit more pretty.</p>
 <div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="visualising-data.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table.breakfast,</span>
 <span id="cb105-2"><a href="visualising-data.html#cb105-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">&quot;Frequency&quot;</span>, <span class="co"># Adds label to the y-axis</span></span>
@@ -526,10 +421,10 @@ The whiskers that you see give an impression of the magnitude of the overall spr
 <span id="cb105-11"><a href="visualising-data.html#cb105-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">col =</span> cardiffgold,</span>
 <span id="cb105-12"><a href="visualising-data.html#cb105-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">horiz =</span> <span class="cn">TRUE</span> <span class="co"># plots bars horizontally instead of vertically</span></span>
 <span id="cb105-13"><a href="visualising-data.html#cb105-13" aria-hidden="true" tabindex="-1"></a>            )</span></code></pre></div>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-70-1.png" width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-70-2.png" width="50%" /></p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-69-1.png" width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-69-2.png" width="50%" /></p>
 </div>
-<div id="visualising-continuous-data" class="section level3" number="3.2.4">
-<h3><span class="header-section-number">3.2.4</span> Visualising Continuous Data</h3>
+<div id="visualising-continuous-data" class="section level3 hasAnchor" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Visualising Continuous Data<a href="visualising-data.html#visualising-continuous-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We also wanted to take a look at continuous data. Let us see how far you are living from the university for that matter.</p>
 <div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="visualising-data.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R uses an algorithm to determine the number of bins</span></span>
 <span id="cb106-2"><a href="visualising-data.html#cb106-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(commute,</span>
@@ -545,13 +440,13 @@ The whiskers that you see give an impression of the magnitude of the overall spr
 <span id="cb106-12"><a href="visualising-data.html#cb106-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span><span class="st">&#39;&#39;</span>, <span class="co"># suppress the default main title</span></span>
 <span id="cb106-13"><a href="visualising-data.html#cb106-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">border =</span> <span class="st">&quot;white&quot;</span> <span class="co"># border around the histograms--here set to white</span></span>
 <span id="cb106-14"><a href="visualising-data.html#cb106-14" aria-hidden="true" tabindex="-1"></a>        )</span></code></pre></div>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-71-1.png" width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-71-2.png" width="50%" /></p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-70-1.png" width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-70-2.png" width="50%" /></p>
 </div>
-<div id="boxplots" class="section level3" number="3.2.5">
-<h3><span class="header-section-number">3.2.5</span> Boxplots</h3>
+<div id="boxplots" class="section level3 hasAnchor" number="3.2.5">
+<h3><span class="header-section-number">3.2.5</span> Boxplots<a href="visualising-data.html#boxplots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Finally, let us take a look at boxplots. The default function is called <code>boxplot()</code>. Calling it with a continuous variable such as <code>spend</code> as its argument will already generate a plot that has all the important information.</p>
 <div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="visualising-data.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(spend)</span></code></pre></div>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
 <p>But admittedly it is far from pleasent to look at the figure. Since we want that others pay attention to our message, let us make our visual communication more appealing.</p>
 <div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="visualising-data.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="co"># here, we create a data object that is a list. Think of it as a super flexible data object.</span></span>
 <span id="cb108-2"><a href="visualising-data.html#cb108-2" aria-hidden="true" tabindex="-1"></a>list.study <span class="ot">&lt;-</span> <span class="fu">list</span>(studyideal, studyperweek)</span>
@@ -574,13 +469,13 @@ The whiskers that you see give an impression of the magnitude of the overall spr
 <span id="cb108-19"><a href="visualising-data.html#cb108-19" aria-hidden="true" tabindex="-1"></a>     <span class="at">lab =</span><span class="fu">c</span>(<span class="st">&quot;Ideally </span><span class="sc">\n</span><span class="st"> Studied&quot;</span>, <span class="st">&quot;Really </span><span class="sc">\n</span><span class="st"> Studied&quot;</span>) <span class="co"># Labels. &#39;\n&#39; is a new line</span></span>
 <span id="cb108-20"><a href="visualising-data.html#cb108-20" aria-hidden="true" tabindex="-1"></a>     )</span>
 <span id="cb108-21"><a href="visualising-data.html#cb108-21" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">1</span>)</span></code></pre></div>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
 <p>This is it for this week.</p>
 </div>
 </div>
-<div id="readings-for-this-week-2" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Readings for This Week</h2>
-<p>Don’t forget to check into the readings of this week which is chapter 8 in <span class="citation"><a href="#ref-Fogarty2019" role="doc-biblioref">Fogarty</a> (<a href="#ref-Fogarty2019" role="doc-biblioref">2019</a>)</span>. As mentioned it is all about ggplot2—take it as a pointer to what is possible. We will not cover ggplot2 in this class, but you are of course free to go wild and become a proper ggplotter.</p>
+<div id="readings-for-this-week-2" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Readings for This Week<a href="visualising-data.html#readings-for-this-week-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Don’t forget to check into the readings of this week which is chapter 8 in <span class="citation">Fogarty (<a href="#ref-Fogarty2019" role="doc-biblioref">2019</a>)</span>. As mentioned it is all about ggplot2—take it as a pointer to what is possible. We will not cover ggplot2 in this class, but you are of course free to go wild and become a proper ggplotter.</p>
 
 </div>
 </div>
@@ -599,7 +494,7 @@ Fogarty, Brian. 2019. <em><span>Quantitative Social Science Data With R</span></
         </div>
       </div>
 <a href="describing-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="testing-a-hypothesis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="useful-internet-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -659,7 +554,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
