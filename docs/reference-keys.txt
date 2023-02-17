@@ -1,3 +1,4 @@
+fig:t1t2e
 tools-for-working-with-data
 what-is-in-a-data-spreadsheet
 key-concepts
@@ -43,6 +44,20 @@ visualising-nominal-and-ordinal-data
 visualising-continuous-data
 boxplots
 readings-for-this-week-2
+testing-a-hypothesis
+generating-good-hypotheses
+studying-our-sample
+investigating-the-hypothesis
+is-what-we-see-just-coincidence
+are-two-cohorts-the-same
+how-can-we-tell-the-difference
+hypothesis-testing
+test-test-test
+type-1-and-type-2-errors
+coding
+data-management
+hypothesis-testing-1
+reading-for-this-week
 useful-internet-resources
 homepages
 online-books

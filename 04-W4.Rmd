@@ -7,10 +7,11 @@ rm(list=ls())
 library(foreign)
 library(xtable)
 # data: Class surveys
-dat18 <- read.csv("preparing_data/data/class_survey/lecture_survey_18.csv")
-dat19 <- read.csv("preparing_data/data/class_survey/lecture_survey_19.csv")
-dat21 <- read.csv("preparing_data/data/class_survey/lecture_survey_21.csv")
-dat <- read.csv("preparing_data/data/class_survey/lecture_survey_22.csv")
+dat18 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_18.csv")
+dat19 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_21.csv")
+dat22 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_22.csv")
+dat <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_23.csv")
 # names(dat)
 attach(dat)
 # Predefined Cardiff colours
@@ -105,7 +106,7 @@ Let us take a look at what the data is telling us.
 
 ```{r echo=FALSE, fig.show="hold", out.width="50%"}
 par(mar = c(4,7,1,1))
-boxplot(list(dat18$studyperweek, dat19$studyperweek, dat21$studyperweek, studyperweek), horizontal = TRUE
+boxplot(list(dat18$studyperweek, dat19$studyperweek, dat21$studyperweek,dat22$studyperweek, studyperweek), horizontal = TRUE
         , col = cardiffgold
         , axes = FALSE
         , boxwex = .6
@@ -113,9 +114,9 @@ boxplot(list(dat18$studyperweek, dat19$studyperweek, dat21$studyperweek, studype
         , xlab = 'Hours'
         , main = 'How Much You Study'
 )
-axis(2, col = "white", las = 1, at = c(1,2,3,4),lab =c("Module 2018", "Module 2019", "Module 2021", 'You'))
+axis(2, col = "white", las = 1, at = c(1,2,3,4,5),lab =c("Module 2018", "Module 2019", "Module 2021", "Module 2022",'You'))
 axis(1)
-boxplot(list(dat18$studyideal, dat19$studyideal, dat21$studyideal, studyideal), horizontal = TRUE
+boxplot(list(dat18$studyideal, dat19$studyideal, dat21$studyideal,dat22$studyideal, studyideal), horizontal = TRUE
         , col = cardiffred
         , axes = FALSE
         , boxwex = .6
@@ -123,11 +124,11 @@ boxplot(list(dat18$studyideal, dat19$studyideal, dat21$studyideal, studyideal), 
         , xlab = 'Hours'
         , main = 'How Much You Think You Should Be Studying'
 )
-axis(2, col = "white", las = 1, at = c(1,2,3,4),lab =c("Module 2018", "Module 2019", "Module 2021", 'You'))
+axis(2, col = "white", las = 1, at = c(1,2,3,4,5),lab =c("Module 2018", "Module 2019", "Module 2021", "Module 2022",'You'))
 axis(1)
 ```
 
-It seems as if you are investing a little less than the students in 2019 and 2018, but more than the lockdown students from 2021. Now when you compare you to the previous years with regards to how much you think you should be studying, your ideal number of hours is not so different and you seem to be a bit more in line with the other students.
+It seems as if you are investing a little less than the students in 2018, 2019 and 2022, but more than the lockdown students from 2021. When you compare you to the previous years with regards to how much you think you should be studying, you are clearly convinced that you can get away with a really low effort. 
 
 
 
@@ -199,22 +200,13 @@ ttest.perweek.now.19
 ```
 
 
-The means are even further apart. The cohort in 2019 was putting in on average `r round(ttest.perweek.now.19$estimate[1], 2)` hours, while you on average study `r round(ttest.perweek.now.19$estimate[2], 2)` hours. Can we still assume that the mean in both cohorts is the same in the light of the data we collected from the students in the two methods classes?
+The means are further apart. The cohort in 2019 was putting in on average `r round(ttest.perweek.now.19$estimate[1], 2)` hours, while you on average study `r round(ttest.perweek.now.19$estimate[2], 2)` hours. Can we assume that the mean in both cohorts is the same in the light of the data we collected from the students in the two methods classes?
 
-The p-value is reported as `r round(ttest.perweek.now.19$p.value, 2)`. If both of the samples were drawn from cohorts with the same mean, we would have a `r round((ttest.perweek.now.19$p.value*100), 2)`% probability that we observe the data in our two samples. This is still quite unlikely and below the general accepted the threshold of $\alpha$ = 0.05. So what do we do now? Well, we refute the null hypothesis $H_0$. Instead, we will trust in the alternative hypothesis $H_A$. Your cohort is on average studying less than the cohort in 2019.
+The p-value is reported as `r round(ttest.perweek.now.19$p.value, 2)`. If both of the samples were drawn from cohorts with the same mean, we would have a `r round((ttest.perweek.now.19$p.value*100), 2)`% probability that we observe the data in our two samples. This is quite unlikely. But typically, we would only accept an alternative hypothesis at the general accepted the threshold of $\alpha$ = 0.05. So what do we do now? Well, we still do not refute the null hypothesis $H_0$ and continue to trust in it. We stick with the null hypothesis and believe that apparently the amount of average effort is the same in your cohorts and in the cohort in 2019.
 
-And lastly, let us compare you to the cohort before you that was completely in lockdown in their second year.
-
-
-```{r echo=FALSE}
-ttest.perweek.now.21 <- t.test(dat21$studyperweek, studyperweek)
-ttest.perweek.now.21
-```
+Only if your p-value were lower than 0.05 would we trust in the alternative hypothesis $H_A$. Your cohort would then on average be studying less than the cohort in 2019.
 
 
-They were studying on average `r round(ttest.perweek.now.21$estimate[1], 2)` hours. In comparison to your `r round(ttest.perweek.now.21$estimate[2], 2)` hours, do both larger cohorts study the same?
-
-The t-test yields a p-value of `r round(ttest.perweek.now.21$p.value, 2)`. If both of the samples were drawn from cohorts with the same mean, we would have a `r round((ttest.perweek.now.21$p.value*100), 2)`% probability that we observe the data in our two samples. Again. We refute the 0-hypothesis. 
 
 
 <!-- We can do the same exercise for the hours that you think you should be studying ideally. Let me show you how this works in a quick video.  -->

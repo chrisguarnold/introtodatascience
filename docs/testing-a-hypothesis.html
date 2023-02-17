@@ -4,27 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Testing a Hypothesis | PL 9239 Introduction to Data Science for Politics and IR</title>
-  <meta name="description" content="This is the website for the Intro to Data Science Class." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <title>Chapter 4 Testing a Hypothesis | PL 9248 Data Science for Politics and IR</title>
+  <meta name="description" content="This is the website for the Data Science Class." />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Testing a Hypothesis | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta property="og:title" content="Chapter 4 Testing a Hypothesis | PL 9248 Data Science for Politics and IR" />
   <meta property="og:type" content="book" />
   
-  
-  <meta property="og:description" content="This is the website for the Intro to Data Science Class." />
+  <meta property="og:description" content="This is the website for the Data Science Class." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Testing a Hypothesis | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta name="twitter:title" content="Chapter 4 Testing a Hypothesis | PL 9248 Data Science for Politics and IR" />
   
-  <meta name="twitter:description" content="This is the website for the Intro to Data Science Class." />
+  <meta name="twitter:description" content="This is the website for the Data Science Class." />
   
 
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2022-04-22" />
+<meta name="date" content="2023-02-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +31,7 @@
   
   
 <link rel="prev" href="visualising-data.html"/>
-<link rel="next" href="why-does-hypothesis-testing-work-a-primer-on-probability.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<link rel="next" href="useful-internet-resources.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,14 +49,16 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -258,93 +258,11 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="testing-a-hypothesis.html"><a href="testing-a-hypothesis.html#reading-for-this-week"><i class="fa fa-check"></i><b>4.5</b> Reading for This Week</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html"><i class="fa fa-check"></i><b>5</b> Why Does Hypothesis Testing Work? A Primer on Probability</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#distributions"><i class="fa fa-check"></i><b>5.1</b> Distributions</a>
-<ul>
-<li class="chapter" data-level="5.1.1" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#probability"><i class="fa fa-check"></i><b>5.1.1</b> Probability</a></li>
-<li class="chapter" data-level="5.1.2" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#distribution"><i class="fa fa-check"></i><b>5.1.2</b> Distribution</a></li>
-<li class="chapter" data-level="5.1.3" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#the-normal-distribution"><i class="fa fa-check"></i><b>5.1.3</b> The Normal Distribution</a></li>
-<li class="chapter" data-level="5.1.4" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#your-standard-measure-z-scores"><i class="fa fa-check"></i><b>5.1.4</b> Your Standard Measure z-scores</a></li>
-</ul></li>
-<li class="chapter" data-level="5.2" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#inference"><i class="fa fa-check"></i><b>5.2</b> Inference</a>
-<ul>
-<li class="chapter" data-level="5.2.1" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#some-key-concepts"><i class="fa fa-check"></i><b>5.2.1</b> Some Key Concepts</a></li>
-<li class="chapter" data-level="5.2.2" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#population-and-samples"><i class="fa fa-check"></i><b>5.2.2</b> Population and Samples</a></li>
-<li class="chapter" data-level="5.2.3" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#the-central-limit-theorem"><i class="fa fa-check"></i><b>5.2.3</b> The Central Limit Theorem</a></li>
-<li class="chapter" data-level="5.2.4" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#summing-up-what-is-inference"><i class="fa fa-check"></i><b>5.2.4</b> Summing Up: What is Inference?</a></li>
-<li class="chapter" data-level="5.2.5" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#confidence-intervals-being-95-certain"><i class="fa fa-check"></i><b>5.2.5</b> Confidence Intervals: Being 95% Certain</a></li>
-<li class="chapter" data-level="5.2.6" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#revisiting-t-tests"><i class="fa fa-check"></i><b>5.2.6</b> Revisiting t-tests</a></li>
-</ul></li>
-<li class="chapter" data-level="5.3" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#revisiting-the-original-questions"><i class="fa fa-check"></i><b>5.3</b> Revisiting the Original Questions</a></li>
-<li class="chapter" data-level="5.4" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#r-a-simple-figure-with-two-variables"><i class="fa fa-check"></i><b>5.4</b> R: A Simple Figure With Two Variables</a></li>
-<li class="chapter" data-level="5.5" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#reading-for-this-week-1"><i class="fa fa-check"></i><b>5.5</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="are-different-people-different.html"><a href="are-different-people-different.html"><i class="fa fa-check"></i><b>6</b> Are Different People Different?</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#a-recap-from-last-week"><i class="fa fa-check"></i><b>6.1</b> A Recap from Last Week</a></li>
-<li class="chapter" data-level="6.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#what-are-bivariate-relationships"><i class="fa fa-check"></i><b>6.2</b> What Are Bivariate Relationships?</a></li>
-<li class="chapter" data-level="6.3" data-path="are-different-people-different.html"><a href="are-different-people-different.html#categorical-data"><i class="fa fa-check"></i><b>6.3</b> Categorical Data</a>
-<ul>
-<li class="chapter" data-level="6.3.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#describing-the-sample"><i class="fa fa-check"></i><b>6.3.1</b> Describing the Sample</a></li>
-<li class="chapter" data-level="6.3.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#estimating-the-parameters-in-the-population"><i class="fa fa-check"></i><b>6.3.2</b> Estimating the Parameters in the Population</a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="are-different-people-different.html"><a href="are-different-people-different.html#continuous-data"><i class="fa fa-check"></i><b>6.4</b> Continuous Data</a>
-<ul>
-<li class="chapter" data-level="6.4.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#describe"><i class="fa fa-check"></i><b>6.4.1</b> Describe</a></li>
-<li class="chapter" data-level="6.4.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#measures-about-the-population"><i class="fa fa-check"></i><b>6.4.2</b> Measures About the Population</a></li>
-</ul></li>
-<li class="chapter" data-level="6.5" data-path="are-different-people-different.html"><a href="are-different-people-different.html#code"><i class="fa fa-check"></i><b>6.5</b> Code</a></li>
-<li class="chapter" data-level="6.6" data-path="are-different-people-different.html"><a href="are-different-people-different.html#reading-for-this-week-2"><i class="fa fa-check"></i><b>6.6</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html"><i class="fa fa-check"></i><b>7</b> Comparing Apples and Oranges</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#bivariate-regression"><i class="fa fa-check"></i><b>7.1</b> Bivariate Regression</a>
-<ul>
-<li class="chapter" data-level="7.1.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#how-does-it-work"><i class="fa fa-check"></i><b>7.1.1</b> How Does It Work?</a></li>
-<li class="chapter" data-level="7.1.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#how-do-we-interpret-results"><i class="fa fa-check"></i><b>7.1.2</b> How Do We Interpret Results?</a></li>
-</ul></li>
-<li class="chapter" data-level="7.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#beyond-bivariate-regression"><i class="fa fa-check"></i><b>7.2</b> Beyond Bivariate Regression</a>
-<ul>
-<li class="chapter" data-level="7.2.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#bivariate-regression-plus-a-dummy"><i class="fa fa-check"></i><b>7.2.1</b> Bivariate Regression Plus a Dummy</a></li>
-<li class="chapter" data-level="7.2.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#multivariate-regression"><i class="fa fa-check"></i><b>7.2.2</b> Multivariate Regression</a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#the-relevance-of-statistical-control"><i class="fa fa-check"></i><b>7.3</b> The Relevance of Statistical Control</a></li>
-<li class="chapter" data-level="7.4" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#r-code"><i class="fa fa-check"></i><b>7.4</b> R Code</a></li>
-<li class="chapter" data-level="7.5" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#reading-for-this-week-3"><i class="fa fa-check"></i><b>7.5</b> Reading for This Week</a></li>
-</ul></li>
-<li class="part"><span><b>Scenario III: Did the New Policy Have an Effect?</b></span></li>
-<li class="chapter" data-level="8" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html"><i class="fa fa-check"></i><b>8</b> The Fundamental Problem of Causal Inference</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#studying-causal-effects"><i class="fa fa-check"></i><b>8.1</b> Studying Causal Effects</a></li>
-<li class="chapter" data-level="8.2" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#key-concepts-1"><i class="fa fa-check"></i><b>8.2</b> Key Concepts</a></li>
-<li class="chapter" data-level="8.3" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#the-fundamental-problem-of-causal-inference-1"><i class="fa fa-check"></i><b>8.3</b> The Fundamental Problem of Causal Inference</a></li>
-<li class="chapter" data-level="8.4" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#randomized-control-trials"><i class="fa fa-check"></i><b>8.4</b> Randomized Control Trials</a></li>
-<li class="chapter" data-level="8.5" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#estimating-a-first-causal-effect"><i class="fa fa-check"></i><b>8.5</b> Estimating a First Causal Effect</a></li>
-<li class="chapter" data-level="8.6" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#plotting-data-on-maps"><i class="fa fa-check"></i><b>8.6</b> Plotting Data on Maps</a></li>
-<li class="chapter" data-level="8.7" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#reading-for-this-week-4"><i class="fa fa-check"></i><b>8.7</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html"><i class="fa fa-check"></i><b>9</b> Causal Statements from Observational Data</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#this-weeks-data-the-effect-of-the-welsh-circuit-break"><i class="fa fa-check"></i><b>9.1</b> This Week’s Data: The Effect of the Welsh Circuit Break</a></li>
-<li class="chapter" data-level="9.2" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-treated-from-one-group-to-the-non-treated-of-another-group"><i class="fa fa-check"></i><b>9.2</b> Compare Treated from One Group to the Non-Treated of Another Group</a></li>
-<li class="chapter" data-level="9.3" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-the-treated-before-and-after-their-treatment"><i class="fa fa-check"></i><b>9.3</b> Compare the Treated Before and After their Treatment</a></li>
-<li class="chapter" data-level="9.4" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#best-of-both-worlds-the-difference-in-difference-estimator"><i class="fa fa-check"></i><b>9.4</b> Best of Both Worlds: The Difference-in-Difference Estimator</a></li>
-<li class="chapter" data-level="9.5" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#reading-for-this-week-5"><i class="fa fa-check"></i><b>9.5</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html"><i class="fa fa-check"></i><b>10</b> Multivariate Regression and Heterogenous Treatment Effects</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#analysing-experimental-data-revisited"><i class="fa fa-check"></i><b>10.1</b> Analysing Experimental Data Revisited</a></li>
-<li class="chapter" data-level="10.2" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#controling-for-confounders"><i class="fa fa-check"></i><b>10.2</b> Controling for Confounders</a></li>
-<li class="chapter" data-level="10.3" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#treatment-heterogeneity"><i class="fa fa-check"></i><b>10.3</b> Treatment Heterogeneity</a></li>
-<li class="chapter" data-level="10.4" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#outro"><i class="fa fa-check"></i><b>10.4</b> Outro</a></li>
-<li class="chapter" data-level="10.5" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#reading-for-this-week-6"><i class="fa fa-check"></i><b>10.5</b> Reading for This Week</a></li>
-</ul></li>
 <li class="part"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="11" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>11</b> Useful Internet Resources</a>
+<li class="chapter" data-level="5" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>5</b> Useful Internet Resources</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>11.1</b> Homepages</a></li>
-<li class="chapter" data-level="11.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>11.2</b> Online Books</a></li>
+<li class="chapter" data-level="5.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>5.1</b> Homepages</a></li>
+<li class="chapter" data-level="5.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>5.2</b> Online Books</a></li>
 </ul></li>
 </ul>
 
@@ -355,7 +273,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PL 9239 Introduction to Data Science for Politics and IR</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PL 9248 Data Science for Politics and IR</a>
           </h1>
         </div>
 
@@ -363,16 +281,16 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="testing-a-hypothesis" class="section level1" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Testing a Hypothesis</h1>
+<div id="testing-a-hypothesis" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Testing a Hypothesis<a href="testing-a-hypothesis.html#testing-a-hypothesis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Welcome to the second part of the module PL9239. In our second scenario we turn to one of the core tasks of any data analysis: inference. The basic idea is that you want to be able to make a statement—e.g. calculate a statistic—about the world out there. But since the world out there is so large it is impossible to collect data about everything, we will have to chose a different approach. Instead, we are going to learn how to collect data about a sample and then say something with a little uncertainty about the world at large.</p>
 <p>To show you how useful all this actually is, I interviewed Michelle Brown who is working as a Senior Advisor on Elections for the <a href="https://www.ndi.org/">National Democratic Institute</a>. This NGO cooperates with local civil society actors in fragile democracies and trains them to do voting observation missions. These election observers tabulate the ballots in parallel to the official representatives and can thus get an idea about the amount of voting fraud that might be occurring.</p>
 <p>Obviously, it is prohibitive to observe every single polling station. In some countries there might be tens of thousands of polling stations and an NGO never has the resources to cover all that. Instead, the NDI relies on sampling. Election observers only monitor randomly selected polling stations, and the NDI then uses statistics to infer what is really going on.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y5W0Xj6bQh0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 <p>Together with colleagues, we are doing research with the National Democratic Institute that helps them improve their technology stack even further. In case you are interested, feel free to take a look at a <a href="https://youtu.be/3vpP8MA5Ocg?t=1005">presentation</a> I gave at the 2020 CogX—it might give you a good overview about what we are doing. Of course, feel free to reach out in case you want to know more.</p>
-<div id="generating-good-hypotheses" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Generating Good Hypotheses</h2>
+<div id="generating-good-hypotheses" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Generating Good Hypotheses<a href="testing-a-hypothesis.html#generating-good-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>All research requires hypotheses. What is a good hypothesis? Good Hypotheses have a number of characteristics.</p>
 <ul>
 <li>A hypothesis is falsifiable.</li>
@@ -383,16 +301,16 @@ div.csl-indent {
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nPuJ1lzk0Bk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </div>
-<div id="studying-our-sample" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Studying Our Sample</h2>
-<div id="investigating-the-hypothesis" class="section level3" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Investigating the Hypothesis</h3>
+<div id="studying-our-sample" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Studying Our Sample<a href="testing-a-hypothesis.html#studying-our-sample" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="investigating-the-hypothesis" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Investigating the Hypothesis<a href="testing-a-hypothesis.html#investigating-the-hypothesis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We investigate our data and take a look at what the data is telling us. First we compare the hours that you are studying with the hours that you think you should be studying. Given that we assume that you have a bit of a bad conscious regarding your efforts, there should be a clear difference.</p>
 <blockquote>
 <p><strong>Hypothesis 1</strong>: On average, you think that you should be studying more than you actually are.</p>
 </blockquote>
 <p>Let us investigate the question. We begin with Hypothesis 1.</p>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
 <p>It seems, there is a lot to our hypothesis. Given the two distributions, there seems to be a clear difference.</p>
 <p>Next we will compare you to the past cohort here in Cardiff for which I have data. Actually, I asked them the same questions that I asked you. Would we expect any difference between you and the previous cohorts? There is no real reason to believe that the cohorts are different, so:</p>
 <blockquote>
@@ -402,15 +320,15 @@ div.csl-indent {
 <p><strong>Hypothesis 2b</strong>: On average, you and your previous cohorts have the same expectations regarding the efforts that you think you should be making for your university degree.</p>
 </blockquote>
 <p>Let us take a look at what the data is telling us.</p>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-78-1.png" width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-78-2.png" width="50%" /></p>
-<p>It seems as if you are investing a little less than the students in 2019 and 2018, but more than the lockdown students from 2021. Now when you compare you to the previous years with regards to how much you think you should be studying, your ideal number of hours is not so different and you seem to be a bit more in line with the other students.</p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-77-1.png" width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-77-2.png" width="50%" /></p>
+<p>It seems as if you are investing a little less than the students in 2018, 2019 and 2022, but more than the lockdown students from 2021. When you compare you to the previous years with regards to how much you think you should be studying, you are clearly convinced that you can get away with a really low effort.</p>
 </div>
 </div>
-<div id="is-what-we-see-just-coincidence" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Is What We See Just Coincidence?</h2>
+<div id="is-what-we-see-just-coincidence" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Is What We See Just Coincidence?<a href="testing-a-hypothesis.html#is-what-we-see-just-coincidence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We have seen that indeed there are slight differences between your module and the students in the module before you. Now, can we say something about your cohort—all Politics and IR students in your year—more in general? It could be, for example, that out of pure coincidence you are a particularly efficient crowd of students who do not need as much time to study as the cohorts before you. So given the differences in the observations from your class and the classes in previous years, can we say something about whether we would expect differences in your cohorts in general?</p>
-<div id="are-two-cohorts-the-same" class="section level3" number="4.3.1">
-<h3><span class="header-section-number">4.3.1</span> Are Two Cohorts the Same?</h3>
+<div id="are-two-cohorts-the-same" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Are Two Cohorts the Same?<a href="testing-a-hypothesis.html#are-two-cohorts-the-same" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To be able to answer this question, we first need to understand the idea of sampling. Sampling means to draw a number of observations randomly from a larger population. Intuitively, our sample should be able to provide us with a good account of what is going on in the population. Of course, with bad luck we can always be wrong and sample a result that is quite unusual given what is going on in the population.</p>
 <p>It is also intuitive that larger samples should be less prone to coincidences. If we only ask a few number of individuals, there is fair likelihood that these few people do not represent the overall population well. However, if we ask a larger amount of people, we could be fairly certain that this sample gives us a good insight about the overall population.</p>
 <!-- Let us do an easy sampling exercise with Lego bricks:  -->
@@ -418,13 +336,13 @@ div.csl-indent {
 <p>How does it help us understand whether your cohort is different from the cohort before you? Let us assume that on average the effort that you put into your studies is the same, for you and for the cohorts before you. How likely is it that we would observe the data I collected on you assuming that the cohorts invest on average the same amount of time? What are the odds to observe these differences? We have a clear expectation. If the average amount of hours in our data sample is largely different, then this is already a good indication that it should be quite unlikely to observe so different samples given that they all come from the same population.</p>
 <p>If it is unlikely that we observe such a group of students on the basis of pure coincidence, we should maybe revisit our initial assumption. Maybe, it was wrong to assume that you and the other cohorts all share the same efficiency in studying. We would then have to refute this initial assumption and rather conclude that, well maybe your group indeed puts in a different effort into your studies.</p>
 </div>
-<div id="how-can-we-tell-the-difference" class="section level3" number="4.3.2">
-<h3><span class="header-section-number">4.3.2</span> How Can We Tell the Difference?</h3>
+<div id="how-can-we-tell-the-difference" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> How Can We Tell the Difference?<a href="testing-a-hypothesis.html#how-can-we-tell-the-difference" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In the light of the two samples that we observe, we want to be able to determine how likely it is that they are from the same population? So we need a measure. It is called the p-value and in our example it will be able to tell us how likely is it to observe the means of two samples given that we assume they come from the same population.</p>
 <p>This is a very useful measure, because now we can say something about the likelihood that these samples really are from cohorts with the same amount of effort in both groups. If the samples look quite similar, then we can be certain that they are from same population. However, if they are really distinct, the probability that the cohorts have similar efforts is quite small. So what should we conclude? We might want to reconsider our initial assumption: Maybe the two cohorts are not one large population. Instead, maybe the two cohorts are different after all.</p>
 </div>
-<div id="hypothesis-testing" class="section level3" number="4.3.3">
-<h3><span class="header-section-number">4.3.3</span> Hypothesis Testing</h3>
+<div id="hypothesis-testing" class="section level3 hasAnchor" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Hypothesis Testing<a href="testing-a-hypothesis.html#hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>What we are doing here is called hypothesis testing. More formally, we distinguish between two hypothesis. The first one is called the <em>null-hypothesis</em> and it assumes that there is no difference between the two groups. We can specify it explicitly as follows.</p>
 <blockquote>
 <p>Null hypothesis (<span class="math inline">\(H_0\)</span>): The samples come from populations with the same mean.</p>
@@ -436,51 +354,38 @@ div.csl-indent {
 <p>If we believe in the alternative hypothesis, then we say that the two populations are different.</p>
 <p>How unlikely is ‘unlikely enough’ to change our minds? By convention, in the social sciences we define a threshold of 5% for that: We will believe in the null-hypothesis until the two samples are so different that we think it would be less than 5% probable to observe two samples that are so different by chance. More formally, the threshold <span class="math inline">\(\alpha\)</span> for the acceptable p-value is set to <span class="math inline">\(p \leq 0.05\)</span>.</p>
 </div>
-<div id="test-test-test" class="section level3" number="4.3.4">
-<h3><span class="header-section-number">4.3.4</span> Test! Test! Test!</h3>
+<div id="test-test-test" class="section level3 hasAnchor" number="4.3.4">
+<h3><span class="header-section-number">4.3.4</span> Test! Test! Test!<a href="testing-a-hypothesis.html#test-test-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now, let us go and test the hypotheses in our data.</p>
 <p>Regarding the actual effort you put into studying, is your cohort different from previous cohorts? With R, we can do a so called t-test. We will cover it more formally next week, so do not worry at this stage how it really works. What matters for now is that it will return us the p-value we are interested in: the probability that the mean in the cohorts is the same given the two samples we observe. We first compare your cohort to the cohort in 2018.</p>
 <pre><code>## 
 ##  Welch Two Sample t-test
 ## 
 ## data:  dat18$studyperweek and studyperweek
-## t = 0.31733, df = 36.126, p-value = 0.7528
+## t = 1.0721, df = 30.267, p-value = 0.2921
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -5.693601  7.806133
+##  -3.058163  9.822869
 ## sample estimates:
 ## mean of x mean of y 
-##  16.88235  15.82609</code></pre>
-<p>R reports a number of statistics and for now we only care about some. First, for the mean of both of the samples at the very bottom of the table with 15.83 for your cohort and 16.88 for the cohort back in 2018. The important bit for us is the p-value. Here it is reported as 0.75.</p>
-<p>How do we interpret this result? Well it tells us that assuming that both of the samples come from the same population, there is a 75.28% probability that we observe the result if both are from populations with the same mean. In the light of this evidence, we stick with the null hypothesis and believe that apparently the amount of average effort is the same in your cohorts and in the cohort in 2018.</p>
+##  16.88235  13.50000</code></pre>
+<p>R reports a number of statistics and for now we only care about some. First, for the mean of both of the samples at the very bottom of the table with 13.5 for your cohort and 16.88 for the cohort back in 2018. The important bit for us is the p-value. Here it is reported as 0.29.</p>
+<p>How do we interpret this result? Well it tells us that assuming that both of the samples come from the same population, there is a 29.21% probability that we observe the result if both are from populations with the same mean. In the light of this evidence, we stick with the null hypothesis and believe that apparently the amount of average effort is the same in your cohorts and in the cohort in 2018.</p>
 <p>Let us now compare your cohort to the one in 2019. Here are the results from the t-test.</p>
 <pre><code>## 
 ##  Welch Two Sample t-test
 ## 
 ## data:  dat19$studyperweek and studyperweek
-## t = 1.2732, df = 37.816, p-value = 0.2107
+## t = 1.8941, df = 33.593, p-value = 0.06685
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -3.130627 13.739323
+##  -0.5600751 15.8209447
 ## sample estimates:
 ## mean of x mean of y 
-##  21.13043  15.82609</code></pre>
-<p>The means are even further apart. The cohort in 2019 was putting in on average 21.13 hours, while you on average study 15.83 hours. Can we still assume that the mean in both cohorts is the same in the light of the data we collected from the students in the two methods classes?</p>
-<p>The p-value is reported as 0.21. If both of the samples were drawn from cohorts with the same mean, we would have a 21.07% probability that we observe the data in our two samples. This is still quite unlikely and below the general accepted the threshold of <span class="math inline">\(\alpha\)</span> = 0.05. So what do we do now? Well, we refute the null hypothesis <span class="math inline">\(H_0\)</span>. Instead, we will trust in the alternative hypothesis <span class="math inline">\(H_A\)</span>. Your cohort is on average studying less than the cohort in 2019.</p>
-<p>And lastly, let us compare you to the cohort before you that was completely in lockdown in their second year.</p>
-<pre><code>## 
-##  Welch Two Sample t-test
-## 
-## data:  dat21$studyperweek and studyperweek
-## t = -1.065, df = 35.291, p-value = 0.2941
-## alternative hypothesis: true difference in means is not equal to 0
-## 95 percent confidence interval:
-##  -8.392950  2.615776
-## sample estimates:
-## mean of x mean of y 
-##  12.93750  15.82609</code></pre>
-<p>They were studying on average 12.94 hours. In comparison to your 15.83 hours, do both larger cohorts study the same?</p>
-<p>The t-test yields a p-value of 0.29. If both of the samples were drawn from cohorts with the same mean, we would have a 29.41% probability that we observe the data in our two samples. Again. We refute the 0-hypothesis.</p>
+##  21.13043  13.50000</code></pre>
+<p>The means are further apart. The cohort in 2019 was putting in on average 21.13 hours, while you on average study 13.5 hours. Can we assume that the mean in both cohorts is the same in the light of the data we collected from the students in the two methods classes?</p>
+<p>The p-value is reported as 0.07. If both of the samples were drawn from cohorts with the same mean, we would have a 6.68% probability that we observe the data in our two samples. This is quite unlikely. But typically, we would only accept an alternative hypothesis at the general accepted the threshold of <span class="math inline">\(\alpha\)</span> = 0.05. So what do we do now? Well, we still do not refute the null hypothesis <span class="math inline">\(H_0\)</span> and continue to trust in it. We stick with the null hypothesis and believe that apparently the amount of average effort is the same in your cohorts and in the cohort in 2019.</p>
+<p>Only if your p-value were lower than 0.05 would we trust in the alternative hypothesis <span class="math inline">\(H_A\)</span>. Your cohort would then on average be studying less than the cohort in 2019.</p>
 <!-- We can do the same exercise for the hours that you think you should be studying ideally. Let me show you how this works in a quick video.  -->
 <!-- XXXTODO redo this here. -->
 <!-- ```{r, eval=knitr::is_html_output(excludes = "epub"), results = 'asis', echo = F} -->
@@ -490,8 +395,8 @@ div.csl-indent {
 <!-- ``` -->
 <p>You got the hang of it by now, don’t you?</p>
 </div>
-<div id="type-1-and-type-2-errors" class="section level3" number="4.3.5">
-<h3><span class="header-section-number">4.3.5</span> Type 1 and Type 2 Errors</h3>
+<div id="type-1-and-type-2-errors" class="section level3 hasAnchor" number="4.3.5">
+<h3><span class="header-section-number">4.3.5</span> Type 1 and Type 2 Errors<a href="testing-a-hypothesis.html#type-1-and-type-2-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When we test a hypothesis based on samples, we can of course be wrong. Remember that everything do involves probabilistic statements. An <span class="math inline">\(\alpha\)</span> level of 0.05 means that in 19 out of 20 cases we should be correct. However, in one out of 20 cases we might wrongly refute a hypothesis.</p>
 <p>We could observe two samples that seem to be different even though in reality the null hypothesis is actually true. This kind of error is called a type-1 error or also a false positive. Then again, the two samples may come from populations with distinct means. But out of bad luck we get samples that actually look quite similar. In that case, we speak of a false negative, or a type-2 error. Figure <a href="testing-a-hypothesis.html#fig:t1t2e">4.1</a> offers you a nice summary.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:t1t2e"></span>
@@ -506,75 +411,78 @@ Figure 4.1: Type 1 and Type 2 Errors
 <p>The first time the young shepherd is calling for help, the farmers believe that the wolf is there even though in reality it is not—clearly a type 1 error or a false positive. In the second instance, the farmers think there is no wolf, even though in reality there is actually one. We speak of a false negative, or a type 2 error.</p>
 </div>
 </div>
-<div id="coding" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> Coding</h2>
+<div id="coding" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Coding<a href="testing-a-hypothesis.html#coding" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This week was quite heavy on conceptual things, so we will be much lighter with the code.</p>
-<div id="data-management" class="section level3" number="4.4.1">
-<h3><span class="header-section-number">4.4.1</span> Data Management</h3>
+<div id="data-management" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Data Management<a href="testing-a-hypothesis.html#data-management" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We learned that we can select from objects using their position and these brackets <code>[ ]</code>. Just to stress this again: since data frames are R’s spreadsheets, you can select from them also by the name of their column.</p>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="testing-a-hypothesis.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data</span></span>
-<span id="cb112-2"><a href="testing-a-hypothesis.html#cb112-2" aria-hidden="true" tabindex="-1"></a>people.living.in.household <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">5</span>)</span>
-<span id="cb112-3"><a href="testing-a-hypothesis.html#cb112-3" aria-hidden="true" tabindex="-1"></a>education.in.years <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">13</span>, <span class="dv">15</span>)</span>
-<span id="cb112-4"><a href="testing-a-hypothesis.html#cb112-4" aria-hidden="true" tabindex="-1"></a>favourite.colour <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;forestgreen&#39;</span>, <span class="st">&#39;darkred&#39;</span>, <span class="st">&#39;lemongreen&#39;</span>)</span>
-<span id="cb112-5"><a href="testing-a-hypothesis.html#cb112-5" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(people.living.in.household, education.in.years, favourite.colour)</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="testing-a-hypothesis.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data</span></span>
+<span id="cb111-2"><a href="testing-a-hypothesis.html#cb111-2" aria-hidden="true" tabindex="-1"></a>people.living.in.household <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">5</span>)</span>
+<span id="cb111-3"><a href="testing-a-hypothesis.html#cb111-3" aria-hidden="true" tabindex="-1"></a>education.in.years <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">13</span>, <span class="dv">15</span>)</span>
+<span id="cb111-4"><a href="testing-a-hypothesis.html#cb111-4" aria-hidden="true" tabindex="-1"></a>favourite.colour <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;forestgreen&#39;</span>, <span class="st">&#39;darkred&#39;</span>, <span class="st">&#39;lemongreen&#39;</span>)</span>
+<span id="cb111-5"><a href="testing-a-hypothesis.html#cb111-5" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(people.living.in.household, education.in.years, favourite.colour)</span></code></pre></div>
 <p>Let us select the first column.</p>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="testing-a-hypothesis.html#cb113-1" aria-hidden="true" tabindex="-1"></a>dat[,<span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="testing-a-hypothesis.html#cb112-1" aria-hidden="true" tabindex="-1"></a>dat[,<span class="dv">1</span>]</span></code></pre></div>
 <pre><code>## [1] 3 2 5</code></pre>
-<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="testing-a-hypothesis.html#cb115-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>people.living.in.household</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="testing-a-hypothesis.html#cb114-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>people.living.in.household</span></code></pre></div>
 <pre><code>## [1] 3 2 5</code></pre>
 <p>Or what about the third element of second column?</p>
-<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="testing-a-hypothesis.html#cb117-1" aria-hidden="true" tabindex="-1"></a>dat[<span class="dv">3</span>,<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="testing-a-hypothesis.html#cb116-1" aria-hidden="true" tabindex="-1"></a>dat[<span class="dv">3</span>,<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## [1] 15</code></pre>
-<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="testing-a-hypothesis.html#cb119-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>education.in.years[<span class="dv">3</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="testing-a-hypothesis.html#cb118-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>education.in.years[<span class="dv">3</span>]</span></code></pre></div>
 <pre><code>## [1] 15</code></pre>
 <p>Sometimes you want to recode a variable. The oldschool way using the <code>car</code> package goes as follows.</p>
-<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="testing-a-hypothesis.html#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
-<span id="cb121-2"><a href="testing-a-hypothesis.html#cb121-2" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>favourite.colour <span class="ot">&lt;-</span> <span class="fu">recode</span>(dat<span class="sc">$</span>favourite.colour, <span class="st">&quot;</span></span>
-<span id="cb121-3"><a href="testing-a-hypothesis.html#cb121-3" aria-hidden="true" tabindex="-1"></a><span class="st">       c(&#39;forestgreen&#39;, &#39;lemongreen&#39;) = &#39;green&#39;;</span></span>
-<span id="cb121-4"><a href="testing-a-hypothesis.html#cb121-4" aria-hidden="true" tabindex="-1"></a><span class="st">       &#39;darkred&#39; = &#39;red&#39;&quot;</span>)</span>
-<span id="cb121-5"><a href="testing-a-hypothesis.html#cb121-5" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>favourite.colour</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="testing-a-hypothesis.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb120-2"><a href="testing-a-hypothesis.html#cb120-2" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>favourite.colour <span class="ot">&lt;-</span> <span class="fu">recode</span>(dat<span class="sc">$</span>favourite.colour, <span class="st">&quot;</span></span>
+<span id="cb120-3"><a href="testing-a-hypothesis.html#cb120-3" aria-hidden="true" tabindex="-1"></a><span class="st">       c(&#39;forestgreen&#39;, &#39;lemongreen&#39;) = &#39;green&#39;;</span></span>
+<span id="cb120-4"><a href="testing-a-hypothesis.html#cb120-4" aria-hidden="true" tabindex="-1"></a><span class="st">       &#39;darkred&#39; = &#39;red&#39;&quot;</span>)</span>
+<span id="cb120-5"><a href="testing-a-hypothesis.html#cb120-5" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>favourite.colour</span></code></pre></div>
 <pre><code>## [1] &quot;green&quot; &quot;red&quot;   &quot;green&quot;</code></pre>
 <p>Finally let us meet a problem that will keep haunting you until the end of your professional life: missing data. Sometimes, data has empty entries. By convention R uses <code>NA</code> for it. Please not that even if it looks like a string variable, it actually is not treated as such by R.</p>
 <pre><code>## [1] 5e+04 1e+05    NA</code></pre>
 <p>Things begin to be complicated as soon as you want to do calculations with the variable. The reason is that R protects you from making stupid mistakes.</p>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="testing-a-hypothesis.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dat<span class="sc">$</span>income)</span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="testing-a-hypothesis.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dat<span class="sc">$</span>income)</span></code></pre></div>
 <pre><code>## [1] NA</code></pre>
 <p>I know this is a pain at the moment, but believe me, once you write more complex programmes for analysing data, it will become really useful. You can set options in the functions to override the default behaviour.</p>
-<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="testing-a-hypothesis.html#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dat<span class="sc">$</span>income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="testing-a-hypothesis.html#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dat<span class="sc">$</span>income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## [1] 75000</code></pre>
 <p>Another more general way of handling the issue is to filter your data set for missing values with <code>na.omit()</code>.</p>
-<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="testing-a-hypothesis.html#cb128-1" aria-hidden="true" tabindex="-1"></a>dat.no.na <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(dat)</span>
-<span id="cb128-2"><a href="testing-a-hypothesis.html#cb128-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(dat)</span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="testing-a-hypothesis.html#cb127-1" aria-hidden="true" tabindex="-1"></a>dat.no.na <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(dat)</span>
+<span id="cb127-2"><a href="testing-a-hypothesis.html#cb127-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(dat)</span></code></pre></div>
 <pre><code>## [1] 3 4</code></pre>
-<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="testing-a-hypothesis.html#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(dat.no.na)</span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="testing-a-hypothesis.html#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(dat.no.na)</span></code></pre></div>
 <pre><code>## [1] 2 4</code></pre>
 <p>As you can see, R kicked out a whole row from our observations. This certainly means that quite a bit of information just go lost here. Deleting missing data is a quick and convenient fix, but it comes at a high price.</p>
 <p>There is a whole subfield that is concerned with <a href="https://en.wikipedia.org/wiki/Imputation_(statistics)">imputing values</a> that are reasonable for the missing observation. The intuition is that you would use information from the fully observed variables to get a good guess for the observation that is missing. For example, in our case the years in education might give us a good proxy for the income that someone receives and we can get a good estimate for it. If we then want to analyse the relationship between—say—preferred colours and income we would then have a better data basis for that.</p>
 </div>
-<div id="hypothesis-testing-1" class="section level3" number="4.4.2">
-<h3><span class="header-section-number">4.4.2</span> Hypothesis Testing</h3>
+<div id="hypothesis-testing-1" class="section level3 hasAnchor" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> Hypothesis Testing<a href="testing-a-hypothesis.html#hypothesis-testing-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>R is made for statistical analysis. No surprise that doing a t-test is really easy: With the function <code>t.test()</code>.</p>
-<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="testing-a-hypothesis.html#cb132-1" aria-hidden="true" tabindex="-1"></a>ttest.perweek.now<span class="fl">.19</span> <span class="ot">&lt;-</span> <span class="fu">t.test</span>(dat19<span class="sc">$</span>studyperweek, studyperweek)</span>
-<span id="cb132-2"><a href="testing-a-hypothesis.html#cb132-2" aria-hidden="true" tabindex="-1"></a>ttest.perweek.now<span class="fl">.19</span></span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="testing-a-hypothesis.html#cb131-1" aria-hidden="true" tabindex="-1"></a>ttest.perweek.now<span class="fl">.19</span> <span class="ot">&lt;-</span> <span class="fu">t.test</span>(dat19<span class="sc">$</span>studyperweek, studyperweek)</span>
+<span id="cb131-2"><a href="testing-a-hypothesis.html#cb131-2" aria-hidden="true" tabindex="-1"></a>ttest.perweek.now<span class="fl">.19</span></span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
 ## 
 ## data:  dat19$studyperweek and studyperweek
-## t = 1.2732, df = 37.816, p-value = 0.2107
+## t = 1.8941, df = 33.593, p-value = 0.06685
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -3.130627 13.739323
+##  -0.5600751 15.8209447
 ## sample estimates:
 ## mean of x mean of y 
-##  21.13043  15.82609</code></pre>
+##  21.13043  13.50000</code></pre>
 </div>
 </div>
-<div id="reading-for-this-week" class="section level2" number="4.5">
-<h2><span class="header-section-number">4.5</span> Reading for This Week</h2>
-<p>The readings for this week are chapter 6 in <span class="citation"><a href="#ref-Fogarty2019" role="doc-biblioref">Fogarty</a> (<a href="#ref-Fogarty2019" role="doc-biblioref">2019</a>)</span> which tells you all about generating hypotheses. Chapter 9 is all about how to test them.</p>
+<div id="reading-for-this-week" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Reading for This Week<a href="testing-a-hypothesis.html#reading-for-this-week" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The readings for this week are chapter 6 in <span class="citation">Fogarty (<a href="#ref-Fogarty2019" role="doc-biblioref">2019</a>)</span> which tells you all about generating hypotheses. Chapter 9 is all about how to test them.</p>
 
 </div>
 </div>
+
+
+
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Fogarty2019" class="csl-entry">
@@ -587,7 +495,7 @@ Fogarty, Brian. 2019. <em><span>Quantitative Social Science Data With R</span></
         </div>
       </div>
 <a href="visualising-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="useful-internet-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -647,7 +555,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
