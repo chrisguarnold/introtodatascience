@@ -4,27 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Why Does Hypothesis Testing Work? A Primer on Probability | PL 9239 Introduction to Data Science for Politics and IR</title>
-  <meta name="description" content="This is the website for the Intro to Data Science Class." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <title>Chapter 5 Why Does Hypothesis Testing Work? A Primer on Probability | PL 9248 Data Science for Politics and IR</title>
+  <meta name="description" content="This is the website for the Data Science Class." />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Why Does Hypothesis Testing Work? A Primer on Probability | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta property="og:title" content="Chapter 5 Why Does Hypothesis Testing Work? A Primer on Probability | PL 9248 Data Science for Politics and IR" />
   <meta property="og:type" content="book" />
   
-  
-  <meta property="og:description" content="This is the website for the Intro to Data Science Class." />
+  <meta property="og:description" content="This is the website for the Data Science Class." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Why Does Hypothesis Testing Work? A Primer on Probability | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta name="twitter:title" content="Chapter 5 Why Does Hypothesis Testing Work? A Primer on Probability | PL 9248 Data Science for Politics and IR" />
   
-  <meta name="twitter:description" content="This is the website for the Intro to Data Science Class." />
+  <meta name="twitter:description" content="This is the website for the Data Science Class." />
   
 
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2022-04-22" />
+<meta name="date" content="2023-02-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +31,7 @@
   
   
 <link rel="prev" href="testing-a-hypothesis.html"/>
-<link rel="next" href="are-different-people-different.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<link rel="next" href="useful-internet-resources.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,14 +49,16 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -280,71 +280,11 @@ div.csl-indent {
 <li class="chapter" data-level="5.4" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#r-a-simple-figure-with-two-variables"><i class="fa fa-check"></i><b>5.4</b> R: A Simple Figure With Two Variables</a></li>
 <li class="chapter" data-level="5.5" data-path="why-does-hypothesis-testing-work-a-primer-on-probability.html"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#reading-for-this-week-1"><i class="fa fa-check"></i><b>5.5</b> Reading for This Week</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="are-different-people-different.html"><a href="are-different-people-different.html"><i class="fa fa-check"></i><b>6</b> Are Different People Different?</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#a-recap-from-last-week"><i class="fa fa-check"></i><b>6.1</b> A Recap from Last Week</a></li>
-<li class="chapter" data-level="6.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#what-are-bivariate-relationships"><i class="fa fa-check"></i><b>6.2</b> What Are Bivariate Relationships?</a></li>
-<li class="chapter" data-level="6.3" data-path="are-different-people-different.html"><a href="are-different-people-different.html#categorical-data"><i class="fa fa-check"></i><b>6.3</b> Categorical Data</a>
-<ul>
-<li class="chapter" data-level="6.3.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#describing-the-sample"><i class="fa fa-check"></i><b>6.3.1</b> Describing the Sample</a></li>
-<li class="chapter" data-level="6.3.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#estimating-the-parameters-in-the-population"><i class="fa fa-check"></i><b>6.3.2</b> Estimating the Parameters in the Population</a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="are-different-people-different.html"><a href="are-different-people-different.html#continuous-data"><i class="fa fa-check"></i><b>6.4</b> Continuous Data</a>
-<ul>
-<li class="chapter" data-level="6.4.1" data-path="are-different-people-different.html"><a href="are-different-people-different.html#describe"><i class="fa fa-check"></i><b>6.4.1</b> Describe</a></li>
-<li class="chapter" data-level="6.4.2" data-path="are-different-people-different.html"><a href="are-different-people-different.html#measures-about-the-population"><i class="fa fa-check"></i><b>6.4.2</b> Measures About the Population</a></li>
-</ul></li>
-<li class="chapter" data-level="6.5" data-path="are-different-people-different.html"><a href="are-different-people-different.html#code"><i class="fa fa-check"></i><b>6.5</b> Code</a></li>
-<li class="chapter" data-level="6.6" data-path="are-different-people-different.html"><a href="are-different-people-different.html#reading-for-this-week-2"><i class="fa fa-check"></i><b>6.6</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html"><i class="fa fa-check"></i><b>7</b> Comparing Apples and Oranges</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#bivariate-regression"><i class="fa fa-check"></i><b>7.1</b> Bivariate Regression</a>
-<ul>
-<li class="chapter" data-level="7.1.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#how-does-it-work"><i class="fa fa-check"></i><b>7.1.1</b> How Does It Work?</a></li>
-<li class="chapter" data-level="7.1.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#how-do-we-interpret-results"><i class="fa fa-check"></i><b>7.1.2</b> How Do We Interpret Results?</a></li>
-</ul></li>
-<li class="chapter" data-level="7.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#beyond-bivariate-regression"><i class="fa fa-check"></i><b>7.2</b> Beyond Bivariate Regression</a>
-<ul>
-<li class="chapter" data-level="7.2.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#bivariate-regression-plus-a-dummy"><i class="fa fa-check"></i><b>7.2.1</b> Bivariate Regression Plus a Dummy</a></li>
-<li class="chapter" data-level="7.2.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#multivariate-regression"><i class="fa fa-check"></i><b>7.2.2</b> Multivariate Regression</a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#the-relevance-of-statistical-control"><i class="fa fa-check"></i><b>7.3</b> The Relevance of Statistical Control</a></li>
-<li class="chapter" data-level="7.4" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#r-code"><i class="fa fa-check"></i><b>7.4</b> R Code</a></li>
-<li class="chapter" data-level="7.5" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#reading-for-this-week-3"><i class="fa fa-check"></i><b>7.5</b> Reading for This Week</a></li>
-</ul></li>
-<li class="part"><span><b>Scenario III: Did the New Policy Have an Effect?</b></span></li>
-<li class="chapter" data-level="8" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html"><i class="fa fa-check"></i><b>8</b> The Fundamental Problem of Causal Inference</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#studying-causal-effects"><i class="fa fa-check"></i><b>8.1</b> Studying Causal Effects</a></li>
-<li class="chapter" data-level="8.2" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#key-concepts-1"><i class="fa fa-check"></i><b>8.2</b> Key Concepts</a></li>
-<li class="chapter" data-level="8.3" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#the-fundamental-problem-of-causal-inference-1"><i class="fa fa-check"></i><b>8.3</b> The Fundamental Problem of Causal Inference</a></li>
-<li class="chapter" data-level="8.4" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#randomized-control-trials"><i class="fa fa-check"></i><b>8.4</b> Randomized Control Trials</a></li>
-<li class="chapter" data-level="8.5" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#estimating-a-first-causal-effect"><i class="fa fa-check"></i><b>8.5</b> Estimating a First Causal Effect</a></li>
-<li class="chapter" data-level="8.6" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#plotting-data-on-maps"><i class="fa fa-check"></i><b>8.6</b> Plotting Data on Maps</a></li>
-<li class="chapter" data-level="8.7" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#reading-for-this-week-4"><i class="fa fa-check"></i><b>8.7</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html"><i class="fa fa-check"></i><b>9</b> Causal Statements from Observational Data</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#this-weeks-data-the-effect-of-the-welsh-circuit-break"><i class="fa fa-check"></i><b>9.1</b> This Week’s Data: The Effect of the Welsh Circuit Break</a></li>
-<li class="chapter" data-level="9.2" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-treated-from-one-group-to-the-non-treated-of-another-group"><i class="fa fa-check"></i><b>9.2</b> Compare Treated from One Group to the Non-Treated of Another Group</a></li>
-<li class="chapter" data-level="9.3" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-the-treated-before-and-after-their-treatment"><i class="fa fa-check"></i><b>9.3</b> Compare the Treated Before and After their Treatment</a></li>
-<li class="chapter" data-level="9.4" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#best-of-both-worlds-the-difference-in-difference-estimator"><i class="fa fa-check"></i><b>9.4</b> Best of Both Worlds: The Difference-in-Difference Estimator</a></li>
-<li class="chapter" data-level="9.5" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#reading-for-this-week-5"><i class="fa fa-check"></i><b>9.5</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html"><i class="fa fa-check"></i><b>10</b> Multivariate Regression and Heterogenous Treatment Effects</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#analysing-experimental-data-revisited"><i class="fa fa-check"></i><b>10.1</b> Analysing Experimental Data Revisited</a></li>
-<li class="chapter" data-level="10.2" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#controling-for-confounders"><i class="fa fa-check"></i><b>10.2</b> Controling for Confounders</a></li>
-<li class="chapter" data-level="10.3" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#treatment-heterogeneity"><i class="fa fa-check"></i><b>10.3</b> Treatment Heterogeneity</a></li>
-<li class="chapter" data-level="10.4" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#outro"><i class="fa fa-check"></i><b>10.4</b> Outro</a></li>
-<li class="chapter" data-level="10.5" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#reading-for-this-week-6"><i class="fa fa-check"></i><b>10.5</b> Reading for This Week</a></li>
-</ul></li>
 <li class="part"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="11" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>11</b> Useful Internet Resources</a>
+<li class="chapter" data-level="6" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>6</b> Useful Internet Resources</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>11.1</b> Homepages</a></li>
-<li class="chapter" data-level="11.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>11.2</b> Online Books</a></li>
+<li class="chapter" data-level="6.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>6.1</b> Homepages</a></li>
+<li class="chapter" data-level="6.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>6.2</b> Online Books</a></li>
 </ul></li>
 </ul>
 
@@ -355,7 +295,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PL 9239 Introduction to Data Science for Politics and IR</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PL 9248 Data Science for Politics and IR</a>
           </h1>
         </div>
 
@@ -363,8 +303,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="why-does-hypothesis-testing-work-a-primer-on-probability" class="section level1" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Why Does Hypothesis Testing Work? A Primer on Probability</h1>
+<div id="why-does-hypothesis-testing-work-a-primer-on-probability" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Why Does Hypothesis Testing Work? A Primer on Probability<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#why-does-hypothesis-testing-work-a-primer-on-probability" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Why do we care so much about inference? We can calculate central tendencies and spreads. Why learn more?</p>
 <p>This week we are revisiting the concepts from last week and will take a closer look at them. To goal is that you gain a deeper understanding about what it is that we are actually doing here.</p>
 <ul>
@@ -373,11 +313,11 @@ div.csl-indent {
 <li>Why is it so important to properly randomise the samples that we draw?</li>
 <li>And how can we be 95% confident about the test of a hypothesis?</li>
 </ul>
-<div id="distributions" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Distributions</h2>
+<div id="distributions" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Distributions<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>What does inference actually mean? To properly understand the idea behind it, let us begin with distributions and a number of related ideas that will all be useful.</p>
-<div id="probability" class="section level3" number="5.1.1">
-<h3><span class="header-section-number">5.1.1</span> Probability</h3>
+<div id="probability" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Probability<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#probability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We start with with probability and take a look at a definition. Let us define probability from a frequentist perspective.</p>
 <blockquote>
 <p>The probability of an outcome is the frequency of that outcome if the process were repeated a large number of times.</p>
@@ -394,10 +334,10 @@ div.csl-indent {
 </ul>
 <p>While you cannot observe these probabilities from one throw alone, try it out a couple of times, say, 100? Or even better 1000? You should get really close to the <em>true</em> underlying value of the probability.</p>
 </div>
-<div id="distribution" class="section level3" number="5.1.2">
-<h3><span class="header-section-number">5.1.2</span> Distribution</h3>
-<p>The next useful concept is the distribution. You can get to the distribution of an event in a pretty straightforward way. Imagine we were playing <a href="https://en.wikipedia.org/wiki/Boules">Boule</a> in our local club ‘Allez les Bleus.’ On our Thursday evening training sessions we are trying to hit a line that is exactly 5m away. As avid data aficionados we are measuring each try and record the data in a spread sheet. At home you sit down and chart of histogram of all the tries that we have been throwing.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-93"></span>
+<div id="distribution" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Distribution<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The next useful concept is the distribution. You can get to the distribution of an event in a pretty straightforward way. Imagine we were playing <a href="https://en.wikipedia.org/wiki/Boules">Boule</a> in our local club ‘Allez les Bleus’. On our Thursday evening training sessions we are trying to hit a line that is exactly 5m away. As avid data aficionados we are measuring each try and record the data in a spread sheet. At home you sit down and chart of histogram of all the tries that we have been throwing.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-91"></span>
 <img src="figures/w5_distr1.png" alt="A Histogram Becoming a Distribution." width="30%" /><img src="figures/w5_distr2.png" alt="A Histogram Becoming a Distribution." width="30%" /><img src="figures/w5_distr3.png" alt="A Histogram Becoming a Distribution." width="30%" /><img src="figures/w5_distr4.png" alt="A Histogram Becoming a Distribution." width="30%" /><img src="figures/w5_distr5.png" alt="A Histogram Becoming a Distribution." width="30%" /><img src="figures/w5_distr6.png" alt="A Histogram Becoming a Distribution." width="30%" />
 <p class="caption">
 Figure 5.1: A Histogram Becoming a Distribution.
@@ -410,10 +350,10 @@ Figure 5.1: A Histogram Becoming a Distribution.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TJ8cd9UrJl8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </div>
-<div id="the-normal-distribution" class="section level3" number="5.1.3">
-<h3><span class="header-section-number">5.1.3</span> The Normal Distribution</h3>
+<div id="the-normal-distribution" class="section level3 hasAnchor" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> The Normal Distribution<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#the-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>But if we want to know more, we have to introduce a more rigorous concept of what a probability distribution actually is. Let us get to know the Normal Distribution, a very special probability distribution. This is how it looks like.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-95"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-93"></span>
 <img src="figures/w5_stnorm.png" alt="The Normal Distribution." width="30%" />
 <p class="caption">
 Figure 5.2: The Normal Distribution.
@@ -438,14 +378,14 @@ Figure 5.2: The Normal Distribution.
 <li>The area ± 3 SD from the mean always covers 99.7% etc.</li>
 </ul>
 <p>Take a look at the figure below. We have two different Normal distributions. On the left, <span class="math inline">\(\mu\)</span> = 5 and <span class="math inline">\(\sigma\)</span> = 1 and on the right <span class="math inline">\(\mu\)</span> = 5 and <span class="math inline">\(\sigma\)</span> = 2. In both cases, the area that covers one standard deviation to the left and to the right of the mean covers 68.3%. This means that if we have a process that we can describe with this function, then we know that there is a probability of 68.3% that we end up with a value between 4 and 6 on the left figure. Likewise, with the same probability of 68.3% we will end up between 3 and 7 on the right figure. The same holds for all other values of the standard deviation (2 SD, 3 SD, …) <a href="https://www.youtube.com/watch?v=cFods1KSWsQ">Fascinating!</a>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-96"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-94"></span>
 <img src="figures/w5_nd2.png" alt="Two Different Normal Distributions and The Probability Mass Covered By Their Standard Deviations." width="1200" />
 <p class="caption">
 Figure 5.3: Two Different Normal Distributions and The Probability Mass Covered By Their Standard Deviations.
 </p>
 </div>
 <p>This is really useful, because <em>independent of the exact shape of the Normal Distribution</em>—that is <em>indenendent of the values of <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span></em>—we can now draw all kinds of probabilities using simple geometry.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-97"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-95"></span>
 <img src="figures/w5_norm1.png" alt="Probabilities are Just Shapes Under the Distribution Function." width="100%" />
 <p class="caption">
 Figure 5.4: Probabilities are Just Shapes Under the Distribution Function.
@@ -458,14 +398,14 @@ Figure 5.4: Probabilities are Just Shapes Under the Distribution Function.
 </ul>
 <p>And we know all this independent of how exactly the distribution looks like. If it is a normal distribution, then all these relationships hold.</p>
 </div>
-<div id="your-standard-measure-z-scores" class="section level3" number="5.1.4">
-<h3><span class="header-section-number">5.1.4</span> Your Standard Measure z-scores</h3>
+<div id="your-standard-measure-z-scores" class="section level3 hasAnchor" number="5.1.4">
+<h3><span class="header-section-number">5.1.4</span> Your Standard Measure z-scores<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#your-standard-measure-z-scores" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>What are z-scores and why do we need them? We can use them if we want to make comparisons across samples. For example, we might want to compare the effort from two students Alexandra and Bastian who are in different cohorts. <em>In comparison to their peers</em>, is Alexandra more diligent than Peter?</p>
 <ul>
 <li>Alexandra studies 40h per week, Bastian 42h. So <em>prima facie</em>, Bastian is working more. But: Is he working more than Alexandra <em>in the light of the different study regimes of their cohorts?</em></li>
 <li>To determine who studies harder we can standardize the effort of each of the students: How different are Alexandra and Bastian from the typical student in their class?</li>
 </ul>
-<p>The idea is straightforward: We calculate the difference of each student from the average per spread of their respective cohorts. To compare variables from different distributions, we can standardize them by building so called ‘z-scores.’</p>
+<p>The idea is straightforward: We calculate the difference of each student from the average per spread of their respective cohorts. To compare variables from different distributions, we can standardize them by building so called ‘z-scores’.</p>
 <p><span class="math display">\[ z_{i} = \frac{x_{i}-\bar x}{\sigma} \]</span></p>
 <p>A so standardized variable will have mean zero and a standard deviation of one. Let us do the math.</p>
 <ul>
@@ -475,8 +415,8 @@ Figure 5.4: Probabilities are Just Shapes Under the Distribution Function.
 <li>Bastian’s z-score is <span class="math inline">\(z_B =(42−40)/6=0.33\)</span></li>
 </ul>
 <p>What do we conclude? Well, Alexandra is on average much more ‘off’ in comparison to her peers than Bastian. She is much more of an outlier and he actually is much more of an average guy when it comes to studying.</p>
-<p><a href="https://www.youtube.com/watch?v=sdqMvEZTxlI">One more thing.</a> The z-scores have a link to the Normal distribution. We can actually use them to calculate the probability of an event. The only thing you have to do is convert your data into z-score. And then you can look up its probability in the probability tables of a normal distribution.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-98"></span>
+<p>One more thing. The z-scores have a link to the Normal distribution. We can actually use them to calculate the probability of an event. The only thing you have to do is convert your data into z-score. And then you can look up its probability in the probability tables of a normal distribution.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-96"></span>
 <img src="figures/w5_norm2.png" alt="Reading z-Scores." width="50%" /><img src="figures/w5_zscores.png" alt="Reading z-Scores." width="50%" />
 <p class="caption">
 Figure 5.5: Reading z-Scores.
@@ -487,8 +427,8 @@ Figure 5.5: Reading z-Scores.
 </iframe>
 </div>
 </div>
-<div id="inference" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Inference</h2>
+<div id="inference" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Inference<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#inference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let us continue with a proper look at inference. We will revisit some topics we talked about last week—but this time in a much more rigorous way. We might be interested in all sorts of research questions.</p>
 <ul>
 <li>Which party would citizens vote for?</li>
@@ -501,8 +441,8 @@ Figure 5.5: Reading z-Scores.
 <li>What is the most probable value in the population out there?</li>
 <li>How certain are we about our results?</li>
 </ul>
-<div id="some-key-concepts" class="section level3" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> Some Key Concepts</h3>
+<div id="some-key-concepts" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Some Key Concepts<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#some-key-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Before we learn how to answer these questions, we will take a look at some key concepts.</p>
 <p><em>Population</em></p>
 <blockquote>
@@ -529,8 +469,8 @@ Figure 5.5: Reading z-Scores.
 <p>The use of statistics to make inferences about a larger population based on data collected from a sample.</p>
 </blockquote>
 </div>
-<div id="population-and-samples" class="section level3" number="5.2.2">
-<h3><span class="header-section-number">5.2.2</span> Population and Samples</h3>
+<div id="population-and-samples" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Population and Samples<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#population-and-samples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We said already that we can never know the whole population, simply because it is impossible to ask every single individual. Imagine we are interested in learning how the distribution of a particular variable looks like in the population—e.g. income, voting intention etc.. This means that we are particularly keen learn two key variables.</p>
 <ul>
 <li>The population mean <span class="math inline">\(\mu\)</span></li>
@@ -546,7 +486,7 @@ Figure 5.5: Reading z-Scores.
 <p>Well, let us see: You have an idea about how 1000 people who had a reason to be on the streets of Cardiff are intending to vote. But it could be that those people might have a particular political preference. For example, they were out and about despite the weather conditions. It would be quite reasonable to assume that they are more environmentalists than those who stayed at home—or even those who live outside Cardiff.</p>
 <p>If you want to know about the voting intention in <em>all</em> Wales, you probably need a good representation of what is going on in <em>all</em> Wales. Ideally, you would be able to have a completely random draw from all Welsh voters—and not only those who were on the streets of Cardiff on a particularly rainy day.</p>
 <p>Luckily, when we generate the sample with our computer, we can simulate a truly random sample. How could we improve our knowledge about the population? We could draw many more samples, calculate the mean and standard deviation from them and learn how much all these means and standard deviations vary. This would refine our idea about the average typical value in the population and the average spread of the data in the population.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-100"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-98"></span>
 <img src="figures/w5_pop3.png" alt="Drawing Many Samples from the Population." width="50%" />
 <p class="caption">
 Figure 5.6: Drawing Many Samples from the Population.
@@ -557,7 +497,7 @@ Figure 5.6: Drawing Many Samples from the Population.
 <li>First the mean of sampling distribution of means <span class="math inline">\(\bar m_i\)</span>.</li>
 <li>Second the standard deviation of sampling distribution of means <span class="math inline">\(s_n\)</span></li>
 </ul>
-<p>Let us take a look at a <em>real</em> example in Figure <a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#fig:distribution-sampling">5.7</a>. On the left, there is the unknown distribution in the population. We then randomly draw one sample from this distribution. You can see that since it is randomly drawn, it is a bit off. If this were in the real world, we of course would not know that we are off—we only have this one sample. Since we are simulating everything on the computer we take many more samples. You can see on the right that we are retrieving many samples with their bell-shaped distributions. For each of these individual samples we can calculate an average. And you can see all averages accumulate at the bottom of the right hand figure as red points: if you closely inspect these means, they are clustering in ‘the middle.’ This center actually <em>is</em> the true underlying population parameter.</p>
+<p>Let us take a look at a <em>real</em> example in Figure <a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#fig:distribution-sampling">5.7</a>. On the left, there is the unknown distribution in the population. We then randomly draw one sample from this distribution. You can see that since it is randomly drawn, it is a bit off. If this were in the real world, we of course would not know that we are off—we only have this one sample. Since we are simulating everything on the computer we take many more samples. You can see on the right that we are retrieving many samples with their bell-shaped distributions. For each of these individual samples we can calculate an average. And you can see all averages accumulate at the bottom of the right hand figure as red points: if you closely inspect these means, they are clustering in ‘the middle’. This center actually <em>is</em> the true underlying population parameter.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:distribution-sampling"></span>
 <img src="figures/w5_norm3c.png" alt="Drawing Many Samples from the Population." width="100%" />
 <p class="caption">
@@ -570,8 +510,8 @@ Figure 5.7: Drawing Many Samples from the Population.
 <li>The means of all samples also vary of course, which means we can calculate a standard deviation for them. This standard deviation of the means of the samples—so the standard deviation of the sampling distribution—is called the <em>standard error</em>.</li>
 </ul>
 </div>
-<div id="the-central-limit-theorem" class="section level3" number="5.2.3">
-<h3><span class="header-section-number">5.2.3</span> The Central Limit Theorem</h3>
+<div id="the-central-limit-theorem" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> The Central Limit Theorem<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#the-central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you closely look at how the means of the samples are actually distributed, do you notice something? Well, it looks a bit as if they were distributed in a bell shaped way—just like the Normal distribution we heard of before.</p>
 <p>So here is another amazing thing about <a href="https://www.youtube.com/watch?v=Pb0tvv1ojUE">‘the Normal’</a>. The whole world would probably not really work if it did not exist. The reason is: all statistical processes boil down to being normal eventually—as proven by the mathematician <a href="https://en.wikipedia.org/wiki/Pierre-Simon_Laplace">Pierre-Simon Laplace</a> some 200 years ago.</p>
 <p>Informally, this is what the Central Limit Theorem is saying.</p>
@@ -601,11 +541,11 @@ Figure 5.7: Drawing Many Samples from the Population.
 <p>Of course we do not know the true population parameter. So what do we do? We again use the value from the sample and assume that we have the right value. The estimate for the standard error then is as follows.</p>
 <p><span class="math display">\[  \hat{s}_n = \frac{s_i}{\sqrt{n}} \]</span></p>
 <p>Let us take a look at an example to make this more easy to understand. We assume your sample is a random sample from your cohort. How many hours does your cohort sleep per night? And what is our uncertainty around that?</p>
-<p><span class="math display">\[\hat \mu = \bar m_i = 7.61 \]</span></p>
-<p><span class="math display">\[ \hat \sigma_i = \frac{\hat \sigma}{\sqrt{n}} = \frac{0.94}{\sqrt{23}} = 0.2  \]</span></p>
+<p><span class="math display">\[\hat \mu = \bar m_i = 7.76 \]</span></p>
+<p><span class="math display">\[ \hat \sigma_i = \frac{\hat \sigma}{\sqrt{n}} = \frac{1.03}{\sqrt{17}} = 0.25  \]</span></p>
 </div>
-<div id="summing-up-what-is-inference" class="section level3" number="5.2.4">
-<h3><span class="header-section-number">5.2.4</span> Summing Up: What is Inference?</h3>
+<div id="summing-up-what-is-inference" class="section level3 hasAnchor" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Summing Up: What is Inference?<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#summing-up-what-is-inference" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let us take stock and understand the core idea of inference.</p>
 <ul>
 <li>We can never know the true population mean <span class="math inline">\(\mu\)</span>.</li>
@@ -617,12 +557,12 @@ sample.</li>
 <li>We then use the standard deviation from our sample to estimate the standard error of the sampling distribution.</li>
 </ul>
 </div>
-<div id="confidence-intervals-being-95-certain" class="section level3" number="5.2.5">
-<h3><span class="header-section-number">5.2.5</span> Confidence Intervals: Being 95% Certain</h3>
+<div id="confidence-intervals-being-95-certain" class="section level3 hasAnchor" number="5.2.5">
+<h3><span class="header-section-number">5.2.5</span> Confidence Intervals: Being 95% Certain<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#confidence-intervals-being-95-certain" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Last thing to wrap your heads around for today: We have the standard error. How certain can we be that our sampled mean is close to the population mean?</p>
 <p>The thing is, in real life we can of course never know the true population mean <span class="math inline">\(\hat \mu\)</span>. But we can use the Central Limit Theorem! We know that our sample—if well implemented—is a result of a random sampling process. And if that is the case, all samples including ours will follow the Central Limit Theorem (CLT).</p>
 <p>Let us assume we want to catch the population mean with our sample in 95 out of 100 samples. That means from the mean, we have to cover the area 42.5% to the left of the mean and 42.5% to the right of the mean. We call this area the <em>95% confidence interval</em>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-103"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-101"></span>
 <img src="figures/w5_nd2.png" alt="Two Different Normal Distributions and The Probability Mass Covered By Their Standard Deviations." width="1200" />
 <p class="caption">
 Figure 5.8: Two Different Normal Distributions and The Probability Mass Covered By Their Standard Deviations.
@@ -632,27 +572,27 @@ Figure 5.8: Two Different Normal Distributions and The Probability Mass Covered 
 <p>Knowing that we can assume that the sampling distribution is normally distributed (hat tip CLT), we can calculate the probability that we cover the range of values where we will capture the real mean in 95 out of 100 times. It is the range given by</p>
 <p><span class="math display">\[  \hat\mu ± 1.96 \hat \sigma \]</span></p>
 <p>Or in our example <em>How many hours do you sleep at night?</em></p>
-<p><span class="math display">\[  7.61 ± 1.96 * 0.94 = [5.7676, 9.4524] \]</span></p>
-<p>This means that if we drew 100 samples, the true population mean of your overall cohort would be in the interval [5.7676, 9.4524] in 95 out of 100 times.</p>
+<p><span class="math display">\[  7.76 ± 1.96 * 1.03 = [5.7412, 9.7788] \]</span></p>
+<p>This means that if we drew 100 samples, the true population mean of your overall cohort would be in the interval [5.7412, 9.7788] in 95 out of 100 times.</p>
 <!-- Insert a video here on the calculations by hand? -->
 </div>
-<div id="revisiting-t-tests" class="section level3" number="5.2.6">
-<h3><span class="header-section-number">5.2.6</span> Revisiting t-tests</h3>
+<div id="revisiting-t-tests" class="section level3 hasAnchor" number="5.2.6">
+<h3><span class="header-section-number">5.2.6</span> Revisiting t-tests<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#revisiting-t-tests" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The great thing about confidence intervals is that we can also use them to understand hypothesis testing.</p>
 <p>Imagine we are testing whether there is actually a difference in the mean of two samples, just like we did last week with the t-tests. Instead of checking the p-value, we can also study the confidence interval. In 95 out of 100 cases, how much of a difference do we expect to be there between the sample from your cohort vs. for example the 2018 cohort, <em>given what we observe in the data</em>?</p>
 <pre><code>## 
 ##  Welch Two Sample t-test
 ## 
 ## data:  dat18$studyperweek and studyperweek
-## t = 0.31733, df = 36.126, p-value = 0.7528
+## t = 1.0721, df = 30.267, p-value = 0.2921
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -5.693601  7.806133
+##  -3.058163  9.822869
 ## sample estimates:
 ## mean of x mean of y 
-##  16.88235  15.82609</code></pre>
-<p>R returns us the confidence interval: Here, it is anywhere between -5.69 and 7.81. This means that your confidence interval covers the 0—with a probability of 95% you could not tell whether the true difference in the means is lower 0, equal 0 or higher than 0. Hence, you cannot refute the original hypothesis that the means are the same. Therefore, you have to conclude that the means are probably the same in the larger population of the cohort in 2018 and in your cohort.</p>
-<p>Remember that the difference between 2021 and the cohort in 2019 was <em>statistically significant</em>?</p>
+##  16.88235  13.50000</code></pre>
+<p>R returns us the confidence interval: Here, it is anywhere between -3.06 and 9.82. This means that your confidence interval covers the 0—with a probability of 95% you could not tell whether the true difference in the means is lower 0, equal 0 or higher than 0. Hence, you cannot refute the original hypothesis that the means are the same. Therefore, you have to conclude that the means are probably the same in the larger population of the cohort in 2018 and in your cohort.</p>
+<p>Now, what about the difference between 2021 and the cohort in 2019?</p>
 <pre><code>## 
 ##  Welch Two Sample t-test
 ## 
@@ -664,11 +604,11 @@ Figure 5.8: Two Different Normal Distributions and The Probability Mass Covered 
 ## sample estimates:
 ## mean of x mean of y 
 ##  21.13043  12.93750</code></pre>
-<p>Now, the confidence interval it is anywhere between 0.44 and 15.94. The confidence interval <em>does not</em> cover the 0. You can conclude that with a probability of 95% the difference between the cohort <em>is</em> larger than 0. Now, you can refute the original hypothesis that the means are the same—at least with a 95% confidence in the results.</p>
+<p>This difference is apparently <em>statistically significant</em>. You can see that the confidence interval it is anywhere between 0.44 and 15.94. The confidence interval <em>does not</em> cover the 0. You can conclude that with a probability of 95% the difference between the cohort <em>is</em> larger than 0. Now, you can refute the original hypothesis that the means are the same—at least with a 95% confidence in the results.</p>
 </div>
 </div>
-<div id="revisiting-the-original-questions" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Revisiting the Original Questions</h2>
+<div id="revisiting-the-original-questions" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Revisiting the Original Questions<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#revisiting-the-original-questions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let us revisit the original questions we initially set out above.</p>
 <ul>
 <li>What does inference mean?</li>
@@ -676,46 +616,49 @@ Figure 5.8: Two Different Normal Distributions and The Probability Mass Covered 
 <li>And why is it so important to properly randomise the samples that we draw?</li>
 <li>How can we be 95% confident about the test of a hypothesis?</li>
 </ul>
-<p>If you worked through this class properly and also did the readings, you should be able to answer the questions. If not, let’s be in touch in the weekly workshop on Tuesdays.</p>
+<p>If you worked through this class properly and also did the readings, you should be able to answer the questions. If you still struggle, please bs be in touch, e.g. in the weekly workshop on Tuesdays or come to see me in the office hour.</p>
 </div>
-<div id="r-a-simple-figure-with-two-variables" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> R: A Simple Figure With Two Variables</h2>
+<div id="r-a-simple-figure-with-two-variables" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> R: A Simple Figure With Two Variables<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#r-a-simple-figure-with-two-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This week was quite heavy on concepts, hence let us be really quick on the coding. Just a simply plot of two variables. In all we are doing, I am introducing some functions for randomly sampling in different ways.
 Let us first do a random draw from a normal distribution. We then calculate a second variable from it, adding a bit of normally distributed noise on top. Then we plot it using colour.</p>
-<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select var1 randomly from a normal distribution</span></span>
-<span id="cb136-2"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-2" aria-hidden="true" tabindex="-1"></a>var1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">3</span>)</span>
-<span id="cb136-3"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Select some noise again randomly from a normal distribution</span></span>
-<span id="cb136-4"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-4" aria-hidden="true" tabindex="-1"></a>var2.noise <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n=</span><span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="fl">0.5</span>)</span>
-<span id="cb136-5"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-5" aria-hidden="true" tabindex="-1"></a><span class="co"># create second variable</span></span>
-<span id="cb136-6"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-6" aria-hidden="true" tabindex="-1"></a>var2 <span class="ot">&lt;-</span> var1 <span class="sc">+</span> var2.noise</span>
-<span id="cb136-7"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb136-8"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Here I sample two colours randomly</span></span>
-<span id="cb136-9"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-9" aria-hidden="true" tabindex="-1"></a>allcolours <span class="ot">&lt;-</span> <span class="fu">colours</span>()</span>
-<span id="cb136-10"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-10" aria-hidden="true" tabindex="-1"></a>two.colours <span class="ot">&lt;-</span> <span class="fu">sample</span>(allcolours, <span class="dv">2</span>)</span>
-<span id="cb136-11"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb136-12"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot two variables</span></span>
-<span id="cb136-13"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-13" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(var1, var2,</span>
-<span id="cb136-14"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-14" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">21</span>, <span class="co"># Setting Point Characters, here filled circles</span></span>
-<span id="cb136-15"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-15" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> two.colours[<span class="dv">1</span>], <span class="co"># using the first colour for the frame</span></span>
-<span id="cb136-16"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-16" aria-hidden="true" tabindex="-1"></a>     <span class="at">bg =</span> two.colours[<span class="dv">2</span>], <span class="co"># using the second colour for the background</span></span>
-<span id="cb136-17"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-17" aria-hidden="true" tabindex="-1"></a>     <span class="at">las =</span> <span class="dv">1</span>, <span class="co">#rotates numbers on the left</span></span>
-<span id="cb136-18"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-18" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&#39;Label on the x-Axis&#39;</span>)</span>
-<span id="cb136-19"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb136-20"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-20" aria-hidden="true" tabindex="-1"></a><span class="co"># abline is very useful for plotting all sorts of lines</span></span>
-<span id="cb136-21"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-21" aria-hidden="true" tabindex="-1"></a><span class="co"># a: intercept, b: slope</span></span>
-<span id="cb136-22"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-22" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">a=</span> <span class="dv">0</span>, <span class="at">b =</span> <span class="dv">1</span>, <span class="at">col =</span> cardiffred)</span>
-<span id="cb136-23"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-23" aria-hidden="true" tabindex="-1"></a><span class="co"># horizontal line at 0, lwd: line width</span></span>
-<span id="cb136-24"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-24" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> cardiffblue, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
-<span id="cb136-25"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-25" aria-hidden="true" tabindex="-1"></a><span class="co"># vertical line at 0, lty: line type</span></span>
-<span id="cb136-26"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb136-26" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="dv">0</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-1" tabindex="-1"></a><span class="co"># Select var1 randomly from a normal distribution</span></span>
+<span id="cb135-2"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-2" tabindex="-1"></a>var1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">3</span>)</span>
+<span id="cb135-3"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-3" tabindex="-1"></a><span class="co"># Select some noise again randomly from a normal distribution</span></span>
+<span id="cb135-4"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-4" tabindex="-1"></a>var2.noise <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n=</span><span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="fl">0.5</span>)</span>
+<span id="cb135-5"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-5" tabindex="-1"></a><span class="co"># create second variable</span></span>
+<span id="cb135-6"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-6" tabindex="-1"></a>var2 <span class="ot">&lt;-</span> var1 <span class="sc">+</span> var2.noise</span>
+<span id="cb135-7"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-7" tabindex="-1"></a></span>
+<span id="cb135-8"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-8" tabindex="-1"></a><span class="co"># Here I sample two colours randomly</span></span>
+<span id="cb135-9"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-9" tabindex="-1"></a>allcolours <span class="ot">&lt;-</span> <span class="fu">colours</span>()</span>
+<span id="cb135-10"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-10" tabindex="-1"></a>two.colours <span class="ot">&lt;-</span> <span class="fu">sample</span>(allcolours, <span class="dv">2</span>)</span>
+<span id="cb135-11"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-11" tabindex="-1"></a></span>
+<span id="cb135-12"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-12" tabindex="-1"></a><span class="co"># Plot two variables</span></span>
+<span id="cb135-13"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-13" tabindex="-1"></a><span class="fu">plot</span>(var1, var2,</span>
+<span id="cb135-14"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-14" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">21</span>, <span class="co"># Setting Point Characters, here filled circles</span></span>
+<span id="cb135-15"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-15" tabindex="-1"></a>     <span class="at">col =</span> two.colours[<span class="dv">1</span>], <span class="co"># using the first colour for the frame</span></span>
+<span id="cb135-16"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-16" tabindex="-1"></a>     <span class="at">bg =</span> two.colours[<span class="dv">2</span>], <span class="co"># using the second colour for the background</span></span>
+<span id="cb135-17"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-17" tabindex="-1"></a>     <span class="at">las =</span> <span class="dv">1</span>, <span class="co">#rotates numbers on the left</span></span>
+<span id="cb135-18"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-18" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&#39;Label on the x-Axis&#39;</span>)</span>
+<span id="cb135-19"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-19" tabindex="-1"></a></span>
+<span id="cb135-20"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-20" tabindex="-1"></a><span class="co"># abline is very useful for plotting all sorts of lines</span></span>
+<span id="cb135-21"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-21" tabindex="-1"></a><span class="co"># a: intercept, b: slope</span></span>
+<span id="cb135-22"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-22" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">a=</span> <span class="dv">0</span>, <span class="at">b =</span> <span class="dv">1</span>, <span class="at">col =</span> cardiffred)</span>
+<span id="cb135-23"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-23" tabindex="-1"></a><span class="co"># horizontal line at 0, lwd: line width</span></span>
+<span id="cb135-24"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-24" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> cardiffblue, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
+<span id="cb135-25"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-25" tabindex="-1"></a><span class="co"># vertical line at 0, lty: line type</span></span>
+<span id="cb135-26"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-26" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="dv">0</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span></code></pre></div>
 <p><img src="intro_data_science_homepage_files/figure-html/plotting-1.png" width="672" /></p>
 </div>
-<div id="reading-for-this-week-1" class="section level2" number="5.5">
-<h2><span class="header-section-number">5.5</span> Reading for This Week</h2>
-<p>For this week, please read chapter 4 in <span class="citation"><a href="#ref-Agresti2018" role="doc-biblioref">Agresti</a> (<a href="#ref-Agresti2018" role="doc-biblioref">2018</a>)</span>.</p>
+<div id="reading-for-this-week-1" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Reading for This Week<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#reading-for-this-week-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For this week, please read chapter 4 in <span class="citation">Agresti (<a href="#ref-Agresti2018">2018</a>)</span>.</p>
 
 </div>
 </div>
+
+
+
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Agresti2018" class="csl-entry">
@@ -728,7 +671,7 @@ Agresti, Alan. 2018. <em>Statistical Methods for the Social Sciences</em>. 5th e
         </div>
       </div>
 <a href="testing-a-hypothesis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="are-different-people-different.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="useful-internet-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -788,7 +731,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

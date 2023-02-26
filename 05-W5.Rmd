@@ -6,10 +6,13 @@ rm(list=ls())
 library(foreign)
 library(xtable)
 # data: Class surveys
-dat18 <- read.csv("preparing_data/data/class_survey/lecture_survey_18.csv")
-dat19 <- read.csv("preparing_data/data/class_survey/lecture_survey_19.csv")
-dat21 <- read.csv("preparing_data/data/class_survey/lecture_survey_21.csv")
-dat <- read.csv("preparing_data/data/class_survey/lecture_survey_22.csv")
+# data: Class surveys
+dat18 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_18.csv")
+dat19 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_21.csv")
+dat22 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_22.csv")
+dat <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_23.csv")
+
 # names(dat)
 attach(dat)
 # Predefined Cardiff colours
@@ -171,7 +174,7 @@ A so standardized variable will have mean zero and a standard deviation of one. 
 
 What do we conclude? Well, Alexandra is on average much more 'off' in comparison to her peers than Bastian. She is much more of an outlier and he actually is much more of an average guy when it comes to studying.
 
-[One more thing.](https://www.youtube.com/watch?v=sdqMvEZTxlI) The z-scores have a link to the Normal distribution. We can actually use them to calculate the probability of an event. The only thing you have to do is convert your data into z-score. And then you can look up its probability in the probability tables of a normal distribution.
+One more thing. The z-scores have a link to the Normal distribution. We can actually use them to calculate the probability of an event. The only thing you have to do is convert your data into z-score. And then you can look up its probability in the probability tables of a normal distribution.
 
 
 ```{r fig.show="hold", out.width="50%", fig.align="center", fig.cap="Reading z-Scores.", echo=FALSE}
@@ -406,14 +409,14 @@ R returns us the confidence interval: Here, it is anywhere between `r round(ttes
 
 
 
-Remember that the difference between 2021 and the cohort in 2019 was *statistically significant*?
+Now, what about the difference between 2021 and the cohort in 2019?
 
 ```{r echo=FALSE}
 ttest.perweek.21.19 <- t.test(dat19$studyperweek, dat21$studyperweek)
 ttest.perweek.21.19
 ```
 
-Now, the confidence interval it is anywhere between `r round(ttest.perweek.21.19$conf.int, 2)[1] ` and `r round(ttest.perweek.21.19$conf.int, 2)[2]`. The confidence interval *does not* cover the 0. You can conclude that with a probability of 95% the difference between the cohort *is* larger than 0. Now, you can refute the original hypothesis that the means are the same---at least with a 95% confidence in the results.
+This difference is apparently *statistically significant*. You can see that the confidence interval it is anywhere between `r round(ttest.perweek.21.19$conf.int, 2)[1] ` and `r round(ttest.perweek.21.19$conf.int, 2)[2]`. The confidence interval *does not* cover the 0. You can conclude that with a probability of 95% the difference between the cohort *is* larger than 0. Now, you can refute the original hypothesis that the means are the same---at least with a 95% confidence in the results.
 
 
 
@@ -427,7 +430,7 @@ Let us revisit the original questions we initially set out above.
 * And why is it so important to properly randomise the samples that we draw?
 * How can we be 95% confident about the test of a hypothesis?
 
-If you worked through this class properly and also did the readings, you should be able to answer the questions. If not, let's be in touch in the weekly workshop on Tuesdays.
+If you worked through this class properly and also did the readings, you should be able to answer the questions. If you still struggle, please bs be in touch, e.g. in the weekly workshop on Tuesdays or come to see me in the office hour.
 
 ## R: A Simple Figure With Two Variables
 This week was quite heavy on concepts, hence let us be really quick on the coding. Just a simply plot of two variables. In all we are doing, I am introducing some functions for randomly sampling in different ways.
