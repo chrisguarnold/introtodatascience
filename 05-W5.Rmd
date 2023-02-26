@@ -432,6 +432,8 @@ Let us revisit the original questions we initially set out above.
 
 If you worked through this class properly and also did the readings, you should be able to answer the questions. If you still struggle, please bs be in touch, e.g. in the weekly workshop on Tuesdays or come to see me in the office hour.
 
+
+
 ## R: A Simple Figure With Two Variables
 This week was quite heavy on concepts, hence let us be really quick on the coding. Just a simply plot of two variables. In all we are doing, I am introducing some functions for randomly sampling in different ways.
 Let us first do a random draw from a normal distribution. We then calculate a second variable from it, adding a bit of normally distributed noise on top. Then we plot it using colour.
