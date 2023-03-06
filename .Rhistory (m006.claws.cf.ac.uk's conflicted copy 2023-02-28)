@@ -1,0 +1,512 @@
+, ylim = c(0,.4)
+, width = .35
+, las = 1
+, col = c(cardiffpurple1, cardiffgrey, cardiffred, cardiffgold)
+, horiz = TRUE
+, border = NA
+, axes = TRUE)
+text(12, .24, col ="white", labels = "Highest", cex = 2)
+text(4.5, .24, col ="white", labels = "4", cex = 2)
+text(1.5, .24, col ="white", labels = "3", cex = 2)
+text(.5, .24, col ="white", labels = "2", cex = 2)
+par(mar = c(4,1,1,1))
+stripchart(na.omit(studyperweek)
+, pch = 16
+, xlab = "Hours Per Week"
+, col = cardiffred
+, cex = 3
+, ylim = c(.95, 1.4)
+, xlim = c(0,40)
+, frame.plot = FALSE)
+par(mar = c(4,1,1,1))
+stripchart(na.omit(studyperweek)
+, method = "stack"
+, pch = 16
+, xlab = "Hours Per Week"
+, col = cardiffpurple2
+, cex = 3
+, ylim = c(.95, 1.4)
+, xlim = c(0,40)
+, frame.plot = FALSE)
+par(mar = c(4,4,1,1))
+hist(studyperweek
+, breaks = 8
+, col = cardiffgrey
+, main = ""
+, xlab = "Hours Per Week"
+, border = "white")
+par(mar = c(4,4,1,1))
+hist(studyperweek
+, breaks = 3
+, col = cardiffgold
+, main = ""
+, xlab = "Hours Per Week"
+, border = "white")
+par(mar = c(4,5,1,1))
+boxplot(list(studyideal, studyperweek), horizontal = TRUE
+, col = c(cardiffgold, cardiffred)
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,40)
+, xlab = 'Hours'
+)
+axis(2, col = "white", las = 1, at = c(1,2),lab =c("Ideally \n Studied", "Really \n Studied"))
+axis(1)
+par(mar = c(4,5,1,1))
+boxplot(age, horizontal = TRUE
+, col = cardiffgold
+, axes = FALSE
+, boxwex = .6
+, ylim = c(18,45)
+, xlab = "Years"
+)
+axis(2, col = "white", las = 1, at = 1,lab ="Age")
+axis(1)
+# -- housekeeping --------------------------------------------------------------
+rm(list=ls())
+# Libraries
+library(foreign)
+library(xtable)
+# data: Class surveys
+dat18 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_18.csv")
+dat19 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_21.csv")
+dat22 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_22.csv")
+dat <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_23.csv")
+# names(dat)
+attach(dat)
+# Predefined Cardiff colours
+# primary
+cardiffred <- rgb(211,55,74, maxColorValue = 255)
+cardiffblack <- rgb(35,31,32, maxColorValue = 255)
+cardiffgrey <- rgb(47,68,78, maxColorValue = 255)
+cardiffgold <- rgb(189,158,94, maxColorValue = 255)
+# secondary
+cardiffblue <- rgb(21,44,81, maxColorValue = 255)
+cardiffpurple1 <- rgb(29,15,51, maxColorValue = 255)
+cardiffpurple2 <- rgb(60,44,89, maxColorValue = 255)
+par(mar = c(4,4,1,1))
+barplot(table(breakfast)
+, ylab = "Frequency"
+, col = cardiffgrey
+, las = 1
+, border = NA)
+par(mar = c(4,4,1,1))
+barplot(table(breakfast)
+, xlab = "Frequency"
+, las = 1
+, col = cardiffred
+, horiz = TRUE
+, border = NA)
+par(mar = c(1,1,1,1))
+pie(table(breakfast)
+#, labels = c(
+, col = c(cardiffred, cardiffgrey, cardiffgold)
+, border = NA
+, radius = 1)
+ordtable <- cbind(table(summer), prop.table(table(summer)))
+tsummer <- rbind(ordtable)
+rownames(tsummer) <- c(2,3,4,"Highest")
+par(mar = c(4,4,1,1))
+barplot(tsummer[,1]
+, col = cardiffgrey
+, border = NA
+, ylab = "Frequency")
+par(mar = c(4,4,1,1))
+barplot(tsummer[,1]
+, las = 1
+, col = cardiffred
+, horiz = TRUE
+, xlab = "Frequency"
+, border = NA)
+par(mar = c(4,4,1,1))
+barplot(tsummer
+, ylim = c(0,.4)
+, width = .35
+, las = 1
+, col = c(cardiffpurple1, cardiffgrey, cardiffred, cardiffgold)
+, horiz = TRUE
+, border = NA
+, axes = TRUE)
+text(12, .24, col ="white", labels = "Highest", cex = 2)
+text(4.5, .24, col ="white", labels = "4", cex = 2)
+text(1.5, .24, col ="white", labels = "3", cex = 2)
+text(.5, .24, col ="white", labels = "2", cex = 2)
+par(mar = c(4,1,1,1))
+stripchart(na.omit(studyperweek)
+, pch = 16
+, xlab = "Hours Per Week"
+, col = cardiffred
+, cex = 3
+, ylim = c(.95, 1.4)
+, xlim = c(0,40)
+, frame.plot = FALSE)
+par(mar = c(4,1,1,1))
+stripchart(na.omit(studyperweek)
+, method = "stack"
+, pch = 16
+, xlab = "Hours Per Week"
+, col = cardiffpurple2
+, cex = 3
+, ylim = c(.95, 1.4)
+, xlim = c(0,40)
+, frame.plot = FALSE)
+par(mar = c(4,4,1,1))
+hist(studyperweek
+, breaks = 8
+, col = cardiffgrey
+, main = ""
+, xlab = "Hours Per Week"
+, border = "white")
+par(mar = c(4,4,1,1))
+hist(studyperweek
+, breaks = 3
+, col = cardiffgold
+, main = ""
+, xlab = "Hours Per Week"
+, border = "white")
+par(mar = c(4,5,1,1))
+boxplot(list(studyideal, studyperweek), horizontal = TRUE
+, col = c(cardiffgold, cardiffred)
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,40)
+, xlab = 'Hours'
+)
+axis(2, col = "white", las = 1, at = c(1,2),lab =c("Ideally \n Studied", "Really \n Studied"))
+axis(1)
+par(mar = c(4,5,1,1))
+boxplot(age, horizontal = TRUE
+, col = cardiffgold
+, axes = FALSE
+, boxwex = .6
+, ylim = c(18,45)
+, xlab = "Years"
+)
+axis(2, col = "white", las = 1, at = 1,lab ="Age")
+axis(1)
+par(mar = c(4,5,1,1))
+boxplot(spend, horizontal = TRUE
+, col = cardiffpurple2
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,80)
+, xlab = "GBP/Night Out"
+)
+axis(2, col = "white", las = 1, at = 1,lab ="Party \n Money")
+axis(1)
+par(mar = c(4,5,1,1))
+boxplot(spend, horizontal = TRUE
+, col = cardiffpurple2
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,60)
+, xlab = "GBP/Night Out"
+)
+axis(2, col = "white", las = 1, at = 1,lab ="Party \n Money")
+axis(1)
+# This creates a vector with a sequence of integers from -10 to 10 with a distance of 1
+x <- seq(-10,10,1)
+x
+a <- 5
+b <- 3
+c <- .5
+y  <- a + b*x + c*x^2
+y
+plot(x,y)
+plot(x,y,
+cex = 3, # size of the data points
+pch = 16, # point character
+col = 'aquamarine3', # chose the colour. R defaults with inverted commas.
+las = 1, # rotates labels in y axis by 90 degrees,
+xlim = c(-15, 15), # This defines the limit of the x-axis you want to plot in
+main = 'My First Figure' # Title
+)
+colors()[1:15]
+# Predefined Cardiff colours
+# primary
+cardiffred <- rgb(211,55,74, maxColorValue = 255)
+cardiffblack <- rgb(35,31,32, maxColorValue = 255)
+cardiffgrey <- rgb(47,68,78, maxColorValue = 255)
+cardiffgold <- rgb(189,158,94, maxColorValue = 255)
+# secondary
+cardiffblue <- rgb(21,44,81, maxColorValue = 255)
+cardiffpurple1 <- rgb(29,15,51, maxColorValue = 255)
+cardiffpurple2 <- rgb(60,44,89, maxColorValue = 255)
+a <- seq(1,10,1)
+b <- rep(1,10) # repeats the value '1' 10 times
+plot(a, b,
+col = c(cardiffred, cardiffgrey, cardiffgold),
+cex = 2,
+las = 1,
+pch = 15
+)
+table.breakfast <- table(breakfast)
+table.breakfast
+prop.table.breakfast <- prop.table(table.breakfast)
+prop.table.breakfast.rounded <- round(prop.table.breakfast, digits = 2)
+prop.table.breakfast.rounded
+barplot(table.breakfast)
+barplot(table.breakfast,
+ylab = "Frequency", # Adds label to the y-axis
+col = cardiffred, # You know this already
+las = 1, # and this
+border = NA # Removes the small black border around the bars
+)
+barplot(table.breakfast,
+xlab = "Frequency",
+las = 1,
+col = cardiffgold,
+horiz = TRUE # plots bars horizontally instead of vertically
+)
+# R uses an algorithm to determine the number of bins
+hist(commute,
+col = cardiffgold,
+xlab = "Minutes",
+)
+# Here we control a bit more by ourselves
+hist(commute,
+breaks = 3, # This is a very rough break into three bins
+col = cardiffpurple1,
+xlab = "Minutes",
+main ='', # suppress the default main title
+border = "white" # border around the histograms--here set to white
+)
+boxplot(spend)
+# here, we create a data object that is a list. Think of it as a super flexible data object.
+list.study <- list(studyideal, studyperweek)
+boxplot(list.study,
+horizontal = TRUE,
+col = c(cardiffred, cardiffpurple1), # different colours for the plots
+axes = FALSE, # we are suppressing all axes
+boxwex = .6, # this is about the width of the interquartile range box
+ylim = c(0,40), # defines the limit of the x-axis (!).
+# It would have been the y-axis, but we rotated the figure.
+# This is a superconfusing command of the boxplot function
+# We just have to live with it...
+xlab = 'Hours' # Label for the x-axis
+)
+# Here, we are adding axes manually to have more control over them.
+axis(2, col = "white",
+las = 1,
+at = c(1,2), # where to put the tickmarks
+lab =c("Ideally \n Studied", "Really \n Studied") # Labels. '\n' is a new line
+)
+axis(1)
+na.omit(c(NA, 1,2,3))
+par(mar = c(4,5,1,1))
+boxplot(age, horizontal = TRUE
+, col = cardiffgold
+, axes = FALSE
+, boxwex = .6
+, ylim = c(18,30)
+, xlab = "Years"
+)
+axis(2, col = "white", las = 1, at = 1,lab ="Age")
+axis(1)
+read.csv('/Users/haui/Desktop/pizza.csv')
+read.csv('/Users/haui/Desktop/pizza.csv', sep = ';')
+# 2 set the working directory
+setwd('/Users/haui/Desktop/')
+read.csv('/Users/haui/Desktop/pizza.csv', sep = ';')
+read.csv('pizza.csv', sep = ';')
+read.csv('pizza.csv', sep = ';')
+# -- housekeeping --------------------------------------------------------------
+rm(list=ls())
+# -- housekeeping --------------------------------------------------------------
+rm(list=ls())
+# Libraries
+library(foreign)
+library(xtable)
+dat19 <- read.csv("preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("preparing_data/data/class_survey/lecture_survey_21.csv")
+dat22 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_22.csv")
+dat <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_23.csv")
+# names(dat)
+attach(dat)
+# Predefined Cardiff colours
+# primary
+cardiffred <- rgb(211,55,74, maxColorValue = 255)
+cardiffblack <- rgb(35,31,32, maxColorValue = 255)
+cardiffgrey <- rgb(47,68,78, maxColorValue = 255)
+cardiffgold <- rgb(189,158,94, maxColorValue = 255)
+# secondary
+cardiffblue <- rgb(21,44,81, maxColorValue = 255)
+cardiffpurple1 <- rgb(29,15,51, maxColorValue = 255)
+cardiffpurple2 <- rgb(60,44,89, maxColorValue = 255)
+par(mar = c(4,5,1,1))
+boxplot(list(studyideal, studyperweek), horizontal = TRUE
+, col = c(cardiffgold, cardiffred)
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,40)
+, xlab = 'Hours'
+)
+par(mar = c(4,5,1,1))
+boxplot(list(studyideal, studyperweek), horizontal = TRUE
+, col = c(cardiffgold, cardiffred)
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,40)
+, xlab = 'Hours'
+)
+axis(2, col = "white", las = 1, at = c(1,2),lab =c("Ideally \n Studied", "Really \n Studied"))
+axis(1)
+par(mar = c(4,7,1,1))
+boxplot(list(dat18$studyperweek, dat19$studyperweek, dat21$studyperweek, studyperweek), horizontal = TRUE
+, col = cardiffgold
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,60)
+, xlab = 'Hours'
+, main = 'How Much You Study'
+)
+# data: Class surveys
+dat18 <- read.csv("../other_filespreparing_data/data/class_survey/lecture_survey_18.csv")
+# -- housekeeping --------------------------------------------------------------
+rm(list=ls())
+# Libraries
+library(foreign)
+library(xtable)
+# data: Class surveys
+dat18 <- read.csv("../other_filespreparing_data/data/class_survey/lecture_survey_18.csv")
+dat22 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_22.csv")
+# data: Class surveys
+dat18 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_18.csv")
+dat19 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_21.csv")
+dat22 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_22.csv")
+dat <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_23.csv")
+# names(dat)
+attach(dat)
+# Predefined Cardiff colours
+# primary
+cardiffred <- rgb(211,55,74, maxColorValue = 255)
+cardiffblack <- rgb(35,31,32, maxColorValue = 255)
+cardiffgrey <- rgb(47,68,78, maxColorValue = 255)
+cardiffgold <- rgb(189,158,94, maxColorValue = 255)
+# secondary
+cardiffblue <- rgb(21,44,81, maxColorValue = 255)
+cardiffpurple1 <- rgb(29,15,51, maxColorValue = 255)
+cardiffpurple2 <- rgb(60,44,89, maxColorValue = 255)
+par(mar = c(4,5,1,1))
+boxplot(list(studyideal, studyperweek), horizontal = TRUE
+, col = c(cardiffgold, cardiffred)
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,40)
+, xlab = 'Hours'
+)
+axis(2, col = "white", las = 1, at = c(1,2),lab =c("Ideally \n Studied", "Really \n Studied"))
+axis(1)
+par(mar = c(4,7,1,1))
+boxplot(list(dat18$studyperweek, dat19$studyperweek, dat21$studyperweek, studyperweek), horizontal = TRUE
+, col = cardiffgold
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,60)
+, xlab = 'Hours'
+, main = 'How Much You Study'
+)
+par(mar = c(4,7,1,1))
+boxplot(list(dat18$studyperweek, dat19$studyperweek, dat21$studyperweek,dat22$studyperweek, studyperweek), horizontal = TRUE
+, col = cardiffgold
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,60)
+, xlab = 'Hours'
+, main = 'How Much You Study'
+)
+par(mar = c(4,7,1,1))
+boxplot(list(dat18$studyperweek, dat19$studyperweek, dat21$studyperweek,dat22$studyperweek, studyperweek), horizontal = TRUE
+, col = cardiffgold
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,60)
+, xlab = 'Hours'
+, main = 'How Much You Study'
+)
+axis(2, col = "white", las = 1, at = c(1,2,3,4),lab =c("Module 2018", "Module 2019", "Module 2021", "Module 2022",'You'))
+par(mar = c(4,7,1,1))
+boxplot(list(dat18$studyperweek, dat19$studyperweek, dat21$studyperweek,dat22$studyperweek, studyperweek), horizontal = TRUE
+, col = cardiffgold
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,60)
+, xlab = 'Hours'
+, main = 'How Much You Study'
+)
+axis(2, col = "white", las = 1, at = c(1,2,3,4,5),lab =c("Module 2018", "Module 2019", "Module 2021", "Module 2022",'You'))
+axis(1)
+boxplot(list(dat18$studyideal, dat19$studyideal, dat21$studyideal,dat22$studyideal, studyideal), horizontal = TRUE
+, col = cardiffred
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,60)
+, xlab = 'Hours'
+, main = 'How Much You Think You Should Be Studying'
+)
+axis(2, col = "white", las = 1, at = c(1,2,3,4,5),lab =c("Module 2018", "Module 2019", "Module 2021", "Module 2022",'You'))
+axis(1)
+par(mar = c(4,7,1,1))
+boxplot(list(dat18$studyperweek, dat19$studyperweek, dat21$studyperweek,dat22$studyperweek, studyperweek), horizontal = TRUE
+, col = cardiffgold
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,60)
+, xlab = 'Hours'
+, main = 'How Much You Study'
+)
+par(mar = c(4,7,1,1))
+boxplot(list(dat18$studyperweek, dat19$studyperweek, dat21$studyperweek,dat22$studyperweek, studyperweek), horizontal = TRUE
+, col = cardiffgold
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,60)
+, xlab = 'Hours'
+, main = 'How Much You Study'
+)
+axis(2, col = "white", las = 1, at = c(1,2,3,4,5),lab =c("Module 2018", "Module 2019", "Module 2021", "Module 2022",'You'))
+axis(1)
+boxplot(list(dat18$studyideal, dat19$studyideal, dat21$studyideal,dat22$studyideal, studyideal), horizontal = TRUE
+, col = cardiffred
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,60)
+, xlab = 'Hours'
+, main = 'How Much You Think You Should Be Studying'
+)
+axis(2, col = "white", las = 1, at = c(1,2,3,4,5),lab =c("Module 2018", "Module 2019", "Module 2021", "Module 2022",'You'))
+axis(1)
+ttest.perweek.now.18 <- t.test(dat18$studyperweek, studyperweek)
+ttest.perweek.now.18
+# t.test(dat18$studyperweek, studyperweek)
+# dat18$studyideal, dat19$studyideal, studyideal)
+ttest.perweek.now.19 <- t.test(dat19$studyperweek, studyperweek)
+ttest.perweek.now.19
+par(mar = c(4,7,1,1))
+boxplot(list(dat18$studyperweek, dat19$studyperweek, dat21$studyperweek,dat22$studyperweek, studyperweek), horizontal = TRUE
+, col = cardiffgold
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,60)
+, xlab = 'Hours'
+, main = 'How Much You Study'
+)
+axis(2, col = "white", las = 1, at = c(1,2,3,4,5),lab =c("Module 2018", "Module 2019", "Module 2021", "Module 2022",'You'))
+axis(1)
+boxplot(list(dat18$studyideal, dat19$studyideal, dat21$studyideal,dat22$studyideal, studyideal), horizontal = TRUE
+, col = cardiffred
+, axes = FALSE
+, boxwex = .6
+, ylim = c(0,60)
+, xlab = 'Hours'
+, main = 'How Much You Think You Should Be Studying'
+)
+axis(2, col = "white", las = 1, at = c(1,2,3,4,5),lab =c("Module 2018", "Module 2019", "Module 2021", "Module 2022",'You'))
+axis(1)
+# Create data
+people.living.in.household <- c(3,2,5)
+education.in.years <- c(10, 13, 15)
+favourite.colour <- c('forestgreen', 'darkred', 'lemongreen')
+dat <- data.frame(people.living.in.household, education.in.years, favourite.colour)

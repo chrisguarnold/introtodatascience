@@ -8,10 +8,12 @@ library(xtable)
 library(knitr)
 library(DescTools)
 # data: Class surveys
-dat18 <- read.csv("preparing_data/data/class_survey/lecture_survey_18.csv")
-dat19 <- read.csv("preparing_data/data/class_survey/lecture_survey_19.csv")
-dat21 <- read.csv("preparing_data/data/class_survey/lecture_survey_21.csv")
-dat <- na.omit(read.csv("preparing_data/data/class_survey/lecture_survey_22.csv"))
+# data: Class surveys
+dat18 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_18.csv")
+dat19 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_21.csv")
+dat22 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_22.csv")
+dat <- na.omit(read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_23.csv"))
 
 
 
@@ -73,7 +75,7 @@ We express association formally as a connection between two variables and can us
 
 For a bivariate analysis, we can measure the values of the variable in question and study "associations" between two or more variables. We first describe this relationship in our sample. We can then of course also do inference and test whether changes in the value of one variable $X$ are associated with changes in the value of the other variable $Y$ in the population at large.
 
-Interpret their relationship allows to make a statement about whether a change in one variable $X$ is associated with changes of patterns of variable $Y$.
+Interpreting their relationship allows to make a statement about whether a change in one variable $X$ is associated with changes of patterns of variable $Y$.
 
 
 ## Categorical Data
@@ -101,7 +103,7 @@ kable(list(table.siblings.sleep, table.siblings.sleep.prop),
       booktabs = TRUE,
       valign ='t')
 ```
-Herem there is apparently not really a clear pattern: siblings is quite unrelated to sleep. We can of course also calculate percentages. If you are eager to understand how siblings affect the amount of sleep, it might make sense to calculate percentages that add up to 100% in each column. You can calculate cross tabulations independent of whether the data is nominal or any kind of ordinal data.
+Here, there is apparently not really a clear pattern: siblings is quite unrelated to sleep. We can of course also calculate percentages. If you are eager to understand how siblings affect the amount of sleep, it might make sense to calculate percentages that add up to 100% in each column. You can calculate cross tabulations independent of whether the data is nominal or any kind of ordinal data.
 
 
 #### Measures for the Strength of the Association Between Variables
@@ -124,7 +126,7 @@ Measures that express the association between two variables are typically bound 
 
 A positive association means that if the variable $X$ grows, then the variable $Y$ grows as well. In contrast, if the association is negative, then a growth in one variable means a reduction in the other.
 
-For example, [drinking beer](https://youtu.be/dX5QNZtQXX4) and being thirsty is a negative relationship: the more beer you drink, the less thirsty you are. However, the relationship between a headache the next day and drinking beer is a positive one: the more beer you drink, the larger the headache the next morning.
+For example, drinking beer and being thirsty is a negative relationship: the more beer you drink, the less thirsty you are. However, the relationship between a headache the next day and drinking beer is a positive one: the more beer you drink, the larger the headache the next morning.
 
 
 
@@ -136,11 +138,13 @@ Another example: Do coffee drinkers have anything to do with how much you love s
 
 ```{r echo=FALSE}
 # table(dat$partydays, dat$sleep)
-table.breakfast.summer.21 <- table(dat$breakfast, dat$summer)
+table.breakfast.summer.23 <- table(dat$breakfast, dat$summer)
+table.breakfast.summer.22 <- table(dat22$breakfast, dat22$summer)
+table.breakfast.summer.21 <- table(dat21$breakfast, dat21$summer)
 table.breakfast.summer.19 <- table(dat19$breakfast, dat19$summer)
 table.breakfast.summer.18 <- table(dat18$breakfast, dat18$summer)
-kable(list(table.breakfast.summer.18, table.breakfast.summer.19, table.breakfast.summer.21),
-      caption = "Cross Tabulating the variables 'What You Drink in the Morning' and 'How Much You Like Summer' for the Cohort in 2018, 2019 and 2022 (from Left to Right).",
+kable(list(table.breakfast.summer.21, table.breakfast.summer.22, table.breakfast.summer.23),
+      caption = "Cross Tabulating the variables 'What You Drink in the Morning' \n and 'How Much You Like Summer' for the Cohort in 2021-2023 (from Left to Right).",
       booktabs = TRUE,
       valign ='t')
 ```
@@ -150,13 +154,14 @@ We can calulate Cramér's V between the preference of the morning drink and the 
 * Cohort 2018: `r round(CramerV(dat18$breakfast, dat18$summer), 2)`
 * Cohort 2019: `r round(CramerV(dat19$breakfast, dat19$summer), 2)`
 * Cohort 2021: `r round(CramerV(dat21$breakfast, dat21$summer), 2)`
-* Cohort 2022: `r round(CramerV(dat$breakfast, dat$summer), 2)`
+* Cohort 2022: `r round(CramerV(dat22$breakfast, dat22$summer), 2)`
+* Cohort 2023: `r round(CramerV(dat$breakfast, dat$summer), 2)`
 
-Here, the quick analysis tells us that there is a moderate relationship at play. It is strongest for the cohort in 2018: It looks as if it were driven by summer loving coffee drinkers vs. tea drinkers who seem to prefer other seasons. In the 2022 cohort there is the weakest relationship among the four.
+Here, the quick analysis tells us that there is a moderate relationship at play. It is strongest for the cohort in 2023: It looks as if it were driven by summer loving coffee drinkers vs. tea drinkers who seem to prefer other seasons. In the 2022 cohort there is the weakest relationship among the four.
 
 Whenever we are measuring the association between two ordinal variables, we want to choose something different. After all, now that the variables can both be ordered, we are able to make a statement about the direction of the association between them. The measure of choice is called *Goodman and Kruskall’s gamma*. Again, we will treat the exact way it works as a black box for this module. Suffice it to say that it ranges from $-1$ to $1$.
 
-We revisit the example on the number of siblings and how much you sleep. This time, we also add data from the other cohorts.
+We revisit the example on the number of siblings and how much you sleep. We also add data from the other cohorts.
 
 ```{r echo = FALSE}
 table.siblings.sleep.18 <- table(dat18$siblings, dat18$sleep)
@@ -165,8 +170,11 @@ dat19$siblings <- car::recode(dat19$siblings, "'5 or more'=5")
 dat19$sleep <- car::recode(dat19$sleep,
   "'5 and less'=5")
 table.siblings.sleep.21 <- table(dat21$siblings, dat21$sleep)
+table.siblings.sleep.22 <- table(dat22$siblings, dat22$sleep)
+dat$siblings <- car::recode(dat$siblings, "'5 or more'=5")
+table.siblings.sleep.23 <- table(dat$siblings, dat$sleep)
 kable(list(table.siblings.sleep.18, table.siblings.sleep.21, table.siblings.sleep),
-      caption = "Tabulating the Number of Siblings with the Hours You Sleep at Night for the Cohort in 2018, 2021 and 2022 (from Left to Right).",
+      caption = "Tabulating the Number of Siblings with the Hours You Sleep at Night for the Cohort in 2018, 2021 and 2023 (from Left to Right).",
       booktabs = TRUE,
       valign ='t')
 ```
@@ -176,17 +184,18 @@ Again, we are eager to understand the strength of the relationship. This time, w
 * Cohort 2018: `r round(GoodmanKruskalGamma(dat18$siblings, dat18$sleep), 2)`
 * Cohort 2019: `r round(GoodmanKruskalGamma(dat19$siblings, dat19$sleep), 2)`
 * Cohort 2021: `r round(GoodmanKruskalGamma(dat21$siblings, dat21$sleep), 2)`
-* Cohort 2022: `r round(GoodmanKruskalGamma(dat$siblings, dat$sleep), 2)`
+* Cohort 2022: `r round(GoodmanKruskalGamma(dat22$siblings, dat22$sleep), 2)`
+* Cohort 2023: `r round(GoodmanKruskalGamma(dat$siblings, dat$sleep), 2)`
 
 
-Overall, the relationship turns out to be negative in all cases. Interesting! It is weakly negative for the cohort in 2019, moderately negative for the cohort 2018. For the cohort 2021, it even shows an almost strong negative relationship. Looking at the data from this cohort we can immediately see why: Single childs never sleep less than 8 hours and those with one sibling never less than 7.
+Overall, the relationship turns out to be negative in all cases. Interesting! It is weakly negative for the cohort in 2019, 2022 and 2023, and moderately negative for the cohort 2018. For the cohort 2021, it even shows an almost strong negative relationship. Looking at the data from this cohort we can immediately see why: Single childs never sleep less than 8 hours and those with one sibling never less than 7 in that particular cohort.
 
 
 
 
 ### Estimating the Parameters in the Population
 
-We investigated the strength of the association between variables. Now, let us take a look and study how this plays out in the population. How certain can we be that there is actually a systematical relationship between the variables in the population? For any kind of categorical data---be it ordered or not---we will use statistical test that is called the $\chi ^2$-Test (*Chi-Squared Test*). The way we will use it is very similar to the t-test we met two weeks ago. We first formulate the 0-hypothesis that there is actually no relationship in the data. Then, we take a look at our data. If there were really no relationship in the variables, how likely would it be that we observe the data that we have?
+We investigated the strength of the association between variables. Now, let us take a look and study how this plays out in the population. How certain can we be that there is actually a systematical relationship between the variables in the population? For any kind of categorical data---be it ordered or not---we will use a statistical test that is called the $\chi ^2$-Test (*Chi-Squared Test*). The way we will use it is very similar to the t-test we met two weeks ago. We first formulate the 0-hypothesis that there is actually no relationship in the data. Then, we take a look at our data. If there were really no relationship in the variables, how likely would it be that we observe the data that we have?
 
 The $\chi ^2$-test is doing the following. The two cross tabulated variables result in a matrix with counts. The test looks up how many observations it would expect in each cell of the matrix if a sample of our size were collected, given there was no relation between the two variables. It then compares these values with the data we *actually* collected and calculates one single statistic---i.e. one single value---from it. This test statistic has a distribution, the $\chi ^2$ distribution, which means that the test can make a probability statement: Given that the data were random, how likely is it to observe our data? Think of the value for the test statistic as our z-scores from last week. Given a z-score, how likely is it to observe a z-score that is larger on a Normal distribution?
 
@@ -206,18 +215,24 @@ The data for 2019 looks fairly similar. Now, there is only a 28% probability tha
 chisq.test(dat19$siblings, dat19$sleep)
 ```
 
-Lastly, we take a look at the 2021 data. Here, we have a p-value of 0.02. The $\chi ^2$-test is telling us that it is really unlikely to observe their data assuming that these two variables are *not* related. We will refute the 0-hypothesis and will go with the alternative hypothesis. We believe that the two variables are related---of course in their sample, but also in the larger population of their cohort.
+We take a look at the 2021 data. Here, we have a p-value of 0.02. The $\chi ^2$-test is telling us that it is really unlikely to observe their data assuming that these two variables are *not* related. We will refute the 0-hypothesis and will go with the alternative hypothesis. We believe that the two variables are related---of course in their sample, but also in the larger population of their cohort.
 
 
 ```{r warning=FALSE, echo=FALSE}
+chisq.test(dat21$siblings, dat21$sleep)
+```
+
+And for completion, here are the years 2022 and 2023:
+
+```{r warning=FALSE, echo=FALSE}
+chisq.test(dat22$siblings, dat22$sleep)
 chisq.test(dat$siblings, dat$sleep)
 ```
 
 
+Summing up, how do we interpret the results from both tests, the Goodman Kruskall gamma and the $\chi^2$-test? Remember that the first test was about the substantive relationship between the variables *in your sample*. We then tested with the $\chi^2$-test whether we believe that the relationship also exists *in the respective cohort at large*.  
 
-Summing up, how do we interpret the results from both tests, the Goodman Kruskall gamma and the $\chi^2$-test? Remember that the first test was about the substantive relationship between the variables *in your sample*. We then tested with the $\chi^2$-test whether we believe that the relationship also exists *in the respective cohort at large*.  t
-
-We are observing a negatively relationship---with differently strong relationships---for all data sets. The second test on statistical significance now offers insights about the population behind it. We want to know whether the data that we are observing in the sample is also likely to occur in the population. We have seen that for the cohorts in 2018, 2019 and 2022, it is still quite likely to observe the data even if the two variables are not related. But the statistical signal was not clear enough to really believe that it would also happen in the larger population.
+We are observing a negatively relationship---with differently strong relationships---for all data sets. The second test on statistical significance now offers insights about the population behind it. We want to know whether the data that we are observing in the sample is also likely to occur in the population. We have seen that for the cohorts in 2018, 2019, 2022 and 2023 it is still quite likely to observe the data even if the two variables are not related. But the statistical signal was not clear enough to really believe that it would also happen in the larger population.
 
 The case is different for the 2021 cohort. Again we find a negative relation in the sample, but in addition the signal is so clear that we also believe that this relation should exist in the overall cohort. We refute the null hypothesis, and rather believe in the alternative hypothesis: There is a negative relationship between the two variables in the overall cohort. And the most likely strength is the one we calculate---which is the one we will ultimately believe in.
 
@@ -229,6 +244,7 @@ Let us sum up results in a table
 2019 Data | Negative | None |
 2021 Data | Negative | Negative |
 2022 Data | Negative | None |
+2023 Data | Negative | None |
 
 
 
@@ -251,7 +267,7 @@ commute.men <- mean(dat$commute[dat$gender=='Male'])
 commute.women <- mean(dat$commute[dat$gender=='Female'])
 ```
 
-How long is your commute to university? It turns out, it takes the men in the class on average `r commute.men` mins. The women, however, take `r commute.women` mins. This looks like a bit of a  difference.
+How long is your commute to university? It turns out, it takes the men in the class on average `r commute.men` mins. The women, however, take `r round(commute.women, 2)` mins. This looks like a bit of a difference.
 
 
 
@@ -317,17 +333,18 @@ plot(dat$studyideal, dat$studyperweek,  las = 1,
 		ylab = "Studying Per Week \n Real Effort (in h)", xlab = "Studying Per Week \n Ideal Effort (in h)",
 		pch = 16, cex = 2,
 		col = cardiffblue)
-text(10, 19, lab = paste0('r = ',
+text(30, 19, lab = paste0('r = ',
      round(cor(dat$studyideal, dat$studyperweek), 2)), cex = 2)
 plot(dat$studyideal, dat$commute, las = 1,
 		xlab = "Studying Per Week \n Ideal Effort (in h)", ylab = "Commute (in min)",
 		pch = 16, cex = 2,
 		col = cardiffblue)
-text(10, 47, lab = paste0('r = ',
+text(30, 30, lab = paste0('r = ',
      round(cor(dat$studyideal, as.integer(dat$commute)), 2)), cex = 2)
 ```
 
-It does make sense that the two study variables are 'connected'. But what is the exact mechanism that connects them? Well that depends on the theory why they are connected. The most convincing story to tell is that there is probably a general attitude towards university studies. It affects the effort for your studies and also drives the effort you think you should be putting into your secondary education.
+It does make sense that the two study variables are 'connected'. But what is the exact mechanism that connects them? Well that depends on the theory, or in other words, why we believe they are connected. The most convincing story to tell is that there is probably a general attitude towards university studies. It affects the effort for your studies and also drives the effort you think you should be putting into your secondary education.
+
 Note that the correlation between the two variables does not provide you an answer for the reason *why* an association between variables exists. It is the task of your theory to tell a convincing story. As such, correlation between variables does not *proof* of the validity of any causal claim. But it is an observable implication of a theory and therefore a good hint that your reasoning is correct.
 
 
@@ -354,7 +371,7 @@ cat(
 ```
 
 
-We also studied the relationship between continuous variables. First between the two study variables. In addition, we also took a look at the study variable and the commute variable. This time, the statistical test is the *correlation test*. Without going into detail, its interpretation is very similar to what we have seen in the t-test. Again, take a quick look at the video to see how to interpret these results for the 2021 cohort.
+We also studied the relationship between continuous variables. First between the two study variables. In addition, we also took a look at the study variable and the commute variable. This time, the statistical test is the *correlation test*. Without going into detail, its interpretation is very similar to what we have seen in the t-test. Again, take a quick look at the video to see how to interpret these results for the 2023 cohort.
 
 ```{r echo=FALSE}
 cor.test(dat21$studyperweek, dat21$studyideal)

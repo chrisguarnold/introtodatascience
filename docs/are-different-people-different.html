@@ -4,27 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Are Different People Different? | PL 9239 Introduction to Data Science for Politics and IR</title>
-  <meta name="description" content="This is the website for the Intro to Data Science Class." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <title>Chapter 6 Are Different People Different? | PL 9248 Data Science for Politics and IR</title>
+  <meta name="description" content="This is the website for the Data Science Class." />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Are Different People Different? | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta property="og:title" content="Chapter 6 Are Different People Different? | PL 9248 Data Science for Politics and IR" />
   <meta property="og:type" content="book" />
   
-  
-  <meta property="og:description" content="This is the website for the Intro to Data Science Class." />
+  <meta property="og:description" content="This is the website for the Data Science Class." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Are Different People Different? | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta name="twitter:title" content="Chapter 6 Are Different People Different? | PL 9248 Data Science for Politics and IR" />
   
-  <meta name="twitter:description" content="This is the website for the Intro to Data Science Class." />
+  <meta name="twitter:description" content="This is the website for the Data Science Class." />
   
 
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2022-04-22" />
+<meta name="date" content="2023-03-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +31,7 @@
   
   
 <link rel="prev" href="why-does-hypothesis-testing-work-a-primer-on-probability.html"/>
-<link rel="next" href="comparing-apples-and-oranges.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<link rel="next" href="useful-internet-resources.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,14 +49,16 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -297,54 +297,11 @@ div.csl-indent {
 <li class="chapter" data-level="6.5" data-path="are-different-people-different.html"><a href="are-different-people-different.html#code"><i class="fa fa-check"></i><b>6.5</b> Code</a></li>
 <li class="chapter" data-level="6.6" data-path="are-different-people-different.html"><a href="are-different-people-different.html#reading-for-this-week-2"><i class="fa fa-check"></i><b>6.6</b> Reading for This Week</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html"><i class="fa fa-check"></i><b>7</b> Comparing Apples and Oranges</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#bivariate-regression"><i class="fa fa-check"></i><b>7.1</b> Bivariate Regression</a>
-<ul>
-<li class="chapter" data-level="7.1.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#how-does-it-work"><i class="fa fa-check"></i><b>7.1.1</b> How Does It Work?</a></li>
-<li class="chapter" data-level="7.1.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#how-do-we-interpret-results"><i class="fa fa-check"></i><b>7.1.2</b> How Do We Interpret Results?</a></li>
-</ul></li>
-<li class="chapter" data-level="7.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#beyond-bivariate-regression"><i class="fa fa-check"></i><b>7.2</b> Beyond Bivariate Regression</a>
-<ul>
-<li class="chapter" data-level="7.2.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#bivariate-regression-plus-a-dummy"><i class="fa fa-check"></i><b>7.2.1</b> Bivariate Regression Plus a Dummy</a></li>
-<li class="chapter" data-level="7.2.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#multivariate-regression"><i class="fa fa-check"></i><b>7.2.2</b> Multivariate Regression</a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#the-relevance-of-statistical-control"><i class="fa fa-check"></i><b>7.3</b> The Relevance of Statistical Control</a></li>
-<li class="chapter" data-level="7.4" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#r-code"><i class="fa fa-check"></i><b>7.4</b> R Code</a></li>
-<li class="chapter" data-level="7.5" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#reading-for-this-week-3"><i class="fa fa-check"></i><b>7.5</b> Reading for This Week</a></li>
-</ul></li>
-<li class="part"><span><b>Scenario III: Did the New Policy Have an Effect?</b></span></li>
-<li class="chapter" data-level="8" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html"><i class="fa fa-check"></i><b>8</b> The Fundamental Problem of Causal Inference</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#studying-causal-effects"><i class="fa fa-check"></i><b>8.1</b> Studying Causal Effects</a></li>
-<li class="chapter" data-level="8.2" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#key-concepts-1"><i class="fa fa-check"></i><b>8.2</b> Key Concepts</a></li>
-<li class="chapter" data-level="8.3" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#the-fundamental-problem-of-causal-inference-1"><i class="fa fa-check"></i><b>8.3</b> The Fundamental Problem of Causal Inference</a></li>
-<li class="chapter" data-level="8.4" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#randomized-control-trials"><i class="fa fa-check"></i><b>8.4</b> Randomized Control Trials</a></li>
-<li class="chapter" data-level="8.5" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#estimating-a-first-causal-effect"><i class="fa fa-check"></i><b>8.5</b> Estimating a First Causal Effect</a></li>
-<li class="chapter" data-level="8.6" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#plotting-data-on-maps"><i class="fa fa-check"></i><b>8.6</b> Plotting Data on Maps</a></li>
-<li class="chapter" data-level="8.7" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#reading-for-this-week-4"><i class="fa fa-check"></i><b>8.7</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html"><i class="fa fa-check"></i><b>9</b> Causal Statements from Observational Data</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#this-weeks-data-the-effect-of-the-welsh-circuit-break"><i class="fa fa-check"></i><b>9.1</b> This Week’s Data: The Effect of the Welsh Circuit Break</a></li>
-<li class="chapter" data-level="9.2" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-treated-from-one-group-to-the-non-treated-of-another-group"><i class="fa fa-check"></i><b>9.2</b> Compare Treated from One Group to the Non-Treated of Another Group</a></li>
-<li class="chapter" data-level="9.3" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-the-treated-before-and-after-their-treatment"><i class="fa fa-check"></i><b>9.3</b> Compare the Treated Before and After their Treatment</a></li>
-<li class="chapter" data-level="9.4" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#best-of-both-worlds-the-difference-in-difference-estimator"><i class="fa fa-check"></i><b>9.4</b> Best of Both Worlds: The Difference-in-Difference Estimator</a></li>
-<li class="chapter" data-level="9.5" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#reading-for-this-week-5"><i class="fa fa-check"></i><b>9.5</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html"><i class="fa fa-check"></i><b>10</b> Multivariate Regression and Heterogenous Treatment Effects</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#analysing-experimental-data-revisited"><i class="fa fa-check"></i><b>10.1</b> Analysing Experimental Data Revisited</a></li>
-<li class="chapter" data-level="10.2" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#controling-for-confounders"><i class="fa fa-check"></i><b>10.2</b> Controling for Confounders</a></li>
-<li class="chapter" data-level="10.3" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#treatment-heterogeneity"><i class="fa fa-check"></i><b>10.3</b> Treatment Heterogeneity</a></li>
-<li class="chapter" data-level="10.4" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#outro"><i class="fa fa-check"></i><b>10.4</b> Outro</a></li>
-<li class="chapter" data-level="10.5" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#reading-for-this-week-6"><i class="fa fa-check"></i><b>10.5</b> Reading for This Week</a></li>
-</ul></li>
 <li class="part"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="11" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>11</b> Useful Internet Resources</a>
+<li class="chapter" data-level="7" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>7</b> Useful Internet Resources</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>11.1</b> Homepages</a></li>
-<li class="chapter" data-level="11.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>11.2</b> Online Books</a></li>
+<li class="chapter" data-level="7.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>7.1</b> Homepages</a></li>
+<li class="chapter" data-level="7.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>7.2</b> Online Books</a></li>
 </ul></li>
 </ul>
 
@@ -355,7 +312,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PL 9239 Introduction to Data Science for Politics and IR</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PL 9248 Data Science for Politics and IR</a>
           </h1>
         </div>
 
@@ -363,11 +320,11 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="are-different-people-different" class="section level1" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Are Different People Different?</h1>
+<div id="are-different-people-different" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Are Different People Different?<a href="are-different-people-different.html#are-different-people-different" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Last week, we did a good part of the conceptual heavy lifting for this class. Well done! This week, we will refine the lessons that you have learned.</p>
-<div id="a-recap-from-last-week" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> A Recap from Last Week</h2>
+<div id="a-recap-from-last-week" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> A Recap from Last Week<a href="are-different-people-different.html#a-recap-from-last-week" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Why is inference so useful? The amazing thing about inference is that if you want to learn something about a population—for example their political ideology, how well a certain policy is working or any other characteristic you might want to know—you do not have to collect data on each individual in the population. It is enough to ask several hundred people and then estimate the value that is in the population.</p>
 <p>This estimate comes at a price.</p>
 <ul>
@@ -383,10 +340,10 @@ div.csl-indent {
 <!-- In short: -->
 <!-- > The goal of statistical inference is to estimate population parameters and summarize our uncertainty about these estimates. -->
 </div>
-<div id="what-are-bivariate-relationships" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> What Are Bivariate Relationships?</h2>
+<div id="what-are-bivariate-relationships" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> What Are Bivariate Relationships?<a href="are-different-people-different.html#what-are-bivariate-relationships" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We actually talked about bivariate relationships already. Two weeks ago, we wanted to understand the difference between your cohort and the cohort before you. We can think of this data also as a small data set with two variables. One variable encodes the effort that students put into their studies. The other variable would capture information about the cohort of the students. See? It is actually quite natural to think about data not only in the context of one single variable, but actually considering at least two variables at a time.</p>
-<p>When we analyse data, we study the association between variables. A variable is a “characteristic that can vary in value among subjects in a sample or population” <span class="citation">(<a href="#ref-Agresti2018" role="doc-biblioref">Agresti 2018</a>)</span>. Some typical examples area age, income, gender, education level, race, inequality in a country etc..</p>
+<p>When we analyse data, we study the association between variables. A variable is a “characteristic that can vary in value among subjects in a sample or population” <span class="citation">(<a href="#ref-Agresti2018">Agresti 2018</a>)</span>. Some typical examples area age, income, gender, education level, race, inequality in a country etc..</p>
 <p>We express association formally as a connection between two variables and can use an arrow for that.</p>
 <p><span class="math display">\[X \rightarrow Y \]</span></p>
 <ul>
@@ -394,21 +351,21 @@ div.csl-indent {
 <li>The variable X is called the independent variable, or explanatory variable.</li>
 </ul>
 <p>For a bivariate analysis, we can measure the values of the variable in question and study “associations” between two or more variables. We first describe this relationship in our sample. We can then of course also do inference and test whether changes in the value of one variable <span class="math inline">\(X\)</span> are associated with changes in the value of the other variable <span class="math inline">\(Y\)</span> in the population at large.</p>
-<p>Interpret their relationship allows to make a statement about whether a change in one variable <span class="math inline">\(X\)</span> is associated with changes of patterns of variable <span class="math inline">\(Y\)</span>.</p>
+<p>Interpreting their relationship allows to make a statement about whether a change in one variable <span class="math inline">\(X\)</span> is associated with changes of patterns of variable <span class="math inline">\(Y\)</span>.</p>
 </div>
-<div id="categorical-data" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> Categorical Data</h2>
+<div id="categorical-data" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Categorical Data<a href="are-different-people-different.html#categorical-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If we want to measure the association between two variables, we need to distinguish whether we have categorical data or continuous data. Let us begin with a closer look at categorical data.</p>
-<div id="describing-the-sample" class="section level3" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> Describing the Sample</h3>
+<div id="describing-the-sample" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Describing the Sample<a href="are-different-people-different.html#describing-the-sample" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Once we have collected our sample, we want to describe the data that is in the sample. This description is a first valuable step in our analysis of the data. Let us begin with a closer look at categorical data.</p>
-<div id="a-first-view" class="section level4" number="6.3.1.1">
-<h4><span class="header-section-number">6.3.1.1</span> A First View</h4>
+<div id="a-first-view" class="section level4 hasAnchor" number="6.3.1.1">
+<h4><span class="header-section-number">6.3.1.1</span> A First View<a href="are-different-people-different.html#a-first-view" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>As long as the number of categories is small enough, we can use a cross tabulation. We can do this either with absolute numbers, or calculate proportions.</p>
 <p>We could for example take a look at the relationship between the number of siblings you have and the amount of sleep you are usually getting per night.</p>
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-107">Table 6.1: </span>Cross Tabulating the Number of Siblings with the Hours You Sleep at Night. (Absolute and Percent)
+<span id="tab:unnamed-chunk-105">Table 6.1: </span>Cross Tabulating the Number of Siblings with the Hours You Sleep at Night. (Absolute and Percent)
 </caption>
 <tbody>
 <tr>
@@ -421,6 +378,7 @@ div.csl-indent {
 <th align="right">7</th>
 <th align="right">8</th>
 <th align="right">9</th>
+<th align="right">10</th>
 </tr>
 </thead>
 <tbody>
@@ -428,28 +386,40 @@ div.csl-indent {
 <td align="left">0</td>
 <td align="right">0</td>
 <td align="right">0</td>
-<td align="right">2</td>
+<td align="right">0</td>
 <td align="right">1</td>
+<td align="right">0</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
+<td align="right">1</td>
 <td align="right">3</td>
 <td align="right">3</td>
-<td align="right">3</td>
-<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">1</td>
 </tr>
 <tr class="odd">
 <td align="left">2</td>
 <td align="right">0</td>
-<td align="right">0</td>
 <td align="right">2</td>
-<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
 </tr>
 <tr class="even">
-<td align="left">4</td>
+<td align="left">3</td>
 <td align="right">0</td>
-<td align="right">2</td>
+<td align="right">1</td>
 <td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">5 or more</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
 <td align="right">0</td>
 </tr>
 </tbody>
@@ -464,36 +434,49 @@ div.csl-indent {
 <th align="right">7</th>
 <th align="right">8</th>
 <th align="right">9</th>
+<th align="right">10</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">0</td>
 <td align="right">0</td>
-<td align="right">0.0</td>
-<td align="right">0.29</td>
-<td align="right">0.25</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.33</td>
+<td align="right">0</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
 <td align="right">1</td>
-<td align="right">0.6</td>
-<td align="right">0.43</td>
 <td align="right">0.50</td>
+<td align="right">0.75</td>
+<td align="right">0.33</td>
+<td align="right">1</td>
 </tr>
 <tr class="odd">
 <td align="left">2</td>
 <td align="right">0</td>
-<td align="right">0.0</td>
-<td align="right">0.29</td>
-<td align="right">0.25</td>
+<td align="right">0.33</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0</td>
 </tr>
 <tr class="even">
-<td align="left">4</td>
+<td align="left">3</td>
 <td align="right">0</td>
-<td align="right">0.4</td>
+<td align="right">0.17</td>
 <td align="right">0.00</td>
 <td align="right">0.00</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">5 or more</td>
+<td align="right">0</td>
+<td align="right">0.00</td>
+<td align="right">0.25</td>
+<td align="right">0.33</td>
+<td align="right">0</td>
 </tr>
 </tbody>
 </table>
@@ -501,10 +484,10 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<p>Herem there is apparently not really a clear pattern: siblings is quite unrelated to sleep. We can of course also calculate percentages. If you are eager to understand how siblings affect the amount of sleep, it might make sense to calculate percentages that add up to 100% in each column. You can calculate cross tabulations independent of whether the data is nominal or any kind of ordinal data.</p>
+<p>Here, there is apparently not really a clear pattern: siblings is quite unrelated to sleep. We can of course also calculate percentages. If you are eager to understand how siblings affect the amount of sleep, it might make sense to calculate percentages that add up to 100% in each column. You can calculate cross tabulations independent of whether the data is nominal or any kind of ordinal data.</p>
 </div>
-<div id="measures-for-the-strength-of-the-association-between-variables" class="section level4" number="6.3.1.2">
-<h4><span class="header-section-number">6.3.1.2</span> Measures for the Strength of the Association Between Variables</h4>
+<div id="measures-for-the-strength-of-the-association-between-variables" class="section level4 hasAnchor" number="6.3.1.2">
+<h4><span class="header-section-number">6.3.1.2</span> Measures for the Strength of the Association Between Variables<a href="are-different-people-different.html#measures-for-the-strength-of-the-association-between-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Measures that express the association between two variables are typically bound between <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span>. By convention, they express how strongly related the variables are. You can find an overview in the following table.</p>
 <table>
 <thead>
@@ -553,18 +536,79 @@ div.csl-indent {
 </tbody>
 </table>
 <p>A positive association means that if the variable <span class="math inline">\(X\)</span> grows, then the variable <span class="math inline">\(Y\)</span> grows as well. In contrast, if the association is negative, then a growth in one variable means a reduction in the other.</p>
-<p>For example, <a href="https://youtu.be/dX5QNZtQXX4">drinking beer</a> and being thirsty is a negative relationship: the more beer you drink, the less thirsty you are. However, the relationship between a headache the next day and drinking beer is a positive one: the more beer you drink, the larger the headache the next morning.</p>
+<p>For example, drinking beer and being thirsty is a negative relationship: the more beer you drink, the less thirsty you are. However, the relationship between a headache the next day and drinking beer is a positive one: the more beer you drink, the larger the headache the next morning.</p>
 </div>
-<div id="measuring-the-strength-of-the-association-between-variables" class="section level4" number="6.3.1.3">
-<h4><span class="header-section-number">6.3.1.3</span> Measuring the Strength of the Association Between Variables</h4>
+<div id="measuring-the-strength-of-the-association-between-variables" class="section level4 hasAnchor" number="6.3.1.3">
+<h4><span class="header-section-number">6.3.1.3</span> Measuring the Strength of the Association Between Variables<a href="are-different-people-different.html#measuring-the-strength-of-the-association-between-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Let us begin with nominal variables. As soon as at least one nominal variable is involved in the analysis, we use a measure that is called Cramér’s V. It will return the degree of association between variables. Since nominal variables cannot be ordered, the measures of these associations do not offer any insight about the direction of the relationship. It is therefore bound between <span class="math inline">\([0,1]\)</span>. How can you interpret this measure? The closer the measure to <span class="math inline">\(1\)</span>, the stronger the association between the two variables; the closer the measure to <span class="math inline">\(0\)</span>, the weaker the association between the two variables.</p>
 <p>Another example: Do coffee drinkers have anything to do with how much you love summer? This is how the data looks like for the cohorts in 2018, 2019 and you.</p>
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-108">Table 6.2: </span>Cross Tabulating the variables ‘What You Drink in the Morning’ and ‘How Much You Like Summer’ for the Cohort in 2018, 2019 and 2022 (from Left to Right).
+<span id="tab:unnamed-chunk-106">Table 6.2: </span>Cross Tabulating the variables ‘What You Drink in the Morning’
+and ‘How Much You Like Summer’ for the Cohort in 2021-2023 (from Left to Right).
 </caption>
 <tbody>
 <tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">4</th>
+<th align="right">5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Coffee</td>
+<td align="right">2</td>
+<td align="right">5</td>
+</tr>
+<tr class="even">
+<td align="left">Other</td>
+<td align="right">0</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="left">Tea</td>
+<td align="right">0</td>
+<td align="right">5</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">3</th>
+<th align="right">4</th>
+<th align="right">5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Coffee</td>
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="right">6</td>
+</tr>
+<tr class="even">
+<td align="left">Other</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td align="left">Tea</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">6</td>
+</tr>
+</tbody>
+</table>
+</td>
 <td>
 <table>
 <thead>
@@ -582,85 +626,21 @@ div.csl-indent {
 <td align="right">1</td>
 <td align="right">0</td>
 <td align="right">2</td>
-<td align="right">4</td>
+<td align="right">7</td>
 </tr>
 <tr class="even">
 <td align="left">Other</td>
 <td align="right">0</td>
 <td align="right">0</td>
 <td align="right">1</td>
-<td align="right">1</td>
+<td align="right">0</td>
 </tr>
 <tr class="odd">
 <td align="left">Tea</td>
 <td align="right">0</td>
-<td align="right">3</td>
-<td align="right">4</td>
-<td align="right">1</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">3</th>
-<th align="right">4</th>
-<th align="right">5</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Coffee</td>
-<td align="right">0</td>
-<td align="right">3</td>
-<td align="right">11</td>
-</tr>
-<tr class="even">
-<td align="left">Other</td>
-<td align="right">1</td>
 <td align="right">1</td>
 <td align="right">2</td>
-</tr>
-<tr class="odd">
-<td align="left">Tea</td>
-<td align="right">0</td>
-<td align="right">2</td>
-<td align="right">5</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">3</th>
-<th align="right">4</th>
-<th align="right">5</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Coffee</td>
 <td align="right">1</td>
-<td align="right">3</td>
-<td align="right">4</td>
-</tr>
-<tr class="even">
-<td align="left">Other</td>
-<td align="right">1</td>
-<td align="right">0</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Tea</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">5</td>
 </tr>
 </tbody>
 </table>
@@ -673,14 +653,15 @@ div.csl-indent {
 <li>Cohort 2018: 0.47</li>
 <li>Cohort 2019: 0.34</li>
 <li>Cohort 2021: 0.43</li>
-<li>Cohort 2022: 0.27</li>
+<li>Cohort 2022: 0.23</li>
+<li>Cohort 2023: 0.49</li>
 </ul>
-<p>Here, the quick analysis tells us that there is a moderate relationship at play. It is strongest for the cohort in 2018: It looks as if it were driven by summer loving coffee drinkers vs. tea drinkers who seem to prefer other seasons. In the 2022 cohort there is the weakest relationship among the four.</p>
+<p>Here, the quick analysis tells us that there is a moderate relationship at play. It is strongest for the cohort in 2023: It looks as if it were driven by summer loving coffee drinkers vs. tea drinkers who seem to prefer other seasons. In the 2022 cohort there is the weakest relationship among the four.</p>
 <p>Whenever we are measuring the association between two ordinal variables, we want to choose something different. After all, now that the variables can both be ordered, we are able to make a statement about the direction of the association between them. The measure of choice is called <em>Goodman and Kruskall’s gamma</em>. Again, we will treat the exact way it works as a black box for this module. Suffice it to say that it ranges from <span class="math inline">\(-1\)</span> to <span class="math inline">\(1\)</span>.</p>
-<p>We revisit the example on the number of siblings and how much you sleep. This time, we also add data from the other cohorts.</p>
+<p>We revisit the example on the number of siblings and how much you sleep. We also add data from the other cohorts.</p>
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-109">Table 6.3: </span>Tabulating the Number of Siblings with the Hours You Sleep at Night for the Cohort in 2018, 2021 and 2022 (from Left to Right).
+<span id="tab:unnamed-chunk-107">Table 6.3: </span>Tabulating the Number of Siblings with the Hours You Sleep at Night for the Cohort in 2018, 2021 and 2023 (from Left to Right).
 </caption>
 <tbody>
 <tr>
@@ -800,6 +781,7 @@ div.csl-indent {
 <th align="right">7</th>
 <th align="right">8</th>
 <th align="right">9</th>
+<th align="right">10</th>
 </tr>
 </thead>
 <tbody>
@@ -807,28 +789,40 @@ div.csl-indent {
 <td align="left">0</td>
 <td align="right">0</td>
 <td align="right">0</td>
-<td align="right">2</td>
+<td align="right">0</td>
 <td align="right">1</td>
+<td align="right">0</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
+<td align="right">1</td>
 <td align="right">3</td>
 <td align="right">3</td>
-<td align="right">3</td>
-<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">1</td>
 </tr>
 <tr class="odd">
 <td align="left">2</td>
 <td align="right">0</td>
-<td align="right">0</td>
 <td align="right">2</td>
-<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
 </tr>
 <tr class="even">
-<td align="left">4</td>
+<td align="left">3</td>
 <td align="right">0</td>
-<td align="right">2</td>
+<td align="right">1</td>
 <td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">5 or more</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
 <td align="right">0</td>
 </tr>
 </tbody>
@@ -842,14 +836,15 @@ div.csl-indent {
 <li>Cohort 2018: -0.44</li>
 <li>Cohort 2019: -0.22</li>
 <li>Cohort 2021: -0.64</li>
-<li>Cohort 2022: -0.2</li>
+<li>Cohort 2022: -0.14</li>
+<li>Cohort 2023: -0.16</li>
 </ul>
-<p>Overall, the relationship turns out to be negative in all cases. Interesting! It is weakly negative for the cohort in 2019, moderately negative for the cohort 2018. For the cohort 2021, it even shows an almost strong negative relationship. Looking at the data from this cohort we can immediately see why: Single childs never sleep less than 8 hours and those with one sibling never less than 7.</p>
+<p>Overall, the relationship turns out to be negative in all cases. Interesting! It is weakly negative for the cohort in 2019, 2022 and 2023, and moderately negative for the cohort 2018. For the cohort 2021, it even shows an almost strong negative relationship. Looking at the data from this cohort we can immediately see why: Single childs never sleep less than 8 hours and those with one sibling never less than 7 in that particular cohort.</p>
 </div>
 </div>
-<div id="estimating-the-parameters-in-the-population" class="section level3" number="6.3.2">
-<h3><span class="header-section-number">6.3.2</span> Estimating the Parameters in the Population</h3>
-<p>We investigated the strength of the association between variables. Now, let us take a look and study how this plays out in the population. How certain can we be that there is actually a systematical relationship between the variables in the population? For any kind of categorical data—be it ordered or not—we will use statistical test that is called the <span class="math inline">\(\chi ^2\)</span>-Test (<em>Chi-Squared Test</em>). The way we will use it is very similar to the t-test we met two weeks ago. We first formulate the 0-hypothesis that there is actually no relationship in the data. Then, we take a look at our data. If there were really no relationship in the variables, how likely would it be that we observe the data that we have?</p>
+<div id="estimating-the-parameters-in-the-population" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Estimating the Parameters in the Population<a href="are-different-people-different.html#estimating-the-parameters-in-the-population" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We investigated the strength of the association between variables. Now, let us take a look and study how this plays out in the population. How certain can we be that there is actually a systematical relationship between the variables in the population? For any kind of categorical data—be it ordered or not—we will use a statistical test that is called the <span class="math inline">\(\chi ^2\)</span>-Test (<em>Chi-Squared Test</em>). The way we will use it is very similar to the t-test we met two weeks ago. We first formulate the 0-hypothesis that there is actually no relationship in the data. Then, we take a look at our data. If there were really no relationship in the variables, how likely would it be that we observe the data that we have?</p>
 <p>The <span class="math inline">\(\chi ^2\)</span>-test is doing the following. The two cross tabulated variables result in a matrix with counts. The test looks up how many observations it would expect in each cell of the matrix if a sample of our size were collected, given there was no relation between the two variables. It then compares these values with the data we <em>actually</em> collected and calculates one single statistic—i.e. one single value—from it. This test statistic has a distribution, the <span class="math inline">\(\chi ^2\)</span> distribution, which means that the test can make a probability statement: Given that the data were random, how likely is it to observe our data? Think of the value for the test statistic as our z-scores from last week. Given a z-score, how likely is it to observe a z-score that is larger on a Normal distribution?</p>
 <p>If the data we observe is likely, then we will stick to the 0-hypothesis. If our sample were quite unlikely, we instead refute the 0-hypothesis. We would rather believe in the alternative hypothesis.</p>
 <p>Let us implement a <span class="math inline">\(\chi ^2\)</span>-test for our data to see the results and also learn how to interpret the results. We begin with the data for 2018. As you can see, the p-value value is at 0.40. Assuming there is no relation in the data, there is an almost 40% probability to observe the data that we do. This is still quite likely which is why we we will stick to the 0-hypothesis: it is quite likely to observe a sample like ours if both variables are not related.</p>
@@ -864,14 +859,25 @@ div.csl-indent {
 ## 
 ## data:  dat19$siblings and dat19$sleep
 ## X-squared = 28.742, df = 25, p-value = 0.2748</code></pre>
-<p>Lastly, we take a look at the 2021 data. Here, we have a p-value of 0.02. The <span class="math inline">\(\chi ^2\)</span>-test is telling us that it is really unlikely to observe their data assuming that these two variables are <em>not</em> related. We will refute the 0-hypothesis and will go with the alternative hypothesis. We believe that the two variables are related—of course in their sample, but also in the larger population of their cohort.</p>
+<p>We take a look at the 2021 data. Here, we have a p-value of 0.02. The <span class="math inline">\(\chi ^2\)</span>-test is telling us that it is really unlikely to observe their data assuming that these two variables are <em>not</em> related. We will refute the 0-hypothesis and will go with the alternative hypothesis. We believe that the two variables are related—of course in their sample, but also in the larger population of their cohort.</p>
+<pre><code>## 
+##  Pearson&#39;s Chi-squared test
+## 
+## data:  dat21$siblings and dat21$sleep
+## X-squared = 15.5, df = 6, p-value = 0.0167</code></pre>
+<p>And for completion, here are the years 2022 and 2023:</p>
+<pre><code>## 
+##  Pearson&#39;s Chi-squared test
+## 
+## data:  dat22$siblings and dat22$sleep
+## X-squared = 11.822, df = 12, p-value = 0.46</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test
 ## 
 ## data:  dat$siblings and dat$sleep
-## X-squared = 11.244, df = 9, p-value = 0.2594</code></pre>
-<p>Summing up, how do we interpret the results from both tests, the Goodman Kruskall gamma and the <span class="math inline">\(\chi^2\)</span>-test? Remember that the first test was about the substantive relationship between the variables <em>in your sample</em>. We then tested with the <span class="math inline">\(\chi^2\)</span>-test whether we believe that the relationship also exists <em>in the respective cohort at large</em>. t</p>
-<p>We are observing a negatively relationship—with differently strong relationships—for all data sets. The second test on statistical significance now offers insights about the population behind it. We want to know whether the data that we are observing in the sample is also likely to occur in the population. We have seen that for the cohorts in 2018, 2019 and 2022, it is still quite likely to observe the data even if the two variables are not related. But the statistical signal was not clear enough to really believe that it would also happen in the larger population.</p>
+## X-squared = 12.014, df = 16, p-value = 0.743</code></pre>
+<p>Summing up, how do we interpret the results from both tests, the Goodman Kruskall gamma and the <span class="math inline">\(\chi^2\)</span>-test? Remember that the first test was about the substantive relationship between the variables <em>in your sample</em>. We then tested with the <span class="math inline">\(\chi^2\)</span>-test whether we believe that the relationship also exists <em>in the respective cohort at large</em>.</p>
+<p>We are observing a negatively relationship—with differently strong relationships—for all data sets. The second test on statistical significance now offers insights about the population behind it. We want to know whether the data that we are observing in the sample is also likely to occur in the population. We have seen that for the cohorts in 2018, 2019, 2022 and 2023 it is still quite likely to observe the data even if the two variables are not related. But the statistical signal was not clear enough to really believe that it would also happen in the larger population.</p>
 <p>The case is different for the 2021 cohort. Again we find a negative relation in the sample, but in addition the signal is so clear that we also believe that this relation should exist in the overall cohort. We refute the null hypothesis, and rather believe in the alternative hypothesis: There is a negative relationship between the two variables in the overall cohort. And the most likely strength is the one we calculate—which is the one we will ultimately believe in.</p>
 <p>Let us sum up results in a table</p>
 <table>
@@ -908,18 +914,23 @@ div.csl-indent {
 <td align="center">Negative</td>
 <td align="center">None</td>
 </tr>
+<tr class="odd">
+<td align="left">2023 Data</td>
+<td align="center">Negative</td>
+<td align="center">None</td>
+</tr>
 </tbody>
 </table>
 </div>
 </div>
-<div id="continuous-data" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> Continuous Data</h2>
+<div id="continuous-data" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Continuous Data<a href="are-different-people-different.html#continuous-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You have learned how to do this kind of analysis for discrete data. Now let us have fun with continuous data. Again, we first take a closer look at how to describe the strength of the association between two variables. We will then proceed to understand what we can do to see whether this relationship also exists in the population at large.</p>
-<div id="describe" class="section level3" number="6.4.1">
-<h3><span class="header-section-number">6.4.1</span> Describe</h3>
+<div id="describe" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Describe<a href="are-different-people-different.html#describe" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We will distinguish between two different cases. What can you do when you have continuous data in one variable and discrete data in the other? We actually already did this kind of analysis, but now we can understand how this all fits together in a more systematic way.</p>
 <p>You will end up with as many continuous variables as you have in your discrete variable. To compare the continuous data for these different groups you simply report a typical value for each group. You could pick the median or the mean—it is up to you. Here is an example from your data:</p>
-<p>How long is your commute to university? It turns out, it takes the men in the class on average 14.3333333 mins. The women, however, take 12.5 mins. This looks like a bit of a difference.</p>
+<p>How long is your commute to university? It turns out, it takes the men in the class on average 17 mins. The women, however, take 16.89 mins. This looks like a bit of a difference.</p>
 <p>To measure the association between two continuous variables we will correlate them. Ultimately we want to tell how much two variables are jointly different from their respective means. Imagine you have a subject in your data with two data entries. You observe that the person is an outlier on one variable <span class="math inline">\(X\)</span>. Is this person also an outlier on the other variable <span class="math inline">\(Y\)</span> you recorded about her? If so, our measure should be high. We will get to our measure, the Pearson correlation coefficient <span class="math inline">\(r\)</span>, in two steps.</p>
 <p>The first thing we have to calculate is the <em>covariance</em>. To what extent do two variables co-vary? The covariance is the statistical summary of the linear association between two interval variables. It measures the variation shared by values in two variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</p>
 <p><span class="math display">\[ cov_{XY} = \frac{\sum(y_i - \bar{y})(x_i - \bar{x})}{n-1} \]</span></p>
@@ -935,14 +946,14 @@ Figure 6.1: Values for Pearson’s r.
 </p>
 </div>
 <p>A quick example where we calculate Pearson’s correlation coefficient for data from our survey.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-114"></span>
-<img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-114-1.png" alt="Values for Pearson's r Using Our Survey." width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-114-2.png" alt="Values for Pearson's r Using Our Survey." width="50%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-113"></span>
+<img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-113-1.png" alt="Values for Pearson's r Using Our Survey." width="50%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-113-2.png" alt="Values for Pearson's r Using Our Survey." width="50%" />
 <p class="caption">
 Figure 6.2: Values for Pearson’s r Using Our Survey.
 </p>
 </div>
-<p>It does make sense that the two study variables are ‘connected.’ But what is the exact mechanism that connects them? Well that depends on the theory why they are connected. The most convincing story to tell is that there is probably a general attitude towards university studies. It affects the effort for your studies and also drives the effort you think you should be putting into your secondary education.
-Note that the correlation between the two variables does not provide you an answer for the reason <em>why</em> an association between variables exists. It is the task of your theory to tell a convincing story. As such, correlation between variables does not <em>proof</em> of the validity of any causal claim. But it is an observable implication of a theory and therefore a good hint that your reasoning is correct.</p>
+<p>It does make sense that the two study variables are ‘connected’. But what is the exact mechanism that connects them? Well that depends on the theory, or in other words, why we believe they are connected. The most convincing story to tell is that there is probably a general attitude towards university studies. It affects the effort for your studies and also drives the effort you think you should be putting into your secondary education.</p>
+<p>Note that the correlation between the two variables does not provide you an answer for the reason <em>why</em> an association between variables exists. It is the task of your theory to tell a convincing story. As such, correlation between variables does not <em>proof</em> of the validity of any causal claim. But it is an observable implication of a theory and therefore a good hint that your reasoning is correct.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:corrcaus"></span>
 <img src="figures/w6correlation.png" alt="Source: https://xkcd.com/552/" width="450" />
 <p class="caption">
@@ -950,8 +961,8 @@ Figure 6.3: Source: <a href="https://xkcd.com/552/" class="uri">https://xkcd.com
 </p>
 </div>
 </div>
-<div id="measures-about-the-population" class="section level3" number="6.4.2">
-<h3><span class="header-section-number">6.4.2</span> Measures About the Population</h3>
+<div id="measures-about-the-population" class="section level3 hasAnchor" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Measures About the Population<a href="are-different-people-different.html#measures-about-the-population" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Last bit for today. We measured the association between continuous variables and other continuous or categorical variables in the <em>sample</em>. But we still want to make statements about their relationship in the <em>population</em>. Is the evidence that we are observing in our sample strong enough to be able to make a claim about what is going on in the general population?</p>
 <p>Let us first take a look at a combination of categorical variables and continuous data. We already covered this test two weeks ago when we spoke about t-tests. Let us use it to analyse whether it is likely that there is a difference in the time it takes to commute between men and women—not only between the students in 2021 in this module, <em>but in their cohort overall</em>. This is what the t-test is telling us.</p>
 <pre><code>## 
@@ -959,7 +970,7 @@ Figure 6.3: Source: <a href="https://xkcd.com/552/" class="uri">https://xkcd.com
 ## 
 ## data:  dat21$commute by dat21$gender
 ## t = -1.838, df = 7.8991, p-value = 0.1038
-## alternative hypothesis: true difference in means is not equal to 0
+## alternative hypothesis: true difference in means between group Female and group Male is not equal to 0
 ## 95 percent confidence interval:
 ##  -23.138267   2.638267
 ## sample estimates:
@@ -968,7 +979,7 @@ Figure 6.3: Source: <a href="https://xkcd.com/552/" class="uri">https://xkcd.com
 <p>To interpret the results from this test, I will do a quick video this time.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tGtQ42-jinc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
-<p>We also studied the relationship between continuous variables. First between the two study variables. In addition, we also took a look at the study variable and the commute variable. This time, the statistical test is the <em>correlation test</em>. Without going into detail, its interpretation is very similar to what we have seen in the t-test. Again, take a quick look at the video to see how to interpret these results for the 2021 cohort.</p>
+<p>We also studied the relationship between continuous variables. First between the two study variables. In addition, we also took a look at the study variable and the commute variable. This time, the statistical test is the <em>correlation test</em>. Without going into detail, its interpretation is very similar to what we have seen in the t-test. Again, take a quick look at the video to see how to interpret these results for the 2023 cohort.</p>
 <pre><code>## 
 ##  Pearson&#39;s product-moment correlation
 ## 
@@ -995,8 +1006,8 @@ Figure 6.3: Source: <a href="https://xkcd.com/552/" class="uri">https://xkcd.com
 </iframe>
 </div>
 </div>
-<div id="code" class="section level2" number="6.5">
-<h2><span class="header-section-number">6.5</span> Code</h2>
+<div id="code" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Code<a href="are-different-people-different.html#code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This week is again very light on code. R is a statistical software, so all the things that you have been learning today are really straightforward. All R code is in the verbatim font and lightly shaded like so: <code>This is R code</code></p>
 <table>
 <colgroup>
@@ -1055,12 +1066,15 @@ Figure 6.3: Source: <a href="https://xkcd.com/552/" class="uri">https://xkcd.com
 </tbody>
 </table>
 </div>
-<div id="reading-for-this-week-2" class="section level2" number="6.6">
-<h2><span class="header-section-number">6.6</span> Reading for This Week</h2>
-<p>The reading for this week is chapter 10 in <span class="citation"><a href="#ref-Fogarty2019" role="doc-biblioref">Fogarty</a> (<a href="#ref-Fogarty2019" role="doc-biblioref">2019</a>)</span>.</p>
+<div id="reading-for-this-week-2" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Reading for This Week<a href="are-different-people-different.html#reading-for-this-week-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The reading for this week is chapter 10 in <span class="citation">Fogarty (<a href="#ref-Fogarty2019">2019</a>)</span>.</p>
 
 </div>
 </div>
+
+
+
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Agresti2018" class="csl-entry">
@@ -1076,7 +1090,7 @@ Fogarty, Brian. 2019. <em><span>Quantitative Social Science Data With R</span></
         </div>
       </div>
 <a href="why-does-hypothesis-testing-work-a-primer-on-probability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="comparing-apples-and-oranges.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="useful-internet-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -1136,7 +1150,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
