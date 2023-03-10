@@ -9,10 +9,12 @@ library(xtable)
 library(knitr)
 library(DescTools)
 # data: Class surveys
-dat18 <- read.csv("preparing_data/data/class_survey/lecture_survey_18.csv")
-dat19 <- read.csv("preparing_data/data/class_survey/lecture_survey_19.csv")
-dat21 <- read.csv("preparing_data/data/class_survey/lecture_survey_21.csv")
-dat <- read.csv("preparing_data/data/class_survey/lecture_survey_22.csv")
+dat18 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_18.csv")
+dat19 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_21.csv")
+dat22 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_22.csv")
+dat <- na.omit(read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_23.csv"))
+
 # names(dat)
 attach(dat)
 # Predefined Cardiff colours
@@ -27,7 +29,7 @@ cardiffpurple1 <- rgb(29,15,51, maxColorValue = 255)
 cardiffpurple2 <- rgb(60,44,89, maxColorValue = 255)
 ```
 
-All the tools that we have so far are nice and good. But there are more things that we would like to do with data. While learned how to make statements about bivariate relationships, we often want to go beyond this. In our data, we might be interested to know the relationship between how many hours you study and how often you go out per week. But it might be, that there are also other factors that drive how many hours you actually study. We could be interested to know whether drinking coffee makes any difference for example---and that irrespective of how often you go out per week. After a late night out, you might be more inclined to have coffee in the morning, so just measuring the coffee is not enough. We will have to *control* for your partyness.
+All the tools that we have so far are nice and good. But there are more things that we would like to do with data. While we learned how to make statements about bivariate relationships, we often want to go beyond this. In our data, we might be interested to know the relationship between how many hours you study and how often you go out per week. But it might be, that there are also other factors that drive how many hours you actually study. We could be interested to know whether drinking coffee makes any difference for example---and that irrespective of how often you go out per week. After a late night out, you might be more inclined to have coffee in the morning, so just measuring the coffee is not enough. We will have to *control* for your *partyness*.
 
 Ideally our framework is capable of the following.
 
@@ -132,7 +134,7 @@ abline(20, 0, col = cardiffred, lwd = 3)
 
 The big question of course is, how does this fitting work? The first thing we have to understand is that there will be an error to our estimation.
 
-If an association between two variables were perfect, we would speak of a deterministic relation. Take for example the conversion of temperature. When we want to calculate the temperature in Fahrenheit from Celsius, we can follow the easy formula
+If an association between two variables were perfect, we would speak of a deterministic relationship. Take for example the conversion of temperature. If we want to calculate the temperature in Fahrenheit from Celsius, we can follow the easy formula
 
 \[ \text{Fahrenheit} = 32 + (9/5 ∗ \text{Celsius})\].
 
@@ -185,7 +187,7 @@ Using this OLS estimator, we can calculate the slope $b$.
 
 \[ b = \frac{\text{covariation}}{\text{variance}} = \frac{\sum (x_i-\bar{x})\sum (y_i-\bar{y})}{\sum (x_i-\bar{x})^2} \]
 
-Give we now know the slope $b$ the intercept $a$ is then really straightforward and
+Given we now know the slope $b$ the intercept $a$ is then really straightforward and
 
 \[ 		a = \bar{y} - b\bar{x} \]
 
@@ -289,8 +291,9 @@ But the *real* reason we are here is to go beyond bivariate regressions.
 
 ### Bivariate Regression Plus a Dummy
 
-What is a dummy variable? Qualitative information often come in the form of binary information (zero-one variable). We call these kind of variables a dummy variable.
-The benefit of capturing qualitative information using zero-one variables is that it leads to regression models with easy interpretations. Good coding practice: name your variable after the ‘1’ category; e.g. *Female* if the variable is coded 1 for female and 0 for male. *Gender* would be a confusing variable name.
+What is a dummy variable? Qualitative information often come in the form of binary information (zero-one variable). We call these kind of variables a dummy variable. The benefit of capturing qualitative information using zero-one variables is that it leads to regression models with easy interpretations. 
+
+Good coding practice: name your variable after the ‘1’ category; e.g. *Female* if the variable is coded 1 for female and 0 for male. *Gender* would be a confusing variable name.
 
 
 #### How Does It Work?
@@ -361,8 +364,8 @@ These are the results of our regression equation.
 
 ```{r echo=FALSE}
 library(foreign)
-dat.us <- read.dta('preparing_data/data/uspresidentialelections.dta')
-load('preparing_data/data/uspresnew.Rdata')
+dat.us <- read.dta('../other_files/preparing_data/data/uspresidentialelections.dta')
+load('../other_files/preparing_data/data/uspresnew.Rdata')
 summary(lm(us$vote ~ us$growth + us$approval))
 ```
 
@@ -374,7 +377,7 @@ cat(
 )
 ```
 
-<!-- Can you make the data downloadable? -->
+If you want to download the data to play around with it yourself, you can find it on Learning Central.
 
 
 ## The Relevance of Statistical Control
@@ -446,7 +449,7 @@ The R code we are learning is really simple this week. Remember, R is built for 
 
 ```{r}
 # Load the data
-load('preparing_data/data/uspresnew.Rdata')
+load('../other_files/preparing_data/data/uspresnew.Rdata')
 
 # estimate a model
 model1 <- lm(us$vote ~ us$growth + us$approval)

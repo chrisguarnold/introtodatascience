@@ -23,7 +23,7 @@
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2023-03-06" />
+<meta name="date" content="2023-03-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="why-does-hypothesis-testing-work-a-primer-on-probability.html"/>
-<link rel="next" href="useful-internet-resources.html"/>
+<link rel="next" href="comparing-apples-and-oranges.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -297,11 +297,27 @@ div.csl-indent {
 <li class="chapter" data-level="6.5" data-path="are-different-people-different.html"><a href="are-different-people-different.html#code"><i class="fa fa-check"></i><b>6.5</b> Code</a></li>
 <li class="chapter" data-level="6.6" data-path="are-different-people-different.html"><a href="are-different-people-different.html#reading-for-this-week-2"><i class="fa fa-check"></i><b>6.6</b> Reading for This Week</a></li>
 </ul></li>
-<li class="part"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="7" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>7</b> Useful Internet Resources</a>
+<li class="chapter" data-level="7" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html"><i class="fa fa-check"></i><b>7</b> Comparing Apples and Oranges</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>7.1</b> Homepages</a></li>
-<li class="chapter" data-level="7.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>7.2</b> Online Books</a></li>
+<li class="chapter" data-level="7.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#bivariate-regression"><i class="fa fa-check"></i><b>7.1</b> Bivariate Regression</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#how-does-it-work"><i class="fa fa-check"></i><b>7.1.1</b> How Does It Work?</a></li>
+<li class="chapter" data-level="7.1.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#how-do-we-interpret-results"><i class="fa fa-check"></i><b>7.1.2</b> How Do We Interpret Results?</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#beyond-bivariate-regression"><i class="fa fa-check"></i><b>7.2</b> Beyond Bivariate Regression</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#bivariate-regression-plus-a-dummy"><i class="fa fa-check"></i><b>7.2.1</b> Bivariate Regression Plus a Dummy</a></li>
+<li class="chapter" data-level="7.2.2" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#multivariate-regression"><i class="fa fa-check"></i><b>7.2.2</b> Multivariate Regression</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#the-relevance-of-statistical-control"><i class="fa fa-check"></i><b>7.3</b> The Relevance of Statistical Control</a></li>
+<li class="chapter" data-level="7.4" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#r-code"><i class="fa fa-check"></i><b>7.4</b> R Code</a></li>
+<li class="chapter" data-level="7.5" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#reading-for-this-week-3"><i class="fa fa-check"></i><b>7.5</b> Reading for This Week</a></li>
+</ul></li>
+<li class="part"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="8" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>8</b> Useful Internet Resources</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>8.1</b> Homepages</a></li>
+<li class="chapter" data-level="8.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>8.2</b> Online Books</a></li>
 </ul></li>
 </ul>
 
@@ -343,7 +359,7 @@ div.csl-indent {
 <div id="what-are-bivariate-relationships" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> What Are Bivariate Relationships?<a href="are-different-people-different.html#what-are-bivariate-relationships" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We actually talked about bivariate relationships already. Two weeks ago, we wanted to understand the difference between your cohort and the cohort before you. We can think of this data also as a small data set with two variables. One variable encodes the effort that students put into their studies. The other variable would capture information about the cohort of the students. See? It is actually quite natural to think about data not only in the context of one single variable, but actually considering at least two variables at a time.</p>
-<p>When we analyse data, we study the association between variables. A variable is a “characteristic that can vary in value among subjects in a sample or population” <span class="citation">(<a href="#ref-Agresti2018">Agresti 2018</a>)</span>. Some typical examples area age, income, gender, education level, race, inequality in a country etc..</p>
+<p>When we analyse data, we study the association between variables. A variable is a “characteristic that can vary in value among subjects in a sample or population” <span class="citation">(<a href="#ref-Agresti2018" role="doc-biblioref">Agresti 2018</a>)</span>. Some typical examples area age, income, gender, education level, race, inequality in a country etc..</p>
 <p>We express association formally as a connection between two variables and can use an arrow for that.</p>
 <p><span class="math display">\[X \rightarrow Y \]</span></p>
 <ul>
@@ -1068,13 +1084,10 @@ Figure 6.3: Source: <a href="https://xkcd.com/552/" class="uri">https://xkcd.com
 </div>
 <div id="reading-for-this-week-2" class="section level2 hasAnchor" number="6.6">
 <h2><span class="header-section-number">6.6</span> Reading for This Week<a href="are-different-people-different.html#reading-for-this-week-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The reading for this week is chapter 10 in <span class="citation">Fogarty (<a href="#ref-Fogarty2019">2019</a>)</span>.</p>
+<p>The reading for this week is chapter 10 in <span class="citation">Fogarty (<a href="#ref-Fogarty2019" role="doc-biblioref">2019</a>)</span>.</p>
 
 </div>
 </div>
-
-
-
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Agresti2018" class="csl-entry">
@@ -1090,7 +1103,7 @@ Fogarty, Brian. 2019. <em><span>Quantitative Social Science Data With R</span></
         </div>
       </div>
 <a href="why-does-hypothesis-testing-work-a-primer-on-probability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="useful-internet-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="comparing-apples-and-oranges.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
