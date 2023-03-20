@@ -123,6 +123,14 @@ how-do-we-interpret-results-2
 the-relevance-of-statistical-control
 r-code
 reading-for-this-week-3
+the-fundamental-problem-of-causal-inference
+studying-causal-effects
+key-concepts-1
+the-fundamental-problem-of-causal-inference-1
+randomized-control-trials
+estimating-a-first-causal-effect
+plotting-data-on-maps
+reading-for-this-week-4
 useful-internet-resources
 homepages
 online-books

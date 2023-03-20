@@ -23,7 +23,7 @@
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2023-03-10" />
+<meta name="date" content="2023-03-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -313,11 +313,22 @@ div.csl-indent {
 <li class="chapter" data-level="7.4" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#r-code"><i class="fa fa-check"></i><b>7.4</b> R Code</a></li>
 <li class="chapter" data-level="7.5" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#reading-for-this-week-3"><i class="fa fa-check"></i><b>7.5</b> Reading for This Week</a></li>
 </ul></li>
-<li class="part"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="8" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>8</b> Useful Internet Resources</a>
+<li class="part"><span><b>Scenario III: Did the New Policy Have an Effect?</b></span></li>
+<li class="chapter" data-level="8" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html"><i class="fa fa-check"></i><b>8</b> The Fundamental Problem of Causal Inference</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>8.1</b> Homepages</a></li>
-<li class="chapter" data-level="8.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>8.2</b> Online Books</a></li>
+<li class="chapter" data-level="8.1" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#studying-causal-effects"><i class="fa fa-check"></i><b>8.1</b> Studying Causal Effects</a></li>
+<li class="chapter" data-level="8.2" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#key-concepts-1"><i class="fa fa-check"></i><b>8.2</b> Key Concepts</a></li>
+<li class="chapter" data-level="8.3" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#the-fundamental-problem-of-causal-inference-1"><i class="fa fa-check"></i><b>8.3</b> The Fundamental Problem of Causal Inference</a></li>
+<li class="chapter" data-level="8.4" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#randomized-control-trials"><i class="fa fa-check"></i><b>8.4</b> Randomized Control Trials</a></li>
+<li class="chapter" data-level="8.5" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#estimating-a-first-causal-effect"><i class="fa fa-check"></i><b>8.5</b> Estimating a First Causal Effect</a></li>
+<li class="chapter" data-level="8.6" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#plotting-data-on-maps"><i class="fa fa-check"></i><b>8.6</b> Plotting Data on Maps</a></li>
+<li class="chapter" data-level="8.7" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#reading-for-this-week-4"><i class="fa fa-check"></i><b>8.7</b> Reading for This Week</a></li>
+</ul></li>
+<li class="part"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="9" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>9</b> Useful Internet Resources</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>9.1</b> Homepages</a></li>
+<li class="chapter" data-level="9.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>9.2</b> Online Books</a></li>
 </ul></li>
 </ul>
 
@@ -655,37 +666,37 @@ Figure 5.8: Two Different Normal Distributions and The Probability Mass Covered 
 <h2><span class="header-section-number">5.4</span> R: A Simple Figure With Two Variables<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#r-a-simple-figure-with-two-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This week was quite heavy on concepts, hence let us be really quick on the coding. Just a simply plot of two variables. In all we are doing, I am introducing some functions for randomly sampling in different ways.
 Let us first do a random draw from a normal distribution. We then calculate a second variable from it, adding a bit of normally distributed noise on top. Then we plot it using colour.</p>
-<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select var1 randomly from a normal distribution</span></span>
-<span id="cb135-2"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-2" aria-hidden="true" tabindex="-1"></a>var1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">3</span>)</span>
-<span id="cb135-3"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Select some noise again randomly from a normal distribution</span></span>
-<span id="cb135-4"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-4" aria-hidden="true" tabindex="-1"></a>var2.noise <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n=</span><span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="fl">0.5</span>)</span>
-<span id="cb135-5"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-5" aria-hidden="true" tabindex="-1"></a><span class="co"># create second variable</span></span>
-<span id="cb135-6"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-6" aria-hidden="true" tabindex="-1"></a>var2 <span class="ot">&lt;-</span> var1 <span class="sc">+</span> var2.noise</span>
-<span id="cb135-7"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb135-8"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Here I sample two colours randomly</span></span>
-<span id="cb135-9"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-9" aria-hidden="true" tabindex="-1"></a>allcolours <span class="ot">&lt;-</span> <span class="fu">colours</span>()</span>
-<span id="cb135-10"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-10" aria-hidden="true" tabindex="-1"></a>two.colours <span class="ot">&lt;-</span> <span class="fu">sample</span>(allcolours, <span class="dv">2</span>)</span>
-<span id="cb135-11"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb135-12"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot two variables</span></span>
-<span id="cb135-13"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-13" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(var1, var2,</span>
-<span id="cb135-14"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-14" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">21</span>, <span class="co"># Setting Point Characters, here filled circles</span></span>
-<span id="cb135-15"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-15" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> two.colours[<span class="dv">1</span>], <span class="co"># using the first colour for the frame</span></span>
-<span id="cb135-16"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-16" aria-hidden="true" tabindex="-1"></a>     <span class="at">bg =</span> two.colours[<span class="dv">2</span>], <span class="co"># using the second colour for the background</span></span>
-<span id="cb135-17"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-17" aria-hidden="true" tabindex="-1"></a>     <span class="at">las =</span> <span class="dv">1</span>, <span class="co">#rotates numbers on the left</span></span>
-<span id="cb135-18"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-18" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&#39;Label on the x-Axis&#39;</span>)</span>
-<span id="cb135-19"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb135-20"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-20" aria-hidden="true" tabindex="-1"></a><span class="co"># abline is very useful for plotting all sorts of lines</span></span>
-<span id="cb135-21"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-21" aria-hidden="true" tabindex="-1"></a><span class="co"># a: intercept, b: slope</span></span>
-<span id="cb135-22"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-22" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">a=</span> <span class="dv">0</span>, <span class="at">b =</span> <span class="dv">1</span>, <span class="at">col =</span> cardiffred)</span>
-<span id="cb135-23"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-23" aria-hidden="true" tabindex="-1"></a><span class="co"># horizontal line at 0, lwd: line width</span></span>
-<span id="cb135-24"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-24" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> cardiffblue, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
-<span id="cb135-25"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-25" aria-hidden="true" tabindex="-1"></a><span class="co"># vertical line at 0, lty: line type</span></span>
-<span id="cb135-26"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-26" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="dv">0</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-1" tabindex="-1"></a><span class="co"># Select var1 randomly from a normal distribution</span></span>
+<span id="cb135-2"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-2" tabindex="-1"></a>var1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">3</span>)</span>
+<span id="cb135-3"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-3" tabindex="-1"></a><span class="co"># Select some noise again randomly from a normal distribution</span></span>
+<span id="cb135-4"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-4" tabindex="-1"></a>var2.noise <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n=</span><span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="fl">0.5</span>)</span>
+<span id="cb135-5"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-5" tabindex="-1"></a><span class="co"># create second variable</span></span>
+<span id="cb135-6"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-6" tabindex="-1"></a>var2 <span class="ot">&lt;-</span> var1 <span class="sc">+</span> var2.noise</span>
+<span id="cb135-7"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-7" tabindex="-1"></a></span>
+<span id="cb135-8"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-8" tabindex="-1"></a><span class="co"># Here I sample two colours randomly</span></span>
+<span id="cb135-9"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-9" tabindex="-1"></a>allcolours <span class="ot">&lt;-</span> <span class="fu">colours</span>()</span>
+<span id="cb135-10"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-10" tabindex="-1"></a>two.colours <span class="ot">&lt;-</span> <span class="fu">sample</span>(allcolours, <span class="dv">2</span>)</span>
+<span id="cb135-11"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-11" tabindex="-1"></a></span>
+<span id="cb135-12"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-12" tabindex="-1"></a><span class="co"># Plot two variables</span></span>
+<span id="cb135-13"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-13" tabindex="-1"></a><span class="fu">plot</span>(var1, var2,</span>
+<span id="cb135-14"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-14" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">21</span>, <span class="co"># Setting Point Characters, here filled circles</span></span>
+<span id="cb135-15"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-15" tabindex="-1"></a>     <span class="at">col =</span> two.colours[<span class="dv">1</span>], <span class="co"># using the first colour for the frame</span></span>
+<span id="cb135-16"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-16" tabindex="-1"></a>     <span class="at">bg =</span> two.colours[<span class="dv">2</span>], <span class="co"># using the second colour for the background</span></span>
+<span id="cb135-17"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-17" tabindex="-1"></a>     <span class="at">las =</span> <span class="dv">1</span>, <span class="co">#rotates numbers on the left</span></span>
+<span id="cb135-18"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-18" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&#39;Label on the x-Axis&#39;</span>)</span>
+<span id="cb135-19"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-19" tabindex="-1"></a></span>
+<span id="cb135-20"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-20" tabindex="-1"></a><span class="co"># abline is very useful for plotting all sorts of lines</span></span>
+<span id="cb135-21"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-21" tabindex="-1"></a><span class="co"># a: intercept, b: slope</span></span>
+<span id="cb135-22"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-22" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">a=</span> <span class="dv">0</span>, <span class="at">b =</span> <span class="dv">1</span>, <span class="at">col =</span> cardiffred)</span>
+<span id="cb135-23"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-23" tabindex="-1"></a><span class="co"># horizontal line at 0, lwd: line width</span></span>
+<span id="cb135-24"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-24" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> cardiffblue, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
+<span id="cb135-25"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-25" tabindex="-1"></a><span class="co"># vertical line at 0, lty: line type</span></span>
+<span id="cb135-26"><a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#cb135-26" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="dv">0</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span></code></pre></div>
 <p><img src="intro_data_science_homepage_files/figure-html/plotting-1.png" width="672" /></p>
 </div>
 <div id="reading-for-this-week-1" class="section level2 hasAnchor" number="5.5">
 <h2><span class="header-section-number">5.5</span> Reading for This Week<a href="why-does-hypothesis-testing-work-a-primer-on-probability.html#reading-for-this-week-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For this week, please read chapter 4 in <span class="citation">Agresti (<a href="#ref-Agresti2018" role="doc-biblioref">2018</a>)</span>.</p>
+<p>For this week, please read chapter 4 in <span class="citation">Agresti (<a href="#ref-Agresti2018">2018</a>)</span>.</p>
 
 </div>
 </div>

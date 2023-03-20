@@ -4,27 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 The Fundamental Problem of Causal Inference | PL 9239 Introduction to Data Science for Politics and IR</title>
-  <meta name="description" content="This is the website for the Intro to Data Science Class." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <title>Chapter 8 The Fundamental Problem of Causal Inference | PL 9248 Data Science for Politics and IR</title>
+  <meta name="description" content="This is the website for the Data Science Class." />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 The Fundamental Problem of Causal Inference | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta property="og:title" content="Chapter 8 The Fundamental Problem of Causal Inference | PL 9248 Data Science for Politics and IR" />
   <meta property="og:type" content="book" />
   
-  
-  <meta property="og:description" content="This is the website for the Intro to Data Science Class." />
+  <meta property="og:description" content="This is the website for the Data Science Class." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 The Fundamental Problem of Causal Inference | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta name="twitter:title" content="Chapter 8 The Fundamental Problem of Causal Inference | PL 9248 Data Science for Politics and IR" />
   
-  <meta name="twitter:description" content="This is the website for the Intro to Data Science Class." />
+  <meta name="twitter:description" content="This is the website for the Data Science Class." />
   
 
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2022-04-22" />
+<meta name="date" content="2023-03-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +31,7 @@
   
   
 <link rel="prev" href="comparing-apples-and-oranges.html"/>
-<link rel="next" href="causal-statements-from-observational-data.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<link rel="next" href="useful-internet-resources.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,14 +49,16 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -324,27 +324,11 @@ div.csl-indent {
 <li class="chapter" data-level="8.6" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#plotting-data-on-maps"><i class="fa fa-check"></i><b>8.6</b> Plotting Data on Maps</a></li>
 <li class="chapter" data-level="8.7" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#reading-for-this-week-4"><i class="fa fa-check"></i><b>8.7</b> Reading for This Week</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html"><i class="fa fa-check"></i><b>9</b> Causal Statements from Observational Data</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#this-weeks-data-the-effect-of-the-welsh-circuit-break"><i class="fa fa-check"></i><b>9.1</b> This Week’s Data: The Effect of the Welsh Circuit Break</a></li>
-<li class="chapter" data-level="9.2" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-treated-from-one-group-to-the-non-treated-of-another-group"><i class="fa fa-check"></i><b>9.2</b> Compare Treated from One Group to the Non-Treated of Another Group</a></li>
-<li class="chapter" data-level="9.3" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-the-treated-before-and-after-their-treatment"><i class="fa fa-check"></i><b>9.3</b> Compare the Treated Before and After their Treatment</a></li>
-<li class="chapter" data-level="9.4" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#best-of-both-worlds-the-difference-in-difference-estimator"><i class="fa fa-check"></i><b>9.4</b> Best of Both Worlds: The Difference-in-Difference Estimator</a></li>
-<li class="chapter" data-level="9.5" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#reading-for-this-week-5"><i class="fa fa-check"></i><b>9.5</b> Reading for This Week</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html"><i class="fa fa-check"></i><b>10</b> Multivariate Regression and Heterogenous Treatment Effects</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#analysing-experimental-data-revisited"><i class="fa fa-check"></i><b>10.1</b> Analysing Experimental Data Revisited</a></li>
-<li class="chapter" data-level="10.2" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#controling-for-confounders"><i class="fa fa-check"></i><b>10.2</b> Controling for Confounders</a></li>
-<li class="chapter" data-level="10.3" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#treatment-heterogeneity"><i class="fa fa-check"></i><b>10.3</b> Treatment Heterogeneity</a></li>
-<li class="chapter" data-level="10.4" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#outro"><i class="fa fa-check"></i><b>10.4</b> Outro</a></li>
-<li class="chapter" data-level="10.5" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#reading-for-this-week-6"><i class="fa fa-check"></i><b>10.5</b> Reading for This Week</a></li>
-</ul></li>
 <li class="part"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="11" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>11</b> Useful Internet Resources</a>
+<li class="chapter" data-level="9" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>9</b> Useful Internet Resources</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>11.1</b> Homepages</a></li>
-<li class="chapter" data-level="11.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>11.2</b> Online Books</a></li>
+<li class="chapter" data-level="9.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>9.1</b> Homepages</a></li>
+<li class="chapter" data-level="9.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>9.2</b> Online Books</a></li>
 </ul></li>
 </ul>
 
@@ -355,7 +339,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PL 9239 Introduction to Data Science for Politics and IR</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PL 9248 Data Science for Politics and IR</a>
           </h1>
         </div>
 
@@ -363,32 +347,38 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-fundamental-problem-of-causal-inference" class="section level1" number="8">
-<h1><span class="header-section-number">Chapter 8</span> The Fundamental Problem of Causal Inference</h1>
-<div id="studying-causal-effects" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Studying Causal Effects</h2>
+<div id="the-fundamental-problem-of-causal-inference" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> The Fundamental Problem of Causal Inference<a href="the-fundamental-problem-of-causal-inference.html#the-fundamental-problem-of-causal-inference" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="studying-causal-effects" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Studying Causal Effects<a href="the-fundamental-problem-of-causal-inference.html#studying-causal-effects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In the last section of this module, we will take a closer look at policy evaluations. We want to see whether a policy actually did have any effect. Was the outcome what policy makers intended? Or was it different? These questions will concern any society, since studying the effect of policies is the foundation for any good governance.</p>
 <p>But evaluating policies comes with an important challenge. It is only possible to observe the world in two stages. Either the policy was enacted and we now see how the world developed with it. Or the policy was not enacted and we observe the world without it. What was the impact of the policy? The answer is the difference between these two worlds—the world with and the world without the policy.</p>
 <p>For example, imagine a policy introduced mandatory environmental protection for farm land. A year later, biologists measure that harmful substances in ground water are down by 20%. Was this the effect of the policy? Or was it maybe just a particularly rainy year that washed all pollutants away? We could only tell if we observed the world in both stages: farming with the new environmental protection and farming without it.</p>
 <p>In this last section we will learn how to think systematically about this problem. We will also take a look at some easy first solutions to this problem.</p>
-<p>To further introduce this new section, I was fortunate to interview Claire Rowlands. She is the Strategy and Policy Director for the COVID Vaccination Programme in the Welsh Government. Of course, policy evaluation plays a crucial role in fighting the pandemic: measures are updated regularly and have to be adjusted regarding their impact. A rigorous and analytical evaluation of these policies and their impact is therefore key.</p>
+<p>To further introduce this new section, I was fortunate to interview Claire Rowlands. She was the Strategy and Policy Director for the COVID Vaccination Programme in the Welsh Government. Of course, policy evaluation plays a crucial role in fighting a pandemic: measures are updated regularly and have to be adjusted regarding their impact. A rigorous and analytical evaluation of these policies and their impact is therefore key.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tFpMqrBbI_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </div>
-<div id="key-concepts-1" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> Key Concepts</h2>
+<div id="key-concepts-1" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Key Concepts<a href="the-fundamental-problem-of-causal-inference.html#key-concepts-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We have already seen that there are a couple of new concepts that we should define. Let us introduce some terms.</p>
 <p><strong>Treatment</strong> is the actual intervention. The causal inference framework has its roots in experimentation and in particular the life sciences, which is why we speak of the treatment here.</p>
 <p><strong>The Counterfactual</strong> We can observe the world as it is. We can only hypothesise about a different <em>counterfactual</em> world where a key condition is different.</p>
 <p><strong>Potential Outcomes</strong> is the outcome of the world in the presence or the absence of a treatment.</p>
 <p><strong>Causal Effect</strong> In this framework, we care for causality from a particular view. The causal effect is the difference between the two potential outcomes of the world.</p>
 </div>
-<div id="the-fundamental-problem-of-causal-inference-1" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> The Fundamental Problem of Causal Inference</h2>
+<div id="the-fundamental-problem-of-causal-inference-1" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> The Fundamental Problem of Causal Inference<a href="the-fundamental-problem-of-causal-inference.html#the-fundamental-problem-of-causal-inference-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let us think a bit more rigorously about the potential outcomes framework. We first need a treatment <span class="math inline">\(T\)</span>. In the light of the treatment there are two possible outcomes for our dependent variable <span class="math inline">\(Y\)</span>. In theory, we would love to observe both of them: the outcome under the treatment <span class="math inline">\(Y(1)\)</span> and also the outcome of the same unit we are studying without the treatment <span class="math inline">\(Y(0)\)</span>. We will often collect data about more than one observation, so we index everything with <span class="math inline">\(i\)</span> resulting in the treatment <span class="math inline">\(T_i\)</span> and the two potential outcomes will be <span class="math inline">\(Y_i(1)\)</span> and <span class="math inline">\(Y_i(0)\)</span>.</p>
 <p>To calculate the causal effect of the treatment <span class="math inline">\(T_i\)</span>, we subtract the two potential outcomes from one another: <span class="math inline">\(Y_i(1) - Y_i(0)\)</span>. Done.</p>
 <p>The problem is, we can never observe the same unit <span class="math inline">\(i\)</span> in both conditions. As illustrated in the small table, we can only observe a unit either under the treatment condition <span class="math inline">\(T_i=1\)</span> or the control condition <span class="math inline">\(T_i=0\)</span>, but never under both at the same time.</p>
 <table>
+<colgroup>
+<col width="6%" />
+<col width="31%" />
+<col width="35%" />
+<col width="26%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>ID</th>
@@ -431,11 +421,11 @@ div.csl-indent {
 </tbody>
 </table>
 <p>This framework tells us already a lot about the potential research that we can implement with it: it is necessary to be able to manipulate the treatment variable <span class="math inline">\(T\)</span>. Think back at the data we collected about you. From the point of this framework, could we study the causal effect of gender on for example much you spend on average when you go out?</p>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-140-1.png" width="672" /></p>
-<p>Well, we can of course take a look at the distribution. But this is not the true causal effect, simply because it is impossible to change <em>gender</em> in an experimental setting. Does that mean that this framework is unable to study <em>any</em> gender related questions? This is not the case: we need to think carefully about what it is that we are actually interested in—and then manipulate this condition. For example, if we are studying how the <em>perception</em> of gender might affect certain outcomes, we could use a clever research design that helps manipulate this gender perception.</p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-139-1.png" width="672" /></p>
+<p>Well, we can of course take a look at the distribution: Men seem to be spending more than women. But this is not the true causal effect, simply because it is impossible to change <em>gender</em> in an experimental setting. Does that mean that this framework is unable to study <em>any</em> gender related questions? This is not the case: we need to think carefully about what it is that we are actually interested in—and then manipulate this condition. For example, if we are studying how the <em>perception</em> of gender might affect certain outcomes, we could use a clever research design that helps manipulate this gender perception.</p>
 </div>
-<div id="randomized-control-trials" class="section level2" number="8.4">
-<h2><span class="header-section-number">8.4</span> Randomized Control Trials</h2>
+<div id="randomized-control-trials" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Randomized Control Trials<a href="the-fundamental-problem-of-causal-inference.html#randomized-control-trials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>So what is our way out? How <em>can</em> we estimate causal effects?</p>
 <p>A very straightforward way to calculate the average treatment effect in a sample is to randomise the treatment. These randomised experiments are called <em>Randomised Control Trials</em> (RCT) and they are the working horse in the Life Sciences and Psychology. They have recently also found increasing attention in those disciplines who study societies at large like Economics, Sociology or Political Science.</p>
 <p>RCTs are often considered as the gold standard, because they have a lot of internal validity: If randomization is done correctly, they reliably produce an average treatment effect. The big question is whether this validity within the study can be extrapolated to the society at large. For that, researchers need to show that a study also has external validity: the sample that is being studied actually needs to represent the population at large.</p>
@@ -449,14 +439,14 @@ div.csl-indent {
 <p>However, as mentioned before, we cannot observe the individuals <span class="math inline">\(i\)</span> under both conditions. But what we can do in an RCT is to randomise our treatment across individuals. We chose those who receive the treatment and those who are in the control group by coincidence. If this condition is satisfied, we can actually expect that the inviduals in both groups are comparable <em>on average</em>. Randomisation makes sure that participants in the treatment group and the control group share <em>on average</em> the same traits. In short, if we randomise the treatment, we can compare the results of both groups with one another. The causal effect from the treatment then simply boils down to the <em>difference in means</em>. We also alredy know from previous weeks how to do inference and express our uncertainty for estimates by simplyt using t-tests.</p>
 <p>One final note here. We are observing the <em>average</em> treatment effect. Does that mean that the treatment will have the same effect for all individuals? No, it will not. Using randomised control trials in this way we can only estimate the <em>average</em> effect across all participants in a study.</p>
 </div>
-<div id="estimating-a-first-causal-effect" class="section level2" number="8.5">
-<h2><span class="header-section-number">8.5</span> Estimating a First Causal Effect</h2>
-<p>I sent out an email before Week 8 asking you for more data on the effort you are putting into this module and the effort you think you should be investing into the module. In these emails, I hid a quick experiment: I wanted to investigate whether priming you for how difficult this class is makes any difference regarding the effort you are reporting or the effort you think you should be investing.</p>
+<div id="estimating-a-first-causal-effect" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Estimating a First Causal Effect<a href="the-fundamental-problem-of-causal-inference.html#estimating-a-first-causal-effect" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Last year, I sent out an email before Week 8 asking them for more data on the effort they were putting into this module and the effort they thought they should be investing into the module. In these emails, I hid a quick experiment: I wanted to investigate whether priming them for how difficult this class is makes any difference regarding the effort they were are reporting or the effort you think you should be investing. (I did not implement the experiment with you this year, since the cohort is quite small and the sample size would be quite small then.)</p>
 <p>This was the email to the control group:</p>
 <blockquote>
 <p>Hi everybody,
-To fine tune the material for PL 9239, I would like to collect some more data on your study effort.
-Could you please fill out the two short questions at the following link until tomorrow Thursday night?
+To fine tune the material for PL 9248, I would like to collect some more data on your study effort.
+Could you please fill out the two short questions about your effort at the following link until tomorrow Thursday night?
 Thanks a lot!
 Best,
 Christian</p>
@@ -464,18 +454,18 @@ Christian</p>
 <p>And here is the email to the treatment group with the extra prompt in bold so that you can easily see it here.</p>
 <blockquote>
 <p>Hi everybody,
-To fine tune the material for PL 9239, I would like to collect some more data on your study effort.
+To fine tune the material for PL 9248, I would like to collect some more data on your study effort.
 <strong>I am aware that the module does indeed require quite a bit of work to keep up with the comprehensive material.</strong>
-Could you please fill out the two short questions at the following link until tomorrow Thursday night?
+Could you please fill out the two short questions about your effort at the following link until tomorrow Thursday night?
 Thanks a lot!
 Best,
 Christian</p>
 </blockquote>
-<p>Let us go and analyse whether this prompt actually made any difference. To analyse the data, let us first plot the data. On the left, you can see the effort that you are actually putting into your studies in both groups. In the middle, you can see what you think that you should be studying. On the right we are plotting the difference between what you think that you should be studying and what you are actually studying.</p>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-141-1.png" width="33%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-141-2.png" width="33%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-141-3.png" width="33%" /></p>
-<p>The differences are quite striking in our little experiment! Let us begin with the actual hours that you are studying. The treatment group reports that they study on average 1.08h more. For the number of hours that you think you should be studying, the difference is also positive: Those in the treatment group think they should study on average 3.42h more. Finally, we can also calculate the difference between the hours that you think you should be studying and the actual hours that you are studying. Think of it as an expression about how ‘bad’ your conscious is. Do we find an effect here, too? We do. The difference between the treatment group and the control group is 2.33h—telling you that the module requires a lot of work indeed causes you a bad consciousness.</p>
-<p>So from just the descriptive data, it seems that the experiment worked: Just telling you that this module is a hard one actually makes you report a higher effort. And btw., this experiment had the same results in last year’s cohort…</p>
-<p>Now, what about statistical significance? Could we trust that we would find this in the larger population if we ran the experiment there? All t-test report a unanimous result: the result is not statistically significant, which means we can not refute the Hypothesis <span class="math inline">\(H_0\)</span> that there is no difference between the means of both samples. The reason is quite simple: your sample is way to small. Ideally we have at least 100 participants in the control group and another 100 in the treatment group to get nice and small 95% confidence intervals.</p>
+<p>Let us go and analyse whether this prompt actually made any difference. To analyse the data, let us first plot the data. On the left, you can see the effort that they are actually putting into their studies in both groups. In the middle, you can see what they think that they should be studying. On the right we are plotting the difference between what they think that they should be studying and what they are actually studying.</p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-140-1.png" width="33%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-140-2.png" width="33%" /><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-140-3.png" width="33%" /></p>
+<p>The differences are quite striking in our little experiment! Let us begin with the actual hours that they were studying. The treatment group reports that they study on average 1.08h more. For the number of hours that they think they should be studying, the difference is also positive: Those in the treatment group think they should study on average 3.42h more. Finally, we can also calculate the difference between the hours that they think they should be studying and the actual hours that they are studying. Think of it as an expression about how ‘bad’ their conscious is. Do we find an effect here, too? We do. The difference between the treatment group and the control group is 2.33h—telling the students that the module requires a lot of work indeed causes a bad consciousness.</p>
+<p>So from just the descriptive data, it seems that the experiment worked: Just telling the students that this module is a hard one actually makes them report a higher effort.</p>
+<p>Now, what about statistical significance? Could we trust that we would find this in the larger population if we ran the experiment there? All t-test report a unanimous result: the result is not statistically significant, which means we can not refute the Hypothesis <span class="math inline">\(H_0\)</span> that there is no difference between the means of both samples. The reason is quite simple: the sample is way to small. Ideally we have at least 100 participants in the control group and another 100 in the treatment group to get nice and small 95% confidence intervals.</p>
 <pre><code>## 
 ##  Welch Two Sample t-test
 ## 
@@ -510,40 +500,43 @@ Christian</p>
 ## mean of x mean of y 
 ##   8.00000  10.33333</code></pre>
 </div>
-<div id="plotting-data-on-maps" class="section level2" number="8.6">
-<h2><span class="header-section-number">8.6</span> Plotting Data on Maps</h2>
+<div id="plotting-data-on-maps" class="section level2 hasAnchor" number="8.6">
+<h2><span class="header-section-number">8.6</span> Plotting Data on Maps<a href="the-fundamental-problem-of-causal-inference.html#plotting-data-on-maps" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There is nothing really new this week regarding code, so let us refine your plotting skills. Today we will take a start at plotting maps. I used the stop and search data that is published <a href="https://data.police.uk/data/">online</a> by the police. For this introduction, I am using the data from December 2018 before the pandemic which you can download <a href="https://github.com/chrisguarnold/introtodatascience/blob/master/stop_and_search_18_12.RData">here</a> if you want to play around with it yourself.</p>
 <p>The basic idea is pretty simple: We have to load a map of Wales from a package. Then we can plot our stop and search incidents on that map using the longitude and latitude data.</p>
-<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="the-fundamental-problem-of-causal-inference.html#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stop and Search Data</span></span>
-<span id="cb153-2"><a href="the-fundamental-problem-of-causal-inference.html#cb153-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;stop_and_search_18_12.RData&quot;</span>)</span>
-<span id="cb153-3"><a href="the-fundamental-problem-of-causal-inference.html#cb153-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb153-4"><a href="the-fundamental-problem-of-causal-inference.html#cb153-4" aria-hidden="true" tabindex="-1"></a><span class="co"># First, we want to have a map</span></span>
-<span id="cb153-5"><a href="the-fundamental-problem-of-causal-inference.html#cb153-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rworldmap)</span>
-<span id="cb153-6"><a href="the-fundamental-problem-of-causal-inference.html#cb153-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rworldxtra)</span>
-<span id="cb153-7"><a href="the-fundamental-problem-of-causal-inference.html#cb153-7" aria-hidden="true" tabindex="-1"></a><span class="co"># we don&#39;t want to take a look at the whole world -</span></span>
-<span id="cb153-8"><a href="the-fundamental-problem-of-causal-inference.html#cb153-8" aria-hidden="true" tabindex="-1"></a><span class="co"># just the bits on the map that have our data points</span></span>
-<span id="cb153-9"><a href="the-fundamental-problem-of-causal-inference.html#cb153-9" aria-hidden="true" tabindex="-1"></a><span class="co"># so we take the min and max</span></span>
-<span id="cb153-10"><a href="the-fundamental-problem-of-causal-inference.html#cb153-10" aria-hidden="true" tabindex="-1"></a>min.long <span class="ot">&lt;-</span> <span class="fu">min</span>(dat.sas<span class="sc">$</span>Longitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb153-11"><a href="the-fundamental-problem-of-causal-inference.html#cb153-11" aria-hidden="true" tabindex="-1"></a>max.long <span class="ot">&lt;-</span> <span class="fu">max</span>(dat.sas<span class="sc">$</span>Longitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb153-12"><a href="the-fundamental-problem-of-causal-inference.html#cb153-12" aria-hidden="true" tabindex="-1"></a>min.lat <span class="ot">&lt;-</span> <span class="fu">min</span>(dat.sas<span class="sc">$</span>Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb153-13"><a href="the-fundamental-problem-of-causal-inference.html#cb153-13" aria-hidden="true" tabindex="-1"></a>max.lat <span class="ot">&lt;-</span> <span class="fu">max</span>(dat.sas<span class="sc">$</span>Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb153-14"><a href="the-fundamental-problem-of-causal-inference.html#cb153-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb153-15"><a href="the-fundamental-problem-of-causal-inference.html#cb153-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Get a map</span></span>
-<span id="cb153-16"><a href="the-fundamental-problem-of-causal-inference.html#cb153-16" aria-hidden="true" tabindex="-1"></a>newmap <span class="ot">&lt;-</span> <span class="fu">getMap</span>(<span class="at">resolution =</span> <span class="st">&quot;high&quot;</span>)</span>
-<span id="cb153-17"><a href="the-fundamental-problem-of-causal-inference.html#cb153-17" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(newmap, <span class="at">xlim =</span> <span class="fu">c</span>(min.long, max.long),</span>
-<span id="cb153-18"><a href="the-fundamental-problem-of-causal-inference.html#cb153-18" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span> <span class="fu">c</span>(min.lat, max.lat))</span>
-<span id="cb153-19"><a href="the-fundamental-problem-of-causal-inference.html#cb153-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb153-20"><a href="the-fundamental-problem-of-causal-inference.html#cb153-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the incidents</span></span>
-<span id="cb153-21"><a href="the-fundamental-problem-of-causal-inference.html#cb153-21" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(dat.sas<span class="sc">$</span>Longitude, dat.sas<span class="sc">$</span>Latitude, <span class="at">col =</span> cardiffred)</span></code></pre></div>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-143-1.png" width="672" /></p>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="the-fundamental-problem-of-causal-inference.html#cb154-1" tabindex="-1"></a><span class="co"># Stop and Search Data</span></span>
+<span id="cb154-2"><a href="the-fundamental-problem-of-causal-inference.html#cb154-2" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;../other_files/stop_and_search_18_12.RData&quot;</span>)</span>
+<span id="cb154-3"><a href="the-fundamental-problem-of-causal-inference.html#cb154-3" tabindex="-1"></a></span>
+<span id="cb154-4"><a href="the-fundamental-problem-of-causal-inference.html#cb154-4" tabindex="-1"></a><span class="co"># First, we want to have a map</span></span>
+<span id="cb154-5"><a href="the-fundamental-problem-of-causal-inference.html#cb154-5" tabindex="-1"></a><span class="fu">library</span>(rworldmap)</span>
+<span id="cb154-6"><a href="the-fundamental-problem-of-causal-inference.html#cb154-6" tabindex="-1"></a><span class="fu">library</span>(rworldxtra)</span>
+<span id="cb154-7"><a href="the-fundamental-problem-of-causal-inference.html#cb154-7" tabindex="-1"></a><span class="co"># we don&#39;t want to take a look at the whole world -</span></span>
+<span id="cb154-8"><a href="the-fundamental-problem-of-causal-inference.html#cb154-8" tabindex="-1"></a><span class="co"># just the bits on the map that have our data points</span></span>
+<span id="cb154-9"><a href="the-fundamental-problem-of-causal-inference.html#cb154-9" tabindex="-1"></a><span class="co"># so we take the min and max</span></span>
+<span id="cb154-10"><a href="the-fundamental-problem-of-causal-inference.html#cb154-10" tabindex="-1"></a>min.long <span class="ot">&lt;-</span> <span class="fu">min</span>(dat.sas<span class="sc">$</span>Longitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb154-11"><a href="the-fundamental-problem-of-causal-inference.html#cb154-11" tabindex="-1"></a>max.long <span class="ot">&lt;-</span> <span class="fu">max</span>(dat.sas<span class="sc">$</span>Longitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb154-12"><a href="the-fundamental-problem-of-causal-inference.html#cb154-12" tabindex="-1"></a>min.lat <span class="ot">&lt;-</span> <span class="fu">min</span>(dat.sas<span class="sc">$</span>Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb154-13"><a href="the-fundamental-problem-of-causal-inference.html#cb154-13" tabindex="-1"></a>max.lat <span class="ot">&lt;-</span> <span class="fu">max</span>(dat.sas<span class="sc">$</span>Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb154-14"><a href="the-fundamental-problem-of-causal-inference.html#cb154-14" tabindex="-1"></a></span>
+<span id="cb154-15"><a href="the-fundamental-problem-of-causal-inference.html#cb154-15" tabindex="-1"></a><span class="co"># Get a map</span></span>
+<span id="cb154-16"><a href="the-fundamental-problem-of-causal-inference.html#cb154-16" tabindex="-1"></a>newmap <span class="ot">&lt;-</span> <span class="fu">getMap</span>(<span class="at">resolution =</span> <span class="st">&quot;high&quot;</span>)</span>
+<span id="cb154-17"><a href="the-fundamental-problem-of-causal-inference.html#cb154-17" tabindex="-1"></a><span class="fu">plot</span>(newmap, <span class="at">xlim =</span> <span class="fu">c</span>(min.long, max.long),</span>
+<span id="cb154-18"><a href="the-fundamental-problem-of-causal-inference.html#cb154-18" tabindex="-1"></a>     <span class="at">ylim =</span> <span class="fu">c</span>(min.lat, max.lat))</span>
+<span id="cb154-19"><a href="the-fundamental-problem-of-causal-inference.html#cb154-19" tabindex="-1"></a></span>
+<span id="cb154-20"><a href="the-fundamental-problem-of-causal-inference.html#cb154-20" tabindex="-1"></a><span class="co"># Add the incidents</span></span>
+<span id="cb154-21"><a href="the-fundamental-problem-of-causal-inference.html#cb154-21" tabindex="-1"></a><span class="fu">points</span>(dat.sas<span class="sc">$</span>Longitude, dat.sas<span class="sc">$</span>Latitude, <span class="at">col =</span> cardiffred)</span></code></pre></div>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-142-1.png" width="672" /></p>
 <p>This is it—as simple as that. Go wild and explore the data that is available on the police’s website!</p>
 </div>
-<div id="reading-for-this-week-4" class="section level2" number="8.7">
-<h2><span class="header-section-number">8.7</span> Reading for This Week</h2>
-<p>This week, we will get to know a new book. Please read p.32–53 in <span class="citation"><a href="#ref-Imai2018" role="doc-biblioref">Imai</a> (<a href="#ref-Imai2018" role="doc-biblioref">2018</a>)</span>.</p>
+<div id="reading-for-this-week-4" class="section level2 hasAnchor" number="8.7">
+<h2><span class="header-section-number">8.7</span> Reading for This Week<a href="the-fundamental-problem-of-causal-inference.html#reading-for-this-week-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This week, we will get to know a new book. Please read p.32–53 in <span class="citation">Imai (<a href="#ref-Imai2018">2018</a>)</span>.</p>
 
 </div>
 </div>
+
+
+
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Imai2018" class="csl-entry">
@@ -556,7 +549,7 @@ Imai, Kosuke. 2018. <em>Quantitative Social Science–an Introduction</em>. Prin
         </div>
       </div>
 <a href="comparing-apples-and-oranges.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="causal-statements-from-observational-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="useful-internet-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -616,7 +609,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

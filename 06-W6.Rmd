@@ -7,7 +7,7 @@ library(foreign)
 library(xtable)
 library(knitr)
 library(DescTools)
-# data: Class surveys
+# data: Class survey
 # data: Class surveys
 dat18 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_18.csv")
 dat19 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_19.csv")

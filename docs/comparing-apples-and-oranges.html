@@ -23,7 +23,7 @@
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2023-03-10" />
+<meta name="date" content="2023-03-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="are-different-people-different.html"/>
-<link rel="next" href="useful-internet-resources.html"/>
+<link rel="next" href="the-fundamental-problem-of-causal-inference.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -313,11 +313,22 @@ div.csl-indent {
 <li class="chapter" data-level="7.4" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#r-code"><i class="fa fa-check"></i><b>7.4</b> R Code</a></li>
 <li class="chapter" data-level="7.5" data-path="comparing-apples-and-oranges.html"><a href="comparing-apples-and-oranges.html#reading-for-this-week-3"><i class="fa fa-check"></i><b>7.5</b> Reading for This Week</a></li>
 </ul></li>
-<li class="part"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="8" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>8</b> Useful Internet Resources</a>
+<li class="part"><span><b>Scenario III: Did the New Policy Have an Effect?</b></span></li>
+<li class="chapter" data-level="8" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html"><i class="fa fa-check"></i><b>8</b> The Fundamental Problem of Causal Inference</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>8.1</b> Homepages</a></li>
-<li class="chapter" data-level="8.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>8.2</b> Online Books</a></li>
+<li class="chapter" data-level="8.1" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#studying-causal-effects"><i class="fa fa-check"></i><b>8.1</b> Studying Causal Effects</a></li>
+<li class="chapter" data-level="8.2" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#key-concepts-1"><i class="fa fa-check"></i><b>8.2</b> Key Concepts</a></li>
+<li class="chapter" data-level="8.3" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#the-fundamental-problem-of-causal-inference-1"><i class="fa fa-check"></i><b>8.3</b> The Fundamental Problem of Causal Inference</a></li>
+<li class="chapter" data-level="8.4" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#randomized-control-trials"><i class="fa fa-check"></i><b>8.4</b> Randomized Control Trials</a></li>
+<li class="chapter" data-level="8.5" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#estimating-a-first-causal-effect"><i class="fa fa-check"></i><b>8.5</b> Estimating a First Causal Effect</a></li>
+<li class="chapter" data-level="8.6" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#plotting-data-on-maps"><i class="fa fa-check"></i><b>8.6</b> Plotting Data on Maps</a></li>
+<li class="chapter" data-level="8.7" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#reading-for-this-week-4"><i class="fa fa-check"></i><b>8.7</b> Reading for This Week</a></li>
+</ul></li>
+<li class="part"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="9" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>9</b> Useful Internet Resources</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>9.1</b> Homepages</a></li>
+<li class="chapter" data-level="9.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>9.2</b> Online Books</a></li>
 </ul></li>
 </ul>
 
@@ -608,14 +619,14 @@ Figure 7.3: Data on Presidential Elections in the US.
 <div id="r-code" class="section level2 hasAnchor" number="7.4">
 <h2><span class="header-section-number">7.4</span> R Code<a href="comparing-apples-and-oranges.html#r-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The R code we are learning is really simple this week. Remember, R is built for statistics, so estimating a regression is as simple as follows.</p>
-<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="comparing-apples-and-oranges.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the data</span></span>
-<span id="cb148-2"><a href="comparing-apples-and-oranges.html#cb148-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&#39;../other_files/preparing_data/data/uspresnew.Rdata&#39;</span>)</span>
-<span id="cb148-3"><a href="comparing-apples-and-oranges.html#cb148-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb148-4"><a href="comparing-apples-and-oranges.html#cb148-4" aria-hidden="true" tabindex="-1"></a><span class="co"># estimate a model</span></span>
-<span id="cb148-5"><a href="comparing-apples-and-oranges.html#cb148-5" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(us<span class="sc">$</span>vote <span class="sc">~</span> us<span class="sc">$</span>growth <span class="sc">+</span> us<span class="sc">$</span>approval)</span>
-<span id="cb148-6"><a href="comparing-apples-and-oranges.html#cb148-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb148-7"><a href="comparing-apples-and-oranges.html#cb148-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the results from the regression</span></span>
-<span id="cb148-8"><a href="comparing-apples-and-oranges.html#cb148-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model1)</span></code></pre></div>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="comparing-apples-and-oranges.html#cb148-1" tabindex="-1"></a><span class="co"># Load the data</span></span>
+<span id="cb148-2"><a href="comparing-apples-and-oranges.html#cb148-2" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&#39;../other_files/preparing_data/data/uspresnew.Rdata&#39;</span>)</span>
+<span id="cb148-3"><a href="comparing-apples-and-oranges.html#cb148-3" tabindex="-1"></a></span>
+<span id="cb148-4"><a href="comparing-apples-and-oranges.html#cb148-4" tabindex="-1"></a><span class="co"># estimate a model</span></span>
+<span id="cb148-5"><a href="comparing-apples-and-oranges.html#cb148-5" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(us<span class="sc">$</span>vote <span class="sc">~</span> us<span class="sc">$</span>growth <span class="sc">+</span> us<span class="sc">$</span>approval)</span>
+<span id="cb148-6"><a href="comparing-apples-and-oranges.html#cb148-6" tabindex="-1"></a></span>
+<span id="cb148-7"><a href="comparing-apples-and-oranges.html#cb148-7" tabindex="-1"></a><span class="co"># Get the results from the regression</span></span>
+<span id="cb148-8"><a href="comparing-apples-and-oranges.html#cb148-8" tabindex="-1"></a><span class="fu">summary</span>(model1)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = us$vote ~ us$growth + us$approval)
@@ -636,18 +647,18 @@ Figure 7.3: Data on Presidential Elections in the US.
 ## Multiple R-squared:  0.808,  Adjusted R-squared:  0.776 
 ## F-statistic: 25.25 on 2 and 12 DF,  p-value: 5.01e-05</code></pre>
 <p>If you save the model summary, you can easily extract some results for later use. For example, you could use the parameters to plot a regression line through your data—here for the bivariate case.</p>
-<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="comparing-apples-and-oranges.html#cb150-1" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(us<span class="sc">$</span>vote <span class="sc">~</span> us<span class="sc">$</span>approval)</span>
-<span id="cb150-2"><a href="comparing-apples-and-oranges.html#cb150-2" aria-hidden="true" tabindex="-1"></a>summary.model2 <span class="ot">&lt;-</span> <span class="fu">summary</span>(model2)</span>
-<span id="cb150-3"><a href="comparing-apples-and-oranges.html#cb150-3" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> summary.model2<span class="sc">$</span>coefficients[<span class="dv">1</span>]</span>
-<span id="cb150-4"><a href="comparing-apples-and-oranges.html#cb150-4" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> summary.model2<span class="sc">$</span>coefficients[<span class="dv">2</span>]</span>
-<span id="cb150-5"><a href="comparing-apples-and-oranges.html#cb150-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(us<span class="sc">$</span>approval, us<span class="sc">$</span>vote, <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">xlab =</span> <span class="st">&#39;Approval&#39;</span>,</span>
-<span id="cb150-6"><a href="comparing-apples-and-oranges.html#cb150-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">&#39;Vote Share&#39;</span>, <span class="at">las =</span> <span class="dv">1</span>)</span>
-<span id="cb150-7"><a href="comparing-apples-and-oranges.html#cb150-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">a=</span>a, <span class="at">b=</span>b, <span class="at">col =</span> cardiffred)</span></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="comparing-apples-and-oranges.html#cb150-1" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(us<span class="sc">$</span>vote <span class="sc">~</span> us<span class="sc">$</span>approval)</span>
+<span id="cb150-2"><a href="comparing-apples-and-oranges.html#cb150-2" tabindex="-1"></a>summary.model2 <span class="ot">&lt;-</span> <span class="fu">summary</span>(model2)</span>
+<span id="cb150-3"><a href="comparing-apples-and-oranges.html#cb150-3" tabindex="-1"></a>a <span class="ot">&lt;-</span> summary.model2<span class="sc">$</span>coefficients[<span class="dv">1</span>]</span>
+<span id="cb150-4"><a href="comparing-apples-and-oranges.html#cb150-4" tabindex="-1"></a>b <span class="ot">&lt;-</span> summary.model2<span class="sc">$</span>coefficients[<span class="dv">2</span>]</span>
+<span id="cb150-5"><a href="comparing-apples-and-oranges.html#cb150-5" tabindex="-1"></a><span class="fu">plot</span>(us<span class="sc">$</span>approval, us<span class="sc">$</span>vote, <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">xlab =</span> <span class="st">&#39;Approval&#39;</span>,</span>
+<span id="cb150-6"><a href="comparing-apples-and-oranges.html#cb150-6" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">&#39;Vote Share&#39;</span>, <span class="at">las =</span> <span class="dv">1</span>)</span>
+<span id="cb150-7"><a href="comparing-apples-and-oranges.html#cb150-7" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">a=</span>a, <span class="at">b=</span>b, <span class="at">col =</span> cardiffred)</span></code></pre></div>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-137-1.png" width="672" /></p>
 </div>
 <div id="reading-for-this-week-3" class="section level2 hasAnchor" number="7.5">
 <h2><span class="header-section-number">7.5</span> Reading for This Week<a href="comparing-apples-and-oranges.html#reading-for-this-week-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This week, please take a look at chapter 11 in <span class="citation">Fogarty (<a href="#ref-Fogarty2019" role="doc-biblioref">2019</a>)</span>.</p>
+<p>This week, please take a look at chapter 11 in <span class="citation">Fogarty (<a href="#ref-Fogarty2019">2019</a>)</span>.</p>
 
 </div>
 </div>
@@ -666,7 +677,7 @@ Fogarty, Brian. 2019. <em><span>Quantitative Social Science Data With R</span></
         </div>
       </div>
 <a href="are-different-people-different.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="useful-internet-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="the-fundamental-problem-of-causal-inference.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

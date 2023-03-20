@@ -11,13 +11,17 @@ rm(list=ls())
 # Libraries
 library(foreign)
 library(xtable)
-
-
+library(knitr)
+library(DescTools)
 # data: Class surveys
-dat18 <- read.csv("preparing_data/data/class_survey/lecture_survey_18.csv")
-dat19 <- read.csv("preparing_data/data/class_survey/lecture_survey_19.csv")
-dat21 <- read.csv("preparing_data/data/class_survey/lecture_survey_21.csv")
-dat <- read.csv("preparing_data/data/class_survey/lecture_survey_22.csv")
+# data: Class surveys
+dat18 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_18.csv")
+dat19 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_19.csv")
+dat21 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_21.csv")
+dat22 <- read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_22.csv")
+dat <- na.omit(read.csv("../other_files/preparing_data/data/class_survey/lecture_survey_23.csv"))
+
+
 
 # names(dat)
 attach(dat)
@@ -43,7 +47,7 @@ For example, imagine a policy introduced mandatory environmental protection for 
 
 In this last section we will learn how to think systematically about this problem. We will also take a look at some easy first solutions to this problem.
 
-To further introduce this new section, I was fortunate to interview Claire Rowlands. She is the Strategy and Policy Director for the COVID Vaccination Programme in the Welsh Government. Of course, policy evaluation plays a crucial role in fighting the pandemic: measures are updated regularly and have to be adjusted regarding their impact. A rigorous and analytical evaluation of these policies and their impact is therefore key.
+To further introduce this new section, I was fortunate to interview Claire Rowlands. She was the Strategy and Policy Director for the COVID Vaccination Programme in the Welsh Government. Of course, policy evaluation plays a crucial role in fighting a pandemic: measures are updated regularly and have to be adjusted regarding their impact. A rigorous and analytical evaluation of these policies and their impact is therefore key.
 
 
 ```{r, eval=knitr::is_html_output(excludes = "epub"), results = 'asis', echo = F}
@@ -96,7 +100,8 @@ boxplot(dat.sub$spend ~ dat.sub$gender, horizontal = TRUE, col = c(cardiffgold, 
 
 ```
 
-Well, we can of course take a look at the distribution. But this is not the true causal effect, simply because it is impossible to change *gender* in an experimental setting. Does that mean that this framework is unable to study *any* gender related questions? This is not the case: we need to think carefully about what it is that we are actually interested in---and then manipulate this condition. For example, if we are studying how the *perception* of gender might affect certain outcomes, we could use a clever research design that helps manipulate this gender perception.
+
+Well, we can of course take a look at the distribution: On average, men seem to be spending more than women. But this is not the true causal effect, simply because it is impossible to change *gender* in an experimental setting. Does that mean that this framework is unable to study *any* gender related questions? This is not the case: we need to think carefully about what it is that we are actually interested in---and then manipulate this condition. For example, if we are studying how the *perception* of gender might affect certain outcomes, we could use a clever research design that helps manipulate this gender perception.
 
 
 
@@ -128,14 +133,14 @@ One final note here. We are observing the *average* treatment effect. Does that 
 
 ## Estimating a First Causal Effect
 
-I sent out an email before Week 8 asking you for more data on the effort you are putting into this module and the effort you think you should be investing into the module. In these emails, I hid a quick experiment: I wanted to investigate whether priming you for how difficult this class is makes any difference regarding the effort you are reporting or the effort you think you should be investing.
+Last year, I sent out an email before Week 8 asking them for more data on the effort they were putting into this module and the effort they thought they should be investing into the module. In these emails, I hid a quick experiment: I wanted to investigate whether priming them for how difficult this class is makes any difference regarding the effort they were are reporting or the effort you think you should be investing. (I did not implement the experiment with you this year, since the cohort is quite small and the sample size would be quite small then.)
 
 This was the email to the control group:
 
 
 > Hi everybody,
-> To fine tune the material for PL 9239, I would like to collect some more data on your study effort.
-> Could you please fill out the two short questions at the following link until tomorrow Thursday night?
+> To fine tune the material for PL 9248, I would like to collect some more data on your study effort.
+> Could you please fill out the two short questions about your effort at the following link until tomorrow Thursday night?
 > Thanks a lot!
 > Best,
 > Christian
@@ -143,20 +148,20 @@ This was the email to the control group:
 And here is the email to the treatment group with the extra prompt in bold so that you can easily see it here.
 
 > Hi everybody,
-> To fine tune the material for PL 9239, I would like to collect some more data on your study effort.
+> To fine tune the material for PL 9248, I would like to collect some more data on your study effort.
 > **I am aware that the module does indeed require quite a bit of work to keep up with the comprehensive material.**
-> Could you please fill out the two short questions at the following link until tomorrow Thursday night?
+> Could you please fill out the two short questions about your effort at the following link until tomorrow Thursday night?
 > Thanks a lot!
 > Best,
 > Christian
 
 
-Let us go and analyse whether this prompt actually made any difference. To analyse the data, let us first plot the data. On the left, you can see the effort that you are actually putting into your studies in both groups. In the middle, you can see what you think that you should be studying. On the right we are plotting the difference between what you think that you should be studying and what you are actually studying.
+Let us go and analyse whether this prompt actually made any difference. To analyse the data, let us first plot the data. On the left, you can see the effort that they are actually putting into their studies in both groups. In the middle, you can see what they think that they should be studying. On the right we are plotting the difference between what they think that they should be studying and what they are actually studying.
 
 ```{r echo=FALSE, fig.show="hold", out.width="33%"}
-dat.treatment <- read.csv('experiment_w8/exp_w8_t.csv')
+dat.treatment <- read.csv('../other_files/experiment_w8/exp_w8_t.csv')
 names(dat.treatment) <- c('timestamp','studyperweek','studyideal')
-dat.control <- read.csv('experiment_w8/exp_w8_c.csv')
+dat.control <- read.csv('../other_files/experiment_w8/exp_w8_c.csv')
 names(dat.control) <- c('timestamp','studyperweek','studyideal')
 
 # dat.control <- subset(dat.control, dat.control$studyideal < 40)
@@ -200,11 +205,11 @@ axis(1)
 ```
 
 
-The differences are quite striking in our little experiment! Let us begin with the actual hours that you are studying. The treatment group reports that they study on average `r round(mean(dat.treatment$studyperweek) - mean(dat.control$studyperweek), 2)`h more. For the number of hours that you think you should be studying, the difference is also positive: Those in the treatment group think they should study on average `r round(mean(dat.treatment$studyideal) - mean(dat.control$studyideal), 2)`h more. Finally, we can also calculate the difference between the hours that you think you should be studying and the actual hours that you are studying. Think of it as an expression about how 'bad' your conscious is. Do we find an effect here, too? We do. The difference between the treatment group and the control group is `r round(mean(dat.treatment$studydifference) - mean(dat.control$studydifference), 2)`h---telling you that the module requires a lot of work indeed causes you a bad consciousness. 
+The differences are quite striking in our little experiment! Let us begin with the actual hours that they were studying. The treatment group reports that they study on average `r round(mean(dat.treatment$studyperweek) - mean(dat.control$studyperweek), 2)`h more. For the number of hours that they think they should be studying, the difference is also positive: Those in the treatment group think they should study on average `r round(mean(dat.treatment$studyideal) - mean(dat.control$studyideal), 2)`h more. Finally, we can also calculate the difference between the hours that they think they should be studying and the actual hours that they are studying. Think of it as an expression about how 'bad' their conscious is. Do we find an effect here, too? We do. The difference between the treatment group and the control group is `r round(mean(dat.treatment$studydifference) - mean(dat.control$studydifference), 2)`h---telling the students that the module requires a lot of work indeed causes a bad consciousness. 
 
-So from just the descriptive data, it seems that the experiment worked: Just telling you that this module is a hard one actually makes you report a higher effort. And btw., this experiment had the same results in last year's cohort...
+So from just the descriptive data, it seems that the experiment worked: Just telling the students that this module is a hard one actually makes them report a higher effort. 
 
-Now, what about statistical significance? Could we trust that we would find this in the larger population if we ran the experiment there? All t-test report a unanimous result: the result is not statistically significant, which means we can not refute the Hypothesis $H_0$ that there is no difference between the means of both samples. The reason is quite simple: your sample is way to small. Ideally we have at least 100 participants in the control group and another 100 in the treatment group to get nice and small 95% confidence intervals.
+Now, what about statistical significance? Could we trust that we would find this in the larger population if we ran the experiment there? All t-test report a unanimous result: the result is not statistically significant, which means we can not refute the Hypothesis $H_0$ that there is no difference between the means of both samples. The reason is quite simple: the sample is way to small. Ideally we have at least 100 participants in the control group and another 100 in the treatment group to get nice and small 95% confidence intervals.
 
 ```{r echo=FALSE}
 t.test(dat.control$studyperweek, dat.treatment$studyperweek)
@@ -224,7 +229,7 @@ The basic idea is pretty simple: We have to load a map of Wales from a package. 
 
 ```{r message=FALSE}
 # Stop and Search Data
-load("stop_and_search_18_12.RData")
+load("../other_files/stop_and_search_18_12.RData")
 
 # First, we want to have a map
 library(rworldmap)
