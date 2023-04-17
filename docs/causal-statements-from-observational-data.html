@@ -4,27 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 Causal Statements from Observational Data | PL 9239 Introduction to Data Science for Politics and IR</title>
-  <meta name="description" content="This is the website for the Intro to Data Science Class." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <title>Chapter 9 Causal Statements from Observational Data | PL 9248 Data Science for Politics and IR</title>
+  <meta name="description" content="This is the website for the Data Science Class." />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 Causal Statements from Observational Data | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta property="og:title" content="Chapter 9 Causal Statements from Observational Data | PL 9248 Data Science for Politics and IR" />
   <meta property="og:type" content="book" />
   
-  
-  <meta property="og:description" content="This is the website for the Intro to Data Science Class." />
+  <meta property="og:description" content="This is the website for the Data Science Class." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Causal Statements from Observational Data | PL 9239 Introduction to Data Science for Politics and IR" />
+  <meta name="twitter:title" content="Chapter 9 Causal Statements from Observational Data | PL 9248 Data Science for Politics and IR" />
   
-  <meta name="twitter:description" content="This is the website for the Intro to Data Science Class." />
+  <meta name="twitter:description" content="This is the website for the Data Science Class." />
   
 
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2022-04-22" />
+<meta name="date" content="2023-04-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +31,7 @@
   
   
 <link rel="prev" href="the-fundamental-problem-of-causal-inference.html"/>
-<link rel="next" href="multivariate-regression-and-heterogenous-treatment-effects.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<link rel="next" href="useful-internet-resources.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,14 +49,16 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -332,19 +332,11 @@ div.csl-indent {
 <li class="chapter" data-level="9.4" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#best-of-both-worlds-the-difference-in-difference-estimator"><i class="fa fa-check"></i><b>9.4</b> Best of Both Worlds: The Difference-in-Difference Estimator</a></li>
 <li class="chapter" data-level="9.5" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#reading-for-this-week-5"><i class="fa fa-check"></i><b>9.5</b> Reading for This Week</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html"><i class="fa fa-check"></i><b>10</b> Multivariate Regression and Heterogenous Treatment Effects</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#analysing-experimental-data-revisited"><i class="fa fa-check"></i><b>10.1</b> Analysing Experimental Data Revisited</a></li>
-<li class="chapter" data-level="10.2" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#controling-for-confounders"><i class="fa fa-check"></i><b>10.2</b> Controling for Confounders</a></li>
-<li class="chapter" data-level="10.3" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#treatment-heterogeneity"><i class="fa fa-check"></i><b>10.3</b> Treatment Heterogeneity</a></li>
-<li class="chapter" data-level="10.4" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#outro"><i class="fa fa-check"></i><b>10.4</b> Outro</a></li>
-<li class="chapter" data-level="10.5" data-path="multivariate-regression-and-heterogenous-treatment-effects.html"><a href="multivariate-regression-and-heterogenous-treatment-effects.html#reading-for-this-week-6"><i class="fa fa-check"></i><b>10.5</b> Reading for This Week</a></li>
-</ul></li>
 <li class="part"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="11" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>11</b> Useful Internet Resources</a>
+<li class="chapter" data-level="10" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>10</b> Useful Internet Resources</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>11.1</b> Homepages</a></li>
-<li class="chapter" data-level="11.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>11.2</b> Online Books</a></li>
+<li class="chapter" data-level="10.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>10.1</b> Homepages</a></li>
+<li class="chapter" data-level="10.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>10.2</b> Online Books</a></li>
 </ul></li>
 </ul>
 
@@ -355,7 +347,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PL 9239 Introduction to Data Science for Politics and IR</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PL 9248 Data Science for Politics and IR</a>
           </h1>
         </div>
 
@@ -363,38 +355,38 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="causal-statements-from-observational-data" class="section level1" number="9">
-<h1><span class="header-section-number">Chapter 9</span> Causal Statements from Observational Data</h1>
+<div id="causal-statements-from-observational-data" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Causal Statements from Observational Data<a href="causal-statements-from-observational-data.html#causal-statements-from-observational-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Last week, we were taking a look at randomised control trials. While they are of course great in generating internal validity, they are not always easy to implement and we may need alternatives for practical reasons. Let me help frame this week’s discussion in this video.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kzv3FXv14pU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
-<div id="this-weeks-data-the-effect-of-the-welsh-circuit-break" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> This Week’s Data: The Effect of the Welsh Circuit Break</h2>
+<div id="this-weeks-data-the-effect-of-the-welsh-circuit-break" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> This Week’s Data: The Effect of the Welsh Circuit Break<a href="causal-statements-from-observational-data.html#this-weeks-data-the-effect-of-the-welsh-circuit-break" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The data that we will be using for this week is publicly available data on manual ventilation beds due to COVID-19 in autumn 2020. The data from Wales is <a href="https://gov.wales/nhs-activity-and-capacity-during-coronavirus-covid-19-pandemic-7-january-2021-html">here</a> and the data for England can be downloaded <a href="https://www.england.nhs.uk/statistics/statistical-work-areas/hospital-activity/monthly-hospital-activity/mar-data/">here</a>. I then used the overall population of Wales and England to calculate how many MV beds are being used per 1,000,000 inhabitants. The Figure is plotting the resulting daily time-series from September 1st 2020 until the end of 2020.</p>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-146-1.png" width="672" /></p>
-<p>What you can see is that the numbers were increasing from September onwards. In October, the Welsh government announced the Circuit Break that would start on October 23rd and everybody had to stay at home. The way Covid19 then worked, it is reasonable to assume a four weeks lag before the policy is actually becoming effective. Apparently, between being infected and being able to transmit the virus further on, there was normally a one to two weeks lag. And then you can add another two weeks until the critical patients become so severely ill that the patient would have to use an MV bed. So the date that we should pay attention to when we want to understand whether the policy has become effective is around November the 20th for Wales. England introduced a stay home order as well, but this only came effective on November the 5th, so almost two weeks after. It is reasonable to assume that this policy will take effect only in the first week of December.</p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-145-1.png" width="672" /></p>
+<p>What you can see is that the numbers were increasing from September 2020 onwards. In October 2020, the Welsh government announced the Circuit Break that would start on October 23rd and everybody had to stay at home. The way Covid19 then worked, it is reasonable to assume a four weeks lag before the policy is actually becoming effective. Apparently, between being infected and being able to transmit the virus further on, there was normally a one to two weeks lag. And then you can add another two weeks until the critical patients become so severely ill that the patient would have to use an MV bed. So the date that we should pay attention to when we want to understand whether the policy has become effective is around November the 20th for Wales. England introduced a stay home order as well, but this only came effective on November the 5th, so almost two weeks after. It is reasonable to assume that this policy will take effect only in the first week of December.</p>
 <p>We will use this example to study the causal effect of the Welsh circuit break. How did the policy affect the pandemic situation measured by the use of envy beds per 1,000,000 population?</p>
 <p>Remember that our goal is to calculate the treatment effect from a policy. What difference does the policy make? The definition of the causal effect means that we are interested in the difference between the world as it is with the new policy and the world without that policy. Obviously, both states cannot be observed at the same time.</p>
 </div>
-<div id="compare-treated-from-one-group-to-the-non-treated-of-another-group" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> Compare Treated from One Group to the Non-Treated of Another Group</h2>
+<div id="compare-treated-from-one-group-to-the-non-treated-of-another-group" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Compare Treated from One Group to the Non-Treated of Another Group<a href="causal-statements-from-observational-data.html#compare-treated-from-one-group-to-the-non-treated-of-another-group" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>One solution to this problem would be to compare units that have been treated to units that have not been treated. In a policy context, we could for example compare the country where a policy is enacted with another country that does not have this policy.</p>
 <p>What would that mean for the Welsh circuit breaker? We could compare the policy outcome in Wales to what is going on in England. The calculation is actually pretty straightforward: we take the seven day average of Wales during the week of November 20th (17.36) and compare it to the same time in England (22.35). The difference between the two would be our estimate for the causal effect: -4.99 MV beds per 1 Million inhabitants.</p>
 <p>All this rests on a fairly strong assumption: we are actually comparing Wales to England. Now, is that a fair comparison to make? You might rightfully say that this might not be a good idea, simply because Wales and England are different on very many levels.</p>
 <p>From a more systematic point of view, we might fall prey to an important bias that can influence your results: the confounding bias. Confounding bias happens when a pre-treatment variable is related to the treatment and the outcome at the same time. In our case, this could be for example the quality of the NHS. A better performing Welsh NHS would inform Welsh politicians in a better way and this therefore affects the likelihood that a new policy is enacted. At the same time, a better NHS of course can care for its patients in better way, which is why it is also likely to affect the outcome. There are ways to control for this influence and we will take a closer look at them next week. But for now suffice it to say that it is not a good idea to “just” compare two different countries, one with the treatment and one without.</p>
 </div>
-<div id="compare-the-treated-before-and-after-their-treatment" class="section level2" number="9.3">
-<h2><span class="header-section-number">9.3</span> Compare the Treated Before and After their Treatment</h2>
+<div id="compare-the-treated-before-and-after-their-treatment" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Compare the Treated Before and After their Treatment<a href="causal-statements-from-observational-data.html#compare-the-treated-before-and-after-their-treatment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>So comparing different countries does not make a lot of sense. But what about comparing a unit with a treatment to its state just before the treatment? Or, in the context of our policy evaluation, why not comparing the country with a policy enacted with the same country, but before the policy actually came into force?</p>
 <p>Indeed, comparing the same units before and after policy intervention will make sure that the units are the same. But, are they <em>really</em> the same? Note that meanwhile some time has gone past. This means that a lot of things apart from our new policy might have changed and the environment for the policy might be a different one.</p>
 <p>Let us take a look at the Welsh MV beds again, in particular around the 20th of November at the finely dotted line. Compare the figures to what happened on October 23rd when the Wales circuit break actually came into force. During these two points in time, the number of empty beds actually was rising and did not remain flat or was even going down. This is simply due to the fact that the whole environment in Wales changed and the Corona situation was completely different then.</p>
 <p>To estimate the causal effect in this way, we would take the seven day average of Wales during the week of November 20th (17.36) and compare it to the week of October the 23rd for example (10.98). The difference now would be 6.38 MV beds per 1 Million inhabitants. Any intuition with the numbers would tell us that this cannot be correct.</p>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-147-1.png" width="672" /></p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-146-1.png" width="672" /></p>
 <p>What happens is that we are again observing a confounding factor that biases the estimation of the causal effect. This time it is a time-varying confounder.</p>
 <p>In short, we need something that can clearly combine the best of both worlds: making sure that we neither bias our results due to pre-treatment counfounders nor time varying confounders.</p>
 </div>
-<div id="best-of-both-worlds-the-difference-in-difference-estimator" class="section level2" number="9.4">
-<h2><span class="header-section-number">9.4</span> Best of Both Worlds: The Difference-in-Difference Estimator</h2>
+<div id="best-of-both-worlds-the-difference-in-difference-estimator" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Best of Both Worlds: The Difference-in-Difference Estimator<a href="causal-statements-from-observational-data.html#best-of-both-worlds-the-difference-in-difference-estimator" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Can you have it both ways? Indeed, you can. The estimator that will solve a lot of our problems is called the <em>difference-in-difference estimator</em>. What it does is it calculates the difference between the treated group before and after the treatment and subtracts from it the difference in the control group before and after the treatment.</p>
 <p>This is the formula for the difference-in-difference estimator. You can use it to calculate the sample average treatment effect for the treated (SATT).</p>
 <p><span class="math display">\[ \text{DiD estimate} = \left(\overline{Y}_{\text{treated}}^{\text{after}} -\overline{Y}_{\text{treated}}^{\text{before}} \right) -  \left(\overline{Y}_{\text{control}}^{\text{after}} -\overline{Y}_{\text{control}}^{\text{before}} \right)\]</span></p>
@@ -407,19 +399,22 @@ div.csl-indent {
 <li>We account for confounding pretreatment variables by comparing the difference between <em>two times two points in time</em>.</li>
 </ul>
 <p>Remember that we buy this leverage by making a third assumption: the outcome variables are following a parallel trend without the treatment. How can you check this assumption? Simply look at the data.</p>
-<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-149-1.png" width="672" /></p>
+<p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-148-1.png" width="672" /></p>
 <p>Given what we see in our figures, this assumption is met fairly well. Even better: for the MV beds in our sample it is not only a similar trend—which means that both lines should have the same slope—both curves actually overlap pretty much. This parallel trend assumption is therefore really well fulfilled for our example.</p>
 <p>So let us calculate the SATT. We take the seven day average of Wales during the week of November 20th (17.36) and subtract the seven day average of Wales during the Week of October 23rd (10.98), which gives us a difference of 6.38.</p>
 <p>Then we do the same for our control group England. We calculate the seven day average of England during the week of November 20th (22.35) and subtract the seven day average of England during the Week of October 23rd (10.91), resulting in a difference of 11.44.</p>
 <p>Last step: To calculate the sample average treatment effect of the treated (SATT), we subtract the two differences from one another once more 6.38 - 11.44 = -5.06 MV beds per 1 Million inhabitants.</p>
 <p>Note that this result is remarkably close with our very first result when we simply compared Wales to England. Why is this the case? It is, because Wales and England not only share the same trend before the treatment, but their values are actually really close to one another.</p>
 </div>
-<div id="reading-for-this-week-5" class="section level2" number="9.5">
-<h2><span class="header-section-number">9.5</span> Reading for This Week</h2>
-<p>To learn more about all this and going through everything with yet another great example, please read p.54–63 in <span class="citation"><a href="#ref-Imai2018" role="doc-biblioref">Imai</a> (<a href="#ref-Imai2018" role="doc-biblioref">2018</a>)</span>.</p>
+<div id="reading-for-this-week-5" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Reading for This Week<a href="causal-statements-from-observational-data.html#reading-for-this-week-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To learn more about all this and going through everything with yet another great example, please read p.54–63 in <span class="citation">Imai (<a href="#ref-Imai2018" role="doc-biblioref">2018</a>)</span>.</p>
 
 </div>
 </div>
+
+
+
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Imai2018" class="csl-entry">
@@ -432,7 +427,7 @@ Imai, Kosuke. 2018. <em>Quantitative Social Science–an Introduction</em>. Prin
         </div>
       </div>
 <a href="the-fundamental-problem-of-causal-inference.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="multivariate-regression-and-heterogenous-treatment-effects.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="useful-internet-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -492,7 +487,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

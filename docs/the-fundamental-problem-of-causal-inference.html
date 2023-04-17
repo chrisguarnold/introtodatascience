@@ -23,7 +23,7 @@
 <meta name="author" content="Christian Arnold, Cardiff University" />
 
 
-<meta name="date" content="2023-03-20" />
+<meta name="date" content="2023-04-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="comparing-apples-and-oranges.html"/>
-<link rel="next" href="useful-internet-resources.html"/>
+<link rel="next" href="causal-statements-from-observational-data.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -324,11 +324,19 @@ div.csl-indent {
 <li class="chapter" data-level="8.6" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#plotting-data-on-maps"><i class="fa fa-check"></i><b>8.6</b> Plotting Data on Maps</a></li>
 <li class="chapter" data-level="8.7" data-path="the-fundamental-problem-of-causal-inference.html"><a href="the-fundamental-problem-of-causal-inference.html#reading-for-this-week-4"><i class="fa fa-check"></i><b>8.7</b> Reading for This Week</a></li>
 </ul></li>
-<li class="part"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="9" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>9</b> Useful Internet Resources</a>
+<li class="chapter" data-level="9" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html"><i class="fa fa-check"></i><b>9</b> Causal Statements from Observational Data</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>9.1</b> Homepages</a></li>
-<li class="chapter" data-level="9.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>9.2</b> Online Books</a></li>
+<li class="chapter" data-level="9.1" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#this-weeks-data-the-effect-of-the-welsh-circuit-break"><i class="fa fa-check"></i><b>9.1</b> This Week’s Data: The Effect of the Welsh Circuit Break</a></li>
+<li class="chapter" data-level="9.2" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-treated-from-one-group-to-the-non-treated-of-another-group"><i class="fa fa-check"></i><b>9.2</b> Compare Treated from One Group to the Non-Treated of Another Group</a></li>
+<li class="chapter" data-level="9.3" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#compare-the-treated-before-and-after-their-treatment"><i class="fa fa-check"></i><b>9.3</b> Compare the Treated Before and After their Treatment</a></li>
+<li class="chapter" data-level="9.4" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#best-of-both-worlds-the-difference-in-difference-estimator"><i class="fa fa-check"></i><b>9.4</b> Best of Both Worlds: The Difference-in-Difference Estimator</a></li>
+<li class="chapter" data-level="9.5" data-path="causal-statements-from-observational-data.html"><a href="causal-statements-from-observational-data.html#reading-for-this-week-5"><i class="fa fa-check"></i><b>9.5</b> Reading for This Week</a></li>
+</ul></li>
+<li class="part"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="10" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html"><i class="fa fa-check"></i><b>10</b> Useful Internet Resources</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#homepages"><i class="fa fa-check"></i><b>10.1</b> Homepages</a></li>
+<li class="chapter" data-level="10.2" data-path="useful-internet-resources.html"><a href="useful-internet-resources.html#online-books"><i class="fa fa-check"></i><b>10.2</b> Online Books</a></li>
 </ul></li>
 </ul>
 
@@ -422,7 +430,7 @@ div.csl-indent {
 </table>
 <p>This framework tells us already a lot about the potential research that we can implement with it: it is necessary to be able to manipulate the treatment variable <span class="math inline">\(T\)</span>. Think back at the data we collected about you. From the point of this framework, could we study the causal effect of gender on for example much you spend on average when you go out?</p>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-139-1.png" width="672" /></p>
-<p>Well, we can of course take a look at the distribution: Men seem to be spending more than women. But this is not the true causal effect, simply because it is impossible to change <em>gender</em> in an experimental setting. Does that mean that this framework is unable to study <em>any</em> gender related questions? This is not the case: we need to think carefully about what it is that we are actually interested in—and then manipulate this condition. For example, if we are studying how the <em>perception</em> of gender might affect certain outcomes, we could use a clever research design that helps manipulate this gender perception.</p>
+<p>Well, we can of course take a look at the distribution: On average, men seem to be spending more than women. But this is not the true causal effect, simply because it is impossible to change <em>gender</em> in an experimental setting. Does that mean that this framework is unable to study <em>any</em> gender related questions? This is not the case: we need to think carefully about what it is that we are actually interested in—and then manipulate this condition. For example, if we are studying how the <em>perception</em> of gender might affect certain outcomes, we could use a clever research design that helps manipulate this gender perception.</p>
 </div>
 <div id="randomized-control-trials" class="section level2 hasAnchor" number="8.4">
 <h2><span class="header-section-number">8.4</span> Randomized Control Trials<a href="the-fundamental-problem-of-causal-inference.html#randomized-control-trials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -504,39 +512,36 @@ Christian</p>
 <h2><span class="header-section-number">8.6</span> Plotting Data on Maps<a href="the-fundamental-problem-of-causal-inference.html#plotting-data-on-maps" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There is nothing really new this week regarding code, so let us refine your plotting skills. Today we will take a start at plotting maps. I used the stop and search data that is published <a href="https://data.police.uk/data/">online</a> by the police. For this introduction, I am using the data from December 2018 before the pandemic which you can download <a href="https://github.com/chrisguarnold/introtodatascience/blob/master/stop_and_search_18_12.RData">here</a> if you want to play around with it yourself.</p>
 <p>The basic idea is pretty simple: We have to load a map of Wales from a package. Then we can plot our stop and search incidents on that map using the longitude and latitude data.</p>
-<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="the-fundamental-problem-of-causal-inference.html#cb154-1" tabindex="-1"></a><span class="co"># Stop and Search Data</span></span>
-<span id="cb154-2"><a href="the-fundamental-problem-of-causal-inference.html#cb154-2" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;../other_files/stop_and_search_18_12.RData&quot;</span>)</span>
-<span id="cb154-3"><a href="the-fundamental-problem-of-causal-inference.html#cb154-3" tabindex="-1"></a></span>
-<span id="cb154-4"><a href="the-fundamental-problem-of-causal-inference.html#cb154-4" tabindex="-1"></a><span class="co"># First, we want to have a map</span></span>
-<span id="cb154-5"><a href="the-fundamental-problem-of-causal-inference.html#cb154-5" tabindex="-1"></a><span class="fu">library</span>(rworldmap)</span>
-<span id="cb154-6"><a href="the-fundamental-problem-of-causal-inference.html#cb154-6" tabindex="-1"></a><span class="fu">library</span>(rworldxtra)</span>
-<span id="cb154-7"><a href="the-fundamental-problem-of-causal-inference.html#cb154-7" tabindex="-1"></a><span class="co"># we don&#39;t want to take a look at the whole world -</span></span>
-<span id="cb154-8"><a href="the-fundamental-problem-of-causal-inference.html#cb154-8" tabindex="-1"></a><span class="co"># just the bits on the map that have our data points</span></span>
-<span id="cb154-9"><a href="the-fundamental-problem-of-causal-inference.html#cb154-9" tabindex="-1"></a><span class="co"># so we take the min and max</span></span>
-<span id="cb154-10"><a href="the-fundamental-problem-of-causal-inference.html#cb154-10" tabindex="-1"></a>min.long <span class="ot">&lt;-</span> <span class="fu">min</span>(dat.sas<span class="sc">$</span>Longitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb154-11"><a href="the-fundamental-problem-of-causal-inference.html#cb154-11" tabindex="-1"></a>max.long <span class="ot">&lt;-</span> <span class="fu">max</span>(dat.sas<span class="sc">$</span>Longitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb154-12"><a href="the-fundamental-problem-of-causal-inference.html#cb154-12" tabindex="-1"></a>min.lat <span class="ot">&lt;-</span> <span class="fu">min</span>(dat.sas<span class="sc">$</span>Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb154-13"><a href="the-fundamental-problem-of-causal-inference.html#cb154-13" tabindex="-1"></a>max.lat <span class="ot">&lt;-</span> <span class="fu">max</span>(dat.sas<span class="sc">$</span>Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb154-14"><a href="the-fundamental-problem-of-causal-inference.html#cb154-14" tabindex="-1"></a></span>
-<span id="cb154-15"><a href="the-fundamental-problem-of-causal-inference.html#cb154-15" tabindex="-1"></a><span class="co"># Get a map</span></span>
-<span id="cb154-16"><a href="the-fundamental-problem-of-causal-inference.html#cb154-16" tabindex="-1"></a>newmap <span class="ot">&lt;-</span> <span class="fu">getMap</span>(<span class="at">resolution =</span> <span class="st">&quot;high&quot;</span>)</span>
-<span id="cb154-17"><a href="the-fundamental-problem-of-causal-inference.html#cb154-17" tabindex="-1"></a><span class="fu">plot</span>(newmap, <span class="at">xlim =</span> <span class="fu">c</span>(min.long, max.long),</span>
-<span id="cb154-18"><a href="the-fundamental-problem-of-causal-inference.html#cb154-18" tabindex="-1"></a>     <span class="at">ylim =</span> <span class="fu">c</span>(min.lat, max.lat))</span>
-<span id="cb154-19"><a href="the-fundamental-problem-of-causal-inference.html#cb154-19" tabindex="-1"></a></span>
-<span id="cb154-20"><a href="the-fundamental-problem-of-causal-inference.html#cb154-20" tabindex="-1"></a><span class="co"># Add the incidents</span></span>
-<span id="cb154-21"><a href="the-fundamental-problem-of-causal-inference.html#cb154-21" tabindex="-1"></a><span class="fu">points</span>(dat.sas<span class="sc">$</span>Longitude, dat.sas<span class="sc">$</span>Latitude, <span class="at">col =</span> cardiffred)</span></code></pre></div>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="the-fundamental-problem-of-causal-inference.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stop and Search Data</span></span>
+<span id="cb154-2"><a href="the-fundamental-problem-of-causal-inference.html#cb154-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;../other_files/stop_and_search_18_12.RData&quot;</span>)</span>
+<span id="cb154-3"><a href="the-fundamental-problem-of-causal-inference.html#cb154-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb154-4"><a href="the-fundamental-problem-of-causal-inference.html#cb154-4" aria-hidden="true" tabindex="-1"></a><span class="co"># First, we want to have a map</span></span>
+<span id="cb154-5"><a href="the-fundamental-problem-of-causal-inference.html#cb154-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rworldmap)</span>
+<span id="cb154-6"><a href="the-fundamental-problem-of-causal-inference.html#cb154-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rworldxtra)</span>
+<span id="cb154-7"><a href="the-fundamental-problem-of-causal-inference.html#cb154-7" aria-hidden="true" tabindex="-1"></a><span class="co"># we don&#39;t want to take a look at the whole world -</span></span>
+<span id="cb154-8"><a href="the-fundamental-problem-of-causal-inference.html#cb154-8" aria-hidden="true" tabindex="-1"></a><span class="co"># just the bits on the map that have our data points</span></span>
+<span id="cb154-9"><a href="the-fundamental-problem-of-causal-inference.html#cb154-9" aria-hidden="true" tabindex="-1"></a><span class="co"># so we take the min and max</span></span>
+<span id="cb154-10"><a href="the-fundamental-problem-of-causal-inference.html#cb154-10" aria-hidden="true" tabindex="-1"></a>min.long <span class="ot">&lt;-</span> <span class="fu">min</span>(dat.sas<span class="sc">$</span>Longitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb154-11"><a href="the-fundamental-problem-of-causal-inference.html#cb154-11" aria-hidden="true" tabindex="-1"></a>max.long <span class="ot">&lt;-</span> <span class="fu">max</span>(dat.sas<span class="sc">$</span>Longitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb154-12"><a href="the-fundamental-problem-of-causal-inference.html#cb154-12" aria-hidden="true" tabindex="-1"></a>min.lat <span class="ot">&lt;-</span> <span class="fu">min</span>(dat.sas<span class="sc">$</span>Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb154-13"><a href="the-fundamental-problem-of-causal-inference.html#cb154-13" aria-hidden="true" tabindex="-1"></a>max.lat <span class="ot">&lt;-</span> <span class="fu">max</span>(dat.sas<span class="sc">$</span>Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb154-14"><a href="the-fundamental-problem-of-causal-inference.html#cb154-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb154-15"><a href="the-fundamental-problem-of-causal-inference.html#cb154-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Get a map</span></span>
+<span id="cb154-16"><a href="the-fundamental-problem-of-causal-inference.html#cb154-16" aria-hidden="true" tabindex="-1"></a>newmap <span class="ot">&lt;-</span> <span class="fu">getMap</span>(<span class="at">resolution =</span> <span class="st">&quot;high&quot;</span>)</span>
+<span id="cb154-17"><a href="the-fundamental-problem-of-causal-inference.html#cb154-17" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(newmap, <span class="at">xlim =</span> <span class="fu">c</span>(min.long, max.long),</span>
+<span id="cb154-18"><a href="the-fundamental-problem-of-causal-inference.html#cb154-18" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span> <span class="fu">c</span>(min.lat, max.lat))</span>
+<span id="cb154-19"><a href="the-fundamental-problem-of-causal-inference.html#cb154-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb154-20"><a href="the-fundamental-problem-of-causal-inference.html#cb154-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the incidents</span></span>
+<span id="cb154-21"><a href="the-fundamental-problem-of-causal-inference.html#cb154-21" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(dat.sas<span class="sc">$</span>Longitude, dat.sas<span class="sc">$</span>Latitude, <span class="at">col =</span> cardiffred)</span></code></pre></div>
 <p><img src="intro_data_science_homepage_files/figure-html/unnamed-chunk-142-1.png" width="672" /></p>
 <p>This is it—as simple as that. Go wild and explore the data that is available on the police’s website!</p>
 </div>
 <div id="reading-for-this-week-4" class="section level2 hasAnchor" number="8.7">
 <h2><span class="header-section-number">8.7</span> Reading for This Week<a href="the-fundamental-problem-of-causal-inference.html#reading-for-this-week-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This week, we will get to know a new book. Please read p.32–53 in <span class="citation">Imai (<a href="#ref-Imai2018">2018</a>)</span>.</p>
+<p>This week, we will get to know a new book. Please read p.32–53 in <span class="citation">Imai (<a href="#ref-Imai2018" role="doc-biblioref">2018</a>)</span>.</p>
 
 </div>
 </div>
-
-
-
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Imai2018" class="csl-entry">
@@ -549,7 +554,7 @@ Imai, Kosuke. 2018. <em>Quantitative Social Science–an Introduction</em>. Prin
         </div>
       </div>
 <a href="comparing-apples-and-oranges.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="useful-internet-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="causal-statements-from-observational-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -7,7 +7,7 @@ library(foreign)
 library(xtable)
 # data: Class surveys
 # cov.dat <- read.csv("preparing_data/data/confirmed_hosp_cases_england_wales.csv")
-cov.dat <- read.csv("preparing_data/data/mv_beds_england_wales.csv")
+cov.dat <- read.csv("../other_files/preparing_data/data/mv_beds_england_wales.csv")
 # Predefined Cardiff colours
 # primary
 cardiffred <- rgb(211,55,74, maxColorValue = 255)
@@ -78,7 +78,7 @@ text(as.Date('2020-12-03'), 50, labels = '+ 4 Weeks', pos = 4,
 
 
 
-What you can see is that the numbers were increasing from September onwards. In October, the Welsh government announced the Circuit Break that would start on October 23rd and everybody had to stay at home. The way Covid19 then worked, it is reasonable to assume a four weeks lag before the policy is actually becoming effective. Apparently, between being infected and being able to transmit the virus further on, there was normally a one to two weeks lag. And then you can add another two weeks until the critical patients become so severely ill that the patient would have to use an MV bed. So the date that we should pay attention to when we want to understand whether the policy has become effective is around November the 20th for Wales. England introduced a stay home order as well, but this only came effective on November the 5th, so almost two weeks after. It is reasonable to assume that this policy will take effect only in the first week of December.
+What you can see is that the numbers were increasing from September 2020 onwards. In October 2020, the Welsh government announced the Circuit Break that would start on October 23rd and everybody had to stay at home. The way Covid19 then worked, it is reasonable to assume a four weeks lag before the policy is actually becoming effective. Apparently, between being infected and being able to transmit the virus further on, there was normally a one to two weeks lag. And then you can add another two weeks until the critical patients become so severely ill that the patient would have to use an MV bed. So the date that we should pay attention to when we want to understand whether the policy has become effective is around November the 20th for Wales. England introduced a stay home order as well, but this only came effective on November the 5th, so almost two weeks after. It is reasonable to assume that this policy will take effect only in the first week of December.
 
 We will use this example to study the causal effect of the Welsh circuit break. How did the policy affect the pandemic situation measured by the use of envy beds per 1,000,000 population?
 
